@@ -1,0 +1,68 @@
+<h2 id="为-layui-扩展的-下拉多选select"><a href="#为-layui-扩展的-下拉多选select" class="headerlink" title="为 layui 扩展的 下拉多选select"></a>为 layui 扩展的 下拉多选select</h2><p>在线demo： <a href="http://yelog.org/layui-select-multiple/">http://yelog.org/layui-select-multiple/</a></p>
+<p>这个在线 demo就是本项目的 <code>index.html</code>。 可将项目 <code>clone</code> 到本地查看效果。</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png" alt="效果"></p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><table>
+<thead>
+<tr>
+<th align="left">属性名</th>
+<th align="left">属性值</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">multiple</td>
+<td align="left">无</td>
+<td align="left">开启多选</td>
+</tr>
+<tr>
+<td align="left">lay-search</td>
+<td align="left">无</td>
+<td align="left">开启搜索</td>
+</tr>
+<tr>
+<td align="left">lay-case</td>
+<td align="left">无</td>
+<td align="left">大小写敏感</td>
+</tr>
+<tr>
+<td align="left">lay-omit</td>
+<td align="left">无</td>
+<td align="left">开启多选简写，显示勾选条数</td>
+</tr>
+</tbody></table>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>将项目中的 <code>form.js</code> 覆盖自己项目中的 <code>form.js</code>。</li>
+<li>引入下面css</li>
+</ol>
+<pre><code class="css">select[multiple]+.layui-form-select&gt;.layui-select-title&gt;input.layui-input{ border-bottom: 0}
+select[multiple]+.layui-form-select dd{ padding:0;}
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary]{ margin:0 !important; display:block; line-height:36px !important; position:relative; padding-left:26px;}
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] span{line-height:36px !important; float:none;}
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] i{ position:absolute; left:10px; top:0; margin-top:9px;}
+.multiSelect{ line-height:normal; height:auto; padding:4px 10px; overflow:hidden;min-height:38px; margin-top:-38px; left:0; z-index:99;position:relative;background:none;}
+.multiSelect a{ padding:2px 5px; background:#908e8e; border-radius:2px; color:#fff; display:block; line-height:20px; height:20px; margin:2px 5px 2px 0; float:left;}
+.multiSelect a span{ float:left;}
+.multiSelect a i {float:left;display:block;margin:2px 0 0 2px;border-radius:2px;width:8px;height:8px;padding:4px;position:relative;-webkit-transition:all .3s;transition:all .3s}
+.multiSelect a i:before, .multiSelect a i:after {position:absolute;left:8px;top:2px;content:&#39;&#39;;height:12px;width:1px;background-color:#fff}
+.multiSelect a i:before {-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.multiSelect a i:after {-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.multiSelect a i:hover{ background-color:#545556;}
+</code></pre>
+<h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><p>下面实例 开启了下拉多选（<code>multiple</code>）, 并开启了检索功能（<code>lay-search</code>）。<br>效果可以参考 在线实例 的 <code>多选+搜索+大小写不敏感</code> 模块</p>
+<pre><code class="html">&lt;select name=&quot;多选+搜索+大小写不敏感&quot; lay-verify=&quot;required&quot; multiple lay-search&gt;
+    &lt;option value=&quot;&quot;&gt;请选择您的兴趣爱好&lt;/option&gt;
+    &lt;option&gt;sing1&lt;/option&gt;
+    &lt;option selected&gt;sing2&lt;/option&gt;
+    &lt;option&gt;SING1-大写&lt;/option&gt;
+    &lt;option&gt;movie1&lt;/option&gt;
+    &lt;option selected&gt;movie2&lt;/option&gt;
+    &lt;option&gt;movie3&lt;/option&gt;
+    &lt;option&gt;MOVIE4&lt;/option&gt;
+    &lt;option&gt;swim&lt;/option&gt;
+    &lt;option&gt;moon&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<blockquote>
+<p><strong>更多实例参考 在线实例、或 <code>index.html</code>。</strong></p>
+</blockquote>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>此项目基于 <a href="https://gitee.com/layuicms/XiaLaDuoXuan">https://gitee.com/layuicms/XiaLaDuoXuan</a> 项目修改得来，修复了一些bug，扩展了 简化多选、多选搜索、大小写敏感控制等功能。</p>
