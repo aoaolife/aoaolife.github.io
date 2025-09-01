@@ -330,30 +330,34 @@ h2 {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 16px;
     color: #1d9bf0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 2px solid #1d9bf0;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 8px;
+    padding: 8px 12px;
     text-decoration: none;
     z-index: 1000;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .nav-arrow-left {
-    left: 20px;
+    left: 15px;
 }
 .nav-arrow-right {
-    right: 20px;
+    right: 15px;
 }
 .nav-arrow:hover {
     color: #0a6db7;
     background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-52%);
 }
 
 /* 移动端优化 */
 @media (max-width: 768px) {
     body {
         padding: 10px;
+        border-width: 4px;
     }
     .content-wrapper {
         width: 100%;
@@ -370,52 +374,57 @@ h2 {
     }
     .container {
         width: 100%;
-        padding: 20px; /* 减少移动端padding */
+        padding: 20px;
     }
     .item {
-        font-size: 20px; /* 稍微减小移动端字体 */
-        padding: 15px 18px; /* 减少移动端item padding */
+        font-size: 20px;
+        padding: 15px 18px;
     }
     .article-title {
-        font-size: 24px; /* 减小移动端标题字体 */
+        font-size: 24px;
     }
     .current-time {
-        font-size: 20px; /* 减小移动端时间字体 */
+        font-size: 20px;
     }
     .progress-text {
-        font-size: 16px; /* 减小移动端进度条字体 */
+        font-size: 16px;
     }
     .progress-container {
-        height: 50px; /* 减小移动端进度条高度 */
+        height: 50px;
     }
 
-    /* 优化移动端导航箭头 - 显著减小尺寸 */
+    /* 移动端导航箭头优化 - 大幅减小尺寸并改善位置 */
     .nav-arrow {
-        font-size: 14px; /* 从16px减小到14px */
-        padding: 6px 10px; /* 从8px 12px减小到6px 10px */
-        border-radius: 4px; /* 稍微减小圆角 */
-        top: 60%; /* 稍微下移位置，避免遮挡内容 */
+        font-size: 12px; /* 从16px减小到12px */
+        padding: 4px 8px; /* 从8px 12px减小到4px 8px */
+        border-radius: 6px;
+        top: 70%; /* 下移到70%位置，避免遮挡主要内容 */
+        border-width: 1px; /* 减小边框宽度 */
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
     .nav-arrow-left {
-        left: 5px; /* 从10px减小到5px */
+        left: 8px; /* 从15px减小到8px */
     }
     .nav-arrow-right {
-        right: 5px; /* 从10px减小到5px */
+        right: 8px; /* 从15px减小到8px */
+    }
+    .nav-arrow:hover {
+        transform: translateY(-72%); /* 调整hover状态的位移 */
     }
 
     /* 移动端文章内容字体优化 */
     .item .content {
-        font-size: 16px; /* 减小移动端正文字体 */
+        font-size: 16px;
     }
 
     /* 移动端分页链接优化 */
     .more-articles-link {
-        font-size: 20px; /* 减小移动端更多文章链接字体 */
-        padding: 10px 20px; /* 减小padding */
+        font-size: 20px;
+        padding: 10px 20px;
     }
     .prev-articles-link {
-        font-size: 18px; /* 减小移动端上一页链接字体 */
-        padding: 8px 16px; /* 减小padding */
+        font-size: 18px;
+        padding: 8px 16px;
     }
 }
 
@@ -423,12 +432,24 @@ h2 {
 @media (max-width: 480px) {
     body {
         padding: 5px;
-        border-width: 3px; /* 减小边框宽度 */
+        border-width: 3px;
     }
 
+    /* 超小屏幕导航箭头进一步优化 */
     .nav-arrow {
-        font-size: 12px; /* 超小屏幕进一步减小 */
-        padding: 4px 8px;
+        font-size: 10px; /* 进一步减小到10px */
+        padding: 3px 6px; /* 进一步减小padding */
+        border-radius: 4px;
+        top: 75%; /* 进一步下移 */
+    }
+    .nav-arrow-left {
+        left: 5px;
+    }
+    .nav-arrow-right {
+        right: 5px;
+    }
+    .nav-arrow:hover {
+        transform: translateY(-77%);
     }
 
     .container {

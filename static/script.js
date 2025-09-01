@@ -1,23 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Touch swipe navigation
+    // 获取导航链接信息
+    const prevPageLink = document.querySelector('.nav-arrow-left');
+    const nextPageLink = document.querySelector('.nav-arrow-right');
+
+    let prevPageUrl = null;
+    let nextPageUrl = null;
+
+    if (prevPageLink) {
+        prevPageUrl = prevPageLink.getAttribute('href');
+    }
+    if (nextPageLink) {
+        nextPageUrl = nextPageLink.getAttribute('href');
+    }
+
+    // Touch swipe navigation - 修复模板变量问题
     let touchStartX = 0;
     let touchEndX = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
 
     document.addEventListener('touchstart', function(event) {
         touchStartX = event.changedTouches[0].screenX;
+        touchStartY = event.changedTouches[0].screenY;
     });
 
     document.addEventListener('touchend', function(event) {
         touchEndX = event.changedTouches[0].screenX;
+        touchEndY = event.changedTouches[0].screenY;
         handleSwipe();
     });
 
     function handleSwipe() {
-        const swipeDistance = touchEndX - touchStartX;
-        if (swipeDistance > 50 && "{{ prev_page }}") {
-            window.location.href = "/{{ prev_page }}";
-        } else if (swipeDistance < -50 && "{{ next_page }}") {
-            window.location.href = "/{{ next_page }}";
+        const swipeDistanceX = touchEndX - touchStartX;
+        const swipeDistanceY = touchEndY - touchStartY;
+
+        // 只有在水平滑动距离大于垂直滑动距离时才触发页面切换
+        // 这样可以避免在垂直滚动时误触发页面切换
+        if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY) && Math.abs(swipeDistanceX) > 80) {
+            if (swipeDistanceX > 80 && prevPageUrl) {
+                // 向右滑动，跳转到上一页
+                window.location.href = prevPageUrl;
+            } else if (swipeDistanceX < -80 && nextPageUrl) {
+                // 向左滑动，跳转到下一页
+                window.location.href = nextPageUrl;
+            }
         }
     }
 
@@ -97,6 +123,18 @@ document.addEventListener('DOMContentLoaded', function() {
             if (arrow) {
                 arrow.style.transform = 'rotate(0deg)';
             }
+        }
+    });
+
+    // 添加键盘导航支持
+    document.addEventListener('keydown', function(event) {
+        // 左箭头键 - 上一页
+        if (event.key === 'ArrowLeft' && prevPageUrl) {
+            window.location.href = prevPageUrl;
+        }
+        // 右箭头键 - 下一页
+        else if (event.key === 'ArrowRight' && nextPageUrl) {
+            window.location.href = nextPageUrl;
         }
     });
 });
