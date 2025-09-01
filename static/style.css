@@ -390,19 +390,3 @@ h2 {
         right: 10px;
     }
 }
-
-/* Debug: 确保侧边栏在所有页面都显示 */
-.sidebar {
-    display: block !important;
-    visibility: visible !important;
-}
-
-.content-wrapper {
-    display: flex !important;
-}
-
-/* 文章页面全宽样式 */
-.full-width {
-    width: 100% !important;
-    margin: 0 auto;
-}
