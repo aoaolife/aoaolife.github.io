@@ -179,11 +179,13 @@ body {
     white-space: nowrap;
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
 }
+
+/* 修复首页文章显示一致性 - 每个文章都有独立的边框 */
 .item {
     border: 2px solid #1d9bf0;
     border-radius: 24px;
     padding: 20px 24px;
-    margin: 0 auto 20px;
+    margin: 0 auto 20px; /* 确保每个item都有底部间距 */
     background-color: rgba(255, 255, 255, 0.95);
     text-align: left;
     font-size: 28px;
@@ -347,6 +349,8 @@ h2 {
     color: #0a6db7;
     background-color: rgba(255, 255, 255, 1);
 }
+
+/* 移动端优化 */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -366,28 +370,91 @@ h2 {
     }
     .container {
         width: 100%;
+        padding: 20px; /* 减少移动端padding */
     }
     .item {
-        font-size: 24px;
+        font-size: 20px; /* 稍微减小移动端字体 */
+        padding: 15px 18px; /* 减少移动端item padding */
     }
     .article-title {
-        font-size: 28px;
+        font-size: 24px; /* 减小移动端标题字体 */
     }
     .current-time {
-        font-size: 24px;
+        font-size: 20px; /* 减小移动端时间字体 */
     }
     .progress-text {
-        font-size: 20px;
+        font-size: 16px; /* 减小移动端进度条字体 */
     }
+    .progress-container {
+        height: 50px; /* 减小移动端进度条高度 */
+    }
+
+    /* 优化移动端导航箭头 - 显著减小尺寸 */
     .nav-arrow {
-        font-size: 16px;
-        padding: 8px 12px;
+        font-size: 14px; /* 从16px减小到14px */
+        padding: 6px 10px; /* 从8px 12px减小到6px 10px */
+        border-radius: 4px; /* 稍微减小圆角 */
+        top: 60%; /* 稍微下移位置，避免遮挡内容 */
     }
     .nav-arrow-left {
-        left: 10px;
+        left: 5px; /* 从10px减小到5px */
     }
     .nav-arrow-right {
-        right: 10px;
+        right: 5px; /* 从10px减小到5px */
+    }
+
+    /* 移动端文章内容字体优化 */
+    .item .content {
+        font-size: 16px; /* 减小移动端正文字体 */
+    }
+
+    /* 移动端分页链接优化 */
+    .more-articles-link {
+        font-size: 20px; /* 减小移动端更多文章链接字体 */
+        padding: 10px 20px; /* 减小padding */
+    }
+    .prev-articles-link {
+        font-size: 18px; /* 减小移动端上一页链接字体 */
+        padding: 8px 16px; /* 减小padding */
+    }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        border-width: 3px; /* 减小边框宽度 */
+    }
+
+    .nav-arrow {
+        font-size: 12px; /* 超小屏幕进一步减小 */
+        padding: 4px 8px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .item {
+        font-size: 18px;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+    }
+
+    .article-title {
+        font-size: 20px;
+    }
+
+    .current-time {
+        font-size: 18px;
+    }
+
+    .progress-text {
+        font-size: 14px;
+    }
+
+    .progress-container {
+        height: 40px;
     }
 }
 
@@ -399,6 +466,29 @@ h2 {
 
 .content-wrapper {
     display: flex !important;
+}
+
+/* 分页导航容器 */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.pagination-container .prev-articles,
+.pagination-container .more-articles {
+    margin: 0;
+    padding: 0;
+}
+
+/* 移动端分页导航优化 */
+@media (max-width: 768px) {
+    .pagination-container {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 /* 文章页面全宽样式 */
