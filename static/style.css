@@ -244,8 +244,11 @@ h2 {
 /* 修复后的首页底部"更多文章..."样式 */
 .more-articles {
     text-align: center;
-    margin-top: 30px;
+    margin: 30px auto 0 auto; /* 强制居中对齐 */
     padding: 20px 0;
+    width: 100%; /* 确保容器占满宽度 */
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* flex居中 */
 }
 
 .more-articles-link {
