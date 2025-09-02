@@ -284,24 +284,38 @@ h2 {
     transform: translateY(-1px);
     text-decoration: none;
 }
+
+/* 修复 .article-footer 布局和 .more-link 样式 */
 .article-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* 改为居中对齐 */
     align-items: center;
     margin-top: 10px;
     width: 100%;
     position: relative;
 }
+
 .article-footer .more-link {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     color: #1d9bf0;
+    text-decoration: none;
+    font-size: 14px; /* 从16px减少到14px，约为一半大小 */
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    /* 移除绝对定位，让它自然居中 */
 }
+
+.article-footer .more-link:hover {
+    text-decoration: underline;
+    background-color: rgba(29, 155, 240, 0.05);
+}
+
 .article-footer .date {
-    font-size: 16px;
+    font-size: 14px; /* 从16px减少到14px保持一致性 */
     color: #1d9bf0;
-    margin-left: auto;
+    position: absolute;
+    right: 0;
     text-align: right;
 }
 .copyright {
