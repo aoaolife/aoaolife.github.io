@@ -232,63 +232,41 @@ h1 {
 h2 {
     font-size: 18px;
 }
-
-/* 修复后的 .article-footer 和 .more-link 样式 */
-.article-footer {
-    display: flex;
-    justify-content: center; /* 居中对齐 */
-    align-items: center;
-    margin-top: 15px;
-    width: 100%;
-    position: relative;
-}
-
-.article-footer .more-link {
+.more-link {
     color: #1d9bf0;
     text-decoration: none;
-    font-size: 8px; /* 从16px减少到8px，约为一半大小 */
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    text-align: center; /* 确保文本居中 */
+    font-size: 16px;
 }
-
-.article-footer .more-link:hover {
+.more-link:hover {
     text-decoration: underline;
-    background-color: rgba(29, 155, 240, 0.05);
 }
 
-.article-footer .date {
-    font-size: 8px; /* 相应减小日期字体保持一致性 */
-    color: #1d9bf0;
-    position: absolute;
-    right: 0;
-    text-align: right;
-}
-
+/* 修复后的首页底部"更多文章..."样式 */
 .more-articles {
     text-align: center;
     margin-top: 30px;
     padding: 20px 0;
 }
+
 .more-articles-link {
     color: #1d9bf0;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 16px; /* 从32px减少到16px，约为一半大小 */
     font-weight: 600;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 8px 15px; /* 从15px 30px减少到8px 15px */
     border: 2px solid #1d9bf0;
-    border-radius: 24px;
+    border-radius: 12px; /* 从24px减少到12px */
     background-color: rgba(255, 255, 255, 0.95);
     transition: all 0.2s ease;
 }
+
 .more-articles-link:hover {
     background-color: rgba(29, 155, 240, 0.03);
     transform: translateY(-2px);
     text-decoration: none;
 }
+
 .prev-articles {
     text-align: center;
     margin-top: 20px;
@@ -310,6 +288,26 @@ h2 {
     background-color: rgba(29, 155, 240, 0.03);
     transform: translateY(-1px);
     text-decoration: none;
+}
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+.article-footer .more-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1d9bf0;
+}
+.article-footer .date {
+    font-size: 16px;
+    color: #1d9bf0;
+    margin-left: auto;
+    text-align: right;
 }
 .copyright {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -424,7 +422,7 @@ h2 {
         font-size: 16px;
     }
 
-    /* 移动端分页链接优化 */
+    /* 移动端分页链接优化 - 保持现有的移动端样式 */
     .more-articles-link {
         font-size: 20px;
         padding: 10px 20px;
@@ -432,15 +430,6 @@ h2 {
     .prev-articles-link {
         font-size: 18px;
         padding: 8px 16px;
-    }
-
-    /* 移动端 .more-link 和 .date 样式 */
-    .article-footer .more-link {
-        font-size: 6px; /* 移动端进一步减小 */
-    }
-
-    .article-footer .date {
-        font-size: 6px;
     }
 }
 
@@ -492,15 +481,6 @@ h2 {
 
     .progress-container {
         height: 40px;
-    }
-
-    /* 超小屏幕 .more-link 和 .date 样式 */
-    .article-footer .more-link {
-        font-size: 5px; /* 超小屏幕更小字体 */
-    }
-
-    .article-footer .date {
-        font-size: 5px;
     }
 }
 
