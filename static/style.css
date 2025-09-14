@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     background-color: #f5f5f5;
@@ -12,19 +13,23 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .nav {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .nav a {
     color: #1d9bf0;
     text-decoration: none;
     margin: 0 10px;
     font-size: 18px;
 }
+
 .nav a:hover {
     text-decoration: underline;
 }
+
 .content-wrapper {
     width: 70%;
     margin: 0 auto;
@@ -32,6 +37,7 @@ body {
     align-items: flex-start;
     flex: 1;
 }
+
 .sidebar {
     width: 30%;
     padding: 20px;
@@ -41,6 +47,7 @@ body {
     max-height: calc(100vh - 100px);
     overflow-y: auto;
 }
+
 .sidebar-title {
     color: #1d9bf0;
     font-size: 20px;
@@ -49,12 +56,15 @@ body {
     border-bottom: 2px solid #1d9bf0;
     padding-bottom: 10px;
 }
+
 .tree-container {
     font-size: 14px;
 }
+
 .tree-item {
     margin: 2px 0;
 }
+
 .tree-node {
     display: flex;
     align-items: center;
@@ -64,9 +74,11 @@ body {
     transition: background-color 0.2s ease;
     position: relative;
 }
+
 .tree-node:hover {
     background-color: rgba(29, 155, 240, 0.1);
 }
+
 .tree-icon {
     width: 16px;
     height: 16px;
@@ -77,30 +89,36 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .tree-toggle {
     flex: 1;
     color: #1d9bf0;
     font-weight: 500;
     user-select: none;
 }
+
 .tree-link {
     flex: 1;
     color: #1d9bf0;
     text-decoration: none;
     font-weight: 400;
 }
+
 .tree-link:hover {
     text-decoration: underline;
 }
+
 .tree-arrow {
     color: #1d9bf0;
     font-size: 10px;
     margin-left: 4px;
     transition: transform 0.2s ease;
 }
+
 .tree-item.expanded .tree-arrow {
     transform: rotate(90deg);
 }
+
 .tree-children {
     margin-left: 24px;
     display: none;
@@ -108,6 +126,7 @@ body {
     padding-left: 8px;
     position: relative;
 }
+
 .tree-children::before {
     content: '';
     position: absolute;
@@ -117,24 +136,30 @@ body {
     width: 1px;
     background: linear-gradient(to bottom, rgba(29, 155, 240, 0.3), transparent);
 }
+
 .tree-item.expanded .tree-children {
     display: block;
 }
+
 .file-item .tree-node {
     padding-left: 12px;
 }
+
 .file-item .tree-icon {
     opacity: 0.8;
 }
+
 .main-content {
     flex: 1;
 }
+
 .container {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .title {
     margin: 0 0 20px 0;
     padding: 15px 20px;
@@ -142,12 +167,14 @@ body {
     text-align: center;
     border-radius: 16px;
 }
+
 .current-time {
     font-size: 28px;
     font-weight: 600;
     color: #1d9bf0;
     margin-bottom: 15px;
 }
+
 .progress-container {
     background-color: #f0f2f5;
     border: 2px solid #1d9bf0;
@@ -160,6 +187,7 @@ body {
     justify-content: center;
     width: 100%;
 }
+
 .progress-bar {
     height: 100%;
     background-color: #1d9bf0;
@@ -169,6 +197,7 @@ body {
     top: 0;
     z-index: 1;
 }
+
 .progress-text {
     position: relative;
     z-index: 2;
@@ -180,12 +209,11 @@ body {
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
 }
 
-/* 修复首页文章显示一致性 - 每个文章都有独立的边框 */
 .item {
     border: 2px solid #1d9bf0;
     border-radius: 24px;
     padding: 20px 24px;
-    margin: 0 auto 20px; /* 确保每个item都有底部间距 */
+    margin: 0 auto 20px;
     background-color: rgba(255, 255, 255, 0.95);
     text-align: left;
     font-size: 28px;
@@ -198,68 +226,77 @@ body {
     min-height: 120px;
     max-width: 800px;
 }
+
 .item:hover {
     background-color: rgba(29, 155, 240, 0.03);
     transform: translateY(-2px);
 }
+
 .article-title {
     text-align: center;
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 32px;
 }
+
 .article-title a {
     color: #1d9bf0;
     text-decoration: none;
 }
+
 .article-title a:hover {
     text-decoration: underline;
 }
+
 .item .content {
     text-align: left;
     margin: 10px 0;
     flex: 1;
     font-size: 18px;
 }
+
 .item .content img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
 }
+
 h1 {
     font-size: 24px;
 }
+
 h2 {
     font-size: 18px;
 }
+
 .more-link {
     color: #1d9bf0;
     text-decoration: none;
     font-size: 16px;
 }
+
 .more-link:hover {
     text-decoration: underline;
 }
 
-/* 修复后的首页底部"更多文章..."样式 */
 .more-articles {
     text-align: center;
-    margin: 30px auto 0 auto; /* 强制居中对齐 */
+    margin: 30px auto 0 auto;
     padding: 20px 0;
-    width: 100%; /* 确保容器占满宽度 */
-    display: flex; /* 使用flex布局 */
-    justify-content: center; /* flex居中 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .more-articles-link {
     color: #1d9bf0;
     text-decoration: none;
-    font-size: 16px; /* 从32px减少到16px，约为一半大小 */
+    font-size: 16px;
     font-weight: 600;
     display: inline-block;
-    padding: 8px 15px; /* 从15px 30px减少到8px 15px */
+    padding: 8px 15px;
     border: 2px solid #1d9bf0;
-    border-radius: 12px; /* 从24px减少到12px */
+    border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.95);
     transition: all 0.2s ease;
 }
@@ -275,6 +312,7 @@ h2 {
     margin-top: 20px;
     padding: 10px 0;
 }
+
 .prev-articles-link {
     color: #1d9bf0;
     text-decoration: none;
@@ -287,11 +325,13 @@ h2 {
     background-color: rgba(255, 255, 255, 0.9);
     transition: all 0.2s ease;
 }
+
 .prev-articles-link:hover {
     background-color: rgba(29, 155, 240, 0.03);
     transform: translateY(-1px);
     text-decoration: none;
 }
+
 .article-footer {
     display: flex;
     justify-content: space-between;
@@ -300,18 +340,21 @@ h2 {
     width: 100%;
     position: relative;
 }
+
 .article-footer .more-link {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     color: #1d9bf0;
 }
+
 .article-footer .date {
     font-size: 16px;
     color: #1d9bf0;
     margin-left: auto;
     text-align: right;
 }
+
 .copyright {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     font-size: 14px;
@@ -321,6 +364,7 @@ h2 {
     margin: 20px auto 0;
     max-width: 800px;
 }
+
 .nickname {
     align-self: flex-end;
     margin-top: auto;
@@ -330,10 +374,12 @@ h2 {
     text-align: right;
     padding-top: 10px;
 }
+
 .date {
     font-size: 16px;
     color: #1d9bf0;
 }
+
 .nav-arrow {
     position: fixed;
     top: 50%;
@@ -349,16 +395,82 @@ h2 {
     transition: all 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .nav-arrow-left {
     left: 15px;
 }
+
 .nav-arrow-right {
     right: 15px;
 }
+
 .nav-arrow:hover {
     color: #0a6db7;
     background-color: rgba(255, 255, 255, 1);
     transform: translateY(-52%);
+}
+
+/* 社交按钮样式 */
+.social-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 10px 15px;
+    color: #1d9bf0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.social-icon i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    color: #0a6db7;
+    transform: translateY(-2px);
+}
+
+/* 扫码二维码样式 */
+.qrcode-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qrcode-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.qrcode-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qrcode-img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #1d9bf0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.qrcode-img:hover {
+    transform: scale(1.05);
+}
+
+.qrcode-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #1d9bf0;
 }
 
 /* 移动端优化 */
@@ -367,72 +479,100 @@ h2 {
         padding: 10px;
         border-width: 4px;
     }
+
     .content-wrapper {
         width: 100%;
         flex-direction: column;
     }
+
     .sidebar {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
         max-height: 300px;
     }
+
     .main-content {
         width: 100%;
     }
+
     .container {
         width: 100%;
         padding: 20px;
     }
+
     .item {
         font-size: 20px;
         padding: 15px 18px;
     }
+
     .article-title {
         font-size: 24px;
     }
+
     .current-time {
         font-size: 20px;
     }
+
     .progress-text {
         font-size: 16px;
     }
+
     .progress-container {
         height: 50px;
     }
 
-    /* 移动端导航箭头优化 - 大幅减小尺寸并改善位置 */
     .nav-arrow {
-        font-size: 12px; /* 从16px减小到12px */
-        padding: 4px 8px; /* 从8px 12px减小到4px 8px */
+        font-size: 12px;
+        padding: 4px 8px;
         border-radius: 6px;
-        top: 70%; /* 下移到70%位置，避免遮挡主要内容 */
-        border-width: 1px; /* 减小边框宽度 */
+        top: 70%;
+        border-width: 1px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
+
     .nav-arrow-left {
-        left: 8px; /* 从15px减小到8px */
-    }
-    .nav-arrow-right {
-        right: 8px; /* 从15px减小到8px */
-    }
-    .nav-arrow:hover {
-        transform: translateY(-72%); /* 调整hover状态的位移 */
+        left: 8px;
     }
 
-    /* 移动端文章内容字体优化 */
+    .nav-arrow-right {
+        right: 8px;
+    }
+
+    .nav-arrow:hover {
+        transform: translateY(-72%);
+    }
+
     .item .content {
         font-size: 16px;
     }
 
-    /* 移动端分页链接优化 - 保持现有的移动端样式 */
     .more-articles-link {
         font-size: 20px;
         padding: 10px 20px;
     }
+
     .prev-articles-link {
         font-size: 18px;
         padding: 8px 16px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+        margin: 8px 10px;
+    }
+
+    .social-icon i {
+        font-size: 18px;
+    }
+
+    .qrcode-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .qrcode-container {
+        gap: 20px;
     }
 }
 
@@ -443,19 +583,21 @@ h2 {
         border-width: 3px;
     }
 
-    /* 超小屏幕导航箭头进一步优化 */
     .nav-arrow {
-        font-size: 10px; /* 进一步减小到10px */
-        padding: 3px 6px; /* 进一步减小padding */
+        font-size: 10px;
+        padding: 3px 6px;
         border-radius: 4px;
-        top: 75%; /* 进一步下移 */
+        top: 75%;
     }
+
     .nav-arrow-left {
         left: 5px;
     }
+
     .nav-arrow-right {
         right: 5px;
     }
+
     .nav-arrow:hover {
         transform: translateY(-77%);
     }
@@ -485,9 +627,27 @@ h2 {
     .progress-container {
         height: 40px;
     }
+
+    .social-icon {
+        font-size: 14px;
+        margin: 6px 8px;
+    }
+
+    .social-icon i {
+        font-size: 16px;
+    }
+
+    .qrcode-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .qrcode-container {
+        gap: 15px;
+    }
 }
 
-/* Debug: 确保侧边栏在所有页面都显示 */
+/* 确保侧边栏显示 */
 .sidebar {
     display: block !important;
     visibility: visible !important;
