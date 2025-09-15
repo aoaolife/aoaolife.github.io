@@ -14,9 +14,11 @@ body {
     flex-direction: column;
 }
 
+/* 修复导航栏对齐问题 - 添加与content-wrapper相同的宽度限制 */
 .nav {
+    width: 70%;
+    margin: 0 auto 20px auto;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .nav a {
@@ -452,7 +454,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}160
+}
 
 .qrcode-img {
     width: 160px;
@@ -478,6 +480,16 @@ h2 {
     body {
         padding: 10px;
         border-width: 4px;
+    }
+
+    /* 移动端导航栏也需要调整 - 方案3 */
+    .nav {
+        width: 100%;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .content-wrapper {
