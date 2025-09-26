@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI图片生成 - aoao.life</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="/index.html">主页aoao.life</a> | <a href="/about.html">关于我</a> | <a href="/aoaoindex.html">aoao免费福利及技术服务咨询</a>
+    </div>
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            <div class="title">
+                <div class="current-time">现在是2025年09月26日</div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar" style="width: 73.7%;"></div>
+                    <div id="progress-text" class="progress-text">2025年已完成 73.7% [剩余96天]</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <div class="article-title">AI图片生成</div>
+                    <div class="content"><p>谷歌发布了图像模型 Gemini 2.5 Flash Image（项目名 <a href="https://aistudio.google.com/models/gemini-2-5-flash-image">Nano Banana</a>）。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091305.webp" alt="" /></p>
+
+<p>谷歌称它是目前“<strong>最先进的图像生成和编辑模型</strong>”。</p>
+
+<p>我试用后，感觉确实很强，而且免费使用，打开<a href="https://aistudio.google.com/prompts/new_chat?model=gemini-2.5-flash-image-preview">官网</a>（下图）就能用。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025092111.webp" alt="" /></p>
+
+<p>（备注：如果你访问不了官网，周刊讨论区也有接入官方 API 的<a href="https://github.com/search?q=repo%3Aruanyf%2Fweekly+nano+banana&type=issues">第三方网站</a>，不过大部分要收费。）</p>
+
+<p>对于这个模型，网友发现了各种神奇的用法，有人甚至收集成了一个 <a href="https://github.com/PicoTrex/Awesome-Nano-Banana-images">Awesome 仓库</a>。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025092113.webp" alt="" /></p>
+
+<p>我从这个仓库里面，挑了几个很实用的例子，分享给大家。需要说明的是，我想其他图像模型也能做这些事，大家可以试试。</p>
+
+<h3>（1）人像处理</h3>
+
+<p>图像模型的最常见任务，一定是人像处理。我们先上传一张生活照片。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091308.webp" alt="" /></p>
+
+<p>然后，让模型将其转成证件照，提示词如下。</p>
+
+<blockquote>
+  <p>请为照片里面的人物生成1寸证件照，要求白底，职业正装，睁眼微笑。</p>
+</blockquote>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091309.webp" alt="" /></p>
+
+<p>这个效果有点惊人啊。它意味着，人物的表情、发型、妆容、服饰、姿势都是可以改变的。</p>
+
+<p>下面就是改变人物表情，让其侧脸对着镜头微笑。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091319.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091320.webp" alt="" /></p>
+
+<p>改变人物的姿势，“将下面第二张图片的人物，改成第一张图片的姿势。”</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091316.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091317.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091318.webp" alt="" /></p>
+
+<p>照相馆以后危险了，肖像照、旅游照、集体照都可以交给 AI 了。</p>
+
+<h3>（2）建筑处理</h3>
+
+<p>图像模型的另一个用途是家居装潢，要看家装效果图就让 AI 生成，更改装潢配色和家具，都是小 case。</p>
+
+<p>下面是一个难度更高的例子，上传一张户型图，让它变成 3D 模型渲染图。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091310.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091311.webp" alt="" /></p>
+
+<p>从照片提取建筑模型，也挺神奇。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091323.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091324.webp" alt="" /></p>
+
+<h3>（3）包装处理</h3>
+
+<p>下面，让模型更改物品的包装，“将图二的漫画形象，贴到图一的包装盒，生成一张专业的产品照”。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091313.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091314.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091315.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025092112.webp" alt="" /></p>
+
+<p>书籍的封面、软件的包装盒，也可以同样生成。</p>
+
+<h3>（4）地图处理</h3>
+
+<p>图像模型的另一个大市场是地图应用（地理信息），只不过还没想到可以收费的玩法。下面就是一个创新的用例。</p>
+
+<p>上传一张地图，上面用箭头标注你选定的地点，让模型“生成沿着红色箭头看到的场景。”</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025092114.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025092115.webp" alt="" /></p>
+
+<p>它甚至可以从地形等高线图，生成红色箭头处的实景图。</p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091326.webp" alt="" /></p>
+
+<p><img src="https://cdn.beekka.com/blogimg/asset/202509/bg2025091327.webp" alt="" /></p>
+
+<div style="text-align: right;">—— 搬石头砸别人的脚</div>
+</div>
+                </div>
+                <div class="copyright"><a href="https://aoao.life">aoao.life Python静态网站生成系统</a></div>
+            </div>
+        </div>
+    </div>
+    
+        
+            <a href="/aoao随笔/社会娱乐/aoao谈小米-垃圾消费者.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/aoao随笔/社会娱乐/日本有一个传说.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
