@@ -1,7 +1,3 @@
-2025-11-10 21:02:40: 解析 Markdown 文件 C:\aoaolife\aoao人工技术服务咨询\aoao.life网页截图系统.md 时出错: 'str' object has no attribute 'parent'
-2025-11-10 21:02:40: 解析 Markdown 文件 C:\aoaolife\aoao人工技术服务咨询\001-aoao免费福利\Perplexity AI 高级会员Paypal用户免费200美元.md 时出错: 'str' object has no attribute 'parent'
-2025-11-10 21:02:40: 解析 Markdown 文件 C:\aoaolife\aoao人工技术服务咨询\001-aoao免费福利\免费发放edu邮箱，大型企业邮箱.md 时出错: 'str' object has no attribute 'parent'
-2025-11-10 21:02:40: 解析 Markdown 文件 C:\aoaolife\aoao人工技术服务咨询\aoaoPython静态网站生成发布系统\aoaoPython静态网站生成发布系统.md 时出错: 'str' object has no attribute 'parent'
-2025-11-10 21:02:40: 生成关于页面: C:\aoaolifepublic\about.html
-2025-11-10 21:02:40: 复制静态文件到 public/static
-2025-11-10 21:02:45: 网站生成完成！
+2025-11-10 21:05:06: 生成关于页面: C:\aoaolifepublic\about.html
+2025-11-10 21:05:06: 复制静态文件到 public/static
+2025-11-10 21:05:11: 网站生成完成！
