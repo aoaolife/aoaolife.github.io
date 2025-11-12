@@ -79,6 +79,23 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+
+        /* Tree expansion styles (add these if not in style.css) */
+        .tree-children {
+            display: none;
+            margin-left: 20px;
+        }
+        .tree-item.expanded .tree-children {
+            display: block;
+        }
+        .tree-arrow {
+            transition: transform 0.3s;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .tree-item.expanded .tree-arrow {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body>
@@ -107,20 +124,20 @@
                 
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">经典幽默笑话</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">经典幽默笑话 (20)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">内涵笑话</span>
+                                    <span class="tree-toggle">内涵笑话 (10)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -222,10 +239,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">成人笑话</span>
+                                    <span class="tree-toggle">成人笑话 (6)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -291,10 +308,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">冷笑话</span>
+                                    <span class="tree-toggle">冷笑话 (4)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -347,20 +364,20 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao生活</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">aoao生活 (36)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao娱乐八卦</span>
+                                    <span class="tree-toggle">aoao娱乐八卦 (12)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -480,10 +497,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao阅读学习</span>
+                                    <span class="tree-toggle">aoao阅读学习 (15)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -630,10 +647,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao电影电视</span>
+                                    <span class="tree-toggle">aoao电影电视 (3)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -672,10 +689,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao音乐</span>
+                                    <span class="tree-toggle">aoao音乐 (5)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -732,10 +749,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao游戏</span>
+                                    <span class="tree-toggle">aoao游戏 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -761,20 +778,20 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao随笔</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">aoao随笔 (197)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao娱乐八卦</span>
+                                    <span class="tree-toggle">aoao娱乐八卦 (22)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -984,10 +1001,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">科技技术</span>
+                                    <span class="tree-toggle">科技技术 (16)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -1143,10 +1160,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">政治经济</span>
+                                    <span class="tree-toggle">政治经济 (42)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -1536,10 +1553,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">文化教育</span>
+                                    <span class="tree-toggle">文化教育 (34)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -1857,10 +1874,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">社会娱乐</span>
+                                    <span class="tree-toggle">社会娱乐 (81)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -2610,10 +2627,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">生活感悟</span>
+                                    <span class="tree-toggle">生活感悟 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -2639,20 +2656,20 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">网友名人名言</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">网友名人名言 (53)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">网友言论</span>
+                                    <span class="tree-toggle">网友言论 (18)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -2826,10 +2843,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">名人名言</span>
+                                    <span class="tree-toggle">名人名言 (10)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -2931,10 +2948,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">大V言论</span>
+                                    <span class="tree-toggle">大V言论 (10)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3036,10 +3053,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">心灵鸡汤</span>
+                                    <span class="tree-toggle">心灵鸡汤 (15)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3191,20 +3208,20 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao人工技术服务咨询</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">aoao人工技术服务咨询 (8)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao免费福利</span>
+                                    <span class="tree-toggle">aoao免费福利 (3)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3243,10 +3260,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao无效邮箱地址清除系统</span>
+                                    <span class="tree-toggle">aoao无效邮箱地址清除系统 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3267,10 +3284,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao邮件系统邮件群发系统</span>
+                                    <span class="tree-toggle">aoao邮件系统邮件群发系统 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3291,10 +3308,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao爬虫系统</span>
+                                    <span class="tree-toggle">aoao爬虫系统 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3315,10 +3332,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao图片视频压缩水印工具</span>
+                                    <span class="tree-toggle">aoao图片视频压缩水印工具 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3339,10 +3356,10 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoaoPython静态网站生成发布系统</span>
+                                    <span class="tree-toggle">aoaoPython静态网站生成发布系统 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
@@ -3368,11 +3385,11 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoaoTemp</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">aoaoTemp (2)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
@@ -3401,20 +3418,20 @@
                         
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item expanded">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoaoIT技术项目</span>
-                                    <span class="tree-arrow">▶</span>
+                                    <span class="tree-toggle">aoaoIT技术项目 (1)</span>
+                                    <span class="tree-arrow">▼</span>
                                 </div>
                                 <div class="tree-children">
                                     
                     
                         
-                            <div class="tree-item">
+                            <div class="tree-item ">
                                 <div class="tree-node">
                                     <span class="tree-icon">📁</span>
-                                    <span class="tree-toggle">aoao信息网络安全</span>
+                                    <span class="tree-toggle">aoao信息网络安全 (1)</span>
                                     <span class="tree-arrow">▶</span>
                                 </div>
                                 <div class="tree-children">
