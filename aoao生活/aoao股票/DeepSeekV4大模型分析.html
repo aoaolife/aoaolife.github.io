@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeekV4大模型分析 - aoao.life</title>
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="/index.html">主页aoao.life</a> | <a href="/about.html">关于我</a> | <a href="/aoaoindex.html">aoao免费福利及技术服务咨询</a>
+    </div>
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            <div class="title">
+                <div class="current-time">现在是2026年01月14日</div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar" style="width: 3.8%;"></div>
+                    <div id="progress-text" class="progress-text">2025年已完成 3.8% [剩余351天]</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <div class="article-title">DeepSeekV4大模型分析</div>
+                    <div class="content"><h1><strong>深度研报：DeepSeek V4 深度全景分析</strong></h1>
+
+<p>报告日期： 2026年1月14日<br />
+报告类型： 深度行业策略报告 / TMT 专题研究<br />
+主要覆盖领域： 半导体、人工智能、消费电子、计算机软件、通信基础设施</p>
+
+<h2>---</h2>
+
+<p><strong>摘要：从“云端算力垄断”到“端侧智能普惠”的范式转移</strong></p>
+
+<p>2025年初，DeepSeek（深度求索）凭借DeepSeek-V3与R1模型的发布，以极低的训练成本和媲美顶尖闭源模型的性能，在全球人工智能领域引发了“DeepSeek冲击波”。如今，市场普遍预期DeepSeek V4将进一步突破技术边界，推出千亿参数级别且能在消费级显卡（Consumer-Grade GPUs）上高效运行的大模型。这一潜在的技术飞跃，不仅是算法层面的迭代，更是AI算力部署架构的根本性重构——标志着人工智能正从高度中心化的云端训练/推理模式，向去中心化的**端侧推理（Edge Inference）**模式加速演进。</p>
+
+<p>本报告认为，DeepSeek V4若实现“千亿模型入端”，将彻底打破英伟达（NVIDIA）高端算力芯片对AI产业的“卡脖子”效应。通过混合专家架构（MoE）、多头潜在注意力（MLA）及极致的量化蒸馏技术，DeepSeek正在将超级智能的边际成本降至零（Zero Marginal Cost），这将引发消费级硬件（AI PC、AI手机、边缘盒子）的换机潮，并重塑中国科技产业链的价值分配逻辑。</p>
+
+<p>基于对DeepSeek技术路径、供应链生态及中国A股上市公司的深度穿透分析，我们筛选出在这一范式转移中具备最高贝塔（Beta）与阿尔法（Alpha）收益的四大核心投资主线：</p>
+
+<ol>
+<li><strong>端侧算力芯片（Edge SoC &amp; ASIC）：</strong> 能够承载本地大模型推理的国产芯片厂商，是本次浪潮的“第一顺位”受益者。  </li>
+<li><strong>国产GPU与GPGPU替代：</strong> 填补英伟达消费级与工作站级显卡空白的国产领军企业。  </li>
+<li><strong>AI应用与操作系统：</strong> 因本地推理成本归零而实现商业模式闭环的软件与OS厂商。  </li>
+<li><strong>关键基础设施（Pick-and-Shovel）：</strong> 支撑高性能端侧硬件的先进封装、高速互连（CXL）、PCB及散热解决方案。</li>
+</ol>
+
+<p>本报告全文约15,000字，将详细拆解DeepSeek V4的技术红利如何传导至瑞芯微、寒武纪、金山办公、中科创达、澜起科技等核心标的，并对供应链上下游进行穷尽式的挖掘与验证。</p>
+
+<h2>---</h2>
+
+<p><strong>第一章 DeepSeek V4 的技术猜想与产业逻辑重构</strong></p>
+
+<p>要精准锚定资本市场的受益标的，首先必须从底层逻辑上理解“千亿参数模型运行在消费级显卡上”意味着什么，以及它是如何实现的。这并非科幻，而是基于DeepSeek已验证技术路线的合理外推。</p>
+
+<h3><strong>1.1 技术奇点：打破“显存墙”与“算力墙”</strong></h3>
+
+<p>在DeepSeek出现之前，运行一个1000亿参数（100B）的模型通常需要至少200GB的显存（FP16精度），这通常意味着需要配置4张80GB显存的NVIDIA A100或H100专业卡，成本高达数十万元人民币，且受到美国严格的出口管制。然而，DeepSeek通过以下核心技术，正在将这一门槛降至消费级水平（如24GB-48GB显存）：</p>
+
+<h4><strong>1.1.1 混合专家架构（Mixture-of-Experts, MoE）的极致优化</strong></h4>
+
+<p>DeepSeek-V3虽然拥有6710亿总参数，但在推理过程中，对于每一个Token（词元），仅激活约370亿（37B）参数。这是一种稀疏激活机制。</p>
+
+<ul>
+<li><strong>产业含义：</strong> 这意味着算力需求（FLOPS）被压缩了90%以上。对于消费级显卡而言，核心瓶颈不再是计算速度，而是显存容量和带宽。MoE架构使得“计算”不再是拦路虎，让RTX 4090甚至国产高端显卡具备了运行超大模型的理论算力基础。</li>
+</ul>
+
+<h4><strong>1.1.2 多头潜在注意力（Multi-Head Latent Attention, MLA）</strong></h4>
+
+<p>DeepSeek独创的MLA架构大幅压缩了推理过程中的KV Cache（键值缓存）占用。在长文本推理中，KV Cache通常会吞噬大量显存。</p>
+
+<ul>
+<li><strong>产业含义：</strong> MLA技术使得在有限显存的消费级设备上，处理长达128k上下文成为可能。这为“端侧长文档分析”、“本地代码库理解”等杀手级应用扫清了硬件障碍。</li>
+</ul>
+
+<h4><strong>1.1.3 激进的量化与蒸馏技术（Quantization &amp; Distillation）</strong></h4>
+
+<p>DeepSeek V4预计将深度整合4bit甚至更低精度的量化技术。一个100B的模型，在4bit精度下，显存占用可压缩至50GB-60GB左右。若进一步采用DeepSeek R1所展示的蒸馏技术，将能力压缩至32B或14B的“满血”小模型，显存需求仅需10GB-24GB。</p>
+
+<ul>
+<li><strong>产业含义：</strong> 24GB显存正是高端消费级显卡（如RTX 4090、国产摩尔线程S80等）的配置上限，也是Mac Studio等创意工作站的舒适区。这意味着，<strong>DeepSeek V4将使得每一台高性能PC都成为一个独立的AI推理中心</strong>。</li>
+</ul>
+
+<h3><strong>1.2 商业模式的颠覆：推理成本归零</strong></h3>
+
+<p>当前AI商业模式受制于高昂的API调用成本（Token Economics）。企业不敢大规模部署AI，因为用得越多，付给云厂商的钱越多。<br />
+DeepSeek V4若能本地运行，将带来**“一次性硬件投入，永久免费推理”**的新模式。</p>
+
+<ul>
+<li><strong>对软件厂商：</strong> 也就是金山办公、泛微网络等，可以直接在用户电脑上跑模型，无需为此支付昂贵的云端算力账单，毛利率将大幅提升。  </li>
+<li><strong>对硬件厂商：</strong> 用户为了获得这“免费”的超级智能，会疯狂升级手中的硬件。这将引发一轮类似于20年前“3D游戏推动显卡升级”的硬件军备竞赛，但这次的动力是生产力。</li>
+</ul>
+
+<h2>---</h2>
+
+<p><strong>第二章 核心受益主线一：端侧算力芯片（Edge SoC &amp; ASIC）</strong></p>
+
+<p>这是DeepSeek V4浪潮中弹性最大、确定性最高的板块。相比于难以获得的英伟达芯片，国产端侧芯片不受制裁影响，且产能充足，是承接“AI入端”需求的主力军。</p>
+
+<h3><strong>2.1 瑞芯微（603893.SH）：AIoT时代的“英特尔”</strong></h3>
+
+<p>在消费级和边缘侧AI芯片领域，瑞芯微（Rockchip）是中国市场的绝对霸主。DeepSeek V4的发布，极有可能确立瑞芯微在端侧推理芯片中的垄断地位。</p>
+
+<h4><strong>2.1.1 逻辑拆解：RK3588的“神机”地位</strong></h4>
+
+<ul>
+<li><strong>产品匹配度：</strong> 瑞芯微旗舰芯片RK3588内置6 TOPS算力的NPU（神经网络处理器），支持INT4/INT8/FP16混合运算。虽然6 TOPS听起来不如英伟达的几百TOPS，但得益于DeepSeek模型的稀疏架构和RK3588的高效能效比，大量评测和产业实践表明，RK3588已成功运行DeepSeek R1的蒸馏版本（1.5B/7B/14B）。  </li>
+<li><strong>产业验证：</strong> 根据最新的技术社区和开发者反馈（参考资料1），开发者已经利用瑞芯微官方的RKLLM工具链，成功将DeepSeek模型量化并部署在RK3588开发板上，实现了离线对话和推理。这证明了DeepSeek与瑞芯微架构的兼容性。  </li>
+<li><strong>海量场景：</strong> 瑞芯微的芯片广泛应用于边缘计算盒子、商业显示屏、智能座舱、ARM PC、甚至机器人。一旦DeepSeek V4推出适合端侧的蒸馏版本，数以亿计的搭载RK3588的设备将瞬间升级为“具备逻辑推理能力的智能终端”。</li>
+</ul>
+
+<h4><strong>2.1.2 财务与估值弹性</strong></h4>
+
+<p>瑞芯微正处于从传统SoC向AIoT SoC转型的拐点。DeepSeek带来的端侧推理需求，将大幅提升其高毛利芯片（RK3588及未来的RK3588 Pro/RK3688）的出货占比。不仅是量增，更是价升（ASP提升）。</p>
+
+<h3><strong>2.2 晶晨股份（688099.SH）：多媒体AI的潜伏者</strong></h3>
+
+<p>虽然瑞芯微在通用算力上更强，但晶晨股份在机顶盒、电视芯片领域占据全球领导地位。</p>
+
+<ul>
+<li><strong>逻辑拆解：</strong> DeepSeek V4的多模态能力（如果是V4）将不仅限于文本，还包括视觉理解。晶晨股份正在将NPU引入其全线产品，推动“AI电视”和“AI音箱”的发展。DeepSeek的小型化模型将是家庭智能终端升级的核心驱动力。</li>
+</ul>
+
+<h3><strong>2.3 全志科技（300458.SZ）</strong></h3>
+
+<p>作为中低端市场的补充，全志科技在扫地机器人、智能音箱等对成本敏感的领域具备优势。DeepSeek如果推出极小参数（如1.5B）的高智商模型，全志的芯片将能赋能更广泛的廉价消费电子产品。</p>
+
+<h2>---</h2>
+
+<p><strong>第三章 核心受益主线二：国产GPU与GPGPU替代</strong></p>
+
+<p>DeepSeek V4强调“消费级显卡”。在中国市场，这意味着除了存量的NVIDIA RTX 4090/3090外，增量市场必须依靠国产显卡填补。美国制裁导致RTX 4090在华销售受限（需特供版4090D），这给国产显卡留出了巨大的市场真空。</p>
+
+<h3><strong>3.1 寒武纪（688256.SH）：国产AI算力的“扛旗者”</strong></h3>
+
+<p>寒武纪是目前A股市场中技术最硬核、对标英伟达最直接的标的。</p>
+
+<ul>
+<li><strong>深度适配DeepSeek：</strong> 研究资料显示，寒武纪已在第一时间完成了DeepSeek-V3和R1模型的适配工作（参考资料4）。其软件栈（Cambricon Neuware）对DeepSeek的支持已经达到了“开箱即用”的级别。  </li>
+<li><strong>消费级/工作站潜力：</strong> 虽然寒武纪主打数据中心（思元系列），但其思元370等中端卡完全具备作为“消费级/发烧级”AI加速卡的潜力。如果DeepSeek V4引爆了本地推理需求，寒武纪很有可能推出针对高阶开发者和个人工作室的“AI工作站”解决方案，直接抢占原本属于RTX 4090的市场。  </li>
+<li><strong>生态卡位：</strong> 在DeepSeek引发的“去CUDA化”浪潮中，寒武纪是国内目前唯一建立起相对完整软件生态的厂商。</li>
+</ul>
+
+<h3><strong>3.2 海光信息（688041.SH）：最平滑的迁移路径</strong></h3>
+
+<ul>
+<li><strong>技术路线：</strong> 海光DCU（深算系列）属于GPGPU架构，其底层指令集与CUDA高度兼容（类ROCm生态）。对于习惯了CUDA开发的开发者来说，迁移到海光的成本最低。  </li>
+<li><strong>DeepSeek适配：</strong> 海光已宣布成功适配DeepSeek V3/R1，并能利用Flash Attention等算子加速技术（参考资料4）。  </li>
+<li><strong>市场地位：</strong> 在信创（信息技术应用创新）市场，海光拥有无可比拟的政企采购优势。随着DeepSeek V4被政府和央国企用于本地部署（出于数据安全考虑），海光的工作站和服务器将是首选硬件平台。</li>
+</ul>
+
+<h3><strong>3.3 景嘉微（300474.SZ）：国产图形渲染的破局者</strong></h3>
+
+<ul>
+<li><strong>逻辑拆解：</strong> 景嘉微是国产GPU的老牌劲旅，虽然起步于图形渲染（JM系列），但正在大力攻关通用计算（GPGPU）。DeepSeek V4如果能在消费级显卡上运行，景嘉微未来的高端消费级显卡（如JM9系列后续产品）将获得巨大的应用场景支撑，从单纯的“亮机卡”进化为“AI算力卡”。</li>
+</ul>
+
+<h2>---</h2>
+
+<p><strong>第四章 核心受益主线三：AI应用与操作系统（软件层）</strong></p>
+
+<p>如果说芯片是地基，软件就是DeepSeek V4红利的直接收割者。本地推理成本的消失，将直接转化为软件公司的净利润。</p>
+
+<h3><strong>4.1 金山办公（688111.SH）：商业模式的彻底重估</strong></h3>
+
+<p>金山办公（WPS）是本轮逻辑中最强的应用端Alpha。</p>
+
+<ul>
+<li><strong>痛点解决：</strong> 此前，WPS AI（WPS 365）依赖云端大模型，每当用户使用“一键生成PPT”或“文档润色”功能，金山都需要向大模型厂商支付Token费用，且对于政企客户存在数据出境或上云的安全顾虑。  </li>
+<li><strong>DeepSeek V4红利：</strong>  
+<ol>
+<li><strong>成本归零：</strong> 若DeepSeek V4可部署在用户本地电脑上，金山办公可直接调用本地算力。边际成本降为零，订阅收入将全部转化为毛利。  </li>
+<li><strong>数据安全：</strong> 结合WPS在政企市场的绝对统治力，本地化的DeepSeek+WPS方案将成为电子政务和央企办公的唯一解，完美契合信创安全要求（参考资料7）。  </li>
+<li><strong>产品力跃升：</strong> DeepSeek R1的逻辑推理能力极强，能显著提升WPS在Excel公式生成、复杂数据分析方面的能力，远超现有竞品。</li>
+</ol></li>
+</ul>
+
+<h3><strong>4.2 中科创达（300496.SZ）：端侧AI的“OS”与“中间件”</strong></h3>
+
+<ul>
+<li><strong>核心逻辑：</strong> 要想把DeepSeek V4这样一个庞然大物塞进手机、PC或汽车里，需要极强的操作系统优化能力（内存管理、NPU调度、量化压缩）。这正是中科创达的看家本领。  </li>
+<li><strong>产品布局：</strong> 中科创达已经推出了“魔方”大模型和边缘AI计算盒子（参考资料9）。作为高通、英特尔、瑞芯微的核心OS合作伙伴，每一台搭载DeepSeek的端侧设备，都需要中科创达进行底层软件适配。  </li>
+<li><strong>双重受益：</strong> 既受益于AI PC/AI手机的出货量增长（按设备收费），也受益于帮助厂商适配DeepSeek的开发服务费（NRE）。</li>
+</ul>
+
+<h3><strong>4.3 科大讯飞（002230.SZ）：硬件放量与模型博弈</strong></h3>
+
+<ul>
+<li><strong>竞合关系：</strong> 表面上看DeepSeek是讯飞星火大模型的竞争对手。但实际上，DeepSeek的开源推动了整个AI硬件市场的繁荣。  </li>
+<li><strong>硬件红利：</strong> 科大讯飞拥有庞大的C端硬件产品线（翻译机、录音笔、学习机）。如果能引入DeepSeek的能力（或利用DeepSeek蒸馏技术优化自身模型），将大幅提升其产品的智能化水平，刺激销量。  </li>
+<li><strong>算力底座：</strong> 讯飞与华为有着深度的绑定（“飞星一号”平台），在国产算力调度和应用上经验丰富，能迅速承接DeepSeek在教育、医疗等垂直领域的落地（参考资料11）。</li>
+</ul>
+
+<h3><strong>4.4 三六零（601360.SH）：浏览器入口的重塑</strong></h3>
+
+<ul>
+<li><strong>逻辑拆解：</strong> 360拥有国内最大的PC端浏览器入口。DeepSeek V4如果本地化，浏览器是最天然的交互界面。360已经宣布全线产品接入DeepSeek（参考资料12），通过“本地安全卫士+本地大模型”的组合，360有望重夺PC时代的流量入口主导权。</li>
+</ul>
+
+<h2>---</h2>
+
+<p><strong>第五章 核心受益主线四：关键基础设施（供应链与配套）</strong></p>
+
+<p>要让消费级显卡跑起来千亿模型，除了芯片本身，还需要配套的高速存储、散热和电路板支持。这些“卖铲子”的企业往往被忽视，但弹性极佳。</p>
+
+<h3><strong>5.1 澜起科技（688008.SH）：解决“内存墙”的关键先生（CXL）</strong></h3>
+
+<p><strong>这是本报告重点推荐的隐形冠军。</strong></p>
+
+<ul>
+<li><strong>逻辑核心：</strong> 消费级显卡最大的短板是显存不够（如RTX 4090只有24GB，而运行全精度千亿模型可能需要上百GB）。如何解决？答案是<strong>CXL（Compute Express Link）技术</strong>。CXL允许GPU借用系统内存（DDR5）作为显存的扩展池，虽然速度稍慢，但对于推理来说完全够用。  </li>
+<li><strong>行业地位：</strong> 澜起科技是全球CXL接口芯片的领跑者（参考资料13）。随着DeepSeek V4推动“大内存AI PC”和“AI工作站”的需求，CXL内存扩展控制器（MXC）将成为标配。澜起科技将直接受益于单机内存容量的成倍增长。</li>
+</ul>
+
+<h3><strong>5.2 胜宏科技（300476.SZ）&amp; 沪电股份（002463.SZ）：承载AI的高速公路</strong></h3>
+
+<ul>
+<li><strong>沪电股份：</strong> 是AI服务器和高性能显卡PCB（印制电路板）的核心供应商（参考资料15）。消费级显卡要运行大模型，其PCB层数、材料等级和工艺要求将向服务器级别看齐（HDI、高频高速材料）。  </li>
+<li><strong>胜宏科技：</strong> 是英伟达显卡PCB的隐形冠军，同时也服务于国产算力芯片。DeepSeek V4带来的显卡换代潮，将直接拉动高阶显卡PCB的出货量。</li>
+</ul>
+
+<h3><strong>5.3 英维克（002837.SZ）：液冷散热从机房走向桌面</strong></h3>
+
+<ul>
+<li><strong>逻辑拆解：</strong> 本地运行高负载大模型，会导致GPU和CPU长期处于满载发热状态。传统的风冷散热难以压制数百瓦的持续功耗，且噪音巨大。  </li>
+<li><strong>趋势：</strong> “桌面级液冷”将成为AI PC的标配。英维克作为精密温控龙头，不仅服务数据中心，其液冷技术完全可以下放到高性能工作站和消费级PC领域（参考资料17）。DeepSeek V4将催生对高效散热组件的巨大需求。</li>
+</ul>
+
+<h3><strong>5.4 通富微电（002156.SZ）：Chiplet先进封装</strong></h3>
+
+<ul>
+<li><strong>逻辑拆解：</strong> 消费级芯片要实现高性能，Chiplet（小芯片）封装技术是降低成本、提升良率的必经之路。通富微电是AMD的御用封测厂（参考资料19），在2.5D/3D封装领域技术领先。随着国产AI芯片（如海光、AMD Radeon系列）需求放量，通富微电的先进封装产能利用率将维持高位。</li>
+</ul>
+
+<h2>---</h2>
+
+<p><strong>第六章 泛生态圈：汽车与手机（The Ubiquity Play）</strong></p>
+
+<p>DeepSeek V4的愿景是“万物智能”，汽车和手机是除PC外最大的载体。</p>
+
+<h3><strong>6.1 德赛西威（002920.SZ）&amp; 均胜电子（600699.SH）</strong></h3>
+
+<ul>
+<li><strong>智能座舱：</strong> 资料显示，东风、吉利、比亚迪等车企已宣布接入DeepSeek（参考资料21）。车机芯片（如高通8295或国产芯）运行本地DeepSeek模型，将让车载语音助手发生质变。德赛西威作为智能座舱域控制器的龙头，将率先在硬件层面集成适配DeepSeek能力的算力平台。</li>
+</ul>
+
+<h3><strong>6.2 传音控股（688036.SH）</strong></h3>
+
+<ul>
+<li><strong>边缘AI出海：</strong> 传音在非洲和新兴市场拥有庞大用户群。DeepSeek的高性价比特性完美契合新兴市场需求。传音如果率先在手机中集成离线版DeepSeek，将极大提升其产品在网络基础设施较差地区的竞争力。</li>
+</ul>
+
+<h2>---</h2>
+
+<p><strong>第七章 市场估值与投资策略建议</strong></p>
+
+<h3><strong>7.1 估值体系重构</strong></h3>
+
+<p>市场对上述公司的估值逻辑，将从周期股（半导体周期、PC出货周期）转向成长股（AI渗透率）。对于能够卡位DeepSeek生态的公司，市场将给予显著的估值溢价。</p>
+
+<h3><strong>7.2 投资组合策略：金字塔配置模型</strong></h3>
+
+<ul>
+<li><strong>塔尖（核心进攻）：</strong> <strong>瑞芯微（603893）、寒武纪（688256）、金山办公（688111）。</strong>  
+<ul>
+<li><em>理由：</em> 最直接受益，弹性最大，逻辑最硬。瑞芯微是端侧算力基石，寒武纪是高端替代，金山办公是商业模式闭环。  </li>
+</ul></li>
+<li><strong>塔身（稳健配置）：</strong> <strong>澜起科技（688008）、海光信息（688041）、中科创达（300496）。</strong>  
+<ul>
+<li><em>理由：</em> 业绩确定性高，技术壁垒深厚。CXL和OS优化是绕不开的刚需。  </li>
+</ul></li>
+<li><strong>塔基（基础设施）：</strong> <strong>沪电股份（002463）、英维克（002837）、通富微电（002156）。</strong>  
+<ul>
+<li><em>理由：</em> 受益于行业Beta，不仅依赖DeepSeek，还有整体AI硬件行业的增长支撑。</li>
+</ul></li>
+</ul>
+
+<h3><strong>7.3 风险提示</strong></h3>
+
+<ol>
+<li><strong>技术落地不及预期：</strong> 如果DeepSeek V4在消费级显卡上的推理速度过慢（如低于10 tokens/s），用户体验将大打折扣，本地化逻辑证伪。  </li>
+<li><strong>供应链制裁加剧：</strong> 美国可能进一步限制SMIC的先进制程产能，影响瑞芯微、寒武纪等芯片的量产。  </li>
+<li><strong>价格战风险：</strong> DeepSeek的开源可能引发大模型价格战，虽然利好硬件，但可能导致软件厂商（如科大讯飞）的模型授权收入下降。</li>
+</ol>
+
+<h2>---</h2>
+
+<p><strong>结语：拥抱“端侧AI”的黄金时代</strong></p>
+
+<p>DeepSeek V4的传闻并非空穴来风，它是AI技术发展的必然趋势——从昂贵的云端走向普及的端侧。这一趋势将使得中国在算力受限的背景下，走出一条独特的“端云结合”之路。对于A股投资者而言，紧握<strong>瑞芯微</strong>的边缘算力、<strong>金山办公</strong>的应用落地、<strong>寒武纪</strong>的高端替代以及<strong>澜起科技</strong>的互连技术，是在这一轮DeepSeek引爆的AI新周期中获取超额收益的最佳路径。</p>
+
+<p>这不仅仅是一次产品的发布，这是中国AI产业链集体突围的号角。</p>
+
+<hr />
+
+<p><strong>附录：重点关注上市公司数据一览</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">证券代码</th>
+  <th style="text-align:left;">证券简称</th>
+  <th style="text-align:left;">核心逻辑关键词</th>
+  <th style="text-align:left;">DeepSeek关联度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>603893.SH</strong></td>
+  <td style="text-align:left;"><strong>瑞芯微</strong></td>
+  <td style="text-align:left;">Edge SoC, RK3588, 端侧推理, NPU</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>688256.SH</strong></td>
+  <td style="text-align:left;"><strong>寒武纪</strong></td>
+  <td style="text-align:left;">国产GPU替代, 适配DeepSeek, AI工作站</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>688111.SH</strong></td>
+  <td style="text-align:left;"><strong>金山办公</strong></td>
+  <td style="text-align:left;">办公AI, 成本归零, 信创安全</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>688008.SH</strong></td>
+  <td style="text-align:left;"><strong>澜起科技</strong></td>
+  <td style="text-align:left;">CXL内存扩展, 解决显存瓶颈</td>
+  <td style="text-align:left;">★★★★☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>688041.SH</strong></td>
+  <td style="text-align:left;"><strong>海光信息</strong></td>
+  <td style="text-align:left;">类CUDA生态, 政企工作站</td>
+  <td style="text-align:left;">★★★★☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>300496.SZ</strong></td>
+  <td style="text-align:left;"><strong>中科创达</strong></td>
+  <td style="text-align:left;">边缘OS, 算法优化, 智能硬件</td>
+  <td style="text-align:left;">★★★★☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>002837.SZ</strong></td>
+  <td style="text-align:left;"><strong>英维克</strong></td>
+  <td style="text-align:left;">液冷散热, 桌面级温控</td>
+  <td style="text-align:left;">★★★☆☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>002463.SZ</strong></td>
+  <td style="text-align:left;"><strong>沪电股份</strong></td>
+  <td style="text-align:left;">高速PCB, AI显卡电路板</td>
+  <td style="text-align:left;">★★★☆☆</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>(注：以上评级仅代表基于DeepSeek V4事件的关联度分析，不构成直接买卖建议)</em></p>
+
+<hr />
+
+<p><strong>[正文开始]</strong></p>
+
+<h1><strong>第一部分：DeepSeek V4 冲击波与端侧 AI 的崛起</strong></h1>
+
+<h2><strong>1.1 DeepSeek V4：重新定义“消费级”AI</strong></h2>
+
+<p>在2025年之前，人工智能行业存在一个不成文的共识：千亿参数（100B+）级别的大模型属于数据中心，属于H100/A100集群，属于云计算巨头。普通消费者手中的RTX 4090或MacBook Pro只能运行经过大幅阉割的、智商有限的“玩具”模型。</p>
+
+<p>DeepSeek（深度求索）的出现打破了这一神话。DeepSeek-V3以不到OpenAI o1十分之一的训练成本实现了同等性能，DeepSeek-R1则在逻辑推理上不仅追平了SOTA（State of the Art），更重要的是，它验证了<strong>混合专家（MoE）架构</strong>和<strong>极致量化技术</strong>在降低推理门槛上的巨大潜力。</p>
+
+<p>市场传闻中的<strong>DeepSeek V4</strong>，如果真如预期那样，能够在消费级显卡上运行千亿级参数模型，这将是AI发展史上的一个“iPhone时刻”。这不仅仅是模型变小了，而是<strong>计算范式（Computing Paradigm）的根本性转移</strong>。</p>
+
+<h3><strong>技术可行性深度拆解</strong></h3>
+
+<p>为什么千亿模型能塞进消费级显卡？我们需要深入理解以下三个技术维度，这也是我们筛选硬件受益股的底层逻辑：</p>
+
+<ol>
+<li>MoE架构的稀疏激活（Sparse Activation）：<br />
+传统稠密模型（Dense Model）在推理时，每一个Token都需要所有参数参与计算。而DeepSeek V4预计将沿用并优化V3的MoE架构。以V3为例，虽然总参数量高达671B，但每次推理仅激活37B参数。  
+<ul>
+<li><strong>投资映射：</strong> 这意味着对芯片的<strong>算力（TOPS）要求大幅降低。原本只有数据中心GPU才能处理的计算量，现在像瑞芯微RK3588</strong>、<strong>寒武纪思元系列</strong>甚至高端PC处理器都能处理。算力不再是瓶颈，这也解释了为什么我们要重点关注边缘侧芯片厂商。  </li>
+</ul></li>
+<li>显存占用的极致压缩（MLA + Quantization）：<br />
+消费级显卡最大的短板是显存（VRAM）。一张RTX 4090只有24GB显存，而未量化的100B模型需要200GB+。DeepSeek采用了两项关键技术：  
+<ul>
+<li><strong>多头潜在注意力（MLA）：</strong> 资料显示，MLA技术能将推理时的KV Cache显存占用压缩90%以上（参考资料24）。  </li>
+<li><strong>低比特量化：</strong> DeepSeek证明了在极低精度（如W4A16甚至更低）下，模型性能损失极小。一个100B的模型在4bit量化下，显存需求可降至50GB左右。如果配合系统内存卸载（Offload）或<strong>CXL技术</strong>，这完全在高端个人工作站的可承受范围内。  </li>
+<li><strong>投资映射：</strong> 这直接利好<strong>澜起科技</strong>（CXL技术）和<strong>存储产业链</strong>，因为“大内存”将成为AI PC的刚需。  </li>
+</ul></li>
+<li>知识蒸馏（Knowledge Distillation）：<br />
+DeepSeek R1展示了强大的蒸馏能力，将大模型的思考能力“传授”给小模型（如1.5B/7B/14B/32B）。DeepSeek V4很可能包含一个高性能的蒸馏版本矩阵。  
+<ul>
+<li><strong>投资映射：</strong> 1.5B-7B参数的模型是<strong>手机</strong>、<strong>汽车</strong>、<strong>智能家居</strong>的完美载体。这使得<strong>中科创达</strong>、<strong>全志科技</strong>、<strong>德赛西威</strong>等嵌入式AI厂商直接受益。</li>
+</ul></li>
+</ol>
+
+<h2><strong>1.2 为什么这对中国A股至关重要？</strong></h2>
+
+<p>DeepSeek V4的发布背景，是美国对华实施严厉的GPU出口管制。中国企业买不到H100/H800，甚至连RTX 4090的合规获取都变得困难。</p>
+
+<p>DeepSeek V4提供了一条**“软件突围”**的路径：<strong>既然买不到一张超强卡，那就用几张国产卡或者消费级卡，通过优化的模型来解决问题。</strong></p>
+
+<p>这将导致中国AI算力市场发生结构性变化：</p>
+
+<ul>
+<li><strong>需求转移：</strong> 从抢购天价的英伟达走私卡，转向采购国产推理芯片和构建基于消费级硬件的算力集群。  </li>
+<li><strong>产业链重塑：</strong> 只要能运行DeepSeek V4的芯片，就是好芯片。国产芯片厂商（如海光、寒武纪、瑞芯微）的软件生态劣势，在DeepSeek强大的开源适配支持下被大幅抹平。</li>
+</ul>
+
+<h1>---</h1>
+
+<p><strong>第二部分：核心受益板块一 —— 端侧算力芯片（Edge SoC &amp; ASIC）</strong></p>
+
+<p>这是本轮行情的“风暴眼”。DeepSeek V4让AI推理从云端下沉到端侧，直接引爆了具备NPU能力的SoC厂商。</p>
+
+<h2><strong>2.1 瑞芯微（603893.SH）：AIoT算力的“基建之王”</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 瑞芯微是目前国内最成熟、出货量最大的高端AIoT SoC供应商。其旗舰芯片RK3588是承载DeepSeek端侧落地的最佳载体。</p>
+
+<ul>
+<li>RK3588的技术壁垒：<br />
+RK3588不仅仅是一颗芯片，它是一个能够运行完整AI操作系统的平台。它集成了6 TOPS的NPU，四核Mali-G610 GPU，以及强大的视频编解码能力。<br />
+根据技术社区的实测反馈（参考资料1），RK3588已经成功通过RKLLM工具链部署了DeepSeek R1的蒸馏版（1.5B/7B）。实测显示，利用NPU加速，RK3588可以实现流畅的本地对话，且CPU占用率极低。<br />
+这意味着，数以千万计的基于RK3588的边缘计算盒子、工业平板、智能座舱，只需要一次OTA升级，就能获得DeepSeek的智力。  </li>
+<li>市场空间测算：<br />
+目前AI边缘计算盒子的市场规模正在以每年30%以上的速度增长。DeepSeek V4的发布将加速这一过程。除了传统的安防和工业质检，新兴的“具身智能”（机器人）和“家庭AI中枢”将大量采用RK3588系列芯片。瑞芯微作为这一领域的绝对龙头，将享受量价齐升的红利。  </li>
+<li>生态优势：<br />
+瑞芯微拥有庞大的开发者生态（参考资料26）。从Firefly到香橙派，无数开发者正在自发地为RK3588适配DeepSeek模型。这种“草根”生态力量是其他国产芯片厂商难以比拟的护城河。</li>
+</ul>
+
+<h2><strong>2.2 全志科技（300458.SZ）：普及型AI的推动者</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 如果说瑞芯微占据了高端边缘算力，全志科技则横扫中低端市场。</p>
+
+<ul>
+<li><strong>产品定位：</strong> 全志科技的T系列（车规）、A系列（平板）、V系列（视频）芯片广泛应用于智能音箱、扫地机器人和低成本平板。  </li>
+<li><strong>DeepSeek小模型红利：</strong> DeepSeek V4若推出1.5B甚至更小的微型模型，将可以直接运行在全志的中低端芯片上。这将赋能每家每户的智能家电，使其具备自然语言理解能力。全志科技的出货量级是亿级的，极小的单价提升都能带来巨大的利润弹性。</li>
+</ul>
+
+<h2><strong>2.3 晶晨股份（688099.SH）：多媒体AI的霸主</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 电视和机顶盒是家庭中屏幕最大、交互最自然的AI入口。</p>
+
+<ul>
+<li><strong>场景革命：</strong> 晶晨股份在机顶盒和电视SoC领域全球领先。DeepSeek V4的多模态能力（理解视频、图像）与晶晨的业务高度契合。未来的智能电视将不再只是播放器，而是基于DeepSeek的家庭智能助手。晶晨已全线导入NPU，准备迎接这一变革。</li>
+</ul>
+
+<h1>---</h1>
+
+<p><strong>第三部分：核心受益板块二 —— 国产GPU与GPGPU替代</strong></p>
+
+<p>DeepSeek V4强调“消费级显卡”，但在中国，由于制裁，高端消费级显卡市场出现了巨大的真空。国产GPU厂商迎来了千载难逢的“补位”良机。</p>
+
+<h2><strong>3.1 寒武纪（688256.SH）：硬核科技的“国货之光”</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 寒武纪是目前国内唯一能提供全栈式AI算力解决方案（从云到边到端）且上市的纯正标的。</p>
+
+<ul>
+<li>深度绑定DeepSeek：<br />
+根据行业调研（参考资料4），寒武纪与DeepSeek保持着极高频的互动。在DeepSeek V3发布后不久，寒武纪便宣布完成了思元（MLU）系列芯片的适配，且性能对标英伟达A100。  </li>
+<li>消费级市场的潜力：<br />
+寒武纪虽然主攻B端，但其思元370等产品的板卡形态完全可以适配高性能工作站。在DeepSeek V4的推动下，大量科研机构、高校和AI开发者需要建立本地推理环境。买不到RTX 4090，寒武纪的加速卡就成了最佳替代品。  </li>
+<li>软件生态的突破：<br />
+DeepSeek作为一个开源模型，其官方支持了华为CANN、寒武纪MLU等国产后端。这极大地降低了用户使用寒武纪芯片的门槛。以前用户不买寒武纪是因为“生态不好，跑不了代码”，现在DeepSeek官方帮你跑通了，这个最大的障碍被消除了。</li>
+</ul>
+
+<h2><strong>3.2 海光信息（688041.SH）：最像英维达的国产芯片</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 海光DCU（深算系列）基于GPGPU架构，其最大的优势是<strong>生态兼容性</strong>。</p>
+
+<ul>
+<li><strong>“类CUDA”生态：</strong> 海光DCU的指令集与软件栈设计高度兼容CUDA。这意味着，原本在英伟达显卡上跑的DeepSeek V4代码，迁移到海光DCU上的改动极小。这对于急需进行国产化替代的政企客户来说，是迁移成本最低的选择。  </li>
+<li><strong>信创市场的绝对主力：</strong> 随着DeepSeek V4被用于构建各级政府的“私有云”或“本地知识库”，海光作为信创服务器芯片的龙头，将垄断这一细分市场。</li>
+</ul>
+
+<h2><strong>3.3 景嘉微（300474.SZ）：从图形到计算的跨越</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 景嘉微是A股稀缺的拥有自主图形GPU技术的公司。</p>
+
+<ul>
+<li><strong>JH920的想象力：</strong> 景嘉微的JH920系列GPU已经具备了相当的浮点运算能力。虽然与顶尖显卡有差距，但对于运行量化后的DeepSeek小模型（如7B/14B）已绰绰有余。在国产化PC（信创PC）中，景嘉微是显卡的主力供应商。AI PC的概念将推动景嘉微显卡的价值量重估。</li>
+</ul>
+
+<h1>---</h1>
+
+<p><strong>第四部分：核心受益板块三 —— 软件、操作系统与应用</strong></p>
+
+<p>DeepSeek V4带来的**“推理成本归零”**，是软件行业商业模式的核聚变。</p>
+
+<h2><strong>4.1 金山办公（688111.SH）：WPS的二次腾飞</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 金山办公是DeepSeek V4红利变现路径最清晰的应用厂商。</p>
+
+<ul>
+<li>成本革命：<br />
+目前WPS AI（WPS 365）的功能依赖于云端大模型，这是一项昂贵的变动成本。一旦WPS能够调用用户本地电脑的DeepSeek V4模型，金山办公将不再需要为用户的每一次“AI润色”支付算力成本。这将直接拉升WPS AI订阅服务的毛利率。  </li>
+<li>隐私与安全护城河：<br />
+金山办公的核心客户是政府和央企（参考资料8）。这些客户对数据出境极其敏感。DeepSeek V4的本地化部署能力，使得WPS可以提供**“断网可用的AI能力”**。这完美解决了政企客户的痛点：既要AI的效率，又要数据的绝对安全。  </li>
+<li>产品体验升级：<br />
+DeepSeek R1强大的逻辑推理能力，能让WPS Excel实现复杂的自动数据分析和公式生成，这远超目前基于普通大模型的能力。</li>
+</ul>
+
+<h2><strong>4.2 中科创达（300496.SZ）：端侧AI的“卖水人”</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 芯片厂商（高通、瑞芯微）提供原木，中科创达将其加工成家具（操作系统）。</p>
+
+<ul>
+<li><strong>中间件的价值：</strong> 要让DeepSeek V4在手机、汽车、机器人上跑得顺畅，需要极其复杂的底层优化：NPU算子调度、内存压缩、异构计算管理。这是中科创达的核心技术壁垒（参考资料9）。  </li>
+<li><strong>多端布局：</strong> 中科创达不仅服务于手机厂商（小米、OPPO等），还是理想、蔚来等车企的核心OS供应商。随着车企纷纷接入DeepSeek（参考资料22），中科创达作为技术实施方（System Integrator），其NRE（工程服务）收入和IP授权收入将显著增长。</li>
+</ul>
+
+<h2><strong>4.3 软通动力（301236.SZ）&amp; 润和软件（300339.SZ）：鸿蒙+AI的共振</strong></h2>
+
+<ul>
+<li><strong>鸿蒙生态：</strong> 华为是DeepSeek的重要合作伙伴（算力底座）。软通动力和润和软件作为鸿蒙生态的核心建设者，正在推动DeepSeek模型在鸿蒙原生应用（PC、手机）中的落地。  </li>
+<li><strong>软硬一体：</strong> 软通动力收购同方计算机后，具备了生产AI服务器和AI PC的硬件能力。DeepSeek V4将助力其硬件产品的差异化竞争。</li>
+</ul>
+
+<h1>---</h1>
+
+<p><strong>第五部分：核心受益板块四 —— 基础设施（PCB、散热、封装、互连）</strong></p>
+
+<p>如果你挖不到金子，就卖铲子和牛仔裤。在AI硬件军备竞赛中，基础设施提供商拥有极高的确定性。</p>
+
+<h2><strong>5.1 澜起科技（688008.SH）：解决“内存焦虑”的CXL龙头</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> <strong>这是本报告的“首推标的”之一。</strong></p>
+
+<ul>
+<li><strong>痛点：</strong> 消费级显卡和PC最大的瓶颈是显存/内存容量太小，装不下千亿模型。  </li>
+<li><strong>解药：CXL（Compute Express Link）。</strong> CXL技术允许CPU通过高速接口连接外部内存池，从而极大地扩展可用内存。这对于运行DeepSeek V4这样的巨型模型至关重要。  </li>
+<li><strong>垄断地位：</strong> 澜起科技是全球CXL接口芯片（MXC）的领军者，不仅服务于服务器市场，其技术正下沉至高端工作站（参考资料13）。随着DeepSeek V4推动“大内存AI终端”的需求，澜起科技将迎来量价齐升。</li>
+</ul>
+
+<h2><strong>5.2 沪电股份（002463.SZ）&amp; 胜宏科技（300476.SZ）：承载算力的高速公路</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> AI算力的密度提升，直接导致PCB（印制电路板）的层数增加、材料升级。</p>
+
+<ul>
+<li><strong>沪电股份：</strong> 作为AI服务器PCB的全球龙头，沪电股份深度受益于DeepSeek带来的国产算力建设潮（参考资料15）。无论是华为昇腾服务器，还是未来的国产AI工作站，都需要沪电的高阶HDI板。  </li>
+<li><strong>胜宏科技：</strong> 显卡PCB的隐形冠军。如果DeepSeek V4引发全球（尤其是中国）的显卡升级换代潮，作为英伟达和国产显卡核心供应商的胜宏科技将直接受益。</li>
+</ul>
+
+<h2><strong>5.3 英维克（002837.SZ）：液冷散热的普及</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> 算力就是热量。本地运行DeepSeek V4将使PC长时间处于高功耗状态。</p>
+
+<ul>
+<li><strong>液冷下沉：</strong> 英维克是精密温控龙头，在数据中心液冷领域技术领先（参考资料17）。随着AI PC和AI工作站的功耗突破500W甚至1000W，传统的风冷已捉襟见肘。英维克的液冷技术将从机房走向桌面，成为高端AI PC的标配。</li>
+</ul>
+
+<h2><strong>5.4 通富微电（002156.SZ）：Chiplet封装的受益者</strong></h2>
+
+<p><strong>投资逻辑核心：</strong> AMD的御用封测厂。</p>
+
+<ul>
+<li><strong>关联度：</strong> 既然买不到英伟达，AMD的Radeon显卡和Instinct加速卡是最佳替代品之一。通富微电承接了AMD绝大部分的高端封装订单（参考资料19）。DeepSeek对AMD ROCm生态的支持，将间接拉动通富微电的产能利用率。</li>
+</ul>
+
+<h1>---</h1>
+
+<p><strong>第六部分：投资风险与策略总结</strong></p>
+
+<h2><strong>6.1 潜在风险提示</strong></h2>
+
+<ol>
+<li><strong>地缘政治风险：</strong> 虽然DeepSeek V4旨在降低硬件门槛，但如果美国进一步收紧对成熟制程（28nm/7nm）的制造设备出口，可能会影响瑞芯微、寒武纪等芯片的量产能力。  </li>
+<li><strong>技术落地不及预期：</strong> 如果DeepSeek V4在消费级显卡上的推理速度过慢（如低于人眼阅读速度），将极大影响用户体验，导致“本地推理”逻辑证伪。  </li>
+<li><strong>市场竞争：</strong> 阿里（Qwen）、腾讯（Hunyuan）等巨头也会跟进端侧模型，市场格局可能陷入价格战。</li>
+</ol>
+
+<h2><strong>6.2 投资策略总结</strong></h2>
+
+<p>DeepSeek V4的发布将是中国AI产业的一个分水岭。它标志着AI投资逻辑从**“云端基建”<strong>（光模块、服务器）向</strong>“端侧应用与硬件”**（Edge SoC、AI PC、AI Phone、端侧软件）的切换。</p>
+
+<p><strong>建议构建如下投资组合：</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">推荐评级</th>
+  <th style="text-align:left;">股票名称</th>
+  <th style="text-align:left;">代码</th>
+  <th style="text-align:left;">核心逻辑摘要</th>
+  <th style="text-align:left;">预期弹性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>强推</strong></td>
+  <td style="text-align:left;"><strong>瑞芯微</strong></td>
+  <td style="text-align:left;">603893</td>
+  <td style="text-align:left;">端侧算力底座，RK3588量价齐升，AIoT生态之王。</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>强推</strong></td>
+  <td style="text-align:left;"><strong>金山办公</strong></td>
+  <td style="text-align:left;">688111</td>
+  <td style="text-align:left;">推理成本归零的最大受益者，政企信创AI唯一解。</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>强推</strong></td>
+  <td style="text-align:left;"><strong>寒武纪</strong></td>
+  <td style="text-align:left;">688256</td>
+  <td style="text-align:left;">高端算力国产替代，深度适配DeepSeek，技术稀缺性。</td>
+  <td style="text-align:left;">★★★★★</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>推荐</strong></td>
+  <td style="text-align:left;"><strong>澜起科技</strong></td>
+  <td style="text-align:left;">688008</td>
+  <td style="text-align:left;">CXL技术解决本地大模型内存瓶颈，技术垄断。</td>
+  <td style="text-align:left;">★★★★☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>推荐</strong></td>
+  <td style="text-align:left;"><strong>中科创达</strong></td>
+  <td style="text-align:left;">300496</td>
+  <td style="text-align:left;">端侧OS与中间件，连接芯片与模型的必须环节。</td>
+  <td style="text-align:left;">★★★★☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>关注</strong></td>
+  <td style="text-align:left;"><strong>沪电股份</strong></td>
+  <td style="text-align:left;">002463</td>
+  <td style="text-align:left;">AI算力硬件基础设施，业绩确定性高。</td>
+  <td style="text-align:left;">★★★☆☆</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>关注</strong></td>
+  <td style="text-align:left;"><strong>英维克</strong></td>
+  <td style="text-align:left;">002837</td>
+  <td style="text-align:left;">桌面级液冷散热的新增量市场。</td>
+  <td style="text-align:left;">★★★☆☆</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>结论：</strong> DeepSeek V4不仅是一个模型，它是中国AI产业链在封锁下的一次绝地反击。这股力量将重塑硬件、软件和基础设施的价值分配，而上述公司正站在这一历史机遇的最前沿。</p>
+
+<h4><strong>引用的著作</strong></h4>
+
+<ol>
+<li>A Comprehensive Guide to Deploying the DeepSeek-R1 Large Model on the Forlinx OK3588-C Development Board (Part 1) | Hackaday.io, 访问时间为 一月 14, 2026， <a href="https://hackaday.io/page/399316-a-comprehensive-guide-to-deploying-the-deepseek-r1-large-model-on-the-forlinx-ok3588-c-development-board-part-1">https://hackaday.io/page/399316-a-comprehensive-guide-to-deploying-the-deepseek-r1-large-model-on-the-forlinx-ok3588-c-development-board-part-1</a>  </li>
+<li>How to deploy and test the DeepSeek on the RK3588 development board | Chipmall.com, 访问时间为 一月 14, 2026， <a href="https://www.chipmall.com/news/how-to-deploy-and-test-the-deepseek-on-the-rk3588-development-board_468">https://www.chipmall.com/news/how-to-deploy-and-test-the-deepseek-on-the-rk3588-development-board_468</a>  </li>
+<li>RKLLM DeepSeek-R1 - Radxa Docs, 访问时间为 一月 14, 2026， <a href="https://docs.radxa.com/en/rock5/rock5b/app-development/rkllm_deepseek_r1">https://docs.radxa.com/en/rock5/rock5b/app-development/rkllm_deepseek_r1</a>  </li>
+<li>DeepSeek：助力中国芯突围 - Supplyframe 四方维, 访问时间为 一月 14, 2026， <a href="https://cn.supplyframe.com/article/8309.html">https://cn.supplyframe.com/article/8309.html</a>  </li>
+<li>DeepSeek's Parent Company Earned 5 Billion Yuan Last Year - 36氪, 访问时间为 一月 14, 2026， <a href="https://eu.36kr.com/en/p/3637677974471689">https://eu.36kr.com/en/p/3637677974471689</a>  </li>
+<li>DeepSeek's new AI model debuts with support for China-native chips and CANN, a replacement for Nvidia's CUDA — Chinese chipmakers Huawei, Cambricon, and Hygon get first-class support | Tom's Hardware, 访问时间为 一月 14, 2026， <a href="https://www.tomshardware.com/tech-industry/deepseek-new-model-supports-huawei-cann">https://www.tomshardware.com/tech-industry/deepseek-new-model-supports-huawei-cann</a>  </li>
+<li>The "DeepSeek" Office Suite - WPS Office, 访问时间为 一月 14, 2026， <a href="https://www.wps.com/blog/wps-office-the-deepseek-office-suite/">https://www.wps.com/blog/wps-office-the-deepseek-office-suite/</a>  </li>
+<li>Kingsoft Office and Kingsoft Cloud have jointly launched a government AI all-in-one machine - 数据猿, 访问时间为 一月 14, 2026， <a href="https://datayuan.substack.com/p/kingsoft-office-and-kingsoft-cloud">https://datayuan.substack.com/p/kingsoft-office-and-kingsoft-cloud</a>  </li>
+<li>EBX Edge AI Station Series - ThunderSoft, 访问时间为 一月 14, 2026， <a href="https://en.thundersoft.com/edge-ai-station/">https://en.thundersoft.com/edge-ai-station/</a>  </li>
+<li>Edge Box - ThunderSoft, 访问时间为 一月 14, 2026， <a href="https://en.thundersoft.com/edge-box/">https://en.thundersoft.com/edge-box/</a>  </li>
+<li>iFlytek claims its latest LLM rivals OpenAI and DeepSeek - Regional, 访问时间为 一月 14, 2026， <a href="https://regional.chinadaily.com.cn/wic/2025-04/28/c_1089195.htm">https://regional.chinadaily.com.cn/wic/2025-04/28/c_1089195.htm</a>  </li>
+<li>Deepseek 影响深远，中国AI 市场有望重构, 访问时间为 一月 14, 2026， <a href="https://pdf.dfcfw.com/pdf/H3_AP202502111642965667_1.pdf?1739279773000.pdf">https://pdf.dfcfw.com/pdf/H3_AP202502111642965667_1.pdf?1739279773000.pdf</a>  </li>
+<li>M88MX5891, 访问时间为 一月 14, 2026， <a href="https://www.montage-tech.com/sites/default/files/2023-08/M88MX5891_Flyer_English_updated.pdf">https://www.montage-tech.com/sites/default/files/2023-08/M88MX5891_Flyer_English_updated.pdf</a>  </li>
+<li>CXL 3.1 MXC and the Future of Data Center Memory Architecture - Design And Reuse, 访问时间为 一月 14, 2026， <a href="https://www.design-reuse.com/news/202529287-cxl-3-1-mxc-and-the-future-of-data-center-memory-architecture/">https://www.design-reuse.com/news/202529287-cxl-3-1-mxc-and-the-future-of-data-center-memory-architecture/</a>  </li>
+<li>About Wus, 访问时间为 一月 14, 2026， <a href="https://www.wus.com.tw/index.php/en/">https://www.wus.com.tw/index.php/en/</a>  </li>
+<li>Wus Printed Circuit Rises After Unveiling USD300 Million High-End PCB Investment, 访问时间为 一月 14, 2026， <a href="https://www.yicaiglobal.com/news/wus-printed-circuit-rises-after-unveiling-usd300-million-high-end-pcb-investment">https://www.yicaiglobal.com/news/wus-printed-circuit-rises-after-unveiling-usd300-million-high-end-pcb-investment</a>  </li>
+<li>Liquid Cooling Leads the Way in the AI Infrastructure Track - 36氪, 访问时间为 一月 14, 2026， <a href="https://eu.36kr.com/en/p/3450822292084360">https://eu.36kr.com/en/p/3450822292084360</a>  </li>
+<li>News - Envicool, 访问时间为 一月 14, 2026， <a href="https://www.envicool.net/newsinfo2437.html">https://www.envicool.net/newsinfo2437.html</a>  </li>
+<li>Tongfu Microelectronics Co., Ltd.-FCBGA Series, 访问时间为 一月 14, 2026， <a href="https://en.tfme.com/">https://en.tfme.com/</a>  </li>
+<li>TongFu Microelectronics is investing in hybrid bonding intellectual property to bolster its advanced packaging activities - KnowMade, 访问时间为 一月 14, 2026， <a href="https://www.knowmade.com/technology-news/semiconductor-news/semiconductor-packaging-news/tongfu-microelectronics-is-investing-in-hybrid-bonding-intellectual-property-to-bolster-its-advanced-packaging-activities/">https://www.knowmade.com/technology-news/semiconductor-news/semiconductor-packaging-news/tongfu-microelectronics-is-investing-in-hybrid-bonding-intellectual-property-to-bolster-its-advanced-packaging-activities/</a>  </li>
+<li>端侧AI爆发，AI模组破局DeepSeek在实体产业落地最后一公里 - OFweek, 访问时间为 一月 14, 2026， <a href="https://m.ofweek.com/ai/2025-02/ART-201700-8470-30657424.html">https://m.ofweek.com/ai/2025-02/ART-201700-8470-30657424.html</a>  </li>
+<li>DeepSeek后更大的机遇：AI端侧推理创新| 智在终端 - 量子位, 访问时间为 一月 14, 2026， <a href="https://www.qbitai.com/2025/03/263134.html">https://www.qbitai.com/2025/03/263134.html</a>  </li>
+<li>持续更新｜DeepSeek真香！三大运营商、商汤等已接入，名单还在扩大 - 21财经, 访问时间为 一月 14, 2026， <a href="https://www.21jingji.com/article/20250208/herald/3d402c19a951d2de6adbd9af2111fe09.html">https://www.21jingji.com/article/20250208/herald/3d402c19a951d2de6adbd9af2111fe09.html</a>  </li>
+<li>Minipost: LLM inference vs training costs for DeepSeek - Muxup, 访问时间为 一月 14, 2026， <a href="https://muxup.com/2025q4/minipost-llm-inference-vs-training-cost-for-deepseek">https://muxup.com/2025q4/minipost-llm-inference-vs-training-cost-for-deepseek</a>  </li>
+<li>DeepSeek FAQ – Stratechery by Ben Thompson, 访问时间为 一月 14, 2026， <a href="https://stratechery.com/2025/deepseek-faq/">https://stratechery.com/2025/deepseek-faq/</a>  </li>
+<li>RK3588 AI Module7 | Crowd Supply, 访问时间为 一月 14, 2026， <a href="https://www.crowdsupply.com/armsom/rk3588-ai-module7">https://www.crowdsupply.com/armsom/rk3588-ai-module7</a>  </li>
+<li>ROC-RK3588-RT ARM Single Board Computer - Firefly Store, 访问时间为 一月 14, 2026， <a href="https://www.firefly.store/products/roc-rk3588-rt-roc-rk3588j-rt-octa-core-8k-ai-mini-sbc-with-ethernet-ports-powered-by-rockchip-rk3588">https://www.firefly.store/products/roc-rk3588-rt-roc-rk3588j-rt-octa-core-8k-ai-mini-sbc-with-ethernet-ports-powered-by-rockchip-rk3588</a>  </li>
+<li>RK3588 8-Core 8K AI Core Board (SOM3588 &amp; DB3588) - Geniatech Store, 访问时间为 一月 14, 2026， <a href="https://shop.geniatech.com/product/rk3588-board/">https://shop.geniatech.com/product/rk3588-board/</a>  </li>
+<li>Montage Technology Introduces CXL® 3.1 Memory eXpander Controller to Empower Next-Generation Data Center Infrastructure, 访问时间为 一月 14, 2026， <a href="https://www.montage-tech.com/Press_Releases/20250901">https://www.montage-tech.com/Press_Releases/20250901</a></li>
+</ol>
+</div>
+                </div>
+                <div class="copyright"><a href="https://aoao.life">aoao.life Python静态网站生成系统</a></div>
+            </div>
+        </div>
+    </div>
+    
+        
+        
+            <a href="/aoao生活/aoao股票/容百科技停牌原因与涨跌分析.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
