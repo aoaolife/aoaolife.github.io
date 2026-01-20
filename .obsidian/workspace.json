@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "18e85972c262bbf5",
+    "type": "split",
+    "children": [
+      {
+        "id": "89359f42914c3b7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "386f65e6a121e469",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "aoao人工技术服务咨询/001-aoao免费福利/免费发放edu邮箱，大型企业邮箱.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "免费发放edu邮箱，大型企业邮箱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3b67f763fe35e3fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "eff0156ea53f1267",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a58133d2c0357e1a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "fb7beffdc1d94aaa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "feefd237fb3b6a18",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "da06eda43a38d81e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6bfc1f8a7810ac0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "611d3ec1246882ae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "fc9835aa3b4a012b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "0901b6cbb16a8bed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "c60074e74d268a48",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "386f65e6a121e469",
+  "lastOpenFiles": [
+    "aoao随笔/文化教育/80后和90后不知道到底将会有多记恨这个世界.md",
+    "aoao生活/娱乐八卦/梁家辉对张曼玉说：“我们以后就不要再来往了.md",
+    "aoao生活/娱乐八卦/叶蕴仪拒绝林志颖的表白.md",
+    "aoao随笔/社会娱乐/这西贝强贱了人们.md",
+    "aoao生活/娱乐八卦",
+    "aoao随笔/政治经济/太平洋中途岛环礁中发现的一只信天翁尸体，腹腔里面都是塑料垃圾.md",
+    "aoao随笔/科技技术/城市已经全是摄像头传感器.md",
+    "aoao随笔/政治经济/论文泛滥的危机.md",
+    "aoao随笔/社会娱乐/aoao谈日本.md",
+    "网友名人名言/网友言论/找对象要趁早.md",
+    "aoao随笔/社会娱乐/只有你老婆可以自己选择.md",
+    "aoao随笔/社会娱乐/只有死了才是年轻.md",
+    "aoao随笔/社会娱乐/中国人不骗XX人.md",
+    "aoao随笔/社会娱乐/随缘，随遇而安。.md",
+    "aoao随笔/社会娱乐/没钱好卑微啊.md",
+    "aoao随笔/社会娱乐/金正恩同志打蓝球.md",
+    "aoao随笔/社会娱乐/好精致的老太婆.md",
+    "aoao随笔/社会娱乐/本质.md",
+    "aoao随笔/社会娱乐/不要看那么多片子.md",
+    "aoao随笔/社会娱乐/狒狒面对死亡.md",
+    "aoao随笔/社会娱乐/高速堵车应该可以缓解不少了.md",
+    "aoao随笔/社会娱乐/给各位一个建议：.md",
+    "aoao随笔/社会娱乐/人老了会这样.md",
+    "aoao随笔/社会娱乐/aoao谈彩礼-江西天价彩礼.md",
+    "aoao人工技术服务咨询/aoao图片视频压缩水印工具/Snipaste_2025-09-04_22-15-13.png",
+    "aoao人工技术服务咨询/aoao.life网页截图系统.md",
+    "aoao随笔/社会娱乐/aoao谈杨景某事件.md",
+    "aoao随笔/社会娱乐/现在比谁没有房.md",
+    "aoao人工技术服务咨询/aoao无效邮箱地址清除系统",
+    "aoao人工技术服务咨询/aoao无效邮箱地址清除系统/新建 文本文档.txt",
+    "aoao人工技术服务咨询/aoao无效邮箱地址清除系统/aoao无效邮箱地址清除系统.png",
+    "aoao人工技术服务咨询/aoao无效邮箱地址清除系统",
+    "aoao人工技术服务咨询/新建文件夹",
+    "aoao人工技术服务咨询/aoao无效邮箱地址清除系统.png",
+    "aoao人工1对1服务咨询/aoao邮件系统邮件群发系统",
+    "aoao人工1对1服务咨询/aoao爬虫系统",
+    "aoao人工1对1服务咨询/aoaoPython静态网站生成发布系统",
+    "aoao随笔/科技技术",
+    "aoao人工1对1服务咨询/001-aoao免费福利",
+    "aoao人工1对1服务咨询/aoao图片视频压缩水印工具/Snipaste_2025-09-04_22-15-13.png",
+    "aoao人工1对1服务咨询/aoao图片视频压缩水印工具/aoao图片视频压缩水印工具没压缩.png",
+    "aoao人工1对1服务咨询/aoao图片视频压缩水印工具/aoao图片视频压缩水印工具.webp",
+    "aoaoimages/aoao图片视频压缩水印工具 1.webp",
+    "aoaoimages/aoao图片视频压缩水印工具.webp",
+    "aoaoimages/阅兵女队.png",
+    "aoaoimages/陈凯歌陈红.jpg"
+  ]
+}
