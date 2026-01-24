@@ -2,7 +2,7 @@
 title: 2010年，郑中基与Angelababy高调传出绯闻，阿Sa便与郑中基离婚，阿Sa宣布与陈伟霆在一起。
 
 date: 2025-10-02
-updated: 2025-10-02 00:00:00
+updated: 2025-10-02 12:00:00
 ---
 2010年，郑中基与Angelababy高调传出绯闻，阿Sa便与郑中基离婚，阿Sa宣布与陈伟霆在一起。
 ![](https://img.aoao.life/2010年，郑中基与Angelababy高调传出绯闻，阿Sa便火速官宣与郑中基离婚，不久，阿Sa宣布.webp)

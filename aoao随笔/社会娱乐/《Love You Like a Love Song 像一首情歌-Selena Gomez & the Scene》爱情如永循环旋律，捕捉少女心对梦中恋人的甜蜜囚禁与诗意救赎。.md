@@ -2,7 +2,7 @@
 title: 《Love You Like a Love Song 像一首情歌-Selena Gomez & the Scene》爱情如永循环旋律，捕捉少女心对梦中恋人的甜蜜囚禁与诗意救赎。
 
 date: 2025-10-08
-updated: 2025-10-08 00:00:00
+updated: 2025-10-08 12:00:00
 ---
 ## 歌曲背景故事
 

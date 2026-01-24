@@ -2,7 +2,7 @@
 title: AI图片生成
 
 date: 2025-09-26
-updated: 2025-09-26 00:00:00
+updated: 2025-09-26 12:00:00
 ---
 谷歌发布了图像模型 Gemini 2.5 Flash Image（项目名 [Nano Banana](https://aistudio.google.com/models/gemini-2-5-flash-image)）。
 

@@ -2,7 +2,7 @@
 title: aoao谈嘉城李
 
 date: 2025-09-10
-updated: 2025-09-10 00:00:00
+updated: 2025-09-10 12:00:00
 ---
 最近嘉城李向乌科兰捐款5亿美元。做为天天排名第一首富来说不多。但是你可以天天骂他，
 ![](https://img.aoao.life/lijiachen.webp)
