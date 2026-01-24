@@ -2,7 +2,7 @@
 title: 《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花
 
 date: 2025-10-09
-updated: 2025-10-09 12:00:00
+updated: 2025-10-09 00:00:00
 ---
 ## 歌曲背景故事
 《APT.》是BLACKPINK成员ROSÉ的solo首秀与Bruno Mars的跨界合作，于2024年10月18日发行，由The Black Label和Atlantic Records联合推出。这首歌源于工作室里的即兴玩笑：ROSÉ分享了她钟爱的韩国饮酒游戏“아파트”（Apartment，简称APT），一种叠手匹配数字的派对游戏，Bruno Mars被其趣味性吸引，两人迅速创作出这首融合K-pop与复古迪斯科的单曲。灵感来源于ROSÉ的韩国文化根源，游戏象征随意而亲密的社交，巧妙隐喻现代恋爱的“随机匹配”。歌曲一经发布即席卷全球，登顶Billboard Global 200榜首，获NME满分5/5好评，并在MAMA Awards 2024首演，助力ROSÉ从团体偶像向独立艺人转型，Bruno Mars则借此注入韩流元素，刷新其“派对王”形象。时代背景下，它捕捉了后疫情青年对即时狂欢的渴望，销量破百万，MV播放量超5亿。

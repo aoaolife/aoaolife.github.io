@@ -2,7 +2,7 @@
 title: The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80
 
 date: 2025-11-28
-updated: 2025-11-28 12:00:00
+updated: 2025-11-28 00:00:00
 ---
 为什么更喜欢美国动画，看了几十年美国动画。 日本的吉普力比较不那么喜欢。 中国现在的大红大紫的相对比较不喜欢。 小时候那些动画片除外。
 ![](https://img.aoao.life/moviethebadguys2.webp)

@@ -2,7 +2,7 @@
 title: 无言的山丘 (Hill of No Return) (1992)-aoao评分_93
 
 date: 2026-01-05
-updated: 2026-01-05 12:00:00
+updated: 2026-01-05 00:00:00
 ---
 一段台湾历史。全闽南话。 那个叫天天流鼻血的娃这种幽默很台湾。
 ![](https://img.aoao.life/无言的山丘.webp)
