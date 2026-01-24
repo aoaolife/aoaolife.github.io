@@ -2,7 +2,7 @@
 title: aoao谈无人机
 
 date: 2025-10-04
-updated: 2025-10-04
+updated: 2025-10-04 12:00:00
 ---
 ![](https://img.aoao.life/无人机01.webp)
 

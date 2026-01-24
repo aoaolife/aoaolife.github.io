@@ -2,7 +2,7 @@
 title: aoao邮件EDM发送系统邮件群发系统
 
 date: 2025-09-10
-updated: 2025-09-10
+updated: 2025-09-10 12:00:00
 ---
 大型企业油件油箱EDM发送系统，跨境外贸必备。
 ![aoaoedmsys.webp](https://img.aoao.life/aoaoedmsys.webp)
