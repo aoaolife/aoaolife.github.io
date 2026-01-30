@@ -1,12 +1,12 @@
 ---
-updated: 2026-01-30 23:16:23 
-title: 我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团吧
+updated: 2026-01-30 23:17:52
+title: 我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?
 date: 2026-01-30
 ---
 
-我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团吧
+![emusk/emusk-202601292003.webp](https://img.aoao.life/emusk/emusk-202601292003.webp)
 
-(这里开始写正文...)
+
 
 
 
