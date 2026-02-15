@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京照相馆 (Dead to Rights) (2025) - aoao.life</title>
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 89.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+        }
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 89.0%;"></div>
+                    <div class="progress-text">今天 2025.11.21 | 已耗 89.0% · 剩 40 天</div>
+                </div>
+            </div>
+
+            <div class="article-title">南京照相馆 (Dead to Rights) (2025)</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2025年11月21日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2025年11月21日 12:00</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20251121.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="南京照相馆 (Dead to Rights) (2025)" data-url="https://aoao.life/20251121.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>本来对这种片子是不想看的，看完还行电影质量。80分。刚好最近中日非常紧张。- 我们不是朋友，绝对不是。 
+<img src="https://img.aoao.life/南京照相馆.webp" alt="" /></p>
+
+<p><details>
+<summary><strong>🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录</strong></summary></p>
+
+<p><br></p>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">🎬 <strong>基本元数据 (Metadata)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>原名</strong>：南京照相馆 (Dead to Rights)<br><strong>国家</strong>：🇨🇳 中国大陆 &nbsp;|&nbsp; <strong>时长/单集</strong>：137分钟<br><strong>导演/制作</strong>：申奥<br><strong>主演</strong>：刘昊然 / 王传君 / 高叶 / 王骁 / 周游 / 杨恩又 / 原岛大地<br><strong>类型</strong>：剧情 / 历史 / 战争<br><strong>链接</strong>：<a href="https://movie.douban.com/subject/36809864/">豆瓣(8.7)</a> &nbsp;|&nbsp; <a href="https://www.imdb.com/title/tt36598036/">IMDb(7.9)</a><br><strong>📺 剧集信息</strong>：N/A</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">💰 <strong>商业表现 &amp; 🏆 获奖荣誉</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>📊 票房/收视</strong>：中国大陆累计超30亿元，2025暑期档冠军，全球周末票房多次登顶<br><strong>🌍 影响力</strong>：唤醒民族记忆的现象级作品，代表中国内地角逐第98届奥斯卡最佳国际影片，重新定义南京大屠杀题材的银幕表达<br><strong>🎗️ 核心奖项</strong>：<br>• <strong>长春电影节金鹿奖</strong>：最佳影片 / 最佳导演 (申奥) / 最佳编剧</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">🏷️ <strong>标签系统 (Tags)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>[类型]</strong> <code>#剧情</code> <code>#历史</code> <code>#战争</code><br><strong>[人物]</strong> <code>#申奥</code> <code>#刘昊然</code> <code>#阿昌</code><br><strong>[主题]</strong> <code>#南京大屠杀</code> <code>#历史铁证</code> <code>#民族觉醒</code><br><strong>[氛围]</strong> <code>#压抑窒息</code> <code>#克制震撼</code> <code>#至暗微光</code><br><strong>[规格]</strong> <code>4K_Remux</code> <code>HDR</code></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">💬 <strong>个人影评 &amp; 观看理由 (Reviews)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>1. 暗房红光下的民族显影</strong><br>申奥将照相馆暗房化为没有硝烟的战场，红光摇曳中底片缓缓浮现的暴行画面，像手术刀般精准切割观众的情感神经。胶片与枪膛的声画蒙太奇，将“记录”升华为最锋利的武器，令人窒息却无法移开目光。<br><br><strong>2. 从求生到觉醒的角色弧光</strong><br>刘昊然饰演的阿昌从邮差到“1213号使命”的完成，完成了最动人的平凡英雄蜕变；高叶的林毓秀从舞台伶人到按下战犯枪决快门的复仇者，眼泪与快门声交织，演出了女性在民族苦难中最隐忍的尊严与力量。<br><br><strong>3. 侵略者伪善面具的层层剥落</strong><br>原岛大地饰演的伊藤从“喜欢中国文化”的伪善，到面对婴儿尸体只嫌“破坏构图”的冷血，精准刻画了军国主义如何腐蚀个体灵魂。没有脸谱化恶魔，却更令人毛骨悚然——这才是最真实的恐怖。<br><br><strong>4. 镜头语言的极致克制与爆发</strong><br>申奥用大量阴影、反射与留白取代直白血腥，却在关键时刻让暴行如闪电撕裂黑暗。摇晃镜头模拟战火中的恐慌，固定长镜头凝视人物的沉默崩塌，每一帧都像在拷问观众：面对历史，你敢直视多久？<br><br><strong>5. 铭记不是仇恨，而是吾辈自强的底气</strong><br>片尾今昔南京的蒙太奇对比，将88年前的伤痕与今日盛世叠化，正是最大彩蛋。它不煽情，却让每一位观众走出影院时脊背挺直——因为我们知道，和平从来不是天赐，而是先辈用生命换来的铁证。</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">📝 <strong>个人观影记录 (My Record)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>状态</strong>：✅ <strong>已看完</strong><br><strong>首看日期</strong>：2025-11-22<br><strong>观看平台</strong>：NAS / 电影院</td>
+</tr>
+</tbody>
+</table>
+
+<p></details></p>
+
+<div style="text-align: right;">—— 坐在墙上等红杏</div>
+</div>
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20251121.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)" style="border-color: #1d9bf0; color: #1d9bf0; padding: 10px 25px; font-size: 16px; border-radius: 30px; border-width: 2px;">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" style="border-color: #1d9bf0; color: #1d9bf0;" onclick="handleShareClick(this)" data-title="南京照相馆 (Dead to Rights) (2025)" data-url="https://aoao.life/20251121.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20251122-1.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20251121-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

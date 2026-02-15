@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分级保护全套方案-aoaoIT技术项目-aoao信息网络安全 - aoao.life</title>
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 66.8%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+        }
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 66.8%;"></div>
+                    <div class="progress-text">今天 2025.09.01 | 已耗 66.8% · 剩 121 天</div>
+                </div>
+            </div>
+
+            <div class="article-title">分级保护全套方案-aoaoIT技术项目-aoao信息网络安全</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2025年09月01日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2025年09月01日 12:00</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20250901-4.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="分级保护全套方案-aoaoIT技术项目-aoao信息网络安全" data-url="https://aoao.life/20250901-4.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><blockquote>
+  <p>企业安全建设解决方案-完全方案-对安全有个详细了解 需要完整文档的可以联系</p>
+</blockquote>
+
+<p><strong>目</strong> <strong>录</strong></p>
+
+<p><a href="#_Toc456168864">第1章  系统及安全域定级  1</a></p>
+
+<p><a href="#_Toc456168865">第2章     系统分析  2</a></p>
+
+<p><a href="#_Toc456168866">2.1     系统建设使用单位情况  2</a></p>
+
+<p><a href="#_Toc456168867">2.1.1   业务职责  2</a></p>
+
+<p><a href="#_Toc456168868">2.1.2   组织结构  6</a></p>
+
+<p><a href="#_Toc456168869">2.1.3   地域分布  6</a></p>
+
+<p><a href="#_Toc456168870">2.1.4   人员情况  7</a></p>
+
+<p><a href="#_Toc456168871">2.2     系统物理环境分析  8</a></p>
+
+<p><a href="#_Toc456168872">2.2.1   周边环境  8</a></p>
+
+<p><a href="#_Toc456168873">2.2.2   重要涉密部门部位  9</a></p>
+
+<p><a href="#_Toc456168874">2.3     网络平台分析  9</a></p>
+
+<p><a href="#_Toc456168875">2.3.1   网络平台覆盖范围  9</a></p>
+
+<p><a href="#_Toc456168876">2.3.2   网络拓扑结构  9</a></p>
+
+<p><a href="#_Toc456168877">2.3.3   系统边界与安全域现状  10</a></p>
+
+<p><a href="#_Toc456168878">2.3.4   线缆及设备隔离情况  10</a></p>
+
+<p><a href="#_Toc456168879">2.4     软硬件资源分析  10</a></p>
+
+<p><a href="#_Toc456168880">2.4.1   硬件设备资源  10</a></p>
+
+<p><a href="#_Toc456168881">2.4.2   系统软件资源  10</a></p>
+
+<p><a href="#_Toc456168882">2.5     信息资源与应用系统分析  11</a></p>
+
+<p><a href="#_Toc456168883">2.5.1   信息资源  11</a></p>
+
+<p><a href="#_Toc456168884">2.5.2   应用系统  11</a></p>
+
+<p><a href="#_Toc456168885">2.6     系统管理情况  12</a></p>
+
+<p><a href="#_Toc456168886">2.6.1   管理机构及职责  12</a></p>
+
+<p><a href="#_Toc456168887">2.6.2   管理制度  13</a></p>
+
+<p><a href="#_Toc456168888">第3章     安全保密风险分析  14</a></p>
+
+<p><a href="#_Toc456168889">3.1     脆弱性分析  14</a></p>
+
+<p><a href="#_Toc456168890">3.1.1   技术脆弱性  14</a></p>
+
+<p><a href="#_Toc456168891">3.1.2   管理脆弱性  21</a></p>
+
+<p><a href="#_Toc456168892">3.2     威胁分析  24</a></p>
+
+<p><a href="#_Toc456168893">3.2.1   威胁源分析  24</a></p>
+
+<p><a href="#_Toc456168894">3.2.2   攻击类型分析  25</a></p>
+
+<p><a href="#_Toc456168895">3.3     风险识别与确定  25</a></p>
+
+<p><a href="#_Toc456168896">3.3.1   风险识别  25</a></p>
+
+<p><a href="#_Toc456168897">3.3.2   风险分析结果描述  26</a></p>
+
+<p><a href="#_Toc456168898">第4章     安全保密需求分析  29</a></p>
+
+<p><a href="#_Toc456168899">4.1     技术防护需求分析  29</a></p>
+
+<p><a href="#_Toc456168900">4.1.1   机房与重要部位  29</a></p>
+
+<p><a href="#_Toc456168901">4.1.2   网络安全  30</a></p>
+
+<p><a href="#_Toc456168902">4.1.3   主机安全  32</a></p>
+
+<p><a href="#_Toc456168903">4.1.4   介质安全  33</a></p>
+
+<p><a href="#_Toc456168904">4.1.5   数据与应用安全  34</a></p>
+
+<p><a href="#_Toc456168905">4.1.6   网络安全隔离与信息交换  35</a></p>
+
+<p><a href="#_Toc456168906">4.2     管理需求分析  35</a></p>
+
+<p><a href="#_Toc456168907">4.2.1   人员管理  35</a></p>
+
+<p><a href="#_Toc456168908">4.2.2   物理环境与设施管理  36</a></p>
+
+<p><a href="#_Toc456168909">4.2.3   运行与开发管理  36</a></p>
+
+<p><a href="#_Toc456168910">4.2.4   设备与介质管理  36</a></p>
+
+<p><a href="#_Toc456168911">4.2.5   信息保密管理  37</a></p>
+
+<p><a href="#_Toc456168912">第5章     方案总体设计  38</a></p>
+
+<p><a href="#_Toc456168913">5.1     安全保密建设目标  38</a></p>
+
+<p><a href="#_Toc456168914">5.1.1   总体目标  38</a></p>
+
+<p><a href="#_Toc456168915">5.1.2   总体设计思路  38</a></p>
+
+<p><a href="#_Toc456168916">5.2     设计原则与依据  40</a></p>
+
+<p><a href="#_Toc456168917">5.2.1   设计原则  40</a></p>
+
+<p><a href="#_Toc456168918">5.2.2   设计依据  41</a></p>
+
+<p><a href="#_Toc456168919">5.3     系统安全保密防护框架  42</a></p>
+
+<p><a href="#_Toc456168920">5.4     安全域划分与定级  43</a></p>
+
+<p><a href="#_Toc456168921">5.4.1   安全域划分原则与方法  43</a></p>
+
+<p><a href="#_Toc456168922">5.4.2   安全域等级与描述  44</a></p>
+
+<p><a href="#_Toc456168923">第6章     方案详细设计  46</a></p>
+
+<p><a href="#_Toc456168924">6.1     物理安全  46</a></p>
+
+<p><a href="#_Toc456168925">6.1.1   环境安全  46</a></p>
+
+<p><a href="#_Toc456168926">6.1.2   设备安全  47</a></p>
+
+<p><a href="#_Toc456168927">6.1.3   介质安全  49</a></p>
+
+<p><a href="#_Toc456168928">6.2     运行安全  52</a></p>
+
+<p><a href="#_Toc456168929">6.2.1   备份/恢复  52</a></p>
+
+<p><a href="#_Toc456168930">6.2.2   系统安全性保护  56</a></p>
+
+<p><a href="#_Toc456168931">6.2.3   应急响应  57</a></p>
+
+<p><a href="#_Toc456168932">6.3     信息安全保密  63</a></p>
+
+<p><a href="#_Toc456168933">6.3.1   物理隔离  63</a></p>
+
+<p><a href="#_Toc456168934">6.3.2   密级标识  63</a></p>
+
+<p><a href="#_Toc456168935">6.3.3   身份鉴别  63</a></p>
+
+<p><a href="#_Toc456168936">6.3.4   访问控制  65</a></p>
+
+<p><a href="#_Toc456168937">6.3.5   密码保护措施  66</a></p>
+
+<p><a href="#_Toc456168938">6.3.6   电磁泄漏发射防护  66</a></p>
+
+<p><a href="#_Toc456168939">6.3.7   信息完整性校验  66</a></p>
+
+<p><a href="#_Toc456168940">6.3.8   系统安全性能检测  66</a></p>
+
+<p><a href="#_Toc456168941">6.3.9   安全审计与监控  67</a></p>
+
+<p><a href="#_Toc456168942">6.3.10  抗抵赖  71</a></p>
+
+<p><a href="#_Toc456168943">6.3.11  操作系统安全  71</a></p>
+
+<p><a href="#_Toc456168944">6.3.12  数据库安全  75</a></p>
+
+<p><a href="#_Toc456168945">6.3.13  边界防护与控制  75</a></p>
+
+<p><a href="#_Toc456168946">6.4     安全保密管理  77</a></p>
+
+<p><a href="#_Toc456168947">6.4.1   管理机构  78</a></p>
+
+<p><a href="#_Toc456168948">6.4.2   管理人员  79</a></p>
+
+<p><a href="#_Toc456168949">6.4.3   管理制度  80</a></p>
+
+<p><a href="#_Toc456168950">6.4.4   运行维护管理  81</a></p>
+
+<p><a href="#_Toc456168951">6.5     产品选型与安全服务  86</a></p>
+
+<p><a href="#_Toc456168952">6.5.1   安全保密产品选型  86</a></p>
+
+<p><a href="#_Toc456168953">6.5.2   安全服务  87</a></p>
+
+<p><a href="#_Toc456168954">第7章     残留风险控制  88</a></p>
+
+<p><a href="#_Toc456168955">7.1     方案与标准符合性分析  88</a></p>
+
+<p><a href="#_Toc456168956">7.2     残留风险点与风险规避措施  97</a></p>
+
+<p><a href="#_Toc456168957">第8章     实施计划  99</a></p>
+
+<p><a href="#_Toc456168958">8.1     工程组织  99</a></p>
+
+<p><a href="#_Toc456168959">8.2     任务分工  99</a></p>
+
+<p><a href="#_Toc456168960">8.3     进度安排  100</a></p>
+
+<p><a href="#_Toc456168961">第9章     经费概算  102</a></p>
+
+<p><a href="#_Toc456168962">第10章    相关附件  105</a></p>
+
+<p><a href="#_Toc456168963">10.1    方案设计及相关单位基本情况  105</a></p>
+
+<p><a href="#_Toc456168964">10.2    单位资质证书  105</a></p>
+
+<p><a href="#_Toc456168965">10.3    产品资质证书  106</a></p>
+</div>
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20250901-4.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)" style="border-color: #1d9bf0; color: #1d9bf0; padding: 10px 25px; font-size: 16px; border-radius: 30px; border-width: 2px;">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" style="border-color: #1d9bf0; color: #1d9bf0;" onclick="handleShareClick(this)" data-title="分级保护全套方案-aoaoIT技术项目-aoao信息网络安全" data-url="https://aoao.life/20250901-4.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20250901-3.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

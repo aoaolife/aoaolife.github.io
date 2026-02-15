@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>罗慧娟对周星驰说神经病 - aoao.life</title>
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 85.2%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+        }
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85.2%;"></div>
+                    <div class="progress-text">今天 2025.11.07 | 已耗 85.2% · 剩 54 天</div>
+                </div>
+            </div>
+
+            <div class="article-title">罗慧娟对周星驰说神经病</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2025年11月07日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2025年11月07日 12:00</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-2.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="罗慧娟对周星驰说神经病" data-url="https://aoao.life/20251107-2.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p><img src="https://img.aoao.life/罗慧娟对周星驰说神经病.webp" alt="" /></p>
+
+<p>1990年，罗慧娟对周星驰说：“要不我们结婚吧，我想为你生个孩子！”没想到周星驰却怼了回去：“神经病！”罗慧娟心灰意冷。可周星驰转身却兴奋地跟刘镇伟说：“我想我要结婚了。”</p>
+
+<p>1982年，周星驰想报考无线艺员训练班，于是拉上好友梁朝伟陪他一起去报名。结果梁朝伟顺利进入第11期无线电视艺员训练班，而周星驰却落榜了。之后的梁朝伟演艺事业一路开挂，先后拿下了15个影帝。而周星驰跑了好多年的龙套，直到1988年，遇见李修贤，才正式进入电影圈。也就是那一年，因为一部《阿德也疯狂》，周星驰和罗慧娟相识。</p>
+
+<p>那时的周星驰还只是个默默无闻的小演员，而罗慧娟已经凭借《书剑恩仇录》成为当红花旦。在《阿德也疯狂》中，罗慧娟是女主角，周星驰只是个小配角，他在剧中饰演一个喜欢罗慧娟的角色。那是周星驰的银幕初吻，他在剧中亲吻罗慧娟两次，并凭借这个角色拿下“最佳配角奖”。同年，两人再次合作《盖世豪侠》，这一次，周星驰终于当上了男主角。因为这部剧，他们因戏生情，走到了一起，成了彼此的初恋。</p>
+
+<p>恋爱时，两人温馨甜蜜，羞涩又幸福。连张国荣在与周星驰一同接受采访时都打趣道：“他对小朋友没什么爱心，对女朋友倒是挺有爱心的。”如果说周星驰这一生中，曾真心想娶的女人，那就是罗慧娟。1990年，正在拍《赌圣》的周星驰，满脸幸福地对刘镇伟说：“我想我要结婚了。”</p>
+
+<p>刘镇伟很惊讶地说：“真的？你还那么年轻，事业才刚刚起步啊。”周星驰坚定地回答：“是真的。”原来，这一切都是因为罗慧娟的一句话——“要不我们结婚吧，我想为你生个孩子。”周星驰虽然口头上说了“你神经病啊！”，但心里却开心极了。</p>
+
+<p>他转身就告诉了好友刘镇伟这个消息，也想听听他的意见。刘镇伟建议他：“别急，结婚慢慢来。”周星驰犹豫了。毕竟，他出身贫寒，太渴望成功了。再加上母亲强烈反对这段感情，更别提结婚。罗慧娟却是个传统的女孩，出身优越的她，对事业没有太大野心，只想当个贤妻良母。</p>
+
+<p>周星驰的那句“你神经病啊”，成了她心里永远的痛。周星驰决定暂时不结婚，对罗慧娟说：“再等等我。”罗慧娟舍不得分手，于是两人继续维持地下恋情。</p>
+
+<p>《赌圣》上映后大火，周星驰的事业迎来巅峰期，他不再是当初那个“星仔”。戏约不断的他越来越忙，为了弥补罗慧娟，他会抽时间陪她。带她去澳门看烟花，甚至请了14天假，陪她去加拿大度假。</p>
+
+<p>两人同游被媒体拍到，但事业正红的周星驰却只对外说：“我们只是普通朋友。”家人的反对、男方的不承认、日渐减少的陪伴，最终压垮了罗慧娟。1992年，周星驰已从“星仔”变成“星爷”，罗慧娟提出：“要么结婚，要么分手。”最终，周星驰选择了事业，彻底失去了她。</p>
+
+<p>分手后，罗慧娟的命运并不顺利。一年后拍戏时坠马受重伤，后来又因潜水意外导致失聪。周星驰曾特地去探望她。</p>
+
+<p>1996年，周星驰与朱茵传出绯闻。不久后，罗慧娟在向太陈岚的介绍下嫁给新加坡富商刘志敏。之后，周星驰又与朱茵、莫文蔚、于文凤相继交往，却都未能修成正果。2012年，罗慧娟因病去世。</p>
+
+<p>很多人说，周星驰的电影里有许多罗慧娟的影子。罗慧娟生前最喜欢“美人鱼”，而周星驰的电影《美人鱼》里出现的“大罗湾”，现实中叫“大鹏湾”，正是罗慧娟的长眠之地。</p>
+
+<p>如今，59岁的周星驰，头发花白，依旧孤身一人。有人问他：“如果人生能重来一次，你会怎么做？”他答：“我就不会那么忙了，会去做我真正想做的事。”</p>
+
+<p>周星驰对罗慧娟这段感情，或许真的后悔了。很多人知道他和朱茵的爱情，却不知道，他这一生最想娶的人，其实是罗慧娟。</p>
+
+<div style="text-align: right;">—— aoao.life</div>
+</div>
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20251107-2.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)" style="border-color: #1d9bf0; color: #1d9bf0; padding: 10px 25px; font-size: 16px; border-radius: 30px; border-width: 2px;">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" style="border-color: #1d9bf0; color: #1d9bf0;" onclick="handleShareClick(this)" data-title="罗慧娟对周星驰说神经病" data-url="https://aoao.life/20251107-2.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20251107-1.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20251107-3.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

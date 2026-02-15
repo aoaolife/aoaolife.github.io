@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aoao聊奥运 - aoao.life</title>
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 66.8%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+        }
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 66.8%;"></div>
+                    <div class="progress-text">今天 2025.09.01 | 已耗 66.8% · 剩 121 天</div>
+                </div>
+            </div>
+
+            <div class="article-title">aoao聊奥运</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2025年09月01日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2025年09月01日 12:00</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20250901-1.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="aoao聊奥运" data-url="https://aoao.life/20250901-1.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>aoao聊奥运-为啥国外运动员裁判那么不喜欢中国运动员</h1>
+
+<blockquote>
+  <p>aoao本人不太看奥运，特别是乒乓球，体操，跳水，举重这种，多看一眼都不想。小时候天天跟着老头，看女排，各种乒乓球，现在想想不知道在激动什</p>
+  
+  <p>么。现在老头女排没得看了，还天天在看乒乓球，竟然可以这样看一辈子。可是他一样根本没有时间精力打几次乒乓球，钢筋水泥的城市里多久多远你可以找</p>
+  
+  <p>到一个打乒乓球的？免费的，最多公交钱！</p>
+</blockquote>
+
+<h1> </h1>
+
+<h1>关于2024年巴黎奥运几个感受及新闻:</h1>
+
+<ol>
+<li>奥运快开始了也没人太大关注，直到开幕式，才发现奥运可以这么低碳节能，接地气。</li>
+<li>还有巴黎奥运快结束了，也很少人提俄罗斯被禁止来参赛。</li>
+<li>小伙子自由游泳比赛冠军还有混合泳冠军，还是要赞。虽然商业味道好浓，虽然我不喜欢这种体制产物。</li>
+<li>还有攀岩冠军。</li>
+<li>还有拳击冠军。</li>
+<li>还有花样游泳冠军。这个原来一直是俄罗斯的好像，天天吃激素的俄罗斯。 话说俄罗斯是因为吃兴奋剂还是战争被禁止参加奥运？</li>
+<li>还有女网冠军。 厉害厉害，对于这种吃大米饭比较多的人，还能打得过人家天天吃牛肉的人，这种项目还能冠军，实在是要多多佩服支持。</li>
+<li>澳大利亚人口才几个金牌数好多啊，排第二。然后仔细一看发现国外好多国家金牌都是中国人种都是中国移民过去的。</li>
+<li><strong>还有香港那个很甜很甜的击剑冠军。太甜太甜了。这才是体育这才是教育这才是人生这才是奥运。</strong> 不要那边功利，不要那么不择手段，不要那么不惜一切代价。</li>
+</ol>
+
+<h1>为啥国外运动员裁判那么不喜欢中国运动员</h1>
+
+<p>好像除了俄罗斯队，全世界运动员到裁判都不是很喜欢中国运动员？</p>
+
+<p>除了政治经济原因，会不会是我们真的太功利了呢？</p>
+
+<blockquote>
+  <p>今天看到个新闻乒乓球冠军马琳，跟他老婆离婚。她老婆法院上告他隐瞒财产，不跟她平分。马琳说这是他得世界冠军国家奖励的，她老婆就说奥运冠军是8月分份得的为什么房产证上面写着6月分？ 马琳说冠军6月份就内定了，奖励的房子也是6月分就内定了。</p>
+  
+  <p>再看看这次女单奥运冠军，有个同学没按剧本走，打败了那个奶胖奶胖的队友， 整个教练组，所有队友，还有观众，都没点开心样，都 非常生气。 这是为什么？</p>
+</blockquote>
+
+<blockquote>
+  <p>还有看到一些视频，一些七八岁脸蛋天真无邪的体操体重训练童子，身体结实得让人感到寒颤，每一块肌肉像石头一样，看起来非常有力量感。</p>
+  
+  <p>还看到一些前世界冠军身体长期高压训练受伤残疾，然后马路边卖烧饼，卖金牌，讨薪。这是冠军，能有几个？那些不是冠军的呢，有多少，多少人能冲到市体队，省队，国家队呢呢？</p>
+  
+  <p>此处想一部电影 八角笼中，没钱的娃主动被选去打拳训练， 有问题么？   但这对于比我们早吃饱饭100年的欧美，是比较难想象的。</p>
+</blockquote>
+
+<p>还是喜欢国外他们早上刚生完娃，下午就过来参加奥运会。 然后抽时间请天年假过来参加下奥运会。和平，团结友爱不是那么功利。国家人民不需要用金牌来激素自己。</p>
+</div>
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20250901-1.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)" style="border-color: #1d9bf0; color: #1d9bf0; padding: 10px 25px; font-size: 16px; border-radius: 30px; border-width: 2px;">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" style="border-color: #1d9bf0; color: #1d9bf0;" onclick="handleShareClick(this)" data-title="aoao聊奥运" data-url="https://aoao.life/20250901-1.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20250901.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20250901-2.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
