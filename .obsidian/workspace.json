@@ -11,14 +11,12 @@
             "id": "386f65e6a121e469",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "aoao人工技术服务咨询/001-aoao免费福利/免费发放edu邮箱，大型企业邮箱.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.11.7"
               },
-              "icon": "lucide-file",
-              "title": "免费发放edu邮箱，大型企业邮箱"
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.11.7"
             }
           }
         ]
@@ -157,17 +155,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "386f65e6a121e469",
+  "active": "a58133d2c0357e1a",
   "lastOpenFiles": [
+    "马斯克中文日记/马斯克2026年日程日记/大家好，我是马斯克，今天是2026年02月26日.md",
     "aoao随笔/文化教育/80后和90后不知道到底将会有多记恨这个世界.md",
     "aoao生活/娱乐八卦/梁家辉对张曼玉说：“我们以后就不要再来往了.md",
     "aoao生活/娱乐八卦/叶蕴仪拒绝林志颖的表白.md",
@@ -195,7 +194,6 @@
     "aoao人工技术服务咨询/aoao图片视频压缩水印工具/Snipaste_2025-09-04_22-15-13.png",
     "aoao人工技术服务咨询/aoao.life网页截图系统.md",
     "aoao随笔/社会娱乐/aoao谈杨景某事件.md",
-    "aoao随笔/社会娱乐/现在比谁没有房.md",
     "aoao人工技术服务咨询/aoao无效邮箱地址清除系统",
     "aoao人工技术服务咨询/aoao无效邮箱地址清除系统/新建 文本文档.txt",
     "aoao人工技术服务咨询/aoao无效邮箱地址清除系统/aoao无效邮箱地址清除系统.png",
