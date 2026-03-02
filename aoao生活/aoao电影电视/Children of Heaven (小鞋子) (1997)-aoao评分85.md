@@ -1,5 +1,3 @@
-Children of Heaven (小鞋子) (1997)-aoao评分:85
-
 > 最近的伊朗被搞，想起原来看过的这个伊朗电影。好看。
 >
 > “我一定会拿到第三名的，放心，我有把握！” (Don't worry, I'll be third. I promise.)
