@@ -1,5 +1,5 @@
-New World (新世界) (2013)-aoao评分:8.9
-
+> 好多抖音梗，你不看都会out,都看不懂笑点。看个两三遍没问题。电梯战神、延边F4.
+>
 > “嘿，兄弟... 要是... 我活着，你能应付我吗？”
 > "Hey, brother... if... if I were to live, could you handle me?"
 

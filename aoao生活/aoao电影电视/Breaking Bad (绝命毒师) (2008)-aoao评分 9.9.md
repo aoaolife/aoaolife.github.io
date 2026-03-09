@@ -1,5 +1,3 @@
-Breaking Bad (绝命毒师) (2008)-aoao评分: 9.9
-
 > 这个不用介绍了，没看过，绝对这辈子白活了。
 >
 > "I am not in danger, Skyler. I am the danger." (斯凯勒，我没有危险。我就是危险。)
