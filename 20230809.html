@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杂记-20230809 - aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="充实又荒废的一周，一家子在广州休整2天后，回了趟老家，今天带大希先回来上课。受大环境影响，老家的小县城经济越发萧条，也看到疫情后传统生意模式在小县城的求生求变。   商超求变   小区楼下卜蜂莲花超市的服务员比顾客多，大卖场模式能坚持多久很难说，本地另外2个相对有规模的商场倒是看到在求变。   一家是在原店址改造，缩减营业的场地面积，品类虽全但更重精品而非数量，偏向新潮食品、饮品、生鲜，感觉更像大...">
+    <link rel="canonical" href="https://aoao.life/20230809.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20230809.html">
+    <meta property="og:title" content="杂记-20230809 - aoao.life">
+    <meta property="og:description" content="充实又荒废的一周，一家子在广州休整2天后，回了趟老家，今天带大希先回来上课。受大环境影响，老家的小县城经济越发萧条，也看到疫情后传统生意模式在小县城的求生求变。   商超求变   小区楼下卜蜂莲花超市的服务员比顾客多，大卖场模式能坚持多久很难说，本地另外2个相对有规模的商场倒是看到在求变。   一家是在原店址改造，缩减营业的场地面积，品类虽全但更重精品而非数量，偏向新潮食品、饮品、生鲜，感觉更像大...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20230809.html">
+    <meta property="twitter:title" content="杂记-20230809 - aoao.life">
+    <meta property="twitter:description" content="充实又荒废的一周，一家子在广州休整2天后，回了趟老家，今天带大希先回来上课。受大环境影响，老家的小县城经济越发萧条，也看到疫情后传统生意模式在小县城的求生求变。   商超求变   小区楼下卜蜂莲花超市的服务员比顾客多，大卖场模式能坚持多久很难说，本地另外2个相对有规模的商场倒是看到在求变。   一家是在原店址改造，缩减营业的场地面积，品类虽全但更重精品而非数量，偏向新潮食品、饮品、生鲜，感觉更像大...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "杂记-20230809 - aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2023-08-09",
+      "dateModified": "2023-08-09T00:00:00+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 60.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 60.5%;"></div>
+                    <div class="progress-text">今天 2023.08.09 | 已耗 60.5% · 剩 144 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">杂记-20230809 - aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2023年08月09日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2023年08月09日 00:00</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20230809.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="杂记-20230809 - aoao.life" data-url="https://aoao.life/20230809.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>充实又荒废的一周，一家子在广州休整2天后，回了趟老家，今天带大希先回来上课。受大环境影响，老家的小县城经济越发萧条，也看到疫情后传统生意模式在小县城的求生求变。</p>
+
+<p><strong>商超求变</strong></p>
+
+<p>小区楼下卜蜂莲花超市的服务员比顾客多，大卖场模式能坚持多久很难说，本地另外2个相对有规模的商场倒是看到在求变。</p>
+
+<p>一家是在原店址改造，缩减营业的场地面积，品类虽全但更重精品而非数量，偏向新潮食品、饮品、生鲜，感觉更像大型便利店，人流略好于卜蜂莲花，缩减场地和精简品类后，成本降低且更具竞争力。</p>
+
+<p>另一家是转型做生活超市，在县城开了好几家门店，面积不大，主要是提供米油盐、果蔬、肉类等日常生活所需，主打下沉社区，同比大卖场模式和便利店模式，下沉市场的门槛一旦建立前景是最好的，毕竟传统的集市菜市场随着卫生、环保、品质的需求提高，在城市中会逐渐退出历史舞台。</p>
+
+<p><strong>KTV消亡</strong></p>
+
+<p>以前县城的夜生活就是KTV和宵夜，间接带动县城的酒店业。疫情前县城少说有2-30家KTV在经营，哪家酒便宜，哪家环境好，哪家音响好，如数家珍。3年疫情，倒闭7成，甚至人们都习惯了喝酒不去KTV，看到一些KTV再重新装修，打算重整旗鼓，估摸着年轻人眼里在家玩游戏更香，KTV是过气了，时代抛弃一个行业，招呼都不打一声。</p>
+
+<p><strong>宵夜摊</strong></p>
+
+<p>以前对宵夜的记忆，都是露天的流动宵夜摊摆满河堤边，大家围坐在小圆桌边，夹起夜风嚼着漫天星辰随心畅饮，近几年河边的地都给圈起来发展房地产，移动宵夜摊也被整顿，消失在记忆中，吃宵夜只能到门店摊位吃，跟下馆子一样就没那感觉了。</p>
+
+<p><strong>卖房营销</strong></p>
+
+<p>县城某楼盘开发商为宣传楼盘，吸引回乡过年的返乡人士关注，春节时在售楼部门口组织起夜市摊，摆设很多儿童游乐设备免费提供给小孩玩，敏锐捕抓到小县城晚上没地方给小朋友们玩的需求，人气一下子攒起来，很多家庭晚饭后带着小朋友去玩，顺便吃点喝点，这夜市就奇迹般地维持营业至今，成为县城小年轻们的网红打卡地。这神来之笔的营销策略也给楼盘带来很多意料之外的客户，后来本地其他新楼盘也照模学样，可惜小县城人口有限，很难支撑起第二个夜市。</p>
+
+<p><strong>域名备案</strong></p>
+
+<p>前段时间修改常用邮箱，同时也新注册了个与邮箱匹配的域名：leolin86.com，刚申请域名备案，备好后可能会解析过来博客，逐渐将博客域名过渡到新域名。</p>
+
+<p>人生的意义在于经历，希望在记录点滴的同时，也能持续蜕变成长，敢于拥抱变化。</p>
+
+<p>本文著作权归作者 [ aoao.life ] 享有，未经作者书面授权，禁止转载，封面图片来源于 [ 互联网 ] ，本文仅供个人学习、研究和欣赏使用。如有异议，请联系博主及时处理。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20230809.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="杂记-20230809 - aoao.life" data-url="https://aoao.life/20230809.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20230812.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20230719.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

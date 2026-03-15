@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家里台式机XP系统改装WIN7小记 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="之前  为什么要选择重装系统  我是一个比较喜欢折腾电脑的人，但是却很反感更换系统，因为更换系统之后又要装很多其他的软件，着实让人费力。尽管你可能会说，有经验的人会把主要的软件装到D盘，而不是C盘，但是事实上，有些东西还就是不得不装到C盘的，比如java的jdk，比如git ，node.js等等，确实很多是需要系统盘的，而且有些软件即使装到了D盘，但是也不能用了，这些往往是一些收费软件（当然低调的...">
+    <link rel="canonical" href="https://aoao.life/20140809-2.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20140809-2.html">
+    <meta property="og:title" content="家里台式机XP系统改装WIN7小记 | aoao.life">
+    <meta property="og:description" content="之前  为什么要选择重装系统  我是一个比较喜欢折腾电脑的人，但是却很反感更换系统，因为更换系统之后又要装很多其他的软件，着实让人费力。尽管你可能会说，有经验的人会把主要的软件装到D盘，而不是C盘，但是事实上，有些东西还就是不得不装到C盘的，比如java的jdk，比如git ，node.js等等，确实很多是需要系统盘的，而且有些软件即使装到了D盘，但是也不能用了，这些往往是一些收费软件（当然低调的...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20140809-2.html">
+    <meta property="twitter:title" content="家里台式机XP系统改装WIN7小记 | aoao.life">
+    <meta property="twitter:description" content="之前  为什么要选择重装系统  我是一个比较喜欢折腾电脑的人，但是却很反感更换系统，因为更换系统之后又要装很多其他的软件，着实让人费力。尽管你可能会说，有经验的人会把主要的软件装到D盘，而不是C盘，但是事实上，有些东西还就是不得不装到C盘的，比如java的jdk，比如git ，node.js等等，确实很多是需要系统盘的，而且有些软件即使装到了D盘，但是也不能用了，这些往往是一些收费软件（当然低调的...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "家里台式机XP系统改装WIN7小记 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 60.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 60.5%;"></div>
+                    <div class="progress-text">今天 2014.08.09 | 已耗 60.5% · 剩 144 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">家里台式机XP系统改装WIN7小记 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2014年08月09日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20140809-2.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="家里台式机XP系统改装WIN7小记 | aoao.life" data-url="https://aoao.life/20140809-2.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>之前</h1>
+
+<h2>为什么要选择重装系统</h2>
+
+<p>我是一个比较喜欢折腾电脑的人，但是却很反感更换系统，因为更换系统之后又要装很多其他的软件，着实让人费力。尽管你可能会说，有经验的人会把主要的软件装到D盘，而不是C盘，但是事实上，有些东西还就是不得不装到C盘的，比如java的jdk，比如git ，node.js等等，确实很多是需要系统盘的，而且有些软件即使装到了D盘，但是也不能用了，这些往往是一些收费软件（当然低调的说，我的是盗版的）。但是为什么让我选择更换系统呢，因为出现了很多问题。<br />
+1：XP系统微软不再对其进行技术支持。诚然在我的台式机中，XP系统运行起来十分流畅，但是毕竟因为这个系统已经有了十几年的时间，有些界面层面的东西已经跟不上时代的潮流了。而且，一些操作和win7，win8相比十分繁琐。<br />
+2：出现了一些其他的问题，比如发博客的时候，运行hexo d的时候必须重新开机才能将代码上传到远程。比如电脑里面的文件十分混乱，也想借此机会整理一下。<br />
+3：想借此机会体验一下win7的安装和使用，说实话，在我玩电脑的十几年里，实际上真正认真的学习和玩没有几年的时间，从小学三年级，学校里开始开微机课，那个时候用的还是windows2000，学习了一些基本的打字和office。之后在初中的时候用过xp系统，在高中的时候家里面开始有了第一台也是现在这一台电脑，不过那个时候我的电脑对我而言用途也不过就是刷刷微博，看看电影（很少），看看NBA等体育比赛（很多）。这个时候用的是xp，而当我上了大学有了属于自己的电脑之后，最初装的是win7，但是因为一些原因，也很快换成了win8，而其他人的电脑我也很少碰，虽然确实见识过，玩过win7，但是并不是很亲近。梳理了这些事情之后只是想说明，给家里的电脑装win7对我而言也算是一种体验。当然装系统这件事，我一向是不在乎的。<br />
+4：第四点原因很简单，<strong>闲的蛋疼</strong>。本来是学习android的，但是仅仅是学习到一些十分基础的东西，就遇到了很多问题，让我好忧伤。于是索性破罐破摔，换个系统，换个心情。  </p>
+
+<h2>学习</h2>
+
+<p>既然是选择了装win7，我就去了win7的贴吧，看了那里面的<a href="http://tieba.baidu.com/p/2977256876">置顶帖</a>。教程写的很详细，而且看日期是今年4月份才发的帖子，所以内容绝对是足够新，足够可靠地，于是就按照这个教程上面的方法下载了win7旗舰版32位的系统，他们很反感像老毛桃那种pe，ghost的东西，而就我所接触的我的同学来说，他们基本上都是用这种方法，u盘装系统的，但是这个教程明显更加简单，于是就使用了。这个贴吧是我之前关注过的，但是却不经常去逛。所以当我发帖问家里台式机2g内存适不适合装这个系统的时候，竟然没有人回帖回复我。当然实际上，这种问题也是可以google出来的，所以也没有什么可以抱怨的。  </p>
+
+<h1>安装及激活过程</h1>
+
+<p>安装过程十分顺利，我只是在开始按了一个setup，在中间按了两次按钮，之后基本上就是十几分钟 的等待，在这个过程中，我一边玩着手机，一边偶尔抬头看看屏幕上的变化，基本上就是傻瓜式的，相较于那所谓的老毛桃，我认为是简单德多了，当然教程上说这是官方的系统，而那些ghost之类往往是经过修改的，有可能存在后门隐患。<br />
+安装之前实际上是备份过驱动的，考虑到可能会有网卡驱动的问题，但是当我发现不能上网的时候还是很郁闷d的。我备份的是一个个的zip压缩包文件，压缩包里面是一个个的dll文件以及系统问题，当时并不知道是怎样安装的，后来经过google之后，知道了原来这个也是可以安装到电脑上的，而且这就是网卡驱动，不过我还是<strong>不会啊</strong>,这个先不说，错误651，错误691一个接着一个地出现，意识到这个问题之后，我开始在我的笔记本上联网，希望能够在笔记本上下载驱动，然后用u盘来下载到台式机中。<br />
+但是结果是笔记本也不能联网，出现的问题是错误691，也就是账号密码不相匹配，试过多少次也无效。<br />
+当然我并不想把这件事情说得多么复杂，实际上我这次遇到的不是 一个问题，所以自然也就出现了两个错误喽。一个问题是电脑没有安装网卡驱动，另外一个问题是宽带的账号正确，但是宽带的密码错误了。于是那个691就合理喽。<br />
+所以当第二天我母亲从网络运营商营业厅那里拿到了账号密码之后我才回忆起来，原来之前是改过一次密码的，而我却一直都记得是最初那个密码。写到这里，我默默地将记录宽带账号密码的本子找出来，将那个密码改正了。<br />
+当然笔记本能够正常上网之后，接下来就是下载驱动了。但是我发现这个驱动并不容易找到，之前自己的笔记本下载过网卡驱动，直接到dell的官网上找到对应的型号就可以了，但是因为台式机已经时间很长了，尽管知道是某想的，但型号无从查起。这个时候有个疑问：<br />
+<strong>网卡驱动的选择到底是靠什么决定的呢？</strong><br />
+这似乎是一个很简单的问题，当然是网卡了。但是在前两天的我看来，确实觉得略微复杂，因为一开始一直在纠结着电脑的型号。后来脑子终于想通了，用驱动精灵查到了网卡的型号，但是google之后发现，这个驱动下载下来之后还是一个zip压缩包，打开之后和之前备份的很像，还是不知道怎样安装。<br />
+最终仍然是google出来的结果，可以下载一个驱动精灵万能网卡离线版，于是用笔记本下载下来，用u盘转移到台式机上面，几秒钟安装成功，然后网卡驱动安装也很简单<br />
+之后的激活用到了之前就存在我的百度云网盘里面的windows loader。也是一键激活，重启之后就已经成功激活了。  </p>
+
+<h1>安装后</h1>
+
+<p>其实整个过程中学到的东西并不多，我所说的更多的是解决问题的一个思路，这其中有正确的思路，错误的思路，也希望通过这样的思维分析来让自己在以后解决一些问题时更加顺利，少走弯路，此乃是我写这个小记的最大意义也。<br />
+整理一下学到的东西<br />
+1安装win7直接下载官方旗舰版即可，然后直接安装就好，没有必要用什么老毛桃之类。<br />
+2：激活用windows loader即可，一键激活。<br />
+3：网卡驱动可以不备份，因为自己不会装，但是一定要弄一个驱动精灵万能网卡版，虽然有150多M，但是也真的很简单，仍然是一键操作。<br />
+4一定要记住自己的宽带密码。  </p>
+
+<h1>结尾</h1>
+
+<p>我之前给自己的电脑装过win8，win8装着很省事，装win7认为很简单，但是从不尝试，也很鄙视，觉得装一个系统是一个很简单的事情，很不屑那些总是给别人装系统自以为很牛x的同学。当然，经过我这次装win7之后，我就更有理由了。有的时候只有自己<strong>have done</strong>才有资格说别人<strong>why to be</strong>，这真是一种很奇怪的逻辑。既然不屑，但是还是要去做，因为只有做过之后才能去不屑，是不是很贱呢，现在让我耿耿于怀的是那个win7吧竟然没人回复我的问题，哎呀。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20140809-2.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="家里台式机XP系统改装WIN7小记 | aoao.life" data-url="https://aoao.life/20140809-2.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20220319.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140624.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

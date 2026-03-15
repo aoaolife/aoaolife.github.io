@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOTOSHOP学习笔记 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记内容   ps简介 可以用于合成。 可以三维 adobe bridge图像浏览器 可以直接将图片拖动到ps的编辑系统中。。但是是出于临时文件状态，还需要对他进行保存。。 网站上某些图片不能够拉动，...">
+    <link rel="canonical" href="https://aoao.life/20150515-3.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150515-3.html">
+    <meta property="og:title" content="PHOTOSHOP学习笔记 | aoao.life">
+    <meta property="og:description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记内容   ps简介 可以用于合成。 可以三维 adobe bridge图像浏览器 可以直接将图片拖动到ps的编辑系统中。。但是是出于临时文件状态，还需要对他进行保存。。 网站上某些图片不能够拉动，...">
+    <meta property="og:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150515-3.html">
+    <meta property="twitter:title" content="PHOTOSHOP学习笔记 | aoao.life">
+    <meta property="twitter:description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记内容   ps简介 可以用于合成。 可以三维 adobe bridge图像浏览器 可以直接将图片拖动到ps的编辑系统中。。但是是出于临时文件状态，还需要对他进行保存。。 网站上某些图片不能够拉动，...">
+    <meta property="twitter:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "PHOTOSHOP学习笔记 | aoao.life",
+      "image": [
+        "http://hktkdy.qiniudn.com/slogan.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 37.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 37.0%;"></div>
+                    <div class="progress-text">今天 2015.05.15 | 已耗 37.0% · 剩 230 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">PHOTOSHOP学习笔记 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年05月15日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150515-3.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="PHOTOSHOP学习笔记 | aoao.life" data-url="https://aoao.life/20150515-3.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>写在前边</h1>
+
+<p>这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。<br />
+温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W</p>
+
+<h1>笔记内容</h1>
+
+<ul>
+<li>ps简介<br />
+可以用于合成。<br />
+可以三维<br />
+adobe bridge图像浏览器</li>
+<li>可以直接将图片拖动到ps的编辑系统中。。但是是出于临时文件状态，还需要对他进行保存。。<br />
+网站上某些图片不能够拉动，但是可以利用截图功能来实现。。<br />
+两张图片同时拉倒一个文件中构成两个不同的图层。。打开文件的几种方法。。</li>
+<li>ps数码相片<br />
+点阵图像 矢量图像 一张白纸<br />
+数码相片都是点阵图像<br />
+矢量图像 点和曲线 没有像素点的存在<br />
+矢量图存储特定的图片格式 gif等</li>
+<li>光与色的基础知识<br />
+前期拍摄 后期处理</li>
+<li>吸管工具<br />
+吸取图像中的颜色。<br />
+会被吸取到调色盘中。<br />
+当前前景色。。。取样环，作为衬底看颜色变化。上面的颜色为当前吸取的颜色。</li>
+<li>取样环 样本选项 颜色从哪个图层中吸取。<br />
+可以吸取不同图层的颜色，只在当前图层中取色。</li>
+<li>白光由彩色光线复合而成<br />
+红绿蓝是三种单色光</li>
+</ul>
+
+<p>绿光和红光等量混合可以得到黄色光<br />
+红家蓝 等于品红<br />
+红+绿+蓝等量混合可以得到白光<br />
+彩色的光带</p>
+
+<ul>
+<li>照片的紫光现象<br />
+物体的固有色是他显示 ，反射的颜色<br />
+颜料在混合之后可以得到其他颜色 。。</li>
+<li>通过对ps中的精确到像素点的寻找，可以修复某些因为马赛克等原因而产生的问题，比如将一种颜色去给另外一个点涂上颜色。。<br />
+如何为一个像素点更该某一个特定的颜色是一个问题</li>
+<li>rgb三个值全为零时得到一个黑色。r到达255时可以得到红色。<br />
+rgb混合。r，g全为255可以混合出黄色。<br />
+r加g可以混合出偏向黄色的颜色<br />
+hsb是使用色相，饱和度等来表示的。<br />
+八位图像<br />
+256的三次方<br />
+里面的值是某种颜色的十六进制代码</li>
+<li>新建一个图像文件<br />
+新建 -输入名称<br />
+常见的像素大小 1024*768<br />
+分辨率与图像打印出来的大小成反比。</li>
+</ul>
+
+<p>调色盘 上面的 下面的是背景色。<br />
+rgb颜色配置文件标准srgb适用于初学者<br />
+背景内容设置为白色建立一个白色文件<br />
+透明选项灰色格格的作用</p>
+
+<ul>
+<li>jpg图像<br />
+添加图层等不能继续用jpg<br />
+改成d<br />
+保存为低品质有利于图像传播，品质低<br />
+调整图像品质<br />
+选择连续选项可以使图片传播到网络后 进行加载时逐步加载，一点点的看到这张图片<br />
+ctrl+f2变浅皮肤<br />
+ctrl+f1变深<br />
+左下角有一个全屏模式选项，按住esc退出全屏</li>
+</ul>
+
+<p>窗口 全部竖直，横向 排列。按照图表的现实<br />
+ctrl+j可以复制图层。<br />
+自动选择图层。<br />
+背景图层锁定<br />
+拖动以选择图层。前提是背景图层被锁定。。<br />
+ps上部窗口顶部对齐，垂直居中对齐，以每一个元素的中间部分进行对齐。。<br />
+alt键按住可以对对象进行复制。。<br />
+自动对齐图层<br />
+接图 类似美图秀秀。。。<br />
+将锁拖到垃圾箱里面可以让背 景发生移动。<br />
+先复制所要移动的区域图层，然后再进行移动。</p>
+
+<ul>
+<li>如何选定所要移动的特定区域。。<br />
+图层被选择<br />
+ctrl+z返回<br />
+选择区 移动命令下一个图形<br />
+可以起到保护选择区之外内容的作用。单独成为一个图层。。<br />
+选择规则工具组<br />
+矩形选框 圆形选框 黑白相间<br />
+矩形选矿时按shift键可以选出一个正方形区域。。<br />
+椭圆选矿 按alt可以向四周放射状建立选择区<br />
+shift圆选择区<br />
+shift +alt 正圆。<br />
+单行，单列选框 可以将选择区的大小进行确定；；，。。<br />
+羽化 建立的选择区填充颜色羽化值为十的话，是个像素大小的过度。调整边缘。。</li>
+<li>羽化<br />
+photoshop中的羽化<br />
+基本信息<br />
+在PHOTOSHOP里，羽化是针对选区的一项编辑，初学者很难理解这个词。羽化原理是令选区内外衔接的部分虚化。起到渐变的作用从而达到自然衔接的效果。在设计作图的使用很广泛，只要实际操作下就能理解了。实际运用过程中具体的羽化值完全取决于经验。所以掌握这个常用工具的关键是经常练习。<br />
+羽化值越大，虚化范围越宽，也就是说颜色递变的柔和。羽化值越小，虚化范围越窄。可根据实际情况进行调节。把羽化值设置小一点，反复羽化是羽化的一个技巧。<br />
+操作步骤：<br />
+1）选中你要羽化的图层内容（按住ctrl的同时用鼠标点击图层缩览图即可选中）<br />
+2）用鼠标选中菜单栏的“选择——修改——羽化”后，出来一个对话框，输入你要羽化的范围的值，然后点击“确定”。<br />
+3）确定后，按 ctrl+shift+i 对其进行“反选”（你要不反选羽化效果是出不来的），“反选”后在按delete（delete可以多按，按一次你的羽化效果就重一次，你可以试试），最后是按ctrl+D取消选框就OK了。<br />
+快捷键<br />
+羽化的快捷键为：CTRL+ALT+D<br />
+PS CS3、CS5版本的羽化快捷键为：Shift+F6<br />
+另外，Photoshop软件支持自定义快捷键。用户可以自己根据喜好，自定义羽化的快捷键，以求使用方便</li>
+<li>套索工具<br />
+是一种不太实用的选择工具。<br />
+多边形套索工具<br />
+过于平直生硬。先局部放大，再细致的选出一个选区，如果选坏了，按delete键，取消刚才的操作。<br />
+磁性套索工具<br />
+当前图像，频率设置低一些，20即可。对比度90.宽度15像素<br />
+磁性套索工具，选择出来。<br />
+对边度，是选择区边缘是模糊还是清晰，清晰的话就设的高一些。模糊就低一些。<br />
+多边形套索工具是最精确的选择区。<br />
+磁性套索工具是最快速的。。磁性套索工具画出所选区域后按住ctrl+z单击左键。</li>
+<li>快速选择工具。。自动增强智能半径， ，从选区减去选项。。界面顶部。多个工具配合选择。对所有图层取样。将多个图层当做一个图层来对待。将沟去掉时，鼠标扫过另外的图层时对他没有影响 。画笔，得到一个比较小的画笔笔头。</li>
+<li>魔棒工具<br />
+在白色的背景中单击，可以选择出阴影部分。。<br />
+连续。 容差。。<br />
+容差小时只有非常相似的n颜色才能被选择。容差大时可以对颜色选择不大。<br />
+ctrl+shift+i反选。<br />
+添加到选区<br />
+两个选区可以加在一起<br />
+与选区交叉，交叉的范围构成一个选择区。<br />
+调整边缘<br />
+选择区根据形状修改选区。<br />
+半径 半径越大，离原选区边缘距离越大的地方就会被选中<br />
+alt减选。。注意各个工具之间的配合。。</li>
+<li>抠图<br />
+背景 ps默认的背景。<br />
+羽化，将选择区的边缘进行模糊</li>
+<li>photoshop 新裁剪工具<br />
+单击裁剪工具直接裁剪。拉直，矫正地平线的倾斜。<br />
+删除裁剪的像素。打钩之后可以确保将原来裁掉的素材扔出该图片。。裁切框动，图像本身不动。<br />
+自动居中预览，裁切框在画布中心位置。。显示裁剪区域。勾选他后显示勾选的裁剪区域。针对裁剪的区域颜色可以自定义。图像裁剪之后的大小和分辨率。图像的高度，宽度设置（以像素为单位）</li>
+<li>黄金分割<br />
+黄金分割点。视觉效果很好的图像。。<br />
+界面上面有一个三等分的选项。<br />
+shift+o切换构图方式。。<br />
+alt+透明裁剪，放置中心点。。<br />
+可以将原来不规则的图形成为理想中的矩形图片。</li>
+<li>ps切片工具用于网页的设计。<br />
+用切片工具切出几个切片。<br />
+视图-显示-切片 -可以隐藏切片，但切片是真实存在的。<br />
+删除切片视图。。、<br />
+精确切片 ，视图-标尺-参考线建立。单击基于参考线的切片、<br />
+参考线隐藏。切片选择工具选择切片。<br />
+切片划分。<br />
+也可以利用像素值来进行划分。<br />
+按住shhift键可以同时选择多个切片。<br />
+dreamweaver网站设计工具<br />
+通过切片在图片中添加链接，可以做到制作网页图片的效果。<br />
+所有层看做一个层合并的层进行取样。<br />
+背景层，色彩调整，色相饱和度。当前图层，</li>
+</ul>
+
+<p>取样大小 在绿颜色上单击就是绿色。3*3平均<br />
+铅笔可以用来画颜色。<br />
+吸管工具和铅笔 ，画笔工具配合使用可以将一些图形中不完美的地方进行修整，</p>
+
+<p>如何利用ps对多个素材集中到一个文件中，除了利用抠图还需要什么《《</p>
+
+<ul>
+<li>颜色取样器</li>
+</ul>
+
+<p>对取样点进行编号 。最多只能建立4个取样点。信息面板 rgb值，色相饱和度。观看颜色数值的变化，明度，色彩的变化有多少，将全部取样点删除，可以单击清除按钮。</p>
+
+<ul>
+<li>标尺工具<br />
+可以测出某个元素在图像中的大小，长度。<br />
+编辑-首选项-单位及标尺<br />
+一般选择厘米或像素。。<br />
+按住alt键拖动第二条直线两条标尺<br />
+可以显示两条标尺的长度及角度。</li>
+<li>图像-旋转-矫正<br />
+拉直图层，对地平线进行矫正。。。拉直图层很方便的偶。、<br />
+注释工具 与图像有着明显的色彩区别，因此可以设置注释的颜色。作者名字。注释面板中加入文字。在需要添加注释的地方再次添加注释。也可以将注释删除掉。。<br />
+统计数字 的计数工具。利用该工具，与图像颜色有较大区别的色彩，为他建立一个标号，只要在没有建立标号的元素上进行统计即可。。单击清除可以将所有标记清除掉。。</li>
+<li>污点修复<br />
+常用于美容，创建文理，内容识别。与周围进行融合。<br />
+对当前图像进行修改。对所有图层取样，当有很多图层时可以对所有图层取样。<br />
+省事省力常用修复工具。。</li>
+<li>污点修复画笔工具<br />
+将取样部位的与之融合。设置比较大的画笔。<br />
+按住alt键取样。皮肤白一些。松开鼠标左键，图像自动融合。混合选项。对齐选项。不勾选都是从原来的<br />
+位置取样。和鼠标的位置是相对位置。图案选项。可以设置使用的图案。气泡图案，涂抹出图案纹理，明暗关系的混合。在哪一个图层中取样。<br />
+关闭在修复时的调整图层。</li>
+<li>修补工具<br />
+（ 源模式，目标模式。<br />
+复制的修图方法。将选择的目标复制过去，透明，<br />
+修补过来的 图像与周围图像进行透明的融合<br />
+使用图案 图案填充 修补某个图像，比较松散 自由度比较强，比较相似的地方进行融合。<br />
+对所有图层进行取样。 ）<br />
+内容感知移动工具<br />
+（模式栏 扩展移动 内容感知移动工具 移动要移动的对象，原来的地方寻找相似的将其填充<br />
+扩展 复制 图像在两个地方都有 ctrl+d选择区清晰<br />
+融合的边缘要好 松散</li>
+</ul>
+
+<p>适应选项 非常严格</p>
+
+<ul>
+<li>红眼工具<br />
+单击红眼 即可将红眼的颜色恢复成灰色。。瞳孔大小为100%。可以看到瞳孔收缩到中心位置。变暗亮。将眼睛的明暗进行调整 。</li>
+<li>画笔工具<br />
+改变大小和硬度。使用鼠标涂抹出来的效果。<br />
+模式 。不透明度。流量选项。流量调整shift+70就是70%的流量。可以通过笔尖压力的大小来控制笔画的不透明度。。<br />
+喷枪选项 与流量来配合进行绘画。。一个地方进行停顿。<br />
+不透明度是颜料的不透明度。流量是从喷枪中流出来的速度。叠加的位置不出现特别之处。不透明度与流量的区别。<br />
+特殊的画笔。毛刷各种各样的画笔形态。直立的绘图笔。。<br />
+画笔散布工具 。分散处理。笔尖在一个点一个点点出来的效果。数量抖动有浓有疏。钢笔压力控制散布的值。在画笔选项下进行设置，可以对画笔进行个性化。。<br />
+画笔的纹理设置。使用纹理柔和到画布，通过观察将纹理的花纹进行缩放。可以得到较小的缩放值，设置纹理的亮度，缩放对比度。</li>
+<li>画笔的传递<br />
+画笔传递画笔工具。使用不透明度抖动，每个笔尖有着不同的不透明度。</li>
+<li>铅笔工具<br />
+铅笔工具 沙丘草。绘制。画笔。<br />
+铅笔工具对比。制作像素字。边缘清晰。按住shift键进行直线连接。前景色背景色 。自动抹除。落笔的地方不是前景色自动抹除选项打钩后。</li>
+<li>颜色替换工具</li>
+</ul>
+
+<p>切片参考线 视图下 ，基于参考线的切分。<br />
+工具栏中找颜色替换工具。容差相对大一些。使用硬度低一些的画笔。在图层面板上复制图层。可以将某个颜色替换成另外一个颜色。</p>
+
+<ul>
+<li>混合器画笔工具<br />
+颜料钢里面的涂抹的效果。参数选项。混合器画笔预设。载入画笔 。在燃料刚中占上颜料。预设其他的选项。</li>
+<li>仿制图章工具<br />
+修复画笔类似。将人从某处除掉。可以看到要修复的图像。修复画笔，修复画笔仿制图章中切换到画笔面板。仿制图章模式多。只能有取样。不透明度，流量的选项含有。喷枪。手绘板的压力选项。<br />
+工具栏可以打开或者隐藏。<br />
+隐藏只需要将小叉关闭。打开的操作时窗口菜单下的工具选项打钩。<br />
+ctrl+w关闭窗口。ctrl+w+alt关闭所有的窗口。<br />
+ctrl+o打开文件 。ctrl+n打开新的文件，创建新的文件。<br />
+橡皮擦自动擦出背景颜色,所以可以通过改变背景色改变擦出来的颜色。。使用工具的历史记录可以找到，通过这个可以对以前做的不成功的部分进行修改。。</li>
+<li>下一节背景橡皮擦工具<br />
+ps可以向两侧进行渐变。、、、ooo<br />
+菱形渐变 ，。镜像渐变、、、<br />
+不透明度。100%。完全渐变效果。<br />
+仿色，仿制条带现象的产生。<br />
+中间部分。。。</li>
+<li>海绵工具<br />
+改变图像的饱和度的工具。。。局部色彩更加饱和的方法。。<br />
+ps矢量工具</li>
+<li>路径<br />
+钢笔工具 绘画出一系列的图形。。工作路径。画笔沿着路径描边。前景色对路径进行填充 。路径转化为选择区。<br />
+路径的特性，可以创造出非常平滑的形状。。</li>
+<li>钢笔工具<br />
+线条 起点 闭合的路径 后期进行编辑 某一个锚点 。直接选择工具 。改变曲线的曲率，改变片段的形状。<br />
+ctrl 或者 alt同时拖动可以有不同的组合。。<br />
+？？？？路径工具有什么用处呢，为什么要选择路径。。</li>
+<li>锚点</li>
+</ul>
+
+<p>规则路径<br />
+shift+alt拖动鼠标可以画出一个正的图形来、。<br />
+星型多边形体。。<br />
+通过复制图层和使用喷枪工具可以构造一个对画面中的背景进行填充的画面。。<br />
+描边图层 填充图层 。。拾色器选取的颜色。。在这里面没有颜色。透明的。纯色填充 。色板中拾取某个颜色进行填充。。填充渐变。<br />
+路径<br />
+矢量蒙版。工具。可以实时对选择的图层进行编辑。</p>
+
+<h1>后记</h1>
+
+<p>可怜我记了4000余字的笔记，可是自那之后就没有再用过。</p>
+
+<p>————————————–分割线——————————<br />
+如果您喜欢本文，可以点下面的喜欢按钮，也可以关注<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">本人简书</a><br />
+或简书专题：<a href="https://www.jianshu.com/collection/7b424559990a">我们在自己的世界里独自狂欢</a></p>
+
+<p>也可以阅读我的独立博客，了解更多内容。</p>
+
+<p><a href="http://hktkdy.com/"><img src="http://hktkdy.qiniudn.com/slogan.jpg" alt="" /></a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150515-3.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="PHOTOSHOP学习笔记 | aoao.life" data-url="https://aoao.life/20150515-3.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150820-2.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140825-9.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

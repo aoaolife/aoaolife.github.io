@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利器2020 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="我的工作，学习，和生活（v2020）   my work,study and life.   硬件篇   红米Redmi 7A，百元机里的战斗机，曾经只是想拿他当作备胎，没有想到竟然这么耐用。 Lenove 小新（2019），自己的电脑，也还不错，换过一次网卡，应该还能再战几年。 吉列手动剃须刀锋速3，配合剃须膏，手动刮胡子也是一种享受了。 New Balance 574 ，换了好几双574了。 ...">
+    <link rel="canonical" href="https://aoao.life/20201018.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20201018.html">
+    <meta property="og:title" content="利器2020 | aoao.life">
+    <meta property="og:description" content="我的工作，学习，和生活（v2020）   my work,study and life.   硬件篇   红米Redmi 7A，百元机里的战斗机，曾经只是想拿他当作备胎，没有想到竟然这么耐用。 Lenove 小新（2019），自己的电脑，也还不错，换过一次网卡，应该还能再战几年。 吉列手动剃须刀锋速3，配合剃须膏，手动刮胡子也是一种享受了。 New Balance 574 ，换了好几双574了。 ...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20201018.html">
+    <meta property="twitter:title" content="利器2020 | aoao.life">
+    <meta property="twitter:description" content="我的工作，学习，和生活（v2020）   my work,study and life.   硬件篇   红米Redmi 7A，百元机里的战斗机，曾经只是想拿他当作备胎，没有想到竟然这么耐用。 Lenove 小新（2019），自己的电脑，也还不错，换过一次网卡，应该还能再战几年。 吉列手动剃须刀锋速3，配合剃须膏，手动刮胡子也是一种享受了。 New Balance 574 ，换了好几双574了。 ...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "利器2020 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 79.8%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 79.8%;"></div>
+                    <div class="progress-text">今天 2020.10.18 | 已耗 79.8% · 剩 74 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">利器2020 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2020年10月18日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20201018.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="利器2020 | aoao.life" data-url="https://aoao.life/20201018.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>我的工作，学习，和生活（v2020）</p>
+
+<p>my work,study and life.</p>
+
+<h2>硬件篇</h2>
+
+<ul>
+<li>红米Redmi 7A，百元机里的战斗机，曾经只是想拿他当作备胎，没有想到竟然这么耐用。</li>
+<li>Lenove 小新（2019），自己的电脑，也还不错，换过一次网卡，应该还能再战几年。</li>
+<li><a href="https://item.jd.com/959960.html">吉列手动剃须刀锋速3</a>，配合剃须膏，手动刮胡子也是一种享受了。</li>
+<li>New Balance 574 ，换了好几双574了。</li>
+<li>k2p 路由器，其实买这个路由器之后有点后悔，因为本来以为刷机会很容易，本来以为这款路由器穿墙能力应该不错，结果没想到，刷机很麻烦，也没有可以用的Openwrt包。后来将这款路由器没有做任何处理，大概用了半年左右的时间，后来又闲置了半年，直到后来终于刷入了梅林固件，能够实现路由器级别的科学上网了，但是这个梅林固件的科学上网插件也并不是很强大，有很多让人不爽的点，但是考虑到我毕竟通过它实现了路由器级别的科学上网，因此还勉强能算作是一个我的硬件利器。</li>
+<li>T95Z Max 电视盒子，这个盒子现在淘宝上已经没有人卖了吧。当时买的时候300出头，它的配置还不错，开机无广告，原生安卓系统（并不是安卓TV，因此有些系统的使用上的问题），但并不妨碍我因为拥有了这个盒子，更加热爱看电视了。</li>
+<li>雷鸟 R935C， 75寸电视，结婚新房的电视，之前看知乎和B站很多人分析电视机，在索尼和国产电视机之间犹豫，最后还是买了这台，其实也没有怎么使用，但也毕竟是我斟酌了好久，才买到的一个大件电器。</li>
+</ul>
+
+<h3>付费服务</h3>
+
+<ul>
+<li>科学上网服务 ，现在的科学上网平台，真是越来越先进了，支持节点订阅，支持多种协议，一个链接，粘贴到客户端即可实现配置，爽歪歪</li>
+<li>喜马拉雅， 前不久购买了喜马拉雅包年的会员，还附送了包括腾讯视频，爱奇艺视频等多个第三方服务的会员，总体来看，我只能说，真香！</li>
+<li>Netflix合租账号， 这个用的时间不久，由于已经实现了路由器层面的科学上网，所以在电视上的Netflix App上看影视剧就是一个蛮正常的需求了，总体来看，由于我的电视盒子没有奈飞的认证，导致现在电视上看到的影片分辨率并不高，但是我却总觉得体验很棒了，对我来说，这也是个很值得的会员</li>
+<li>美团单车半年卡， 之前20块买了半年的，对于我这种经常要骑车在地铁站和家之间通勤的人，非常棒了</li>
+</ul>
+
+<h3>windows 7</h3>
+
+<h4>编辑器和 Terminal</h4>
+
+<ul>
+<li><a href="https://code.visualstudio.com/">VS code</a>，在上一家单位的时候，用的不多，主力是Pycharm，后来换到了现在的单位，其他前端同事基本都用VS code.因此，我也就紧跟他们的步伐，开始讲它作为主力编辑器。</li>
+<li><a href="https://ohmyz.sh/">zsh</a> , 也是一个从上家单位就一直用的命令行工具</li>
+</ul>
+
+<h4>VS code 插件</h4>
+
+<ul>
+<li>Dark++ Italic ，主题</li>
+<li>ES7 React/Redux/GraphQL/React-Native snippets， 开发React 应用必装</li>
+<li>IntelliJ IDEA Keybindings, 对于用惯了IDEA等大型IDE的开发者，可以很快地切换快捷键</li>
+<li>Remote - SSH，微软官方出品，通过它，可以实现将WSL中的应用，在VS code当中开发</li>
+<li>Import Cost， 这个也是非常推荐的，推荐给Javascript开发者，可以看引用包的大小，进而对改进引用起到很好的效果</li>
+<li>Rename Actions， 之前的Pycharm能够实现重命名文件名之后，对引入这个文件的文件，全部替换。这个插件实现了类似的效果，非常不错，也是生产力工具</li>
+<li>ESLint， 仍然可以说是前端开发者必备VS code插件了，有了它，可以依据你的eslint规则，自动格式化，自动修改简单错误语法</li>
+</ul>
+
+<h4>系统相关</h4>
+
+<ul>
+<li>ccleaner ，一路相伴，哈哈哈。</li>
+<li>everything，据说是很多人至今不愿意放弃windows的一个理由</li>
+<li>迅雷极速版，偶尔下个片也不错</li>
+<li>IDM，接管浏览器下载功能</li>
+<li>ShareX ， 截屏工具，还可以实现OCR，赞</li>
+<li>Postman, 接口调试与模拟工具</li>
+<li>弹幕派，婚礼与年会等场合发弹幕很好用</li>
+<li>TrafficMonitor ， 监控网络情况， 不到1M的软件，可以省去各种大师和管家了</li>
+<li>WSL， 系统子系统，如果习惯了使用linux，现在切换到了windows，这可能是个不错的选择</li>
+</ul>
+
+<h4>效率</h4>
+
+<ul>
+<li><a href="https://gifcam.en.softonic.com/">gifcam</a> ，有了它录个屏幕gif很方便</li>
+<li>everything, 用它来搜索系统内部的资源比windows 10 自带的还要还用一些。</li>
+</ul>
+
+<h4>音视频</h4>
+
+<ul>
+<li>Spotify , 上一个版本，我还推荐网易云呢，逃</li>
+<li>达芬奇, 视频剪辑软件</li>
+<li>PhotoShop， 图片编辑软件</li>
+</ul>
+
+<h4>即时通讯</h4>
+
+<ul>
+<li>Slack， 办公必备，多端同步聊天记录，更新工作状态，表情表达精准，赞,</li>
+<li>Zoom, 疫情之下，视频会议首选</li>
+<li>微信，中国特色</li>
+</ul>
+
+<h4>浏览器</h4>
+
+<ul>
+<li>Firefox,曾经多年的主力浏览器，现在很少用了。</li>
+<li>Chrome，现在的主力浏览器，日常工作都很给力。</li>
+</ul>
+
+<h4>Chrome 插件</h4>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?utm_source=chrome-app-launcher-info-dialog">uBlock Origin</a>，过滤烦人的广告</li>
+<li><a href="https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd">LastPass: Free Password Manage</a>，密码管理工具，也用了好几年了。</li>
+<li><a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">Proxy SwitchyOmega</a>，翻墙必备</li>
+<li><a href="https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?utm_source=chrome-app-launcher-info-dialog">Save to Pocket</a>，也是日常生活中比较常用的Chrome 插件之一了，配合安卓版pocket碎片化阅读也很不错。</li>
+<li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?utm_source=chrome-app-launcher-info-dialog">React Developer Tools</a>，调试React 项目必备</li>
+<li><a href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-app-launcher-info-dialog">Stylish</a> ,给任意网站添加任何你想要的样式</li>
+<li><a href="https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog">Tampermonkey</a> ，给任意网站添加脚本支持，让浏览器从此与众不同</li>
+<li><a href="https://chrome.google.com/webstore/detail/phlfmkfpmphogkomddckmggcfpmfchpn?utm_source=chrome-app-launcher-info-dialog">右键搜</a> ，让你的右键更加个性化</li>
+<li><a href="https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa">Requestly: Redirect Url, Modify Headers etc</a> , 同样是我开发必备的插件</li>
+</ul>
+
+<h4>手机APP 或小程序</h4>
+
+<ul>
+<li>北京健康宝，疫情期间，有了它，更方便哦</li>
+<li>多抓鱼， 这一年，在多抓鱼买书卖书很多次了，很不错</li>
+<li>每日优鲜，买菜呀</li>
+</ul>
+
+<p>© 2020 Zhangolve</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20201018.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="利器2020 | aoao.life" data-url="https://aoao.life/20201018.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150215-4.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20160518-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

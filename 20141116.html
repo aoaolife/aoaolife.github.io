@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nexus 4刷入Android 5.0初体验 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="如果你不想听我废话，可以直接拉到下面的总结部分 这件事折腾了我一天时间，总觉得要是不写点什么亏得慌，其实写了照样亏，哈哈。   之所以要这么刷入Android 5.0理由如下：  1不能收到OTA  我之前用的rom是cm11，众所周知，cm11只能接到cm的更新，所以这意味着我不可能得到官方的ota，所以尽管ota有很多好处，比如可以不用再root，不用再开启google now，不用再开启位置...">
+    <link rel="canonical" href="https://aoao.life/20141116.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20141116.html">
+    <meta property="og:title" content="nexus 4刷入Android 5.0初体验 | aoao.life">
+    <meta property="og:description" content="如果你不想听我废话，可以直接拉到下面的总结部分 这件事折腾了我一天时间，总觉得要是不写点什么亏得慌，其实写了照样亏，哈哈。   之所以要这么刷入Android 5.0理由如下：  1不能收到OTA  我之前用的rom是cm11，众所周知，cm11只能接到cm的更新，所以这意味着我不可能得到官方的ota，所以尽管ota有很多好处，比如可以不用再root，不用再开启google now，不用再开启位置...">
+    <meta property="og:image" content="http://ww1.sinaimg.cn/large/63a3d9b7jw1embjn42jakj20ao0hsdg6.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20141116.html">
+    <meta property="twitter:title" content="nexus 4刷入Android 5.0初体验 | aoao.life">
+    <meta property="twitter:description" content="如果你不想听我废话，可以直接拉到下面的总结部分 这件事折腾了我一天时间，总觉得要是不写点什么亏得慌，其实写了照样亏，哈哈。   之所以要这么刷入Android 5.0理由如下：  1不能收到OTA  我之前用的rom是cm11，众所周知，cm11只能接到cm的更新，所以这意味着我不可能得到官方的ota，所以尽管ota有很多好处，比如可以不用再root，不用再开启google now，不用再开启位置...">
+    <meta property="twitter:image" content="http://ww1.sinaimg.cn/large/63a3d9b7jw1embjn42jakj20ao0hsdg6.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "nexus 4刷入Android 5.0初体验 | aoao.life",
+      "image": [
+        "http://ww1.sinaimg.cn/large/63a3d9b7jw1embjn42jakj20ao0hsdg6.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 87.7%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 87.7%;"></div>
+                    <div class="progress-text">今天 2014.11.16 | 已耗 87.7% · 剩 45 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">nexus 4刷入Android 5.0初体验 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2014年11月16日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20141116.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="nexus 4刷入Android 5.0初体验 | aoao.life" data-url="https://aoao.life/20141116.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>如果你不想听我废话，可以直接拉到下面的<strong>总结部分</strong><br />
+这件事折腾了我一天时间，总觉得要是不写点什么亏得慌，其实写了照样亏，哈哈。</p>
+
+<h1>之所以要这么刷入Android 5.0理由如下：</h1>
+
+<h2>1不能收到OTA</h2>
+
+<p>我之前用的rom是cm11，众所周知，cm11只能接到cm的更新，所以这意味着我不可能得到官方的ota，所以尽管ota有很多好处，比如可以不用再root，不用再开启google now，不用再开启位置信息，但是因为你的系统不是原生的，所以必须通过刷机来使用Android 5.0  </p>
+
+<h2>2Material design</h2>
+
+<p>随着之前一系列的google应用程序以及国外一些优秀的app用上了Material design，越来越感觉到cm11的整体界面与这些app的不相适应，所以为了更好的使用体验觉得有必要刷入Android 5.0.</p>
+
+<h2>3推迟的原因让你更加渴望</h2>
+
+<p>google官方在北京时间2014年11月15凌晨放出了nexus 4的Android 5.0镜像文件，而在前一天google的一位工作人员在google+上面写下了nexus 4的镜像文件也即将发布的消息，尽管nexus 4 Android 5.0的镜像文件的比nexus 5和nexus 7的发布得要晚，但是对于nexus 4用户，比如我还是足够激动的。<br />
+于是当我15号早上打开电脑，因为之前谷歌那个工作人员消息的原因，于是上了google+去看相关的东西，结果发现镜像文件已经放出，于是果断刷机。  </p>
+
+<h2>4单纯的想要体验一番Android 5.0，</h2>
+
+<p>虽然之前刷入过6月份android L刚刚放出来时的开发者预览版镜像，但是那个时候甚至连google自己的官方app也没有material design，整个系统ui不错，但是与app的搭配使用还很不友好。而这个时候，就如我在1中所说，基本上是大势所趋。  </p>
+
+<h2>5出现了问题</h2>
+
+<p>之前说过，我的nexus 4在拨打电话和接听电话方面出了点问题，有人说是软件问题，所以希望通过刷机来解决，毕竟5.0是最新的系统。  </p>
+
+<h2>顾虑：</h2>
+
+<p>当然是刷入Android 5.0之后的root，开启google now，以及安装一系列app的问题了，这些问题都会让我花费很长的时间来解决，说实话感觉像是挖了个坑。  </p>
+
+<h1>过程：</h1>
+
+<p>过程其实很简单，就像是之前我在刷入L 的文字中写下的那样，利用<a href="http://hktkdy.com/2014/09/08/201409/0908/">刷机精灵的一键刷机</a>，直接就能刷入，不过不知道为什么第一次刷入失败了，第二次才成功，可能是网络原因吧。<br />
+刷机后：<br />
+刷机之后开机非常得慢，大概十几分钟一直停留在那个开机动画上，当最后那个动画变成了ANDROID的时候，很激动有木有。</p>
+
+<p>然后是选择语言，选择wlan接入，选择自己的google账号，今时不同往日，当年我买这部手机的时候选择自己的google账号还能够正常的登录，现在却只有跳过这个步骤等到顺利开机之后翻墙之后才能登录了。说多了都是泪啊！</p>
+
+<p>开始最先想到的是同步联系人，联系人在google账号上面所以必须登录google了，于是就是翻墙的问题，选了之前用过的fqrouter翻墙路由器这个神器，结果它好像还不能够在Android5.0上面使用，于是又找了一个寻路，结果也是无效，经过google之后找到了一款名叫赛风的app，感觉还不错，速度与fqrouter差不多，不过不太稳定。（链接百度云）</p>
+
+<p>顺利登录google之后，同步了联系人等信息之后下载了几个常用的app，截了张lillipop棒棒糖的图到微博上晒了晒<br />
+<img src="http://ww1.sinaimg.cn/large/63a3d9b7jw1embjn42jakj20ao0hsdg6.jpg" alt="" /><br />
+然后就想到了我在理由5中提到的那件事情，结果经过拨打10010的试验，发现比之前的情况还要糟糕，我甚至考虑过刷入其他rom比如我一直笔记比较感兴趣的魔趣，很庆幸最后没有刷入。<br />
+我在网上 的一个<a href="https://plus.google.com/100761412958725838270/posts/KcyvdJndFiy">求助帖</a>：</p>
+
+<blockquote>
+  <p>android 5.0还有没有“按电源键挂断通话”的设置了？我的n4可能是传感器出了问题,刷过几个rom打电话时都是黑屏,上一个rom是cm11,打电话之后黑屏然后再按下电源键可以点亮屏幕,但是不能按动屏幕上上的键盘,这个5.0刷完之后就变成了打出去电话直接黑屏,按动电源键之后闪亮一次,不会常亮.好纠结啊,5.0其实很不错,只有这一个问题(应该不是软件的问题)让我很蛋疼，有什么方法吗？比如按电源键挂断通话，或者其他第三方的拨号软件。附上我上一次遇到这个情况的求助帖</p>
+</blockquote>
+
+<p>，于是我发现这才是最大的坑，就为了这件事情纠结了老长时间。</p>
+
+<p>经过google之后，看到一篇<a href="http://www.xuexx.com/archives/3442">文章</a>，死马当活马医得把手机贴膜揭掉，问题才得以解决，这个问题也是纠结了我两个多月的问题。  </p>
+
+<h1>总结：</h1>
+
+<p>说是初体验，结果写着写着写成了因为刷机而有的各种事情。没有给其他人有用的信息，这真的好么？<br />
+所以现在总结一下对于读者可能有用的点：<br />
+1刷机精灵这个软件虽然有点流氓，但是刷机还是比较方便的，对于一些像我这样的小白可以使用。<br />
+2如果你的nexus 4像我的一样，拨打或者接听电话出现黑屏，请把膜揭掉。<br />
+3如果你有上google的愿望，想要翻墙，暂时还是推荐用用那个赛风软件，还不错。赛风下载：链接: <a href="http://pan.baidu.com/s/1bnix1vx">http://pan.baidu.com/s/1bnix1vx</a> 密码: w58a<br />
+4刷机之后的整体感觉就是非常流畅，但是就像某些人说的那样BAT这三家大厂的app真的很不给力。<br />
+5刷机是个坑，要做的事挺多的，刷前请谨慎考虑，对于上班族等比较忙的还是建议等ota吧，就是省事。<br />
+最后放几张截图吧：<br />
+<img src="http://hktkdy.qiniudn.com/lillipop1.png" alt="好像充电速度还是很快的" /><br />
+<img src="http://hktkdy.qiniudn.com/lillipop2.png" alt="之前我遇到的问题就是向联通拨号后屏幕离开变暗，按电源键只会闪亮" /><br />
+<img src="http://hktkdy.qiniudn.com/lillipop3.png" alt="" /><br />
+<img src="http://hktkdy.qiniudn.com/lillipop4.png" alt="设置里面没有了按动电源键取消通话，也没有了按音量键切歌和唤醒屏幕" /></p>
+
+<p><img src="http://hktkdy.qiniudn.com/lillipop5.png" alt="" />  </p>
+
+<h1>2015年2月9日更新：</h1>
+
+<p>又看到自己这篇博客，补充点也许无关紧要的：<br />
+在升级完android 5.0大概一个月之后，谷歌就放出了android 5.0.1的包，但是因为我之前已经将手机root了（其目的其实也仅仅是为了开一个地理位置），于是导致机器人倒地的结果，最后是通过线刷时修改包里面的文件去 -t 解决的，当然这次刷入android 5.0.1之后，默认又取消了root，而我衡量之后，也觉得没有root的必要了，理由嘛，自然是因为google本身的升级频繁和我自己对手机root的要求不高。<br />
+另外因为买了一个vps，自己搭了shadowsocks，使用了shadowsocks的android 客户端，使用体验很不错，那个赛风也不需要了。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20141116.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="nexus 4刷入Android 5.0初体验 | aoao.life" data-url="https://aoao.life/20141116.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20140614-1.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140712-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

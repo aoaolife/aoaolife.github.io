@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术面试那些事 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="我想接着聊一下技术面试这件事情,我是想探讨一下技术面试的好处,对于实习生或者说对于面试者的好处,也就是他真的是一个免费的讲座,他能够帮助你去进行一个查漏补缺的一个过程。   我想起来知乎上曾经看过一篇文章,他讲到了三甲医院的医生,当时那个问题大概是说为什么三甲医院的这个挂号费最少五六十,最多三四百甚至更高。然后有一个回答很有意思,也让我印象深刻,他说三甲医院的医生都是经过了千锤百炼,他们想在三甲医...">
+    <link rel="canonical" href="https://aoao.life/20220319.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20220319.html">
+    <meta property="og:title" content="技术面试那些事 | aoao.life">
+    <meta property="og:description" content="我想接着聊一下技术面试这件事情,我是想探讨一下技术面试的好处,对于实习生或者说对于面试者的好处,也就是他真的是一个免费的讲座,他能够帮助你去进行一个查漏补缺的一个过程。   我想起来知乎上曾经看过一篇文章,他讲到了三甲医院的医生,当时那个问题大概是说为什么三甲医院的这个挂号费最少五六十,最多三四百甚至更高。然后有一个回答很有意思,也让我印象深刻,他说三甲医院的医生都是经过了千锤百炼,他们想在三甲医...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20220319.html">
+    <meta property="twitter:title" content="技术面试那些事 | aoao.life">
+    <meta property="twitter:description" content="我想接着聊一下技术面试这件事情,我是想探讨一下技术面试的好处,对于实习生或者说对于面试者的好处,也就是他真的是一个免费的讲座,他能够帮助你去进行一个查漏补缺的一个过程。   我想起来知乎上曾经看过一篇文章,他讲到了三甲医院的医生,当时那个问题大概是说为什么三甲医院的这个挂号费最少五六十,最多三四百甚至更高。然后有一个回答很有意思,也让我印象深刻,他说三甲医院的医生都是经过了千锤百炼,他们想在三甲医...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "技术面试那些事 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 21.4%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 21.4%;"></div>
+                    <div class="progress-text">今天 2022.03.19 | 已耗 21.4% · 剩 287 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">技术面试那些事 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2022年03月19日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20220319.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="技术面试那些事 | aoao.life" data-url="https://aoao.life/20220319.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>我想接着聊一下技术面试这件事情,我是想探讨一下技术面试的好处,对于实习生或者说对于面试者的好处,也就是他真的是一个免费的讲座,他能够帮助你去进行一个查漏补缺的一个过程。</p>
+
+<p>我想起来知乎上曾经看过一篇文章,他讲到了三甲医院的医生,当时那个问题大概是说为什么三甲医院的这个挂号费最少五六十,最多三四百甚至更高。然后有一个回答很有意思,也让我印象深刻,他说三甲医院的医生都是经过了千锤百炼,他们想在三甲医院当医生,至少要经过5年本科,然后几年硕士几年博士,长达十几年的学医生涯,要混到博士的地位,然后他们至少也是985,他们学历非常优秀,他们的科研可能也有两把刷子,然后你花上五六十块钱,花200块钱就可以面对面跟这个三甲医院的医生聊上这么20分钟,半个小时,去对你的这个身体做一个回顾,让你的身体变得更好,这个钱花的值不值呢,太值了。</p>
+
+<p>我想对于我们面试者来讲也是一样的道理,假如我们这些面试者,包括还在上学的学生,包括刚毕业的学生,也包括老鸟,去面试,去一些大厂,或者说去一些小厂。无所谓,现在IT行业的工资待遇都还是比较高的,所以也是可以想一下,其实你简单计算一下,可能一个人的时薪怎么着也有100 200。100左右,简单来说100块钱,如果你能跟这一个面试官聊上这么一个小时,那其实你相当于免费享受了别人100块钱的这样一个劳动成果,其实是很值得的嘛。而对于你来讲,你也做到了查漏补缺,你也做到了能够去梳理你的知识,因为一般来说,我们不说那些富有丰富经验的这些开发工程师,也就说找实习的学生或者刚刚毕业的学生,或者刚参加工作工作1年的年轻人,他们的知识体系其实并不健全,会有很多的问题,这个时候如果有一个两个甚至更多的面试官,能够在这个面试的过程中帮助到这些新人们,帮助他们去做一些知识梳理,找到知识上的问题其实是非常有好处的嘛。</p>
+
+<p>我记得我自己刚毕业的时候,也是经过了很多这种被虐的过程,我也记得我自己大四的时候,大概也就是这个时候去找实习,也是被虐,被虐的很惨,我自己也写过文章去讲了这件事情,总体来说确实每一次面试对于你来讲,其实都可以成为一个查漏补缺的过程,都可以成为你自己去总结经验,了解自己过往不足的一个过程,所以你也确实能见到在很多人吧都会去做一些所谓的面经,也就是每一次面试完之后都会去梳理总结面试中遇到的问题,这其实是最大程度地发挥了这个这次面试所达到的效果,所以相对来说其实是对于面试者来讲是非常好的,面试者应该珍惜这样的一个机会,去利用好它。</p>
+
+<p>这是我关于面试者的这样一个体会,面试这件事并不是特别容易,我们都是一步步走过来的,面试可能有很多技巧,有时候你需要去扬长避短,你需要去发挥自己的知识,更好的发挥,展露自己,让别人知道自己的优点,这也是一个需要总结的一些东西,所以无论如何,其实还是我刚才说你需要查漏补,其实需要梳理知识,需要明白自己的不足,一点点变强大,我还记得之前也是看到一个帖子,大概的意思是说不不要气馁,面试的这个过程不要气馁,总会有一个瞎子看上你,话糙理不糙吧,确实是这样,就是即便是再不行的面试者。只要你能坚持下来的,最后也也总能够有暗花明又一春。,总会有匹配上你的一个角色,只要你耐心吧,只要你真的能够去一步步的走,去做到的那些那些东西。</p>
+
+<p>我在这几天的面试当中,也确实遇到过一些很优秀的面试的面试者,一些实习生,,有些实习生就是也很优秀,让我觉得他们甚至比当时参加工作1年左右的时候的我还不错,我觉得他们都很有潜力嗯,所以可能这就是人家梳理知识这样一个结果吧,因为我确实也在他的博客里面见到过他的一些面经,这个过程其实也是需要你自己真正下功夫的,所以这也是我想表达的一个点。</p>
+
+<h2>对面试官的要求</h2>
+
+<p>另外我也想讲一下这个面试官这一块儿,因为以前我一直是做作为面试者的这样一个角色,但是最近的我都担担任了一个面试官,所以我也愿意去换位思考,去想面试官可以做做到什么程度,可以怎样做得更好。</p>
+
+<p>我有几点认识吧,第一点就是面试的时长,我认为一轮技术面试最少的时间应该也要在保持在20分,20分钟左右,这可能也是对一个面试者一个基本的尊重吧,我自己遇到过几次,就是面试时长非常之短,可能只有五分钟,两分钟。这样一个时间我觉得很特别的沮丧,经过了这样有一次经历嗯,我有印象比较深的就是一次去永辉生活,然后当时我坐地铁倒公交可能花了两个小时的时间到了这个公司,然后把简历给面试官一看,面试官一看我的这个简历上写着我会用react,但是我会用没有vue,然后他问我,他说你你会不会用vue,我说只是了解过没有用过,然后他就表现出来这种很沮丧,很很无奈,很茫茫然的这样一个表情。然后后好像还跟别人说了一句,大概意思是怎么又把这种人给我们,这不浪费我时间吗。所以他这样一些表情,他这样一些动作其实也在影响着我,后来其实就没有问什么问题,草草的这个面试就结束了,我当时对他的印象很不好,对这个公司印象也很不好。所以即便过了几年,也一直记得这件事情。所以我觉得对于一个面试官来讲,他也应该有他的善良,他的善良体现在哪呢,体现在他的表情,也体现在他的神态,体现在他即便是面对一个面试者,水平真的不高,你也要给予人家一些尊重,这个尊重体现在哪里呢,就是你能够保证面试的时长,对方的回答即便很可笑,你也不要让人家看出来你在嘲笑人家,这是我觉得一个面试官应该做到的东西。</p>
+
+<p>当然了,面试官要谦虚,尤其是居高临下的,面对一些实习生或者刚毕业的学生,还是应该保持谦虚,因为我确实自己在做面试官的时候,也发现有些问题实际上面试者可能比我还要了解。我举个例子,我当时问一个实习生说git在本地创建一个新分支可以怎么做,我的常用操作是<code>git checkout -b</code> ，如果分支名叫<code>abc</code> ,那么就是<code>git checkout -b abc</code>。 他给我的说法叫<code>git branch abc</code>. 我后来发现这确实也是一个正确方式，只是我以前从来没有用过而已。所以，还是真的要谦虚,面试官当然也不是全知全能,</p>
+
+<h1>总结</h1>
+
+<p>总结来看,面试者他要有一些正确的态度,他如果能够做到查漏补缺,能够换位思考,能够想象面试官其实是在花着自己的时间,在帮助你去进行查漏补缺,其实说的说的高雅一点,你可能需要一个感恩的心,</p>
+
+<p>面试官，也需要一些善良,你需要保证你的面试时长,你需要谦虚,需要注意自己的表情神态。</p>
+
+<p>面试这个过程其实很有意思,我们公司的这个面试到目前为止算是结束了,最近经过了可能有十次面试吧，也想把这样一些感受分享给大家,也我不知道看我文章或视频的朋友是作为面试者的身份来看,还是作为面试官的身份来看,如果你们有什么疑问或者问题,欢迎在这个评论区留言,谢谢大家</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20220319.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="技术面试那些事 | aoao.life" data-url="https://aoao.life/20220319.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150621.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140809-2.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

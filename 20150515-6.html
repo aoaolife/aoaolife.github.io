@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCad学习笔记 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记   基本释义 cad abbr. 计算机辅助设计（Computer - Aided Design） autocad 快捷键 图形单位的设置。。 行业中对尺寸单位是非常敏感的。格式–单位。 ctr...">
+    <link rel="canonical" href="https://aoao.life/20150515-6.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150515-6.html">
+    <meta property="og:title" content="AutoCad学习笔记 | aoao.life">
+    <meta property="og:description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记   基本释义 cad abbr. 计算机辅助设计（Computer - Aided Design） autocad 快捷键 图形单位的设置。。 行业中对尺寸单位是非常敏感的。格式–单位。 ctr...">
+    <meta property="og:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150515-6.html">
+    <meta property="twitter:title" content="AutoCad学习笔记 | aoao.life">
+    <meta property="twitter:description" content="写在前边  这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。 温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W   笔记   基本释义 cad abbr. 计算机辅助设计（Computer - Aided Design） autocad 快捷键 图形单位的设置。。 行业中对尺寸单位是非常敏感的。格式–单位。 ctr...">
+    <meta property="twitter:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "AutoCad学习笔记 | aoao.life",
+      "image": [
+        "http://hktkdy.qiniudn.com/slogan.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 37.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 37.0%;"></div>
+                    <div class="progress-text">今天 2015.05.15 | 已耗 37.0% · 剩 230 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">AutoCad学习笔记 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年05月15日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150515-6.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="AutoCad学习笔记 | aoao.life" data-url="https://aoao.life/20150515-6.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>写在前边</h1>
+
+<p>这还是大一的时候暑假的时候学习这个软件时记的笔记呢，今天又在电脑上找到了它，总觉得不应该让他尘封在我的硬盘上，于是挂了出来。<br />
+<strong>温馨提示：比较乱，写给自己看的，看不下去，按ctrl+W</strong></p>
+
+<h1>笔记</h1>
+
+<ul>
+<li>基本释义<br />
+cad abbr. 计算机辅助设计（Computer - Aided Design）</li>
+<li>autocad 快捷键<br />
+图形单位的设置。。<br />
+行业中对尺寸单位是非常敏感的。格式–单位。</li>
+<li>ctrl+n新建图纸，不能选择英制的单位。。</li>
+<li>十字光标的调整。。调成最长。。工具-选项-显示-光标调成最大</li>
+<li>最上一行，倒三角，单击，出来一个可以隐藏菜单栏的选项。</li>
+<li>正交模式F8，可以控制是他沿着坐标轴。。</li>
+<li>delete选中以删除。。。</li>
+<li>对象捕捉。。测量长度的时候利用对象捕捉。捕捉两点快捷键F3.单击打开或者关闭。<br />
+对象捕捉屏幕最下面有对象捕捉的图标，这时候右击他，打开设置，可以对 对象捕捉进行设置。。<br />
+使用对象捕捉可以</li>
+<li>画出一条线后中断，捕捉一个端点，可以继续完成一个图形。。。</li>
+<li>ctrl+z 恢复。。撤销。。。</li>
+<li>直线的独特操作。。</li>
+</ul>
+
+<p>直线的快捷键是l</p>
+
+<ul>
+<li>点的快捷键是po<br />
+点样式<br />
+格式-点样式<br />
+在cad中一张图纸中只能允许存在一种点样式<br />
+等分点 div加空格+3+空格表示对线段三等分</li>
+<li>等距点等距点 me<br />
+、me+空格+<br />
+绘图命令圆。快捷键c circle。<br />
+c+空格 指定圆的圆心，指定圆的半径或直径。。</li>
+<li>任意画出三点 可以确定一个圆<br />
+规则 3p画圆<br />
+任意画出三点 c+空格 +3p空格 指定三个点<br />
+两点画圆，指定的是圆上的直径。</li>
+</ul>
+
+<p>先画一个长度确定的直线，c+空格+2p画圆。。看屏幕下面有命令提示。。<br />
+建筑行业等 正多边形来做内切圆，外接圆等。。</p>
+
+<ul>
+<li>缩放命令z+空格<br />
+e+空格</li>
+<li>绘制矩形<br />
+快捷键 rec<br />
+rectangle矩形单词前三个字母。。<br />
+如果四个角均为直角，该图为矩形。</li>
+</ul>
+
+<p>It is a rectangle if the four angles square<br />
+abbr. 草图；工程图，结构图（drawing</p>
+
+<p>分解命令<br />
+测量工具的使用</p>
+
+<p>di快捷键 可以测量长度。。<br />
+绝对坐标，相对坐标<br />
+下次学第13节。。<br />
+CAD中测量工具。<br />
+测量圆的面积<br />
+快捷键 aa空格<br />
++o空格 可以得到圆的面积。。<br />
+分解<br />
+线形物体分解<br />
+x+空格 +选择要被分解的对象<br />
+一般使用相对坐标作图。类似于重新建立坐标轴。<br />
+相对坐标 找到他的长度，宽度。<br />
+rec+空格<br />
+@a，b 可以确定一个矩形<br />
+倒角矩形 圆角矩形<br />
+倒角距离<br />
+指定第一个倒角距离+第二个倒角距离+第一个角点<br />
+倒角矩形制作方法<br />
+以倒角为100<em>100，矩形500</em>500为例<br />
+先做出倒角来<br />
+rec空格 c 空格 输入100，,100，再单击鼠标 d<br />
+ 输入500,500.。。</p>
+
+<ul>
+<li>移动命令 快捷键 为 M 。<br />
+例子 先画一个圆 把圆心标出来 m空格<br />
+基点的选择，移动到指定的未知<br />
+选择对象三种方式 ，点选，左框选，右框选。。<br />
+象限点重合 左侧移动 距离<br />
+相对坐标画矩形。</li>
+<li>复制命令 。快捷键co 。把一个对象变成两个或多个对象。。使用一种命令完成，可以使用其他的方法也能够完成。<br />
+文字命令时，先复制文字，然后修改文字如复制五个红字，再把红字改成其他你希望的字。</li>
+<li>圆弧 是一个复杂的命令<br />
+a+空格 +三点 作图。最简单的画圆弧的方式。（角度，半径都不确定）<br />
+弦长不能大于直径的长度。。<br />
+cad与角度相关 逆时针出图。。<br />
+利用圆弧绘制太极图。</li>
+</ul>
+
+<p>步骤<br />
+半径为五百的圆，a+空格 +圆弧起点+端点+</p>
+
+<ul>
+<li>正多边形<br />
+pol空格+边的条数+最少输入三条边，最多输入1024条边。提示电脑边的绘制完毕。。<br />
+选择边的第一个端点。。一个边长为多少的多边形指定。。<br />
+利用圆心。<br />
+椭圆快捷键为el+空格 两种方法<br />
+1 指定端点 轴<br />
+2 圆心<br />
+3 圆弧<br />
+椭圆弧命令 快捷键 el 空格+a<br />
+co复制命令<br />
+旋转ro<br />
+镜像 mi<br />
+拉伸 ex<br />
+偏移 o<br />
+pr 裁剪 栏选点<br />
+tr<br />
+延伸ex<br />
+打断 br break<br />
+打断于点 br<br />
+合并j<br />
+样条曲线 spl 用于绘制不规则的图形。。。找 几个点画出样条曲线，点击三次空格可以关闭。<br />
+修订云线。revcloud 利用修订云线可以进行圈阅，修改，绘制指定区域。绘制湖的形状等。样条曲线。实际需求。<br />
+对样条曲线最好用co复制命令。<br />
+创建块：b<br />
+需要一组图形整体操作。。</li>
+<li>图像填充操作。<br />
+闭合空间点击鼠标左键，按下空格键，空间选择完毕。<br />
+选择图案，图案样例，一一对应。单色，样例改变了，颜色选择。。快捷键 h。。图像填充。。图案填充</li>
+</ul>
+
+<p>渐变色 未闭合的区域进行闭合。。<br />
+倒角cha<br />
+圆角f<br />
+阵列 对行和列同时输入数字，行的方向是正的。这个是阵列的操作。非常有用的操作。库房位置的摆放。环形阵列，首先画圆（为例）ar选择环形阵列操作。需要阵列的对象选择完毕，围绕着一个中心点进行设置，。选择你需要圆的模型。填充的角度是多少，确定。四个圆。做出。<br />
+利用辅助线，阵列可以操作，环形阵列，找中心点，选择的对象，<br />
+利用圆弧命令，4<br />
+<strong><em>*cad逆时针出图</em></strong><em>**<br />
+<strong></em>8阵列*</strong> 快捷键 ar 矩形阵列 环形阵列。、<br />
+刚才的操作时竖向的操作，行的方向上增加了。则列的方向上是1不变。</p>
+
+<h1>结语</h1>
+
+<p>说来惭愧，从那个夏天之后，就再也没有碰过AutoCad。</p>
+
+<p>————————————–分割线——————————<br />
+如果您喜欢本文，可以点下面的喜欢按钮，也可以关注<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">本人简书</a><br />
+或简书专题：<a href="https://www.jianshu.com/collection/7b424559990a">我们在自己的世界里独自狂欢</a></p>
+
+<p>也可以阅读我的独立博客，了解更多内容。</p>
+
+<p><a href="http://hktkdy.com/"><img src="http://hktkdy.qiniudn.com/slogan.jpg" alt="" /></a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150515-6.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="AutoCad学习笔记 | aoao.life" data-url="https://aoao.life/20150515-6.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20140907.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140604-2.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

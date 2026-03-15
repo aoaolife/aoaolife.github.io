@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端项目使用swc踩坑 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="   从rust说起  大概是一个多月以前，我刷推特的时候，偶然说到一条推文，大概内容是讲rust语言在前端开发中的应用的。      Rust语言经过多年的不懈努力终于找到自己最擅长的领域：重写命令行小工具。   之后再接再厉，进一步找到自己最擅长并可以实现降维打击的细分领域：重写前端开发命令行小工具。(象牙山刘能)    后来就简单了解了一下，rust，发现确实有点东西。   比如这个：   ...">
+    <link rel="canonical" href="https://aoao.life/20230224.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20230224.html">
+    <meta property="og:title" content="前端项目使用swc踩坑 | aoao.life">
+    <meta property="og:description" content="   从rust说起  大概是一个多月以前，我刷推特的时候，偶然说到一条推文，大概内容是讲rust语言在前端开发中的应用的。      Rust语言经过多年的不懈努力终于找到自己最擅长的领域：重写命令行小工具。   之后再接再厉，进一步找到自己最擅长并可以实现降维打击的细分领域：重写前端开发命令行小工具。(象牙山刘能)    后来就简单了解了一下，rust，发现确实有点东西。   比如这个：   ...">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/7566337/221146215-d2dda329-fd6b-4dc5-b6d5-d99f8a6e386d.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20230224.html">
+    <meta property="twitter:title" content="前端项目使用swc踩坑 | aoao.life">
+    <meta property="twitter:description" content="   从rust说起  大概是一个多月以前，我刷推特的时候，偶然说到一条推文，大概内容是讲rust语言在前端开发中的应用的。      Rust语言经过多年的不懈努力终于找到自己最擅长的领域：重写命令行小工具。   之后再接再厉，进一步找到自己最擅长并可以实现降维打击的细分领域：重写前端开发命令行小工具。(象牙山刘能)    后来就简单了解了一下，rust，发现确实有点东西。   比如这个：   ...">
+    <meta property="twitter:image" content="https://user-images.githubusercontent.com/7566337/221146215-d2dda329-fd6b-4dc5-b6d5-d99f8a6e386d.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "前端项目使用swc踩坑 | aoao.life",
+      "image": [
+        "https://user-images.githubusercontent.com/7566337/221146215-d2dda329-fd6b-4dc5-b6d5-d99f8a6e386d.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 15.1%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 15.1%;"></div>
+                    <div class="progress-text">今天 2023.02.24 | 已耗 15.1% · 剩 310 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">前端项目使用swc踩坑 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2023年02月24日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20230224.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="前端项目使用swc踩坑 | aoao.life" data-url="https://aoao.life/20230224.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p><img src="https://user-images.githubusercontent.com/7566337/221146215-d2dda329-fd6b-4dc5-b6d5-d99f8a6e386d.png" alt="图片" /></p>
+
+<h1>从rust说起</h1>
+
+<p>大概是一个多月以前，我刷推特的时候，偶然说到一条推文，大概内容是讲<code>rust</code>语言在前端开发中的应用的。</p>
+
+<blockquote>
+  <p>Rust语言经过多年的不懈努力终于找到自己最擅长的领域：重写命令行小工具。<br />
+  之后再接再厉，进一步找到自己最擅长并可以实现降维打击的细分领域：重写前端开发命令行小工具。(<a href="https://twitter.com/disksing/status/1613388069876674561">象牙山刘能</a>)</p>
+</blockquote>
+
+<p>后来就简单了解了一下，rust，发现确实有点东西。</p>
+
+<p>比如这个：</p>
+
+<blockquote>
+  <p>依托于WebAssembly，Rust可以运行在浏览器上，在某些场景（如视频直播或需要大量运算）具有卓越的性能，例如我们经常用的figma就有使用到WebAssembly</p>
+</blockquote>
+
+<p>当然也有另外一个用法，也就是使用<code>rust</code>语言去写前端命令行工具，也就是这个推文里所提到的，后来就进一步探索，发现了另外一个工具<code>swc</code></p>
+
+<h1>swc</h1>
+
+<p>经过了解，发现<a href="https://swc.rs/">swc</a>也有点东西，借助AI问答了一下。</p>
+
+<blockquote>
+  <p>对比一下babel和swc？</p>
+</blockquote>
+
+<blockquote>
+  <p>Babel是一个JavaScript编译器，可以将ES6，ES7和JSX等新特性转换为浏览器可以理解的JavaScript代码。它还可以将ES2015模块转换为其他模块系统，如CommonJS或AMD。</p>
+</blockquote>
+
+<blockquote>
+  <p>Swc是一个快速的JavaScript编译器，它使用Rust语言开发，旨在提供最佳的性能。它可以将ES6，ES7和JSX代码转换为浏览器可以理解的JavaScript代码。它还可以将ES2015模块转换为CommonJS或UMD格式。此外，Swc还具有静态分析功能，可用于找出错误并生成错误信息。</p>
+</blockquote>
+
+<blockquote>
+  <p>总之，Babel是一个功能强大的JavaScript编译器，而Swc则是一个快速而高效的JavaScript编译器。</p>
+</blockquote>
+
+<p>可以看到swc最显著的特殊就是<code>快速</code></p>
+
+<p>这是一个韩国小哥开发的开源程序，使用<code>rust</code>语言编写。虽然没有中文文档，但是英文文档写得还是比较简洁清晰的，于是试着在公司项目中使用了一下，结果发现效果确实不错，什么效果？当时是速度，构建速度。</p>
+
+<p>这里就还要说几句题外话了。公司的项目结构比较复杂，说简单点是用微前端的结构去处理页面。微前端当然意味着每个小组有自己相对独立的一块工作，一些项目，可以不用去影响其他小组的工作，然而代价就是很多东西是我自己很难去处理的，这里就包括了项目构建这一块，目前的通用方案仍然是使用webpack去做项目构建，并且我们还在使用webpack 的module federation去进行微前端项目之间的通信，不能去动webpack这个大的框架，所以我当时去测试，就只能小改，也就是使用<code>swc-loader</code>去替换<code>babel-loader</code>，在webpack中loader是很重要的一个概念，每一种loader都能够去处理一些文件类型的资源，之前我们使用<code>babel-loader</code>去处理<code>js</code>,<code>ts</code>资源，但是现在在我的测试中，我用了<code>swc-loader</code>去替换掉他，经过测试，整个完整的webpack项目的启动时间缩小了一半！从我的电脑来看，大概是从60s，缩短到了30s，如果考虑到整个webpack构建的时间，并不光光只是处理js，ts文件，那么这个速度相对于之前使用babel，优势就更大了。</p>
+
+<h1>是否有意义替换babel</h1>
+
+<p>我做完测试之后，紧接着遇到一个问题，是否有意义替换babel。首先在我看来，babel有点太复杂了。我之前写过一篇博文，讲了很多babel相关的概念（FYI 2）。这种复杂度也体现在我们的项目中安装有很多babel的插件，babel的config文件也比较复杂，<code>package.json</code>里面很多babel相关的包，印象中之前做过两次升级的工作，babel及其插件挨个地升级也是实在很烦人(FYI3)。当然你也可以说，你直接进一步封装一下不就好了，当然也可以，但目前我们没有这么做。</p>
+
+<p>我的另外一个问题是，时间已经来到了2023年，到底还有没有必要使用一个最初目的是为浏览器上能够跑ES2015写的代码而准备的库？我想是没有太大目的的，当然其实babel还有别的目的，比如说可以转化一些还处于stage阶段的语法规范，这种情况，如果用的不多，甚至不需要，完全可以忽略掉。当然，我也相信随着swc生态的完善，swc也会支持更多插件，实现类似的目的。（事实是，swc的开源项目里，也的确已经有了几个官方的插件）</p>
+
+<p>总结而言我对babel有几点不满</p>
+
+<ul>
+<li>2023年了，babel存在意义不大</li>
+<li>babel配置复杂</li>
+</ul>
+
+<h1>swc 替换踩坑</h1>
+
+<p>使用swc乍一看还很完美，我搜了下公司代码库，发现已经有其他组正在用了。然而再仔细推敲一下，发现还有些不完美。当时发现两点问题。</p>
+
+<p>一个问题比较好解决，当时我在测试的时候，很快就发现，我们的某些页面打不开，结果debug之后发现是因为有些变量未声明就先使用了，这个之前使用babel并不会报错，因为我们在babel配置中将target定位到了es5，es5不关心这些，但是使用swc的时候，就有问题了，因为使用swc我们将target定位到了es6，问题就出现了。我的解决办法，就是使用eslint去做检查，把出错的语法一条条修改。</p>
+
+<p>一个问题是我们使用了一个比较小众的babel插件，也就是<a href="https://github.com/QuickBase/babel-plugin-styled-components-css-namespace">babel-plugin-styled-components-css-namespace</a> ,这个插件是我最早引入到项目当中的，目的是解决styled components写的css与其他css同时作用于一个元素时，有些样式标识不符合预期的问题（不符合预期的原因时，其他css的权重更高，造成styled 没表现）。如果去掉babel的话，就意味着这样一个插件不能用了，这些权重的设置也无法表现，会有很多潜在的bug出现。针对这个问题，当时我的应对办法是写一个<code>swc</code>插件，通过看<code>swc</code>官方文档，我了解到<code>swc</code>也是支持写插件的，通过写插件，也能实现和babel类似的效果，一来我对<code>rust</code>很感兴趣，二来也想使用类chatgpt bot去看看写代码的表现，于是花了一些时间写了个插件，还真实现了类似的效果，但是我自己仍然对这个插件不是非常满意。原因也有一些：</p>
+
+<p>首先，这个<code>rust</code>语言的插件，会让其他同事看起来很痛苦，我在学习<code>rust</code>的过程中，也发现这个门槛比较高。另外，我也卡在了npm包的发布上，<code>rust</code>写的npm包与我们项目中之前用的npm包有很大不同，于是由此另外引入一套npm包打包发布流程，这是我不是很满意的。（参见<code>swc</code>官方插件库）</p>
+
+<p>正当我犹豫不决之时，又迎来了一些转机，我们项目由于要支持阿拉伯语，也就需要应对<code>rtl</code>布局，之前这一块一直做的不太好，需要手动去写一些变量替换，比如<code>padding-left</code>要写成<code>$pos('padding-left')</code> ,否则原来的代码就会在<code>rtl</code>布局下有问题，因为这个<code>pos</code>方法就是为了应对<code>rtl</code>去做变量转换的。每次都要手写变量实在太麻烦，刚好那些天不是很忙，我就自告奋勇接过了这个活，结果新的路径就打开了。</p>
+
+<p>长话短说，不卖关子了。在styled component v5引入了插件的概念，他甚至在官方文档里推荐了<a href="https://github.com/styled-components/stylis-plugin-rtl">stylis-plugin-rtl</a>这个插件，去实现rtl的效果。通过阅读文档，当时就有一种柳暗花明的感觉，既然可以使用插件来实现<code>rtl</code>，当然也可以使用插件来实现权重提升，况且这个插件还都是使用js编写，前面说的两个问题就都不存在了。</p>
+
+<p>后来的事情，就是在项目中引入了styled components 的插件，同时在我们的npm monorepo里写了一个styled components 插件来实现权重提升，去替换掉babel的对应插件。</p>
+
+<p>解决完以上的两个问题之后，本以为就没有什么能够阻止我们使用<code>swc</code>了。然而，还是有些意外。</p>
+
+<h1>替换成swc 插曲</h1>
+
+<p>本来以为一切顺利的，结果发现还是有些问题，主要问题出在依赖上。前面已经提到的，我司使用微前端架构，我们平时开发会服务两个网站，这两个网站都有一个base的项目，一些常用的依赖，比如<code>react</code>,<code>react-dom</code>,<code>styled-components</code>是这些base项目直接以<code>umd</code>的方式暴露到window对象上的，结果就是我最早替换的A网站没有问题，但是后来准备替换的B网站，base项目中的<code>styled-components</code>版本还是<code>v4</code>版本，根本不能使用<code>v5</code>的plugin新特性。我当然也是可以改这个base项目的依赖，给它升级，但是由于发布时间的关系，如果我在我的项目中，贸然使用v5的新特性，就有可能有问题。</p>
+
+<p>最终，由于要处理依赖关系，我最终没有在B项目中使用<code>swc</code>。当然，一旦B网站新版本上线之后，我就可以放开去替换了，这也是后话了。</p>
+
+<h1>回顾</h1>
+
+<p>回顾整个过程，其实还蛮好玩的，整个过程历时一个多月，从一开始以为这件事很简单，到后来发现有坑，再后来寻求不同的解决方案，最后还是将方案落地，施行，期间也在思考怎样将影响降到最小，怎样对这样的替换过程更有自信。当然，有自信也有一些原因，有一部分原因来自于项目当中的E2E，由于有了E2E，的确发现了一些问题，我写的<code>styled-components</code>插件是有问题的，通过E2E发现了问题，后来又修复了问题，整个过程也再次让我意识到前端工程化的好处，工程化，当然要有前端测试喽。</p>
+
+<p>FYI:</p>
+
+<ul>
+<li>1  <a href="https://juejin.cn/post/6995518096576348173">一文带你走进 Rust 和 WebAssembly 的世界</a></li>
+<li>2 <a href="https://www.jianshu.com/p/bb0621101308">babel 与 polyfill两三事.md</a></li>
+<li>3 <a href="https://hktkdy.com/2022/01/14/2022/fe_upgrade/">前端项目依赖升级踩的坑</a></li>
+</ul>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20230224.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="前端项目使用swc踩坑 | aoao.life" data-url="https://aoao.life/20230224.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150421-2.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140605.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

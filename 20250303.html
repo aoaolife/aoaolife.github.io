@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="最近家里发生了一些事情，总让我思考我的家庭。生活的变化有时候让我猝不及防，我甚至觉得有点东西，看似铭记在大脑里，但是倘若不记录下来，就又可能会完全忘记。   我出生在河北农村，从我记事起，老爸老妈就非常忙碌，他们做着一个家庭作坊式的家具工厂，每天的工作就是做出来一张张的桌面，然后老爸把这些货运到市场上去售卖。   其实我也是后来才得知，我老爸起初并不是做家具的，而是在村里的村办工厂上班，大概也就是...">
+    <link rel="canonical" href="https://aoao.life/20250303.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20250303.html">
+    <meta property="og:title" content="家 | aoao.life">
+    <meta property="og:description" content="最近家里发生了一些事情，总让我思考我的家庭。生活的变化有时候让我猝不及防，我甚至觉得有点东西，看似铭记在大脑里，但是倘若不记录下来，就又可能会完全忘记。   我出生在河北农村，从我记事起，老爸老妈就非常忙碌，他们做着一个家庭作坊式的家具工厂，每天的工作就是做出来一张张的桌面，然后老爸把这些货运到市场上去售卖。   其实我也是后来才得知，我老爸起初并不是做家具的，而是在村里的村办工厂上班，大概也就是...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20250303.html">
+    <meta property="twitter:title" content="家 | aoao.life">
+    <meta property="twitter:description" content="最近家里发生了一些事情，总让我思考我的家庭。生活的变化有时候让我猝不及防，我甚至觉得有点东西，看似铭记在大脑里，但是倘若不记录下来，就又可能会完全忘记。   我出生在河北农村，从我记事起，老爸老妈就非常忙碌，他们做着一个家庭作坊式的家具工厂，每天的工作就是做出来一张张的桌面，然后老爸把这些货运到市场上去售卖。   其实我也是后来才得知，我老爸起初并不是做家具的，而是在村里的村办工厂上班，大概也就是...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "家 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 17.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 17.0%;"></div>
+                    <div class="progress-text">今天 2025.03.03 | 已耗 17.0% · 剩 303 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">家 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2025年03月03日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20250303.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="家 | aoao.life" data-url="https://aoao.life/20250303.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>最近家里发生了一些事情，总让我思考我的家庭。生活的变化有时候让我猝不及防，我甚至觉得有点东西，看似铭记在大脑里，但是倘若不记录下来，就又可能会完全忘记。</p>
+
+<p>我出生在河北农村，从我记事起，老爸老妈就非常忙碌，他们做着一个家庭作坊式的家具工厂，每天的工作就是做出来一张张的桌面，然后老爸把这些货运到市场上去售卖。</p>
+
+<p>其实我也是后来才得知，我老爸起初并不是做家具的，而是在村里的村办工厂上班，大概也就是90年代中后期，他离开了工厂，和我的爷爷，我的老叔一起经营家庭工厂，后来爷爷去世，我爸又和老叔分家，分家之后，大概是老叔获得了一笔钱，而老爸则获得了当时爷爷留下来的一片宅基地，但是是否除了这片宅基地之外，还有其他钱财，我就不得而知了，我知道的是在新的世纪开始之后不久，老爸就花费大概2万块钱在村北头买了一块一亩多的地，想要作为工厂用地去经营，不过据说这2万块也并不是一次性就拿出来的，而是分了几次，至于他是否那个时候去借了钱，我也不得而知。</p>
+
+<p>其实也正是那个他拿地的那个时候，我有些记事了，那个时候，他们买完那块地并没有钱盖厂房，仅仅盖了几间小房，能够干活，也能够凑合住人，也因为条件艰苦，所以那段时间，都是我跟着奶奶在老院居住，这个老院，也就是之前爷爷留下来的宅基地，我的很多美好回忆，来自于这个老院。我偶尔也会去他们的新厂房看看，记忆之中的这个厂房，没有大门，也没有砖墁的当院，没有一个栅栏去告诉人家这里是我的势力范围，只是那片地比路面要高一些，让人知道了这里其实是一户人家。</p>
+
+<p>后来过了几年，老爸在生意上赚了点钱，才开始规整这个厂子，盖了门楼，铺了当院的地面，盖了两间到座，所谓的到座，就是坐南朝北的住宅，在一个院子里，并不是一个好的位置，不过这个到座虽然位置不佳，却是相比于之前那两间又窄又矮的正房高大了不少。因为盖上了到座，老爸老妈得以从原来破败的正房搬走，搬到新盖好的到座里去，而把正房留给了我奶奶。这个时候，老院就整体出租出去了，那个时候奶奶还很健康，老爸和老叔约定两个人轮流一人对一年的赡养奶奶，在奶奶在老爸这边的时候，我就和奶奶住在一起，而在奶奶不在的时候，我很多时候还是自己一个人住在正房，因为已经不太习惯和父母一起居住了。然而自己一个人居住自然也有很多问题，比如冬天的时候，炕是需要烧的，不然就会很冷，我是不会烧炕的，当时不会，现在也不会。于是好像那些年，有时候就会去和父母一起居住，有时候父母看不过去了，就会帮着给我烧炕，有时候他们忙忘记了给我烧炕，我就只能睡凉炕，不过好在傻小子睡凉炕，全凭火力壮，倒是也没有觉得太冷。自己一个人住，包括跟奶奶一起住，有个好处，就是有一些独立空间，我从三四年级开始写日记，这些日记也都是在这个正房的外间屋写好的，很多时候，可能就是跟作业一起写的。当然，自己一个人住，我把之前放在到座里面的DVD机也搬到正房这边，偶尔也会看看DVD电影之类。这个正房同样给了我很多美好的回忆，比如我印象很深的，老姑来娘家居住的时候，正好电视里播放着李连杰的《霍元甲》，还是在我们的县电视台，这几乎就是首播了，当时十分新奇，对于当时资源溃泛的我来说，能够在电视上看到这么新的电影，实在很高兴，于是不顾老姑和奶奶在旁边聊天，我就开着电视，看得津津有味。</p>
+
+<p>我的记忆长久地模糊了，我只记得06年我的二表哥来到我家住和玩的时候，正好赶上世界杯，那个时候，这个正房就已经盖好了，我们还在正房看了世界杯的决赛录像，看到了齐达内拿头撞人这一经典场景。所以到底正房啥时候盖好的，大概只有问问老爸才清楚了。</p>
+
+<p>好像05-12年左右，我自认为我们家还是很行的，至少是在村里面。甚至我都在我老爸口中亲口听到过他说，我们家在村里属于中等家庭。那个时候，家里最多的时候，可能雇佣着七八个人，老爸老妈还亲自上手干活，全然不是一个老板的样子，也会在流程上做一两道工序。不过说是七八个人，但是这其中四五个人，可能也是同时揽着好几家的活，他们只做这一道工序，做完之后就去下一家，按照数量计费，我们这边就叫做记件工。虽然很多工人并非全职，但是看到这么多工人在我家里工作，总还是会有点飘飘然，觉得自己家条件还算不错，加之当时其实我几乎没有主动去要求过礼物之类，很多时候老妈都是主动买，我之前也提到过，之前想要买一个收音机，结果她就买了一个最好的，这让我激动不已。后来他还买过一身李宁的运动服，也成为当时我们那个初中那个班上的一个很吸引眼球的事件。长久以来，我自认为我在金钱上没有太大追求，我不敢有奢求，跟父母沟通并不是很好，但是因为我自己追求不高，所以也不觉得自己过得有多差或者有多好。青少年时期，也很少去想这些事情。只是知道，父母把每年的压岁钱也都统统给了我，并没有再从我手中拿出去。这一点也是我一直感激的，也从这一点，总还是觉得家里没有那么穷，要从孩子手中拿过去钱。</p>
+
+<p>我其实蛮知足的，不太在乎吃穿，平时还比较节俭，因此到了高中时候，要选出来贫困学生的时候，班主任选中了我，后来一跟我聊天，我说我自己家是开工厂的，就被pass了，其实无非就是个个体工商户而已。</p>
+
+<p>好像风光的时候，就是那几年吧，那个时候，老姨二姨都在我家工作过，也都挣着过钱，但是后来也都先后离开了。不过后来我也是眼看着我家的生意一年不如一年，先是工人数量少了，一开始我的理解是做的产品种类变了，现在的产品不再需要那么多工人了，也不再需要那么多的工序了，后来是老妈参与的工序越来越多，从两道工序，到三道工序，四道工序，再到最后，除了第一道工序还请着一个兼职工人参与之后，就全程参与了。老爸的身份也发生了改变，从我记事开始，他起初是不在家参与制作产品的，就是早上把货运到旁边的镇上他租的门脸房，然后就开始在市场上售卖，如果遇到买家，就给人装车，送货。当然，其实大部分时候，他都是无须装车送货的，买家哪里有那么多呢，所以经常就在这个门市部这里，和其他像他一样“盯门脸”的兄弟们一起说说笑笑，打牌下棋，也是好不欢乐。大概因为老爸在门脸看起来比较轻松，而老妈在厂子比较繁忙，因而老妈心理并不平衡，记得她有一次和老爸吵架，他们互相指责，老爸说老妈在生意最好的时候，天天不想着买卖，只想着晚上去打牌，而老妈也指责老爸说别以为我不知道你那时候在门脸上干什么还不是天天打牌喝酒。两个人互相指责，最后的结果似乎是两败俱伤，让我对他们二人的印象也都更加不好了。</p>
+
+<p>其实风光的时候，不过就是他们三十多岁的时候，那时候正是年富力强的时候，不过看起来机遇曾经或许出现过，但是生产规模并没有扩大，生意上似乎越来越卷，老爸的生意也就慢慢走下坡路。在他们做这个家庭作坊的最后几年，大概平均雇员人数也就是2个左右，你也可见他们的疲惫和忙碌，我们平时并不经常在家，可是即便回家，往往只有两种状态，要么他们忙碌到没有时间看我们几眼，更不要说做饭吃饭，要么就是他们终于休息了不用干活了，又开始报复性打牌，更是没有时间看他们孙女了，总之很多时候我的确也会心生怨念，觉得他们钱也没有挣到，感情也没有得到，好像只有牌友得到一批，但是在关键时候似乎也帮不了啥忙。不过话说回来，似乎疫情也加速了他们的生意的下滑，不过即便下滑，父母仍然也在那个时候帮了妹妹妹夫一把，在妹妹妹夫一次创业失败之后，让他们有了一个过渡，得以来到父母的作坊来工作，妹夫此前从来没有做过这个行当，后来也算是老爸给他引上了路，后来妹夫自己另起炉灶，做起了类似的事情，生产规模也还不错。他们的关系好坏其实我也不得而知，按我的想法，是否妹夫会心存感激呢。</p>
+
+<p>按照岁数来说，老爸今年周岁是56周岁，按照他自己的说法，就是57岁，在农村来说，这样的岁数当然不算小了，甚至很多人在这个岁数，其实已经来到了退休状态，老爸当然不愿意闲着，生意上惨淡，他也早就有心要退出这个行业，但是毕竟干了二十多年，惯性使然，其实一直也只能算是苟延残喘，但是去年的一场车祸加速了他的改变。他做了植入钢钉的手术，腰才没有垮下去，今年前不久，他又做了取钢钉的手术，后来他又盘算着把那片厂房租给别人做工厂，然后收租金。我们回家能接触的时间其实不多，他却总是像唐僧一样，念叨着他的宏伟蓝图，不过很多时候，这个对象是我的老婆，大概是因为我总是出言顶撞他。他会说这块厂房他年轻时候血气方刚的时候买下来，他也会说这块厂房现在价值翻了XX倍，以后还很有可能继续升值。他会说做完手术就盯着盖大棚，把大棚盖好自己找份轻松的工作，他也会说自己这两年比较紧张，等到没这么紧张了，就也再在村里买个小区，这样就不用住我们的婚房了，我们那个婚房就还留给我们。他会说，想要买辆电动汽车，这样出行方便。他也会说自己不想直接把这块厂房卖了，因为如果手里有了那么多钱，很可能就不想干活了，他不想那么安逸，也想找点事情干，况且，他说，他想给我留下来一些遗产，而这些遗产他希望是坐着的房，躺着的地，而不是白花花的银子，我当然只好尊重他的想法。</p>
+
+<p>他的盘算可能酝酿许久了，买卖自从没落之后，其实也总能听到亲戚朋友给他出主意，很多人的想法是如果自己做工厂收益可能还不如把厂房租给别人，他是否心动我并不清楚，直到后来他出车祸，一个人在病床上整天胡思乱想，也会和我念叨，念叨的也就是这些要把厂房租出去之类的事情。</p>
+
+<p>最近，他终于要进入他人生的下一个阶段了，他做了20多年的私营小企业主，或者说个体户，或者说小老板，现在他要换一种生活了，不知道他能够适应吧，我也只好默默祝福。</p>
+
+<p>然而我不光要祝福老爸，也会怀念那片厂房，我有太多回忆来自于这里，我在正房和奶奶妹妹一起看电视，冬天在到座三间屋的台阶那里滑雪，在六年级的最后一个暑假和表哥妹妹还有妹妹的一位朋友，一起在院子里玩耍，嘻嘻，仰望天空；这个院子里还曾经有过若干只看门狗，他们总是被锁在奶奶正房的旁边，有那么一个阶段吃完饭之后，我总是负责把一些剩饭馒头端过去倒给狗吃。我也记得，有很多时候，没有栓绳子的狗会在晾着的产品上留下足迹，那足迹也是一朵小花，在这一块块产品上绽放。 二十多年的时间里，这个院子里出现过好几只狗，他们寿命或长或短，但都有一个使命，保卫这个院子。 当然也在这个院子里，和我的爸妈在一起帮着他们干活，然后在干完活后去旁边镇上看灯，这些琐碎的记忆，支撑起了我对这个院子的回忆。然而后来也物是人非，奶奶去年故去，即便回家多次，我后来也不忍心再去她曾经住过的正房看看，妹妹早就搬出去十年，成为了三个孩子的母亲，我们是亲戚甚于兄妹。表哥，也好多年不曾联络，上一次联络，还是他向我借钱，我找了个接口，没有借给他。妹妹的那个朋友，他们曾经无比要好，后来似乎也不过是点头之交。至于那些狗们，他们一个个离开人世，最后一只狗，大概是去年，和奶奶前后去世的，至于奶奶和狗谁前谁后，我不曾记得了。总之，这个院子越来越安静了，似乎也是时候迎来他的新主人了。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20250303.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="家 | aoao.life" data-url="https://aoao.life/20250303.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20200814.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20141230.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

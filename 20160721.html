@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android手机UI 改造 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content=" 手机类型： MOTO G(2014) 手机系统：CM13.1 APP： Nova 启动器 、Sorcery图标包、 氢壁纸、MaterialUp theme!cm12-13   写在前边  早就习惯了使用Google Now 启动器，但是又总是听说Nova启动器的各种好，也确实见到了很多网友晒出他们的手机，经过Nova启动器的改造之后焕然一新，当然这种焕然一新并不同于MIUI或者其他rom的风格...">
+    <link rel="canonical" href="https://aoao.life/20160721.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20160721.html">
+    <meta property="og:title" content="Android手机UI 改造 | aoao.life">
+    <meta property="og:description" content=" 手机类型： MOTO G(2014) 手机系统：CM13.1 APP： Nova 启动器 、Sorcery图标包、 氢壁纸、MaterialUp theme!cm12-13   写在前边  早就习惯了使用Google Now 启动器，但是又总是听说Nova启动器的各种好，也确实见到了很多网友晒出他们的手机，经过Nova启动器的改造之后焕然一新，当然这种焕然一新并不同于MIUI或者其他rom的风格...">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/s-AYDrJZFO3yDX2WPBt0mLu5feL4kG4BaQi4MKXZl0hE6tyh_3T_HFQxYPdSd5cMzbJ9Yt2o_sBKGJNp5_YodwE2Iail5kZrh42ERDFwiRj9Niw-lG6CpjSe4oeSIqUvO1AOJwDPDb0Xvkrdqd321kU52yWGmk3VlEZuVbhW6dQqVUYUPohCv8wVJI4md0-Na8lD7AQAx-51tyc6g0R3HNoSL6irsSBrKEWx3Qffsxjs_BetHJQpiX6D7UvM4oz2IzyUPwuY8LaKriPxHSZTE2chY7zM-ZRCn2jfoLR62RvWNYdzDuStQUFzB2KTOa2FZTNb7Jk3zAHPSEz0EdDGKFXBxi9kUuU46mWjRF0kWMKuTj_-g4jvup5REzPdRsjKP0VCI_aKPaxHHjNH-1IAgPPhzVZYmiHe-vR7DXKD1jaP5nL3XzSSFgxi_lbQ31RLoe4Lv7aVgKt6iM8MvIbod3fX5K-50JSpZMON_jTgtt5b9qhJugRWL7mIzSXOKnyTag96PznJAcJoNfGLsfl07zeiTGOEdk13cFulFVXkY16rCvFCcd2DgIl8b6tp7chTiJD_ZDcMQSF3UbkoQ55MTCK55JKxGcbG=w367-h650-no">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20160721.html">
+    <meta property="twitter:title" content="Android手机UI 改造 | aoao.life">
+    <meta property="twitter:description" content=" 手机类型： MOTO G(2014) 手机系统：CM13.1 APP： Nova 启动器 、Sorcery图标包、 氢壁纸、MaterialUp theme!cm12-13   写在前边  早就习惯了使用Google Now 启动器，但是又总是听说Nova启动器的各种好，也确实见到了很多网友晒出他们的手机，经过Nova启动器的改造之后焕然一新，当然这种焕然一新并不同于MIUI或者其他rom的风格...">
+    <meta property="twitter:image" content="https://lh3.googleusercontent.com/s-AYDrJZFO3yDX2WPBt0mLu5feL4kG4BaQi4MKXZl0hE6tyh_3T_HFQxYPdSd5cMzbJ9Yt2o_sBKGJNp5_YodwE2Iail5kZrh42ERDFwiRj9Niw-lG6CpjSe4oeSIqUvO1AOJwDPDb0Xvkrdqd321kU52yWGmk3VlEZuVbhW6dQqVUYUPohCv8wVJI4md0-Na8lD7AQAx-51tyc6g0R3HNoSL6irsSBrKEWx3Qffsxjs_BetHJQpiX6D7UvM4oz2IzyUPwuY8LaKriPxHSZTE2chY7zM-ZRCn2jfoLR62RvWNYdzDuStQUFzB2KTOa2FZTNb7Jk3zAHPSEz0EdDGKFXBxi9kUuU46mWjRF0kWMKuTj_-g4jvup5REzPdRsjKP0VCI_aKPaxHHjNH-1IAgPPhzVZYmiHe-vR7DXKD1jaP5nL3XzSSFgxi_lbQ31RLoe4Lv7aVgKt6iM8MvIbod3fX5K-50JSpZMON_jTgtt5b9qhJugRWL7mIzSXOKnyTag96PznJAcJoNfGLsfl07zeiTGOEdk13cFulFVXkY16rCvFCcd2DgIl8b6tp7chTiJD_ZDcMQSF3UbkoQ55MTCK55JKxGcbG=w367-h650-no">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Android手机UI 改造 | aoao.life",
+      "image": [
+        "https://lh3.googleusercontent.com/s-AYDrJZFO3yDX2WPBt0mLu5feL4kG4BaQi4MKXZl0hE6tyh_3T_HFQxYPdSd5cMzbJ9Yt2o_sBKGJNp5_YodwE2Iail5kZrh42ERDFwiRj9Niw-lG6CpjSe4oeSIqUvO1AOJwDPDb0Xvkrdqd321kU52yWGmk3VlEZuVbhW6dQqVUYUPohCv8wVJI4md0-Na8lD7AQAx-51tyc6g0R3HNoSL6irsSBrKEWx3Qffsxjs_BetHJQpiX6D7UvM4oz2IzyUPwuY8LaKriPxHSZTE2chY7zM-ZRCn2jfoLR62RvWNYdzDuStQUFzB2KTOa2FZTNb7Jk3zAHPSEz0EdDGKFXBxi9kUuU46mWjRF0kWMKuTj_-g4jvup5REzPdRsjKP0VCI_aKPaxHHjNH-1IAgPPhzVZYmiHe-vR7DXKD1jaP5nL3XzSSFgxi_lbQ31RLoe4Lv7aVgKt6iM8MvIbod3fX5K-50JSpZMON_jTgtt5b9qhJugRWL7mIzSXOKnyTag96PznJAcJoNfGLsfl07zeiTGOEdk13cFulFVXkY16rCvFCcd2DgIl8b6tp7chTiJD_ZDcMQSF3UbkoQ55MTCK55JKxGcbG=w367-h650-no"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 55.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 55.5%;"></div>
+                    <div class="progress-text">今天 2016.07.21 | 已耗 55.5% · 剩 163 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">Android手机UI 改造 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2016年07月21日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20160721.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="Android手机UI 改造 | aoao.life" data-url="https://aoao.life/20160721.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><ul>
+<li>手机类型： MOTO G(2014)</li>
+<li>手机系统：CM13.1</li>
+<li>APP： <a href="http://www.coolapk.com/apk/com.teslacoilsw.launcher">Nova 启动器</a> 、<a href="http://www.coolapk.com/apk/com.sorcerer.sorcery.iconpack">Sorcery图标包</a>、 <a href="http://www.coolapk.com/apk/cn.zhj.hydrogenwallpager">氢壁纸</a>、<a href="http://www.coolapk.com/apk/com.materialuptheme.victorburgoa">MaterialUp theme!cm12-13</a></li>
+</ul>
+
+<h1>写在前边</h1>
+
+<p>早就习惯了使用Google Now 启动器，但是又总是听说Nova启动器的各种好，也确实见到了很多网友晒出他们的手机，经过Nova启动器的改造之后焕然一新，当然这种焕然一新并不同于MIUI或者其他rom的风格，而是有了自己的特色。所以我也就用了些时间，琢磨了一下。实际效果看下面<a href="## 效果展示">效果</a></p>
+
+<h2><a href="http://www.coolapk.com/apk/com.teslacoilsw.launcher">Nova 启动器</a></h2>
+
+<p>安装好启动器之后，打开app这个时候往往会要求设置默认启动器，我们这时候就可以将默认启动器选择为Nova启动器。该启动器如果使用默认设置其实挺没有意思的。</p>
+
+<p>我在这里主要有以下几点设置：</p>
+
+<ul>
+<li>桌面栅格设置为6×6（这为以后使用氢壁纸埋伏笔），将图标的标签名隐藏掉</li>
+<li>抽屉（Drawer）里图标栅格设置为4×4（与Google now启动器一致），<strong>保留Icon标签</strong>。</li>
+<li>Dock栏透明度设为<strong>100%</strong>，Dock图标数量设置为<strong>3个</strong>。</li>
+<li><p>手势方面，由于我还想要使用Google Now，因此增加了一个Swipe down调出Google Now的设置。其他的手势全部为空。</p>
+
+<p>​</p></li>
+</ul>
+
+<h2><a href="http://www.coolapk.com/apk/com.materialuptheme.victorburgoa">主题</a></h2>
+
+<p>这个很简单，下载好对应的主题之后，到系统的主题设置里，勾选对应的主题即可。</p>
+
+<h2><a href="http://www.coolapk.com/apk/com.sorcerer.sorcery.iconpack">图标包</a></h2>
+
+<p>下载好后，打开这个app，有个对应的apply 启动器的选项。这个时候如果没有安装它所要求的启动器（lancher），那么该图标包将不能生效。</p>
+
+<p>另外，在cm13系统内部有主题设置（themes），一般的图标包都可以从这里添加到系统中生效，但是就像前面所说，这个Sorcery图标包必须要配合启动器发挥作用。</p>
+
+<h2><a href="http://www.coolapk.com/apk/cn.zhj.hydrogenwallpager">氢壁纸</a></h2>
+
+<p>氢壁纸如酷安小编所说：</p>
+
+<blockquote>
+  <p>氢视窗风格壁纸在咱们酷安美化界中出镜率很高啊，在下不得不佩服咱们酷友真是创造力十足，一加起了个头，这边就玩出各种花样，你们真会玩，好吧现在有人直接把制作氢壁纸的应用做出来了，零门槛入门你值得拥有。</p>
+</blockquote>
+
+<p>使用氢壁纸后，我将原来的桌面上放置的时间和天气插件去掉了。因为氢壁纸要求将桌面的上1/3<strong>留白</strong>给氢壁纸自由发挥。</p>
+
+<p>下载好氢壁纸后，选择一张自己喜欢的图片，然后跟据氢壁纸的要求合成一张氢风格的壁纸，将它设置为你的桌面壁纸。</p>
+
+<p>这个时候，桌面的Dock栏可以摆放两个图标或文件夹，桌面其他位置再摆放6个图标或文件夹，OK。</p>
+
+<h2>效果展示</h2>
+
+<p><img src="https://lh3.googleusercontent.com/s-AYDrJZFO3yDX2WPBt0mLu5feL4kG4BaQi4MKXZl0hE6tyh_3T_HFQxYPdSd5cMzbJ9Yt2o_sBKGJNp5_YodwE2Iail5kZrh42ERDFwiRj9Niw-lG6CpjSe4oeSIqUvO1AOJwDPDb0Xvkrdqd321kU52yWGmk3VlEZuVbhW6dQqVUYUPohCv8wVJI4md0-Na8lD7AQAx-51tyc6g0R3HNoSL6irsSBrKEWx3Qffsxjs_BetHJQpiX6D7UvM4oz2IzyUPwuY8LaKriPxHSZTE2chY7zM-ZRCn2jfoLR62RvWNYdzDuStQUFzB2KTOa2FZTNb7Jk3zAHPSEz0EdDGKFXBxi9kUuU46mWjRF0kWMKuTj_-g4jvup5REzPdRsjKP0VCI_aKPaxHHjNH-1IAgPPhzVZYmiHe-vR7DXKD1jaP5nL3XzSSFgxi_lbQ31RLoe4Lv7aVgKt6iM8MvIbod3fX5K-50JSpZMON_jTgtt5b9qhJugRWL7mIzSXOKnyTag96PznJAcJoNfGLsfl07zeiTGOEdk13cFulFVXkY16rCvFCcd2DgIl8b6tp7chTiJD_ZDcMQSF3UbkoQ55MTCK55JKxGcbG=w367-h650-no" alt="桌面" /><br />
+)</p>
+
+<p><img src="https://lh3.googleusercontent.com/qgT91fc4qzZHzN15oj0EYBnqDUH807DQI4POg-SoxMr2QUlnMDPKA6igMieof3Dcq_bzkmFjR_lIlOLAhY8iX-yj83-IGWHDBrQg9Fp42D5ZyyQvOIon0fjovQsbB7YVPdILJQTYN94MHQUwFiyND2yRqqL4PMOP1UzdIL3BKXf8UZQr7rmcGZDYuKg4uhSp7r2sFxohYfmvW6SnkrBU3FmE5w5KuPkwN9eOf1mx82Y2tT8XgU1JBkbNpJgW_QfejGmqUVpQgO_Ssi2zaSCGT80-xzXxcDqBiRkMIundB0PO9E0iUCA8W2cahiOCqtjoG3wFae6ZiOceil-hXVh8I4qJjhElzXW7ZUZS2cGV4MoQxkVmwMWIyfCNAEZBYYfg-EX2dDRKdRvUSoVvlLsiqifGnFaPhMqAz-sVrDDbAU9QeNWWWF4p-Z6e-L5N0S01r5qeropMlzRuhSQtBMRPmm5vm91Qum8tOl5sXY2lgxXgGunbWVt7Po80JCvkWT55k82X9na_TtfYaQvaKXHQVX2q6p2L_uNmFD67XJc-JFzOyDLQWnYwww8QldY1uY6la0yaLU5MlnxTrmKcgRbOJHQc94fMvfwf=w367-h650-no" alt="抽屉界面" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/O3vr_xp00jyuBPyECYWXY0F3uG5iaBA-cCQ2eEUbUKHQFutxTFJAeiGkF1vD-iMsGF3P34WlgEKUL7ujfB-nbatn_8lL-nnWSw18bW0E2rLhkv8v2pkln__LKeHLIGliKCSYFtbv-5yxeESJqNBSyf0hp1GIvcxXypYm3yCJPDiUAZblFnklUBPBXwJMl_x-GUERfeIyrU0tjCjJIXvBfSLPWkkdUVmaaz5hkXrNADJFUwGve6Bg9AdrMitINTrPtnOty8e63w-kPrFQUryg2aQQlTh9REtm1gbCKWTxG7Ri9hbfXbVD0c8KNSEQFLj5zINvUTX4UtgrZMK_5vfOxxSfPuyVh98pxrqO_pi0R9a_gfdKpGKiGUpDBKNrEC1KmWc-CBdEf085T9MXu4_4LpzD9uQgKAZkM1S3AuJ0Q7ksESv2SyXvBjKEGVdjsXxJIk59bgfxuOLmYrb0eXdSHMtRShWL99ECQSvMm78wZsHy8FCMjRDQgk9bPQt7RC_kXiQELMiDNGwlzxCP5dbsnDyOBMY3hPMlTGeXUAkAMdpJFBLxUhHyIpPP43FwjHJXc1O-yZcO7APFmWj4Yb2myPMn3BwA0q9_=w367-h650-no" alt="设置" /></p>
+
+<h2>最后</h2>
+
+<p>感谢<a href="Android手机UI 改造">酷安</a> ，让我发现了更多有趣的app，不煽情了。</p>
+
+<p>​</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20160721.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="Android手机UI 改造 | aoao.life" data-url="https://aoao.life/20160721.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20190113.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20151214.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

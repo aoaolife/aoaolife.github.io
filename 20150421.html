@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理性与感性 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="   离理性越近，离上帝越远？    昨天班主任给我们上课，讲到安排下学期实习的事情，计划安排十个人左右去深圳的两家公司实习，这个事情之前已经向我们提过了，这次便问及了每个人的意向，想去的同学举手。陆续举起了十一二双手，坐在我旁边的前室友略显忧郁，像是自言自语地问道「可不可以留在本地？」，前室友家在广东顺德，若是此去深圳实习，也算是回家了，以后很有可能就在广东发展。   听说他的话，我很自然地脱口...">
+    <link rel="canonical" href="https://aoao.life/20150421.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150421.html">
+    <meta property="og:title" content="理性与感性 | aoao.life">
+    <meta property="og:description" content="   离理性越近，离上帝越远？    昨天班主任给我们上课，讲到安排下学期实习的事情，计划安排十个人左右去深圳的两家公司实习，这个事情之前已经向我们提过了，这次便问及了每个人的意向，想去的同学举手。陆续举起了十一二双手，坐在我旁边的前室友略显忧郁，像是自言自语地问道「可不可以留在本地？」，前室友家在广东顺德，若是此去深圳实习，也算是回家了，以后很有可能就在广东发展。   听说他的话，我很自然地脱口...">
+    <meta property="og:image" content="http://hktkdy.qiniudn.com/ganxing.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150421.html">
+    <meta property="twitter:title" content="理性与感性 | aoao.life">
+    <meta property="twitter:description" content="   离理性越近，离上帝越远？    昨天班主任给我们上课，讲到安排下学期实习的事情，计划安排十个人左右去深圳的两家公司实习，这个事情之前已经向我们提过了，这次便问及了每个人的意向，想去的同学举手。陆续举起了十一二双手，坐在我旁边的前室友略显忧郁，像是自言自语地问道「可不可以留在本地？」，前室友家在广东顺德，若是此去深圳实习，也算是回家了，以后很有可能就在广东发展。   听说他的话，我很自然地脱口...">
+    <meta property="twitter:image" content="http://hktkdy.qiniudn.com/ganxing.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "理性与感性 | aoao.life",
+      "image": [
+        "http://hktkdy.qiniudn.com/ganxing.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 30.4%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 30.4%;"></div>
+                    <div class="progress-text">今天 2015.04.21 | 已耗 30.4% · 剩 254 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">理性与感性 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年04月21日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150421.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="理性与感性 | aoao.life" data-url="https://aoao.life/20150421.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><blockquote>
+  <p>离理性越近，离上帝越远？</p>
+</blockquote>
+
+<p>昨天班主任给我们上课，讲到安排下学期实习的事情，计划安排十个人左右去深圳的两家公司实习，这个事情之前已经向我们提过了，这次便问及了每个人的意向，想去的同学举手。陆续举起了十一二双手，坐在我旁边的前室友略显忧郁，像是自言自语地问道「可不可以留在本地？」，前室友家在广东顺德，若是此去深圳实习，也算是回家了，以后很有可能就在广东发展。</p>
+
+<p>听说他的话，我很自然地脱口而出「你怎么会有这种想法，我不能理解」。这时候前室友正打开手机，解开锁屏，我看了看他手机的墙纸，是一个妹子。他自己并没有答复我，只是玩手机去了，旁边另外一个和他关系较好的胖哥笑嘻嘻地回复我，「你不能理解？你当然不能理解。」</p>
+
+<p>事实上，当我看到前室友的手机墙纸的时候，已经突然明白过来了。于是便回复说，「我有点能够理解，不过，从情感上说，我能够理解；而从理智上讲，我不能理解」。</p>
+
+<p>前室友这时候终于发话了，而他说的，就是此文开头的这句，颇让我惊讶的话。「离理性越近，离上帝越远」</p>
+
+<p>他说完这句话，我竟无言以对。只能默默地将头转过去，继续听老师讲课了。</p>
+
+<p>不过后来一直在想这样一件事，想象如果男主角换作是我，会做出怎样的选择？而这，又让我想到了前不久听闻的另外一件事。</p>
+
+<p><img src="http://hktkdy.qiniudn.com/ganxing.jpg" alt="" /><br />
+上图是微博上认识的一个同校大四女生发的微博，她男朋友碰巧我也认得，曾经我在的一个社团里他指导过我们，是个比较精明干练的人。此女经常在微博上秀二人的出去约会吃饭的照片和两人发展情况，有苦有笑有打有闹。看到这条微博，又看了些下面其他人和她的评论，才知道原来是此女考研失利,而本来二人计划考同一个学校的，无奈想法终于没能变成现实。女的考研失利，而男的呢，则可以准备复试了。于是男的为了女的放弃了211的研究生，选择直接就业，以确保两人同时就业，不会再有一个人等另外一个人的情况，这是我所见的真实的曲折的爱情故事了。后来，我就作为一个校友在评论里祝福了这二位百年好合。</p>
+
+<p>两件事情，前者离我更近，更加真实，后者离我更远，更加飘渺。所以我对前者的态度是，人应当理性，而我对后者的态度则是羡慕嫉妒。这让我更加确信，如果换作是我，我自己一定会在可能的一番挣扎之后选择事业和前途，而断然不会选择那看似飘渺的爱情。我有着轻微的刘备的价值观—-「兄弟如手足，女人如衣服」。也许这样说，并不准确。但是好像中国传统文化里，总是把女人看作是英雄的绊脚石，所谓「英雄难过美人关」。而这里如果把每个普通人看作一个他自己的英雄，那么每个人都在经受着「难过美人关」的考验吧。所以以上两件事情的男主角，换作是我，都会选择事业上的更大的发展，选择对自己的长远发展更有利的方向。而只有看到那些真正没有摊在我们身上的类似的事情的时候，我们才会羡慕嫉妒吧。</p>
+
+<p>所以，字写到这里，大概也能明白我为什么还是单身了。（哈哈，此处自嘲，莫要当真）</p>
+
+<p>我们总在面临着理性和感性的选择，前两天看《星际穿越》，里面就有一个桥段，女主角希望选择一条路，男主角希望选择另外一条路，而二人的选择恰好一条是感性之路，一条是理性之路。当然他们最终，选择了通往理性的路。</p>
+
+<p>————————————–分割线——————————<br />
+如果您喜欢本文，可以点下面的喜欢按钮，也可以关注<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">本人简书</a><br />
+或简书专题：<a href="https://www.jianshu.com/collection/7b424559990a">我们在自己的世界里独自狂欢</a></p>
+
+<p>也可以阅读我的独立博客，了解更多内容。</p>
+
+<p><a href="http://hktkdy.com/"><img src="http://hktkdy.qiniudn.com/slogan.jpg" alt="" /></a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150421.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="理性与感性 | aoao.life" data-url="https://aoao.life/20150421.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20160614.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20160827-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

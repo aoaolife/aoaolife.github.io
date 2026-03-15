@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【LEETCODE-300】最长增加子序列问题 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="问题描述：      Given an unsorted array of integers, find the length of longest increasing subsequence.       For example,   Given [10, 9, 2, 5, 3, 7, 101, 18],   The longest increasing subsequence is [2, ...">
+    <link rel="canonical" href="https://aoao.life/20160705.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20160705.html">
+    <meta property="og:title" content="【LEETCODE-300】最长增加子序列问题 | aoao.life">
+    <meta property="og:description" content="问题描述：      Given an unsorted array of integers, find the length of longest increasing subsequence.       For example,   Given [10, 9, 2, 5, 3, 7, 101, 18],   The longest increasing subsequence is [2, ...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20160705.html">
+    <meta property="twitter:title" content="【LEETCODE-300】最长增加子序列问题 | aoao.life">
+    <meta property="twitter:description" content="问题描述：      Given an unsorted array of integers, find the length of longest increasing subsequence.       For example,   Given [10, 9, 2, 5, 3, 7, 101, 18],   The longest increasing subsequence is [2, ...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "【LEETCODE-300】最长增加子序列问题 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 51.1%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 51.1%;"></div>
+                    <div class="progress-text">今天 2016.07.05 | 已耗 51.1% · 剩 179 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">【LEETCODE-300】最长增加子序列问题 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2016年07月05日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20160705.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="【LEETCODE-300】最长增加子序列问题 | aoao.life" data-url="https://aoao.life/20160705.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>问题描述：</p>
+
+<blockquote>
+  <p>Given an unsorted array of integers, find the length of longest increasing subsequence.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example,<br />
+  Given [10, 9, 2, 5, 3, 7, 101, 18],<br />
+  The longest increasing subsequence is [2, 3, 7, 101], therefore the length is 4. Note that there may be more than one LIS combination, it is only necessary for you to return the length.</p>
+</blockquote>
+
+<blockquote>
+  <p>Your algorithm should run in O(n2) complexity.</p>
+</blockquote>
+
+<blockquote>
+  <p>Follow up: Could you improve it to O(n log n) time complexity?</p>
+</blockquote>
+
+<p>给定一个不规则的整数数组，找出最长的增加的子序列<br />
+比如给定数组为[10, 9, 2, 5, 3, 7, 101, 18]，最长增加子序列为 [2, 3, 7, 101，因此这个长度是4.这里所说的子序列，要求是值是一直在增加的。这时候可能会有多种方案，但是我们需要的只是这个子序列的长度值。</p>
+
+<p>算法的复杂度in O(n2)。</p>
+
+<p>分析：遍历</p>
+
+<p>来看一下使用Java实现的代码：</p>
+
+<pre><code>public class Solution {  
+    public int lengthOfLIS(int[] nums) {  
+        //[10, 2, 5, 3, 7],  
+        if(nums==null || nums.length&lt;1) return 0;  
+
+        int [] d = new int[nums.length];  //动态规划中的数组，默认的长度是nums这个原数组的长度。
+        d[0] = 1;        
+        int max = 1;  
+        for(int i=1; i&lt;nums.length; i++) {  
+            d[i] = 1;    
+            for(int j=0; j&lt;i; j++) {  
+                if(nums[i] &gt; nums[j]) {  
+                    d[i] = Math.max(d[i], d[j]+1);  
+                }  
+            }  
+            max = Math.max(max, d[i]);  
+        }  
+        return max;  
+    }  
+}
+</code></pre>
+
+<p>看网络上对这道题的分析，说是一道动态规划的问题。</p>
+
+<blockquote>
+  <p>An easy dynamic programming problem.</p>
+</blockquote>
+
+<blockquote>
+  <p>Given array arr, we can define another array dp, dp[i] means the length of longest increasing subsequence when the last item is arr[i]. How to get dp[i]? We can get it by enumerating from index=0 to index=i-1(for instance j), and check the value of arr[j] and arr[i], if arr[i] &gt; arr[j], then dp[i]=max(dp[i],dp[j]+1).</p>
+</blockquote>
+
+<blockquote>
+  <p>The algorithm above runs in O(n2) complexity, how to improve it to O(n log n) time complexity? Use binary search, see the code in detail. My runtime beats 100.00% of javascript submissions.</p>
+</blockquote>
+
+<p>我最初写的js代码：</p>
+
+<pre><code>/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function(nums) {
+    var j=1;
+    var length=0;
+    var newArray=[0,0];
+    for(var m=2;m&lt;nums.length;m++)  //这是一个外嵌套
+    {
+    for(var i=m;i&lt;nums.length;i++)
+    {
+        if(nums[i]&lt;nums[i+j])
+        {
+            newArray[i]=nums[i];
+            newArray[i+j]=nums[i+j];
+
+        }
+
+        else{
+            j++;
+            i--;
+
+        }
+
+    }
+     for(var k= 0 ;k&lt;newArray.length;k++)
+ {
+             if(newArray[k] === "" || typeof(newArray[k]) === "undefined")
+             {
+                      newArray.splice(k,1);
+                      k= k-1;
+
+             }
+
+ }
+
+     if(length&lt;newArray.length)
+     {
+         length=newArray.length;
+         return newArray;
+     }
+    }
+
+
+};
+</code></pre>
+
+<p>在学习「动态规划」的过程中，也了解到<a href="https://www.zhihu.com/question/23995189/answer/35324479">什么是动态规划？动态规划的意义是什么?</a></p>
+
+<p>原来的英文解释稀里糊涂，在这个知乎回答中看到了对问题的重新解释：</p>
+
+<ul>
+<li>给定一个数列，长度为N，</li>
+<li>设F_{k}为：以数列中第k项结尾的最长递增子序列的长度.</li>
+<li>求F_{1}..F_{N} 中的最大值.</li>
+</ul>
+
+<p>显然，这个新问题与原问题等价。<br />
+而对于F_{k}来讲，F_{1} .. F_{k-1}都是F_{k}的子问题：因为以第k项结尾的最长递增子序列（下称LIS），包含着以第1..k-1中某项结尾的LIS。</p>
+
+<p>这里解释一下，比如原序列为[1,3,2,5,7,4],这里如果取k=5的话，这个时候N=6，代入进来看。给定的序列长度为6，F_{k}即为F_{5}=4,这个子序列就是[1,3,5,7]，注意这个时候以第5项结尾（也就是以7结尾）的最长子序列是一个范围更大的序列，他也一定包含着小序列。当取k=4的时候，这个时候最长子序列为[1,3,5]，而这个[1,3,5]是属于[1,3,5,7]这个序列的。</p>
+
+<p>这个时候问题就可以转化了（数学上说的状态转移方程）：</p>
+
+<p>以第k项结尾的LIS的长度是：保证第i项比第k项小的情况下，以第i项结尾的LIS长度加一的最大值，取遍i的所有值（i小于k）。<br />
+这个时候，就需要用到递归了。</p>
+
+<p>经过这样的理解之后，我自己又看了前面提到的Java版本的程序，写出了下面的程序：</p>
+
+<pre><code>/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function(nums) {
+
+    if(nums===null||nums.length&lt;1)
+    {
+        return 0;
+    }
+
+
+
+    var dp=[];
+    dp[0]=1;
+
+    for(var i=1;i&lt;nums.length;i++)
+    {
+        dp[i]=1;
+        for(var j=0;j&lt;i;j++)
+        {
+        if(nums[j]&lt;nums[i])
+        {   
+
+            dp[i]=Math.max(dp[j]+1,dp[i]);  //比较
+        }
+        }
+    }
+    var max=1;
+    for(var k=0;k&lt;dp.length;k++)
+    {
+        if(max&lt;dp[k])
+        {
+            max=dp[k];
+        }
+    }
+    return max;
+};
+</code></pre>
+
+<p>上面的程序，总体设计思路是与前面的Java版本相同的，也是状态转移方程的思路。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20160705.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="【LEETCODE-300】最长增加子序列问题 | aoao.life" data-url="https://aoao.life/20160705.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150223-1.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20221228.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

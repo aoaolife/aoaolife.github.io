@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus 4 刷入Android L体验报告 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="手机样式  NEXUS 4 16G ROM 2G RAM 系统：Android 4.4.4 已经root     刷机过程  本来是想借助这个教程http://bbs.gfan.com/android-5482625-1-1.html 上面说的方法来手动刷机，由于手机已经root而且装了xposed，系统里面的东西好像已经被破坏了，导致手机连结usb线之后不能够被电脑识别（前提当然是已经开启了开发...">
+    <link rel="canonical" href="https://aoao.life/20140721.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20140721.html">
+    <meta property="og:title" content="Nexus 4 刷入Android L体验报告 | aoao.life">
+    <meta property="og:description" content="手机样式  NEXUS 4 16G ROM 2G RAM 系统：Android 4.4.4 已经root     刷机过程  本来是想借助这个教程http://bbs.gfan.com/android-5482625-1-1.html 上面说的方法来手动刷机，由于手机已经root而且装了xposed，系统里面的东西好像已经被破坏了，导致手机连结usb线之后不能够被电脑识别（前提当然是已经开启了开发...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20140721.html">
+    <meta property="twitter:title" content="Nexus 4 刷入Android L体验报告 | aoao.life">
+    <meta property="twitter:description" content="手机样式  NEXUS 4 16G ROM 2G RAM 系统：Android 4.4.4 已经root     刷机过程  本来是想借助这个教程http://bbs.gfan.com/android-5482625-1-1.html 上面说的方法来手动刷机，由于手机已经root而且装了xposed，系统里面的东西好像已经被破坏了，导致手机连结usb线之后不能够被电脑识别（前提当然是已经开启了开发...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Nexus 4 刷入Android L体验报告 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 55.3%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 55.3%;"></div>
+                    <div class="progress-text">今天 2014.07.21 | 已耗 55.3% · 剩 163 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">Nexus 4 刷入Android L体验报告 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2014年07月21日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20140721.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="Nexus 4 刷入Android L体验报告 | aoao.life" data-url="https://aoao.life/20140721.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>手机样式</h1>
+
+<p>NEXUS 4<br />
+16G ROM 2G RAM<br />
+系统：Android 4.4.4<br />
+已经root  </p>
+
+<h1>刷机过程</h1>
+
+<p>本来是想借助这个教程<a href="http://bbs.gfan.com/android-5482625-1-1.html">http://bbs.gfan.com/android-5482625-1-1.html</a> 上面说的方法来手动刷机，由于手机已经root而且装了xposed，系统里面的东西好像已经被破坏了，导致手机连结usb线之后不能够被电脑识别（前提当然是已经开启了开发者模式调试），装个驱动就遇到了问题，于是一怒之下，直接将手机恢复出厂设置了（那个钛备份白备份了，之间内存清零了）。<br />
+恢复出厂设置之后，手机可以被电脑识别了，倒懒得手动刷机了，于是利用刷机精灵直接一键刷机了，（看了下，好像最新版的移植版N4 Android L 是beta4 ，而刷机精灵上面的是beta 2.但是当然没管太多，因为太懒？）<br />
+刷机精灵刷机真的很简单，自己几乎是一遍看着电影，一遍进行刷机的。全过程没有超过半个小时。（如果想用刷机精灵刷入android L的，可以自行google其方法）。  </p>
+
+<h1>刷机后问题</h1>
+
+<h2>开机</h2>
+
+<p>刷入Android L beta2之后，首先看到的是开机动画变得更加好看了，因为是第一次开机，这个动画过程也十分漫长，大概有十分钟。过了动画，接入wlan，然后是登入google帐号，鉴于天朝的网络状况，按照之前网友的作为跳过了这一步，开机过程虽然不太顺利，但是毕竟还是开机了。  </p>
+
+<h2>登录google帐号</h2>
+
+<p>之前就听说了刷入L 之后，翻墙是个大问题，甚至都不能用VPN翻墙，经过google搜索，找到了改hosts的方法，索性的是这个版本的移植版L 已经自带了root，所以下载了一个synchosts，改过hosts重启之后就能登录谷歌了。当然这也并不是说这个hosts有多好，twitter之类还是不能光靠改hosts上去的，play可以打开但是想要下载基本上就是拼人品了，很慢，很慢。我的play book里面有几本书还在读，结果一直到现在还有一本书没有下载成功，估计要重启才能停止。因为这个进程根本不能杀掉。（可能是我不会）  </p>
+
+<h2>联系人同步</h2>
+
+<p>这个问题我搞了半个小时，本来以为谷歌会自动同步联系人的，结果却并没有直接在联系人中显示我之前同步过的联系人，于是想到了我之前也在我的百度云里面备份过联系人，但是开启恢复同步之后竟然不能同步过来，我怀疑是对L 的支持问题。最后的解决还是手机的设置上了。同步联系人也是需要手动设置勾选滴。  </p>
+
+<h1>开启google now</h1>
+
+<p>~~还没有开启，哪天有必要开启的。这东西用习惯了，就真的习惯了。~~<br />
+最终还是开启了google now，如果说android 4.x时代开启google now还需要<a href="http://www.zhihu.com/question/21486890/answer/20548296">这样做的话</a>，整个开启步骤长达十几步，熟练了也需要十几二十分钟，那么Android L（开发者预览版）开启google now仅仅是需要三分钟即可搞定，颤抖吧，少年。具体方法：<br />
+<strong>1系统语言改为英文</strong><br />
+<strong>2退除google帐号</strong><br />
+<strong>3将google play service设置为disabled，如果要求卸载，卸载之</strong><br />
+<strong>4重新登录google帐号</strong>，这个时候就已经能够出现<strong>I’M IN</strong>了，点击之，即可成功开启。<br />
+<strong>5将google play service设置为enable</strong><br />
+（此方法来自机锋论坛网友，感谢）</p>
+
+<h1>其他</h1>
+
+<p>当然其实刷机之后的问题未必比刷机之前问题少，比如有大量的软件不能用，比如要重新安装好多app。比如翻墙的问题。当然毕竟这是一个新的系统，权重之下还是能够比较让我满意的，毕竟在家电脑翻一样的翻。手机快才是重要的。  </p>
+
+<h1>刷机后评价</h1>
+
+<p>这个Android L还是很有趣的，我在手机上装了大概20几个app之后还能保持特别顺滑的手感，与刷机之前形成了鲜明的对比。色调和之前的4.4反差特别大，material design还是很给力的，很美妙的是那些阴影，可以看出来是花了功夫的，真的很细腻。正常使用的话，对我而言基本上没什么问题，刚才也有提到，最常上的是社交类app，除了twitter，ins不能用有些遗憾之外，其他的都能够让你玩的很爽，比4.4的时候还要快。</p>
+
+<p>Android L 的图片就不传了，大家在网上看到的还没有看够吗？<br />
+<strong><em>*</strong><strong></em><em></strong></em>N4刷入Android L体验报告到此为止，一下为个人吐槽，可选看<strong><em>*</strong><strong></em><em></strong></em>**</p>
+
+<h1>刷机前吐槽</h1>
+
+<p>首先是手机的问题不少</p>
+
+<p>1 xposed里面的instagram图片下载不能正常使用了，这个让我这个最近喜欢上玩ins的娃有点蛋疼，能刷不能玩，还总是强迫症似的想要下载，摆弄半天也没有用。<br />
+ 2最近手机反映特别慢，是我买来以后最慢的时候了。当然之前并没有刷过机，安卓机又一直有这样一个毛病，使用时间越长，用起来越卡。尤其是我那天尝试着用了钛备份把自己手机上七十多个自装app（xposed框架中的插件也算在内）备份之后，又浪费掉将近两个G的容量，致使手机的16G(当然，实际为12.x）ROM,最后只剩下了1G多一点（我觉得这也是手机变卡的原因）。<br />
+ 3 <a href="https://plus.google.com/100761412958725838270/posts/4eVS5nAD5ry">google play即使用fqrouter也不能打开</a>，但是却可以下载应用。<br />
+ 4因为在家里，和学校里的网络状况不一样，不太清楚，但是很郁闷的是，最近向google+，微博带有图片的post都不能正常发送，根据我的流量监控软件显示，发送的时候几乎就没有网速。</p>
+
+<p>5昨天晚上，把手机开着外放音乐睡着了（屋里面就我一个人，结果半夜十二点醒来发现手机显示没有信号，然后播放音乐没有声音，其他所有涉及声音的也都无效，重启之后依然无效当时没有无线网，直到早上连上wifi之后才能够恢复正常。<br />
+6就在前两天，电量还剩1%的时候我去充电，没去管他，等我一个小时后回来看手机，发现手机上显示红色的”download mode”下面还有一行小字，搜索解决方案后没有解决，最终是等电量全部放光之后再充电恢复正常的。<br />
+ 7 最近也确实看到很多网友在N4上面刷入Android L,这让我这个半小白也有了兴趣，虽然知道九月份就能等到更新，但是最近也确实没啥事，于是想了想，刷就刷呗。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20140721.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="Nexus 4 刷入Android L体验报告 | aoao.life" data-url="https://aoao.life/20140721.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20151214-2.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20211129-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

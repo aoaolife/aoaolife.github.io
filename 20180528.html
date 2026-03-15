@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React开发实践--3对象引用的误区 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="     一个电商应用，有他的一个基本的结构。为了简化我们的代码，我们每一个页面组件外面都会再套上一层&lt;BaseLayout/&gt; ,通过配置&lt;BaseLayout/&gt;，我们可以控制每一个页面是否需要使用公共页头(header),公共的底部导航(footer)。这当然也是一些很基础的功能了，在此不再赘述。   基于上面的需要，我们最初写了下面的代码           con...">
+    <link rel="canonical" href="https://aoao.life/20180528.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20180528.html">
+    <meta property="og:title" content="React开发实践--3对象引用的误区 | aoao.life">
+    <meta property="og:description" content="     一个电商应用，有他的一个基本的结构。为了简化我们的代码，我们每一个页面组件外面都会再套上一层&lt;BaseLayout/&gt; ,通过配置&lt;BaseLayout/&gt;，我们可以控制每一个页面是否需要使用公共页头(header),公共的底部导航(footer)。这当然也是一些很基础的功能了，在此不再赘述。   基于上面的需要，我们最初写了下面的代码           con...">
+    <meta property="og:image" content="http://7ktu2f.com1.z0.glb.clouddn.com/react.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20180528.html">
+    <meta property="twitter:title" content="React开发实践--3对象引用的误区 | aoao.life">
+    <meta property="twitter:description" content="     一个电商应用，有他的一个基本的结构。为了简化我们的代码，我们每一个页面组件外面都会再套上一层&lt;BaseLayout/&gt; ,通过配置&lt;BaseLayout/&gt;，我们可以控制每一个页面是否需要使用公共页头(header),公共的底部导航(footer)。这当然也是一些很基础的功能了，在此不再赘述。   基于上面的需要，我们最初写了下面的代码           con...">
+    <meta property="twitter:image" content="http://7ktu2f.com1.z0.glb.clouddn.com/react.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "React开发实践--3对象引用的误区 | aoao.life",
+      "image": [
+        "http://7ktu2f.com1.z0.glb.clouddn.com/react.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 40.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 40.5%;"></div>
+                    <div class="progress-text">今天 2018.05.28 | 已耗 40.5% · 剩 217 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">React开发实践--3对象引用的误区 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2018年05月28日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20180528.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="React开发实践--3对象引用的误区 | aoao.life" data-url="https://aoao.life/20180528.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p><img src="http://7ktu2f.com1.z0.glb.clouddn.com/react.png" alt="" /></p>
+
+<hr />
+
+<p>一个电商应用，有他的一个基本的结构。为了简化我们的代码，我们每一个页面组件外面都会再套上一层<code>&lt;BaseLayout/&gt;</code> ,通过配置<code>&lt;BaseLayout/&gt;</code>，我们可以控制每一个页面是否需要使用公共页头(header),公共的底部导航(footer)。这当然也是一些很基础的功能了，在此不再赘述。</p>
+
+<p>基于上面的需要，我们最初写了下面的代码</p>
+
+<pre><code>        const RouteWithLayout = ({loader = null, exportName = null, hideFooter = true, hideReturnTop = false, ...rest}) =&gt; {
+                const loadableOpts = {
+                    loader,
+                    loading: LoadingComponent
+                };
+
+                if (exportName) {
+                    loadableOpts.render = (loaded, props) =&gt; { // eslint-disable-line  react/display-name
+                        const Component = loaded[exportName];
+                        return &lt;Component {...props} /&gt;;
+                    };
+                }
+                const LoadableComponent = Loadable(loadableOpts);
+                return (
+                    &lt;Route {...rest} render={matchProps =&gt; (
+                        &lt;BaseLayout hideFooter={hideFooter} hideReturnTop={hideReturnTop} {...matchProps}&gt;
+                            &lt;LoadableComponent {...matchProps} /&gt;
+                        &lt;/BaseLayout&gt;
+                        )}
+                    /&gt;
+                );
+        };
+</code></pre>
+
+<p>看了前面 part-1的同学可能知道，我们在项目中引入了<code>React-loadable</code>这个第三方库，上面的代码也是基于它的实现。乍一看，他似乎没有问题。接下来，我们只需要写这样的配置就ok了。</p>
+
+<pre><code>        &lt;RouteWithLayout exact path="/shopping-cart" hideFooter={false} hideReturnTop={true} loader={() =&gt; import('./ShoppingCart')} /&gt;
+</code></pre>
+
+<p>但是，在2-实现一个类似客户端的商品轮播图阅览交互 里面，我也已经提到过，我在此处遇到了一个坑。这个坑，也正是与上面我展示的代码有关。</p>
+
+<p>再来简单回顾一下，当路由从/products/:productId 到/products/:productId/showpic，事实上，动态引入的组件还是那个<code>ProductDetail</code>组件。按照我们的期待，如果前后两次引入的是同一个组件，这个组件需要update，而不是重新mount。但是就如同我在《React开发实践–2》里面介绍的那样，当路由发生改变的时候，<code>&lt;/ProductDetail /&gt;</code>竟然进入了下一个生命周期。</p>
+
+<p>究其原因，由于路由发生了改变，如果<code>RouteWithLayout</code>没有写其他的生命周期方法的话，那它必然会得到更新。那么我们来看看<code>RouteWithLayout</code>组件更新之后的影响。这时候我们发现<code>LoadableComponent</code>这个变量的引用实际上发生了变化。因此造成当render <code>&lt;LoadableComponent {...matchProps} /&gt;</code>时，需要到下一个生命周期重新render。</p>
+
+<p>可是对象引用发生了变化这种事情，我们应该怎么理解呢？说起来，这其实考察的还是JavaScript的基础。让我们暂时忘掉React这个框架，只提JavaScript。来看看下面这几行代码</p>
+
+<pre><code>let arr = []
+for(let i=0;i&lt;2;i++) {
+    const foo={a:1};
+    arr.push(foo)
+}
+
+console.log(arr[0]===arr[1]);  //false
+</code></pre>
+
+<p>大概学过半年JavaScript的同学，也都能明白这里为什么arr[0]和arr[1]并不相等了。这里还是谈谈我对这件事情的理解：</p>
+
+<p>对于for循环内部的每次执行，都是一个<code>block</code>，每一个 <code>block</code>之间都相互独立。所以，我们也可以将上面的代码进行拆解。</p>
+
+<pre><code>let arr = []
+ {
+    const foo={a:1};
+    arr.push(foo)
+}
+ {
+    const foo={a:1};
+    arr.push(foo)
+}
+
+console.log(arr[0]===arr[1]);  //false
+</code></pre>
+
+<p>这个时候，就更好理解了。对于每一个块里面的<code>i</code>变量来说，他只在当前块内有效，当前块执行完毕之后，他就会被<code>垃圾回收</code>，销毁掉了。因此当我们比较的时候，arr[0]和arr[1]之间就不相等了。</p>
+
+<p>有同学可能会问了，你用的是ES6 的语法。ES5是这样的吗？of course！</p>
+
+<pre><code>var arr = []
+for(var i=0;i&lt;2;i++) {
+    var foo={a:1};
+    arr.push(foo)
+}
+
+console.log(arr[0]===arr[1]);  //false
+console.log(i);
+</code></pre>
+
+<p>关于我的这个示例，ES5 和 ES6的结果并没有区别。如果硬要说有什么区别的话，那就是<code>i</code>这个变量是否在块级(block)之外继续有效。那相对于我本次讨论，实际上是另外一个话题了。</p>
+
+<p>既然说到了这里，我们再想一想。怎么样才能让arr[0]与arr[1]相等呢？在<strong>JavaScript，只能是在比较的两者为同一引用的情况下，才能实现严格相等</strong>。所以按照这个思路，我们可以对上面的代码进行个改写。</p>
+
+<pre><code>const foo={a:1};
+let arr = []
+for(let i=0;i&lt;2;i++) {
+    arr.push(foo)
+}
+
+console.log(arr[0]===arr[1]);  //true
+</code></pre>
+
+<p>没错，就是把foo的生命提到for循环之外。这样的话，每次推入到arr这个数组中的值的引用就一定是相同的了。</p>
+
+<p>这时候，让我们重新回到刚才遇到问题的React代码。<code>RouteWithLayout</code>当前是一个无状态组件，只要它的父组件发生了更新，它也会相应地发生更新。然后执行相应的代码。这其实就类似于我们上面提到的for循环结构。<strong>每一次<code>RouteWithLayout</code>执行的时候，都像是for循环在执行其中一个block</strong>，不难理解，每一次LoadableComponent的引用发生了变化。</p>
+
+<p>所以，还是上面的思路，我们把<code>LoadableComponent</code>的声明放到<code>render()</code>方法之外，怎么做到呢？改写无状态组件为有状态组件。将这个对象声明以状态的方式存在于组件当中。这样就可以实现我们想要的效果，即如果动态加载的是同一个组件，则组件只会发生更新，而不会进入下一个生命周期。相应的代码在《React开发实践–2》中已经提到过了，再粘贴一遍。</p>
+
+<pre><code>        `
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import PropTypes from 'prop-types';
+        import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+        import BaseLayout from './BaseLayout';
+        import Loading from 'react-loading';
+        import Loadable from 'react-loadable';
+
+
+        const LoadingComponent = props =&gt; {
+        // something 
+        };
+
+
+        class RouteWithLayout extends React.Component {
+            state = {
+                loader: () =&gt; {},
+                exportName: null,
+                LoadableComponent: null
+            }
+
+            static getDerivedStateFromProps(nextProps, prevState) {
+
+                if (nextProps.loader.toString() === prevState.loader.toString() &amp;&amp; nextProps.exportName === prevState.exportName) return null;
+                const { loader, exportName } = nextProps;
+                const loadableOpts = {
+                    loader,
+                    loading: LoadingComponent
+                };
+
+                if (exportName) {
+                    loadableOpts.render = (loaded, props) =&gt; {
+                        const Component = loaded[exportName];
+                        return &lt;Component {...props} /&gt;;
+                    };
+                }
+                return {
+                    loader,
+                    exportName,
+                    LoadableComponent: Loadable(loadableOpts)
+                };
+            }
+
+            render() {
+                const { hideFooter, hideReturnTop, ...rest} = this.props;
+                return (
+                    &lt;Route {...rest} render={matchProps =&gt; (
+                        &lt;BaseLayout hideFooter={hideFooter} hideReturnTop={hideReturnTop} {...matchProps}&gt;
+                            &lt;this.state.LoadableComponent {...matchProps} /&gt;
+                        &lt;/BaseLayout&gt;
+                        )}
+                    /&gt;
+                );
+            }
+        }`
+</code></pre>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20180528.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="React开发实践--3对象引用的误区 | aoao.life" data-url="https://aoao.life/20180528.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20180531.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20230428.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

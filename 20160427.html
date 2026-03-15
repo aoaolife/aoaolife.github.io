@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于网盘 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="以前看过一些回忆互联网论坛时代的文章，看得我飘飘摇摇，「猫扑」也好，「关天茶社」也好，都是成为了历史的，让人好奇的事物。然而，互联网的确发展地超乎了人们的想象，这次国内几家网盘纷纷地倒下，也让我觉得有「可以兴怀」的理由了。   从UC网盘说起  我最早知道有网盘这回事，还是起于高中时代。那个时候用着功能机的我，手机上装着一个UC浏览器简直犹如神奇一般。手机UC浏览器相对于手机内置的那个浏览器，简直...">
+    <link rel="canonical" href="https://aoao.life/20160427.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20160427.html">
+    <meta property="og:title" content="关于网盘 | aoao.life">
+    <meta property="og:description" content="以前看过一些回忆互联网论坛时代的文章，看得我飘飘摇摇，「猫扑」也好，「关天茶社」也好，都是成为了历史的，让人好奇的事物。然而，互联网的确发展地超乎了人们的想象，这次国内几家网盘纷纷地倒下，也让我觉得有「可以兴怀」的理由了。   从UC网盘说起  我最早知道有网盘这回事，还是起于高中时代。那个时候用着功能机的我，手机上装着一个UC浏览器简直犹如神奇一般。手机UC浏览器相对于手机内置的那个浏览器，简直...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20160427.html">
+    <meta property="twitter:title" content="关于网盘 | aoao.life">
+    <meta property="twitter:description" content="以前看过一些回忆互联网论坛时代的文章，看得我飘飘摇摇，「猫扑」也好，「关天茶社」也好，都是成为了历史的，让人好奇的事物。然而，互联网的确发展地超乎了人们的想象，这次国内几家网盘纷纷地倒下，也让我觉得有「可以兴怀」的理由了。   从UC网盘说起  我最早知道有网盘这回事，还是起于高中时代。那个时候用着功能机的我，手机上装着一个UC浏览器简直犹如神奇一般。手机UC浏览器相对于手机内置的那个浏览器，简直...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "关于网盘 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 32.2%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 32.2%;"></div>
+                    <div class="progress-text">今天 2016.04.27 | 已耗 32.2% · 剩 248 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">关于网盘 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2016年04月27日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20160427.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="关于网盘 | aoao.life" data-url="https://aoao.life/20160427.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>以前看过一些回忆互联网论坛时代的文章，看得我飘飘摇摇，「猫扑」也好，「关天茶社」也好，都是成为了历史的，让人好奇的事物。然而，互联网的确发展地超乎了人们的想象，这次国内几家网盘纷纷地倒下，也让我觉得有「可以兴怀」的理由了。</p>
+
+<h1>从UC网盘说起</h1>
+
+<p>我最早知道有网盘这回事，还是起于高中时代。那个时候用着功能机的我，手机上装着一个UC浏览器简直犹如神奇一般。手机UC浏览器相对于手机内置的那个浏览器，简直是秒杀级别的，因此我对UC浏览器十分有好感。当UC浏览器一版一版地更新，有一天，它告诉我说，可以使用它的网盘功能了。我当然是很高兴地跃跃欲试了。</p>
+
+<p>印象中，最初的时候，也就是2011年左右，UC网盘只有50M 左右的容量。那个时候，我还真往里面传过一些小的文件。当时觉得这样的容量已经很大了，那个时候还没有用过Wifi, 当时的手机流量还是每个月30M，这在仅仅五年之后的今天可能是不可以想象的（现在我每天使用的手机流量可能都要超过30M了）。的确，在当时50M的容量其实对我已经戳戳有余，我并没有那么多的理由来使用网盘。</p>
+
+<h1>新浪微盘和百度云</h1>
+
+<p>时间过得很快，2012年，也就是我进入大学那年，我注册了百度账号，后来知道了「百度云」网盘并跟着注册了账号。我也大概是那个时候，知道了新浪的微盘。出于对新浪长期的好感（新浪博客和新浪微博上那个时候我最常用的几个网络服务，新浪邮箱是一直到现在我很多国内网络账户的注册邮箱），我也开始使用新浪微盘，我会在新浪微盘里面存放一些高中时候的照片和录制的视频资料。那个时候，我还不知道有Evernote这样的东西，我有大量的新浪微盘里面的文件其实是.TXT 格式的，这些 文本文件每一个的内容往往只有几句话。当我得知<a href="https://www.williamlong.info/archives/4586.html">新浪微盘宣布关闭</a> 之后开始整理自己的新浪微盘内容的时候，看到这大量的.txt 文件，竟也觉得当时的自己幼稚可笑，觉得完全可以使用一个txt将很多内容类似的文件合并起来，觉得完全可以使用网络笔记来处理这些文件中的内容。但是，这就是成长啊，不可能一步登天吧。</p>
+
+<p>我用新浪微盘最频繁的时候，将它作为我的网络同步盘。它同步了我的一个本地文件夹，我将那个文件夹分门别类建立若干个子文件夹，当时从网络上下载了很多的电子书，网络视频等也都放置到这个文件夹里，后来又陆续传到了新浪微盘上面。我后来有了一个意识，那就是：<strong>如果是网络上已经有的视频内容，下载到本地，乃至放到网盘里其实都没有多大的意义，因为我们可以随时再次观看</strong>。这也就是云端的好处，当然，我有了这样的意识也并非突如其来的，当我真正有了这样的意识之后，我再使用网络同步盘的时候，使用的是Dropbox，Onedrive 这样的国外网盘服务，存储的都是个人的文本类数据类图像类资料，因此尽管国外网盘往往都只是相对于国内很小的存储空间，但是对我来讲，已经完全够用了。当然，这也是后话了。</p>
+
+<h1>网盘大战</h1>
+
+<p>我对网盘的认识是逐步的，2013年，让我对网盘有了新的认识。那一年，各家网盘之间爆发了争地盘的大战。如今，还能够从<a href="http://www.sootoo.com/content/443486.shtml">当年的新闻</a>，来一窥当年的硝烟弥漫。</p>
+
+<blockquote>
+  <p>8月22日是百度世界大会，百度在其大会的主页上重点推荐了百度云服务，限时领取，1T永久百度云空间。主要分为三部分，下载PC客户端获赠100G，下载移动端获赠360G，用百付宝支付1元，就能获得564G永久使用容量。<br />
+  百度在百度世界的首页重点推荐，可见其对个人云存储市场的重视。不过360可不会这么轻易的放过百度。同样在8月22日，360在其官方微博上透露：#360云盘1T永久空间免费送#360G不够?那就再来666G吧，不用1块钱哦~。360的1TB也分为三部分，下载PC客户端获赠100G，下载移动端获赠260G，免费的666G。</p>
+</blockquote>
+
+<p>的确，当时的争斗，其实主要还是百度和360之间展开的。只是很多小网盘因为不愿意被是市场淘汰，也纷纷加入战斗，只是阵势没有那两家大吧。他们的争斗，就像是当时的新闻所说：</p>
+
+<blockquote>
+  <p>　纵观网盘整个的大战轨迹，从最初的永硕网络硬盘、网络E盘、QQ网络硬盘、UC网盘等只有几M的网盘大战，再到金山云盘、360云盘、百度云几G甚至到TB级别，变化的只是空间的大小。<br />
+  网盘最初的上传图片、视频、音乐等，到现在的视频云播放，直接在线预览等功能，在功能上，并没有在几大网盘之间形成差异化竞争，技术的壁垒在网盘上并没有形成很大的差异。</p>
+</blockquote>
+
+<h1>百度云的恶心</h1>
+
+<p>想想那个时候，我还真是像着了魔一样，甭管有用没有用，先领取了网盘容量再说，后来的结果是，我的百度云网盘容量2158GB ，我的360网盘容量也达到了2T，我的微盘达到了150G容量，这其中360网盘基本没有用，百度云则真的是使用充分了。百度云那个时候，细细分析百度云当时的成功，忽视版权是一个重要的原因。那个时候，百度云为了抢占市场，允许人们公开分享，因此产生了很多分享达人，而这些分享达人，其实分享的无疑都是盗版电影，盗版电视剧等等，当然还包括人们喜闻乐见的岛国动作片了。离线下载带来了极大的方便，一个几百K的种子文件，拖到百度云里面只需轻轻一点，离线下载完成，苍老师全集就存到你的网盘里面。百度云发力移动端，移动端安装百度云网盘之后仅仅添加一个视频插件，就可以在那全集间自由穿梭，想看哪部看哪部了。这在当时来讲，尽管快播还在活着，虽然离死也不远了，对于广大宅男们来说，却的确是比快播的体验要好得多了。</p>
+
+<p>人们包括我在内也的确乐于看到这样方便快捷的资源分享，仅仅在别人的分享的百度云网盘页面上点击转存，就可以直接将那么多好资源占为己有，那感觉还是很爽的。其实后来想想，百度坏就坏在这一点上了，<strong>在初期为了抢占市场，从不谈什么「版权」「法律」，等到他坐拥了大量的用户之后呢，他就开始拿版权，法律说事了。</strong> 百度在这方面所做的坏事，可不光是百度云，还有当年的百度MP3等等。</p>
+
+<p>后来，大概是2014年，就有了「互联网专项整治活动」，从那以后，百度云的「盗版」和「泛黄」就收敛很多了。的确能够看到很多时候，分享的文件被取消，即便是使用百度云的加密功能也一样无效。但是，大体上，百度还是给「盗版」和「泛黄」留了门的。刚刚提到了，我的百度云有2158G的容量，事实上已经用掉了2000G，其中绝大部分的容量是存储曾经收集到的一些盗版的影视剧，教学资源，网络课程视频。当快播在那个时候倒下的时候，的确见到了一些网民扼腕叹息，很多网民其实不用快播看岛国片，看的就是盗版影视剧而已，但就像我刚刚所说，百度云在这方面，大幅度领先快播，以至于我觉得快播的倒下，自有后来的百度云接力。</p>
+
+<p>不过后来并不是那样了，<a href="http://tieba.baidu.com/p/3012980032">百度云停止离线下载</a>，看到有条评论，说「一个时代结束了」，后来百度云恢复了网盘的离线下载，但是已经根本不是那么嚣张了。不仅那种全集的种子会被提示违规，就是单个的种子也是常常违规，人们后来发现，原来他们存放在百度云里面的岛国片，后来都变成了8秒的教育片，也是讽刺。</p>
+
+<h1>依然相信网盘服务</h1>
+
+<p>然而，2014年，我也更加频繁地使用国外的网络服务，我已经不再会把个人资料存放到百度云或者新浪微盘这些地方了。这在后来被证明极为明智，新浪微盘关闭甚至都不会给用户发一封邮件，仅仅是通过在他们的新浪微博上发条微博告诉人们「我要关门了，都散了吧」。我如果没有看月光博客的相关报道，可能就会损失大量的历史资料，而那些资料，对我而言是一份珍贵的回忆。相比之下，国外的服务，在处理此类问题上往往很有人情味，更何况国外的网盘服务的确在「安全性」和「可靠性」上更胜一筹。</p>
+
+<p>虽然，国内的微盘，UC网盘，快盘等网络云盘相继地倒下了，但是我仍然认为「云」是未来的趋势，我在两年前，也就是2014年，还曾经写过一篇<a href="http://hktkdy.com/2014/08/25/201408/082506/">博客: 构建个人云端信息库</a>，记录我使用的「云」工具，直到如今，我的体验非常良好，我也推荐更多人使用云端服务。</p>
+
+<p>另外，推荐使用<strong>BitTorrent Sync</strong> ，这是一个去中心化的网盘服务，可以试试，很有意思。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20160427.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="关于网盘 | aoao.life" data-url="https://aoao.life/20160427.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20250819.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20251212.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

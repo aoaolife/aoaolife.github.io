@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给六个人写博客----独立博客一周年记 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="一年来大事记   2014年5月13日从godaddy网站购买顶级域名 http://hktkdy.com 5月13日至24日断断续续根据《如何建立一个博客》 教程搭建博客 2014年5月24日发表第一篇博文《关于博客》 2014年5月26日加入简书 2014年8月5日 在简书网站获得第一个喜欢 2014年9月开始在原来的jacman主题基础之上添加其他项目。在hexo博客中添加其他项目主页htt...">
+    <link rel="canonical" href="https://aoao.life/20150515-5.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150515-5.html">
+    <meta property="og:title" content="给六个人写博客----独立博客一周年记 | aoao.life">
+    <meta property="og:description" content="一年来大事记   2014年5月13日从godaddy网站购买顶级域名 http://hktkdy.com 5月13日至24日断断续续根据《如何建立一个博客》 教程搭建博客 2014年5月24日发表第一篇博文《关于博客》 2014年5月26日加入简书 2014年8月5日 在简书网站获得第一个喜欢 2014年9月开始在原来的jacman主题基础之上添加其他项目。在hexo博客中添加其他项目主页htt...">
+    <meta property="og:image" content="http://hktkdy.qiniudn.com/blogpicture.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150515-5.html">
+    <meta property="twitter:title" content="给六个人写博客----独立博客一周年记 | aoao.life">
+    <meta property="twitter:description" content="一年来大事记   2014年5月13日从godaddy网站购买顶级域名 http://hktkdy.com 5月13日至24日断断续续根据《如何建立一个博客》 教程搭建博客 2014年5月24日发表第一篇博文《关于博客》 2014年5月26日加入简书 2014年8月5日 在简书网站获得第一个喜欢 2014年9月开始在原来的jacman主题基础之上添加其他项目。在hexo博客中添加其他项目主页htt...">
+    <meta property="twitter:image" content="http://hktkdy.qiniudn.com/blogpicture.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "给六个人写博客----独立博客一周年记 | aoao.life",
+      "image": [
+        "http://hktkdy.qiniudn.com/blogpicture.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 37.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 37.0%;"></div>
+                    <div class="progress-text">今天 2015.05.15 | 已耗 37.0% · 剩 230 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">给六个人写博客----独立博客一周年记 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年05月15日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150515-5.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="给六个人写博客----独立博客一周年记 | aoao.life" data-url="https://aoao.life/20150515-5.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>一年来大事记</h1>
+
+<ul>
+<li>2014年5月13日从godaddy网站购买顶级域名 <a href="http://hktkdy.com/">http://hktkdy.com</a></li>
+<li>5月13日至24日断断续续根据<a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/">《如何建立一个博客》</a> 教程搭建博客</li>
+<li>2014年5月24日发表第一篇博文<a href="http://hktkdy.com/2014/05/24/201405/0524/">《关于博客》</a></li>
+<li>2014年5月26日加入简书</li>
+<li>2014年8月5日 在简书网站获得第一个喜欢</li>
+<li>2014年9月开始在原来的jacman主题基础之上添加其他项目。在hexo博客中添加其他项目主页<a href="http://hktkdy.com/2014/09/07/201409/0907/">http://hktkdy.com/2014/09/07/201409/0907/</a></li>
+<li>2015年1月更换为kael主题。<a href="http://hktkdy.com/2015/01/01/201501/0101/">http://hktkdy.com/2015/01/01/201501/0101/</a></li>
+<li>2015年以后每月的七牛云存储的图片流量下载量稳定在1G以上，API请求稳定在1万次以上。</li>
+</ul>
+
+<p><img src="http://hktkdy.qiniudn.com/blogpicture.jpg" alt="" />  </p>
+
+<h1>试谈写博客的好处</h1>
+
+<p><strong>很多时候，真的是你接触什么，你就会对什么感兴趣。而不是你对什么感兴趣，你就会接触什么。</strong></p>
+
+<p>在过去的一年里，由于毕竟有了自己的独立博客，于是也开始关注其他「孤岛」上人们的思考了。很多的博主都谈到了写博客的好处，我看到<a href="http://mindhacks.cn/">刘未鹏</a> 提到过，<a href="http://mindhacks.cn/2009/02/09/writing-is-better-thinking/">「书写是为了更好的思考」</a> ,我也看到<a href="http://www.luanxiang.org/blog/about">Yurii</a>写道：<a href="http://www.luanxiang.org/blog/archives/2060.html">写作是种高质量的社交方式</a> 。在我看来，我虽然很认同他们的看法，但是我总觉得那些好处都是写作的附属品，是「无心插柳」。而我认为最直观的好处，仍然是「记录」，记录我们的学习，记录我们的生活，记录我们的点点滴滴。</p>
+
+<p>我曾经看过一个说法，从<a href="http://songchunlin.net/what-we-talk-about-when-we-talk-about-love/">人类学的角度谈到了婚姻的意义</a> ，他讲到，我们娶妻生子，如果说对于人类，对于我们自己有什么意义的话，那便是：对于人类，对于我们自己来说，<strong>通过娶妻生子（也可以生女），我们将我们作为人类的这种「存在」成功地传递了下去。</strong>这个观点，让我印象很深刻，当我偶尔去想象<strong>每个人个体存在的意义</strong>的时候，我就会想到这个观点。而事实上，能够将自己的这种「存在」传递下去的行为（action）又绝对不仅限于娶妻生子（甚至于娶妻生子是最简单的传递方式），读书人著书立说，音乐家谱曲唱歌等等，都能够将自己的信息（information）或者「存在」用那样一种行为（action）来传递下去。所以，后来我看到一位博主，谈到<a href="http://dapengde.com/archives/17808">写博客的意义</a> 的时候，甚至最后说到了：</p>
+
+<blockquote>
+  <p>写博客，得永生</p>
+</blockquote>
+
+<p>而这样的所谓「写博客的意义」由于有了我之前接受的那个「存在传递」的观点，就已经见怪不怪了。我写博客的一部分的动力，源自于像《蒋介石日记》《曾国藩家书》这样的文字，它们总是在用事实告诉我说：<strong>看吧，记录下来的就是一段个人的历史。而如果这个人足够伟大，那么它甚至有可能与这个国家的历史紧密联系，成为国家史的一部分。</strong></p>
+
+<p>我前不久，把我的QQ空间上的那些留言和自己发的说说删除了一大部分，后来有个高中同学发消息问我 ，为什么把她的留言都删除了。我回答说，我不光只删除了她的啊。她心里似乎好受点，又回复我说，干嘛要删除啊，你不想留着些回忆吗？</p>
+
+<p>从一个长期坚持写东西<a href="http://hktkdy.com/tags/%E5%8D%81%E5%B9%B4/">十几年</a> 的人的角度看待回忆这个事情，我认为很多的过往的记忆，如果我没有记录下来的话，那么它们也许真的「如梦似幻」一般，因为与现在的生活实在差别太大。然而我这个人又是一个喜欢「向前看」的人，不太愿意想过去的人过去的事，索性有了过往的文字，如果我念旧的时候，就可以翻翻过去的文字了。这并非是每个人都具有的优势，我发现**很多纠结于过去和未来之间的人，往往他们没有养成记录生活，思考生活的习惯，所以他们一直在幻想，无论是过去还是未来。**而忠实地记录的好处就是在你以后回顾的时候，能够不再存在过多地没完没了的幻想，看过之后，接着向前迈进。</p>
+
+<h1>独立博客群岛</h1>
+
+<p>我之前看过一些观点，讲<a href="http://tech2ipo.com/97059">每一个独立博客都是一个孤岛</a> ，但是事实上从我最近的观察来看，即便独立博客是座岛，每一个岛屿都有几座桥梁沟通到另外的岛屿上，而这些桥梁就是我们所讲的<a href="http://hktkdy.com/2014/12/31/links/">友情链接</a> ，每一个友情链接都是一座桥梁，于是我自己经常做的一件事情就是打开一个独立博客，然后看几篇文章，再之后翻到它的友情链接的位置，去随意点击一个链接，进入另外一个独立博客，这种感觉不就像是从这座岛上游历一番，然后见了一座桥，便去了另外一座岛？我甚至保持着这样的一种怀疑，如果从一个独博的外链出发，也许可以将所有的中文（甚至外文）独博网站全部索引。（据说搜索引擎的爬虫就有类似的原理？不做深究了）</p>
+
+<p>于是岛屿越来越多，形成了一个群岛，中文独立博客的群岛。当然，我也发现，这个群岛事实上并不大，岛屿数目也并不多。前不久遇到了一件蛮有趣的事情，很偶然间翻到了一篇博主写的博文，觉得很有意思，就顺着去读了评论，结果却发现就在将近一年以前，我自己事实上是评论过这篇blog的，而我自己却全无印象，只有那个头像和那个ID能够告诉我，原来我来过这里。</p>
+
+<p>以上是大体的对于独立博客的印象，下面简单谈一些感受：</p>
+
+<ul>
+<li><strong>很多人的blog是为了job开的</strong></li>
+</ul>
+
+<p>是的，我开始并没有这种感觉，直到后来我发现，一方面很多的独立博客的博主是码农出身，他们寻找工作时如果能够有一个技术博客支撑的话会加分许多。另一方面，的确有很多的独立博客的博主，尤其是技术博客的博主，在他们高枕无忧之后，停止了更新他们的Blog。当然，这些都无可厚非，仅仅是个人感受而已。</p>
+
+<ul>
+<li><strong>文字风格差别奇大</strong></li>
+</ul>
+
+<p>我个人写blog 的文字风格相对比较严肃，只是会在一些很小的地方搞点小幽默，我力求逻辑严谨，思维清晰，最好能够让读者看到时无可挑剔。我确实很少使用网络用语在我自己的博文中，其理由大概来源于<a href="http://www.zhihu.com/question/20329726">怎么看待外文电影/电视剧里的中文字幕「接地气」现象？</a> 等相关讨论。</p>
+
+<p>但是我的确发现很多的博主，尤其是90后的博主，不仅博客主题清新到二次元，甚至文风也是异常俏皮，有趣，即便是技术博客，也能够被他们写得绘声绘色，无节操得很。我并非职责他们，而是仅仅是为了说明风格差别很大。与此同时，事实上，我自己是在向我喜欢的博主学习（或者说模仿）的，比如说我模仿着 <a href="http://mindhacks.cn/">刘未鹏</a> 写过<a href="http://hktkdy.com/2015/02/15/201502/021507/">为什么我们都需要读点心理学（beta）</a> ，但是只有下笔才知道笔力不够，肚子里墨水不够抖的。</p>
+
+<h1>展望未来</h1>
+
+<p>过去的一年，我自认为收获颇多，这些收获不止于博客，还在于其他的很多方面。坦白讲，如果有一天，我不再写博客了，那一定是有我自认为充足的理由。但是如果展望一下未来，我依然愿意在这里，相会更多有趣的，有故事的人。以后我的博客将会（并且已经）两周更新一次，我会先在<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">简书</a> 上先发出初稿，待规定日期统一更新到<a href="http://hktkdy.com/">独立博客</a>，你也可以<a href="http://hktkdy.com/atom.xml">订阅我博客RSS</a> 或<a href="http://feedly.com/i/subscription/feed/http://hktkdy.com/atom.xml">我的feedly</a> ，欢迎你的订阅。现在说一下，为什么此文标题要叫做《给六个人写博客》，那是因为在我的feedly的订阅中，可以显示的是有其个人订阅，而我自己为了确保rss的输出无误，也订阅了自己的博客，所以也就是有六个人订阅了<a href="http://feedly.com/i/subscription/feed/http://hktkdy.com/atom.xml">我的feedly</a>，所以理论上的长期读者大概也就是这六个人，这便是给六个人写博客的由来。</p>
+
+<h1>注：</h1>
+
+<p><strong>此文中涉及的一些参考资料以链接的超链接的形式展示，如果感兴趣，可以点击进去浏览详细内容，这些博文的作者也都是优秀的博主，在此向你们表示感谢。</strong></p>
+
+<p>————————————–分割线——————————<br />
+如果您喜欢本文，可以点下面的喜欢按钮，也可以关注<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">本人简书</a><br />
+或简书专题：<a href="https://www.jianshu.com/collection/7b424559990a">我们在自己的世界里独自狂欢</a></p>
+
+<p>也可以阅读我的独立博客，了解更多内容。</p>
+
+<p><a href="http://hktkdy.com/"><img src="http://hktkdy.qiniudn.com/slogan.jpg" alt="" /></a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150515-5.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="给六个人写博客----独立博客一周年记 | aoao.life" data-url="https://aoao.life/20150515-5.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20140601.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20150215-6.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

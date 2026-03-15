@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2018，风平浪静，但我也会想念它 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="工作照常做，但是心里已经有点不踏实了，毕竟马上就要过年了，所以其实工作效率并没有多高。不过似乎大家也都没有强到哪里去，如此而已。1月份经历了人生中第一次年会，之所以说是第一次，是因为虽然从15年实习开始就算是上班了，但是却一直没有参加过年会。直到这个时候，才终于参加了第一次年会。然而年会也并没有多有趣，演出的节目并没有很有趣，大概也是演给70后居多的boss们看的。演出无聊，也没有拿到奖品，当然觉...">
+    <link rel="canonical" href="https://aoao.life/20181229.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20181229.html">
+    <meta property="og:title" content="2018，风平浪静，但我也会想念它 | aoao.life">
+    <meta property="og:description" content="工作照常做，但是心里已经有点不踏实了，毕竟马上就要过年了，所以其实工作效率并没有多高。不过似乎大家也都没有强到哪里去，如此而已。1月份经历了人生中第一次年会，之所以说是第一次，是因为虽然从15年实习开始就算是上班了，但是却一直没有参加过年会。直到这个时候，才终于参加了第一次年会。然而年会也并没有多有趣，演出的节目并没有很有趣，大概也是演给70后居多的boss们看的。演出无聊，也没有拿到奖品，当然觉...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20181229.html">
+    <meta property="twitter:title" content="2018，风平浪静，但我也会想念它 | aoao.life">
+    <meta property="twitter:description" content="工作照常做，但是心里已经有点不踏实了，毕竟马上就要过年了，所以其实工作效率并没有多高。不过似乎大家也都没有强到哪里去，如此而已。1月份经历了人生中第一次年会，之所以说是第一次，是因为虽然从15年实习开始就算是上班了，但是却一直没有参加过年会。直到这个时候，才终于参加了第一次年会。然而年会也并没有多有趣，演出的节目并没有很有趣，大概也是演给70后居多的boss们看的。演出无聊，也没有拿到奖品，当然觉...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "2018，风平浪静，但我也会想念它 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 99.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 99.5%;"></div>
+                    <div class="progress-text">今天 2018.12.29 | 已耗 99.5% · 剩 2 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">2018，风平浪静，但我也会想念它 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2018年12月29日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20181229.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="2018，风平浪静，但我也会想念它 | aoao.life" data-url="https://aoao.life/20181229.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>工作照常做，但是心里已经有点不踏实了，毕竟马上就要过年了，所以其实工作效率并没有多高。不过似乎大家也都没有强到哪里去，如此而已。1月份经历了<strong>人生中第一次年会</strong>，之所以说是第一次，是因为虽然从15年实习开始就算是上班了，但是却一直没有参加过年会。直到这个时候，才终于参加了第一次年会。然而年会也并没有多有趣，演出的节目并没有很有趣，大概也是演给70后居多的boss们看的。演出无聊，也没有拿到奖品，当然觉得不好玩了。不过，这次年会保留下来两张照片，是与其他同事的合影。其中有两位同事后来离职了，于是这两张照片也成为回忆，让我想起了之前与那两位同事一起工作的那段经历。为了年会，还买了一双皮鞋，一件衬衫，都只穿了那么一次，就放到柜子里了。总之，我对年会的印象并不好，甚至不想参加今年年会。说到这，你可以已经明白了，我还在这家单位接着干呢。</p>
+
+<h1>2月份</h1>
+
+<p>2月赶上过年，工作中断了几天，但好在工作并不紧张，所以也就还好。</p>
+
+<p>过年，这件事，越来越驾轻就熟了，以前可能会惶恐于走亲戚串门子，不知道怎么称呼那些叔叔阿姨，哥哥姐姐，也不知道怎么跟他们打交道。现在却觉得这也算是一件沟通感情的好事情了。<strong>套路已然熟悉，接下来就是表演了</strong>。于是表演地也还不错，至少是及格了。也没有像那些年那样，跟我的老舅在酒桌上翻脸，跟我爸爸的老舅在酒桌上耍脸子。其实我到现在我也不明白，为什么那两年，我都跟这些舅们过不去。我并不想说那个时候年轻，也不想说这个时候成熟。也许，大家只是对对分多了两分了解。</p>
+
+<p>过年如旧，但参加了1次高中同学聚会，这聚会也让我喜欢不上来。打算今年如果继续举办的话，不再去了。为什么我不喜欢呢？人们好多年没见了，于是开始聊天，聊到的内容非常肤浅，“在哪里工作”，“上什么班”，“有没有对象”，我甚至觉得今年的聚会，聊天的套路依然如此。其实我也能够理解，彼此之间并不熟悉的人们，能聊的内容本来也并不多，为了化解尴尬，聊一些最浅显的话题当然并不是错。但是，前面说的是理性，而感性的我，并不喜欢如此，我选择逃避。</p>
+
+<p>想起来，几个月前，看到的推特上有人表态，说他明确拒绝了同学的邀请，去参加同学聚会。我当然做不到直接拒绝，可能哪天找个借口就不去了吧。</p>
+
+<p>2月份写过几篇博文，大多是谈吃的，比如<a href="https://www.jianshu.com/p/f1c49ec5599a">就是喜欢饺子</a>。这当然还是因为过年的缘故，会很容易让人想起来聚餐，饮食之类话题。另外，还有一个原因，也是想找一些由头，来回忆一些可能即将就会忘记的事情。</p>
+
+<h1>3月份</h1>
+
+<p>三月份，真正值得说的，大概两件事。</p>
+
+<p>第一件事，去了一次香山。这个时候，天气还略显寒冷，爬香山的人也并不是很多。而偏偏就是这个时候的香山，让我第一次去，就喜欢上了，之后我又陆续去过两次。</p>
+
+<p>我第一次去过香山以后，曾经想，以后要每一个月都争取去爬一次山，后来却发现，之后，也不过只又去了两次而已。上一次去的时候，正是十一国庆节期间，我以为游客们会去到故宫长城这些热门景点，香山的游客应该不会很多。但我却没有想到，去到那里，已经人流如织了。爬过两次山之后，这一次爬很轻松了，以至于，我对香山有了疲倦。</p>
+
+<p>第二件事，由于Y同学在固安出差，因此我们得以相聚两次。当我写下这些的时候，也觉得时间很快： 这件事似乎就是昨天才刚刚发生。那两天，我带他去了还在下着雪的<strong>北京故宫</strong>，去了五棵松附近吃了顿<strong>潮汕火锅</strong>，去南锣鼓巷附近吃了顿<strong>烤鸭</strong>。我们当然不光是玩，也聊过去这两年的变化，成长，经历，也怀有对未来的憧憬。他说他以后不想在深圳长期工作，想要回到西北发展，去西安工作。我说了我的生活，我的遭遇。拭目以待吧，相信明天会更好。</p>
+
+<h1>4月份</h1>
+
+<p>同样是两件事</p>
+
+<p>第一件事，去了工体看了场国安对阵恒大的比赛。这是我第一次在现场看正式比赛，因为是第一次，很新鲜，很有趣，加上比赛过程一波三折，我这次看球的体验实际上非常好了。以至于在接下来的几个月里，我又来到工体看过两场球。不过略显遗憾的是，我三次来到工体，看了三场平局。即便是第三次，我以为稳稳地能够拿下的长春亚泰，最后也跟国安踢成了平局。说起来，也很有意思，在现场看过几次足球之后，再去现场看篮球，即便都是国内最高水准的比赛（足球是中超，篮球是CBA），也会觉得现场看篮球相比足球来说太无聊了 。我是喜欢现场几万球迷一起助威的声势的，喜欢大喊牛逼，大喊口号的，当然喊傻x就是另外一回事了。关于看球，也许以后还会单独开辟一篇单独来讲，总之，我是享受的吧。</p>
+
+<p>第二件事，去了北京草莓。后来写了<a href="https://www.jianshu.com/p/ae748c49fb6f">我的2018北京草莓全纪录</a> ,应该是非常全面了，没有什么可再补充了。</p>
+
+<h1>5月份</h1>
+
+<p>到五月份为止，入职一周年，于是开始考虑是加薪还是辞职找工作的问题。如果找工作当然是要总结知识经验喽，又赶上那段时间自己也的确有一些知识上的积累想要分享，于是写了很多篇技术博文。其中大部分是关于React的，后来我就把他们结集，放到简书的一个文集<a href="https://www.jianshu.com/nb/32728336">React分享</a> 下面了。不过话说回来，后来顺利地加了薪，工作量也没有增加，我也就继续在这家单位工作了。大概由于动力不足，后来也就很少再写技术博文。</p>
+
+<p>第二件事，买个手机，被骗了。后来，我把这件事，写成了博文，又有万余字。</p>
+
+<p><a href="https://www.jianshu.com/p/9f9d4d73ceb9">我遭遇的北京实体店卖手机骗局，希望你们不会遇到</a><br />
+<a href="https://www.jianshu.com/p/fa6f7a7007bf">我现在觉得, 走在街上，路边都是黑店！</a><br />
+<a href="https://www.jianshu.com/p/54a1a720e884">在被侮辱，被威胁之后，我跟骗子达成了和解</a></p>
+
+<h1>６月份</h1>
+
+<p>６月的主题是世界杯了。至今，如果你让我自己想，<strong>我也会觉得六七月份是我整个2018年最愉快的两个月</strong>，工作上没有很多烦心事，也不用加班，下班后看两场球，评评球，看看足球相关的八卦，连朋友圈里面，那个时候讨论世界杯也成为了政治正确的主流，觉得好极了。优酷那档《这就是世界波》节目也很不错，它陪我度过了几乎一整个世界杯期间的夜晚，我也开始认为王自健是一个很不错的主持人，而越来越看不上李诞了。</p>
+
+<h1>７月份</h1>
+
+<p>7月份两件事</p>
+
+<p>第一件事，当时大概有些无聊，关注了BEJ48的ddd，于是只要Ｂ站上那个应援会up主一更新视频，我就会去瞅一瞅看一看。但是，隔着屏幕的美女，看得久了，也是会腻的，于是新鲜感没过多久也就散去。慢慢地，我又没有兴趣了，对那个应援会up主取消了关注，相应地，ddd也很少关注了。</p>
+
+<p>第二件事，有了一次相亲。相亲<strong>始于互相成为微信好友，终止于见面</strong>。相亲对象是一个做财务的女生，比我还大两岁，但我本着“学习”“的态度去了。见面之前，还曾经在微信上热烈地聊过三五天，见面之后，其实对方也没有明确表态不同意继续交往，我们就也继续聊着。但感情就以肉眼可见的速度，疏远了。我继续拖延着，这样父母就不会让我再去找下一个，对方也继续拖延着，经常是我发过去一条微信，对方隔一个小时才回复，而且各种理由，今天说是去健身房了，明天又说是去图书馆了，显得自己很忙的样子，只是太忙了没有时间理我。于是我也只好只是说句，那你忙吧，明天再聊。想要约来第二次见面，就迟迟约不到。终于在加了微信一个月之后，对方提出了我们不适合。其实我又怎么会不知道呢，不过就是一直拖延着罢了。我没有问她哪里看不上我，觉得显得有些扯皮和无聊。却矫情地发了一首徐志摩的诗，发在朋友圈，只给她一个人看。现在想想，倒也觉得有几分可笑了。</p>
+
+<p>第一件事和第二件事有什么联系呢？关注的ddd，是隔着屏幕的人。然而觉得新鲜的时候，也曾经认为，还是屏幕里的人好，现实中的妹子怎么这么难猜呢。那个时候，我也像是一个迷恋二次元的肥宅，不愿意去做现充。可当我的那股新鲜劲过去之后，现实中的妹子也选择放弃了我。</p>
+
+<h1>８月份</h1>
+
+<p>八月，因为”谈判破裂“，心情不好，于是去了一趟泰山。关于这次旅行，我写了两万多字，凑了四篇博文。下面是第一篇</p>
+
+<p><a href="https://www.jianshu.com/p/fb0bb5c781c7">济南是个小姑娘，泰安才是山东大汉(1)</a></p>
+
+<p>该说的，我也都说了，就不再多说了。</p>
+
+<p>另外，继续追《权利的游戏》，去年的夏天看了这部剧的前两季，今年的夏天，看了这部剧的三四五季。我一时也归纳不出个原因，反正总是很喜欢在春夏看美剧，在秋冬看日剧。顺便一提，今年的春夏，除了《权利的游戏》之外，还看了《摩登家庭》，《硅谷》，都是追了好几年的，已经成为习惯的剧，本来还想看《毒枭》的，但是看了半集就看不下去了，也许时机没有到吧。这个冬天，看了今年唯一一部日剧，《我们无法成为野兽》，剧当然是好剧，只是看到第六集之后，因为其他变故，看剧的过程又中断了，反倒不想再继续追下去了。但，应该还是会找个时间补上剩下的剧集的。</p>
+
+<h1>9月份</h1>
+
+<p>工作上，一直想在项目中引入的<code>postcss　autoprefix</code>终于被我引入进来的。相应地，也学到了好多新的知识，不必详细说了，之前也写过博文记录这件事: <a href="https://www.jianshu.com/p/71b8f1caef4e">在webpack项目中配置postcss，实现autoprefix</a></p>
+
+<p>生活上，终于跟父母进行了一次旅行。虽然去的地方也不远，只是在北京，只是去了天安门，故宫，北海公园而已。但整件事现在回想起来，还是挺有意思的，我会想起很多小事，比如我妈不敢地铁站的电动邪梯，于是我爸只好搀扶着我妈走楼梯，而我以前甚至似乎从来都不知道我妈是不敢坐电梯的;又比如我爸我妈不认路，全程我来当导游，一下有一种当家做主的感觉。再比如我那个不听话的小表弟，到了天安门哭着喊着要他妈给他买这买那，去了故宫又觉得这里不好玩，嚷嚷着赶紧走;我也会想起，我给同行的父母和老姨一家办了５张北京公交卡，我们一行人在北京从来没有分离过，结果退卡的时候，其中4张卡退卡金额一致，只有一张卡多了几块钱，所以一定是有人逃了票，又会是谁呢？</p>
+
+<p>这个旅行的所有景点，在此之前，我都去过，有的甚至去过不止一次。但是跟父母去的话，又有新的好玩的点。从这个角度来说，这也算是旅行的意义了。</p>
+
+<p>其实整个夏天，母亲都在念叨着，谁谁谁又去哪哪哪玩儿去了。后来老爸大概是被念叨烦了，才带她来了北京。他们本来还想来我住处参观一番，然而我的住处真的是寒舍，委婉地拒绝了他们。父亲本来想要去八达岭长城的，但是从南城往北城走，这实在是太远了，后来也并没有去。而我，过了差不多两个月之后，自己一个人跑到八达岭逛了一圈，跟想象相差无几，没有多少惊喜。也许到了2019年的中秋节，能够跟父母一起去八达岭吧，到那个时候，我都能够给他们当导游了。</p>
+
+<h1>10月份</h1>
+
+<p>那位“前女友”说过她爱玩网易某款吃鸡游戏，而当时我的手机根本带不动吃鸡游戏。后来我换了个手机，终于能够玩吃鸡了，那位也不在了。我又将那款吃鸡手游卸载了，直到后来因为表弟结婚，去他家吃包子，看见他的电脑上有网易那款吃鸡端游，看他们玩觉得蛮有意思，于是觉得既然玩不了端游，那就玩手游吧，就又重新把游戏装回来了。不过这次，我不光装回了网易那款吃鸡手游，还装了腾讯那款吃鸡手游。结果两相对比，发现腾讯那款手游更加出色一些，对新手也很友好。于是几乎每天都要玩上一两把。我的段位也一路从青铜打到了黄金２。</p>
+
+<p>有那么一段时间，很痴迷。于是也跟很多玩家一样，去看一些打游戏的直播视频，去知乎上看那些“刺激战场的技巧有哪些”之类的帖子。当然，这样一段时期，很快就又过去了，现在又觉得游戏不过是套路罢了。</p>
+
+<p>第二件事，我买了一个魔方，经常会在空闲时候，学习学习魔方的公式。后来经过一番学习，终于拼出了第一个完整的魔方。但是最后一个公式，我没有记住。后来，<strong>我每次也只是把前两层都拼好。然后，就心满意足地打乱魔方，重新拼下一个了。</strong></p>
+
+<p>有那么两个周末，我一个人背着包，包里放着kindle和魔方，去到住处附近的一个公园，坐在一个角落里。我会安静地看会书，看书觉得没有意思了呢，就玩会儿魔方。魔方觉得没意思了呢，又打开手机玩会吃鸡手游。总是有事情做，总是很悠闲。<strong>我很难说这种状态是好是坏，但对我都是经历，而这种经历，今年经历了，明年就未必了</strong></p>
+
+<h1>11月份</h1>
+
+<p>可能还是孤独吧，11月份，竟然又开始在Ｂ站上看聊天直播，开始我只是看吃鸡的直播，有一个叫做大忽悠的主播觉得很有意思，看了三五天之后，偶然间又看到一个聊天主播，发现她人气并不高，只有几百人关注，而长相甜美可爱，简直就像是被遗忘的丑小鸭，于是赶紧关注了。后来，还专门充值了直播的虚拟货币，虽然也没有充值多少钱，但是要知道，我此前从未给主播冲过钱的。其实，这样一个小主播，直播间里面同一时间段内在说话的，也不超过五个访客，即便是你不充值，你要是在弹幕里跟她聊上两句，他也是会搭理你的。当然，主播们当然不是靠空气活着的，她们当然是需要打赏的，于是你每次打赏点小钱，她们也是会对着手机屏幕，喊出你的昵称，说上两声谢谢，比一个心，嘬一下嘴。我后来了解到，这个主播，当时还是一个学民乐的大三学生，家在呼和浩特，在包头上学，我关注她的时候，她才开播没有多久，她没有多少才艺，偶尔会唱两首歌，唱的歌也不是多好听，有一个跟老婆关系不是很融洽的大佬，几乎每天都会到她的直播间逛一逛，说说生活，有时候，我甚至觉得在那个直播间呆了近一个月，我知道那个大佬的故事，要比知道那个主播的情况还要多。大佬好像也只是想找一个对象倾诉，于是直播间里，大佬在屏幕上喋喋不休地说着，主播和几个听众看着。我想起这些事，<strong>总会觉得每个人都不容易，逃避也并不可耻</strong>。我从十月中旬开始看这位主播的直播，看到11月中旬，看着他关注人数基本不动，直播间人数一两百就算是高的，我知道她快要离开了。果然，毫无预告地离开了。</p>
+
+<p>第二件事，去看了改革开放四十周年的展览，也顺带着看了一个《大唐风华》的展览。其实最初，我是在某公众号上，看到小编有推荐《大唐风华》这个展览，可正当我准备过去看的时候，却听到一个新闻，国博闭馆改造。等又过了近两个月之后，再次得到国博的消息，已经是说，国家领导人们集体去参观了改革开放四十周年的展览。</p>
+
+<p>12月</p>
+
+<p>一件事是相亲，因为还没有结束，所以也不想先说太多。另外一件事则是工作上的变动，也不想说太多。除了这两件事之外，最让人意外的，应该还是奶奶生病这回事了。</p>
+
+<p>某天突然接到老妈的电话，告诉我，第二天要去县医院看一看，因为奶奶住院了。我并没有在电话里问起她的病情，怕自己如果知道了一个坏的结果，会失眠，而老妈也没有直接告诉我奶奶的病情。然而，当天晚上，我虽然很早就睡了，但还是做了不好的梦，第二天早上起来去吃早餐的时候，更是往最坏的方向想了好多回，心情并不舒畅，情绪也一直在压抑。等到坐了一小时火车，打了个的来到医院，见到在病床上处于昏迷状态的奶奶的时候，突然发现，自己前一天夜里的梦，以及当天早上所有最坏的结果都有可能出现。旁边的亲戚跟我讲，喊喊你的奶奶吧，我于是坐在床边喊了两声，积压的情绪得到了释放，哭了出来，哭了好一会。这次哭，后来也让我想起，小的时候，一直跟着奶奶的我，突然要离开奶奶，去爸妈那边生活，同样是哇哇地哭了一场。</p>
+
+<p>此后一天半的时间，我都在医院里陪护，索性奶奶也渐渐好转过来，从沉睡中苏醒过来。她醒来的时候，我就在旁边，竟然也把我吓了一跳。她拼命用力去闹腾，试图摆脱呼吸的口罩，插在身上的输液用的针管。我于是赶紧去叫医生，医生回答病人已经苏醒了，这是好症状。我没有特别的欢喜，因为此前，已经从医生的口中得知奶奶并无生命危险，只是有可能会有并发症。可能的并发症包括脑血栓，肺炎，糖尿病等，但后来奶奶苏醒以后，情况的确越来越好，我于是也安心地在周日的下午离开了医院。</p>
+
+<p>后来隔了几天，听老爸说奶奶已经出院了，又过了几天，我回家去看望。说话已经没有问题，但活动还是有些费力。回家的当天，我在奶奶这屋待了很久，想要做一个补偿。但是，第二天，眼见着奶奶的确好转了，而我也的确还有更有意思的事情要做，也就又去做别的了。</p>
+
+<p>亲情，大概是永远都可以聊的一个话题。</p>
+
+<h1>结语</h1>
+
+<p>整个2018年还是很平淡的，一切行走的轨迹都非常地自然，<strong>也几乎没有做什么选择</strong>，相比2016年的自己，简直可以说是非常平淡了。偶尔有两三件事情，给生活造成“波澜”，其实也并不是自己主动去制造的，而是被动接受的。</p>
+
+<p>我希望2019年做出更多主动的改变。</p>
+
+<p>我希望2019年能够增加更多的睡后薪水。</p>
+
+<p>当然，我还有很多美好的希望，这里不展开了。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20181229.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="2018，风平浪静，但我也会想念它 | aoao.life" data-url="https://aoao.life/20181229.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150310-2.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20150913-2.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

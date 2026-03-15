@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老姨 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="随着时间的推移，很多事情可能就忘记了。写这些东西，启发大概来自于破袜子   我也想记录下一些普通人的普通事   简单目录    老姨 二姨 二表哥 老舅   老姨  我曾经一直以为老舅是姥姥最小的孩子，后来才发现，原来老姨才是最小的孩子，老舅并不是。   我对老姨最早的印象，大概来自于姥姥家的墙，墙上贴着林志颖或是郭富城的偶像贴画。直到多年以后，我才意识到她其实也曾经是个追星族，坦白而言，那的确让...">
+    <link rel="canonical" href="https://aoao.life/20221017-2.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20221017-2.html">
+    <meta property="og:title" content="老姨 | aoao.life">
+    <meta property="og:description" content="随着时间的推移，很多事情可能就忘记了。写这些东西，启发大概来自于破袜子   我也想记录下一些普通人的普通事   简单目录    老姨 二姨 二表哥 老舅   老姨  我曾经一直以为老舅是姥姥最小的孩子，后来才发现，原来老姨才是最小的孩子，老舅并不是。   我对老姨最早的印象，大概来自于姥姥家的墙，墙上贴着林志颖或是郭富城的偶像贴画。直到多年以后，我才意识到她其实也曾经是个追星族，坦白而言，那的确让...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20221017-2.html">
+    <meta property="twitter:title" content="老姨 | aoao.life">
+    <meta property="twitter:description" content="随着时间的推移，很多事情可能就忘记了。写这些东西，启发大概来自于破袜子   我也想记录下一些普通人的普通事   简单目录    老姨 二姨 二表哥 老舅   老姨  我曾经一直以为老舅是姥姥最小的孩子，后来才发现，原来老姨才是最小的孩子，老舅并不是。   我对老姨最早的印象，大概来自于姥姥家的墙，墙上贴着林志颖或是郭富城的偶像贴画。直到多年以后，我才意识到她其实也曾经是个追星族，坦白而言，那的确让...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "老姨 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 79.5%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 79.5%;"></div>
+                    <div class="progress-text">今天 2022.10.17 | 已耗 79.5% · 剩 75 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">老姨 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2022年10月17日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20221017-2.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="老姨 | aoao.life" data-url="https://aoao.life/20221017-2.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>随着时间的推移，很多事情可能就忘记了。写这些东西，启发大概来自于<a href="https://pewae.com/">破袜子</a></p>
+
+<p>我也想记录下一些普通人的普通事</p>
+
+<p>简单目录</p>
+
+<ul>
+<li>老姨</li>
+<li>二姨</li>
+<li>二表哥</li>
+<li>老舅</li>
+</ul>
+
+<h2>老姨</h2>
+
+<p>我曾经一直以为老舅是姥姥最小的孩子，后来才发现，原来老姨才是最小的孩子，老舅并不是。</p>
+
+<p>我对老姨最早的印象，大概来自于姥姥家的墙，墙上贴着林志颖或是郭富城的偶像贴画。直到多年以后，我才意识到她其实也曾经是个追星族，坦白而言，那的确让我觉得很意外。毕竟老姨是我妈的同辈人，即便两个人相差了十多岁，但在我看来他们属于同一个年代，而每每想到我妈，我都不会和追星联系在一起。</p>
+
+<p>我不记得老姨什么时候开始不追星的，但记得另外一件事，仍然是我很小的时候，记得老姨还曾经追过《蓝色生死恋》这部韩剧。我也还曾经和她一起看过这部剧，那个时候，她还没有结婚呢。</p>
+
+<h2>结婚之前</h2>
+
+<p>我猜想，老姨结婚之前，应该是度过了一段快乐时光的。她有几年，在我家打零工，就住在我家里。那几年是和老姨接触比较多的几年，晚上往往是我，奶奶，老姨一起在一个炕上睡觉。老姨没有啥别的心思，晚上也不过就是看会电视，就睡觉了。也没有说出去玩耍的心思。</p>
+
+<p>到了白天的时候，老姨干活的时候，还能跟我们说说笑笑。当然，正因如此，她还知道我一些糗事，比如，我很小的时候，站在窗台上往下面撒尿。后来，她也会拿这件事，来逗一逗长大了的我。</p>
+
+<h2>结婚</h2>
+
+<p>老姨的婚礼，大概是我少数印象深刻的婚礼了。</p>
+
+<p>我应该是去了现场的，我对那个旧老姨夫的很多印象也来自于这里。印象里，这个旧老姨夫，很是精明。我们还跟他一起在他的婚房里玩过魂斗罗游戏，他是那种能够一口气过好几关的人。他长得不高，也总是头头是道，印象里，后来有几年去姥姥家，几个女婿坐在桌子上喝酒聊天，这个旧老姨夫话也很多，或者说很能扯淡。</p>
+
+<p>对这个婚礼印象深的另一个理由，来自于一盒录像带，那是婚礼的录像带。</p>
+
+<h2>离婚</h2>
+
+<p>后来，老姨离婚之后，没处去，就又来我家呆过几年，还是那样子。</p>
+
+<p>当然，印象里面，有一次，大概是我初中的时候，也许是初二，又或者是高二，有一次在外面喝酒喝多了，对，你没有看错，反正有那么一段时间，我还比较爱喝酒。我估计，也许是高二。应该是那年的正月十五，记不得了，只记得是跟JXL这个人一起喝的酒，喝多了，后来回到了家，老姨好像都已经睡下了，我醉了，后来甚至要吐，也没有让她管，就自己找了个撒尿的盔子，往里面吐，吐完之后，身体好受了，这才<br />
+慢慢地睡下了，睡得也许跟个死猪一样。第二天，老姨当然把我喝醉酒的事情，告诉了老妈，后来老妈就说了我一顿，之后，就没有再那么喝酒了。</p>
+
+<p>我并没有因为这件事怪罪老姨，不过这的确是我的一件丑事，却偏偏被她知道了。而我的丑事，前已述及过一件，这次就又一件。我也一直觉得，如果丑事能跟别人分享，那么这个人，一定比较亲近，的确是的，那些年， 跟老姨的感情还不错。毕竟接触比较多，那些年，我还经常会给家里忙活着干活，相比之下，现在就很少了。</p>
+
+<h1>老姨的新婚</h1>
+
+<p>我忘记了老姨是什么时候，第二次结婚了。也忘记了老姨啥时候从我家离开的了。只记得，大概老姨从我家离开后，又回本村呆了两年，才找到的我的新老姨父。坦白讲，老姨是我认识的人当中第一个离婚的，她在离婚之前受过家暴，被曾经的老姨夫欺负。在那个年代，乃至到现在，在农村，离婚仍然可以说是一件比较丢人的事情，我想姥姥脸上也没啥光彩。老姨的新婚，总算是把这个离婚女人的标签丢开了，但是却又多了一个二婚女人的标签，我不知道后来的她是否有过被歧视，毕竟后来接触少了。</p>
+
+<p>新的老姨夫，我认为很不错。老实本分，用我爸的话说，是个过日子的主。与这个新老姨父的最多接触，应该是来自四年前，他们一行人来逛北京城，通过这次跟这位新老姨父的接触，也正是能说明，他的确是如我爸所说的那样一个人。甚至，我爸还曾用另外一个词形容他，跟个小孩子似的，童真。</p>
+
+<p>后来接触的少了，平时见了面也不过就是寒暄几句，倒也说不了几句其他的。不过即便如此，还会有几件事情，让我印象深刻。<br />
+一个事情，大概可以追溯到我上大学的时候，有一次老姨带着孩子来我家里玩，她家孩子小时候很淘气，总是不听话，那次，我很看不过去，所以就想要教训一下他，我冲着孩子大嚷，老姨看到了，当然就要护犊子，场面一度失控。不知道这件事情之后，我在老姨心目中留下了什么印象。另外一件事情，也是与老姨的冲突，我结婚那天，亲戚们很早就到了我家，开始忙活，也指手画脚帮忙出主意，当时我大概是有一件事情需要做，表现得有点手忙脚乱，老姨看到了之后，给帮忙出主意，说了两句话，然而这个话，在我看来，一点用都没有。由于我有些着急了，就很直接地冲她嚷了起来，叫嚷着你不要添乱了，根本不是那样的好吧。老姨听闻，沉默很久，至于后来我是否道歉了，忘记了，大概是道歉了吧。</p>
+
+<p>老妈的这些亲姐妹，我一直很难讲她们的感情究竟如何，只知道老妈见了谁都有很多很多的话说，也正因此，很多时候，我是通过老妈和这些亲姐妹，包括老姨的对话当中，得到了很多关于家族的信息。</p>
+
+<p>我曾经写过：</p>
+
+<blockquote>
+  <p>前几天又梦到和爸妈撕破了脸，当然撕破了脸，大吼大叫，也把很多原来没有说的话说了出来。<br />
+  我觉得很大程度上，我不满是因为他们也从来不跟我讲很多事。妹妹第一次怀孕的时候，瞒着我，我还是从亲戚口中得知，后来又是听老姨和老妈交谈，才知道他们都从她那里借钱了。。</p>
+</blockquote>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20221017-2.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="老姨 | aoao.life" data-url="https://aoao.life/20221017-2.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20150515-8.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20190306.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个YouTube视频搬运工的教训 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="我在11月底的时候，在知乎上看过一个帖子，讲的是某人通过搬运Ｂ站上面的视频，获取了很大的经济收益。我当然是很羡慕的，后来简单研究了一下，发现YouTube 有API供开发者调用，这意味着上传的工作完全可以由计算机来完成。我很快想到，既然别人能够搬运Ｂ站上面的视频，可能这些人，还没有技术，只是靠手动搬运。那么我是不是可以通过代码来实现，视频的全自动搬运呢？   我觉得这是个不错的点子，后来又经过研究...">
+    <link rel="canonical" href="https://aoao.life/20190113.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20190113.html">
+    <meta property="og:title" content="一个YouTube视频搬运工的教训 | aoao.life">
+    <meta property="og:description" content="我在11月底的时候，在知乎上看过一个帖子，讲的是某人通过搬运Ｂ站上面的视频，获取了很大的经济收益。我当然是很羡慕的，后来简单研究了一下，发现YouTube 有API供开发者调用，这意味着上传的工作完全可以由计算机来完成。我很快想到，既然别人能够搬运Ｂ站上面的视频，可能这些人，还没有技术，只是靠手动搬运。那么我是不是可以通过代码来实现，视频的全自动搬运呢？   我觉得这是个不错的点子，后来又经过研究...">
+    <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/48180-a0c1f79b0185840f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20190113.html">
+    <meta property="twitter:title" content="一个YouTube视频搬运工的教训 | aoao.life">
+    <meta property="twitter:description" content="我在11月底的时候，在知乎上看过一个帖子，讲的是某人通过搬运Ｂ站上面的视频，获取了很大的经济收益。我当然是很羡慕的，后来简单研究了一下，发现YouTube 有API供开发者调用，这意味着上传的工作完全可以由计算机来完成。我很快想到，既然别人能够搬运Ｂ站上面的视频，可能这些人，还没有技术，只是靠手动搬运。那么我是不是可以通过代码来实现，视频的全自动搬运呢？   我觉得这是个不错的点子，后来又经过研究...">
+    <meta property="twitter:image" content="https://upload-images.jianshu.io/upload_images/48180-a0c1f79b0185840f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "一个YouTube视频搬运工的教训 | aoao.life",
+      "image": [
+        "https://upload-images.jianshu.io/upload_images/48180-a0c1f79b0185840f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 3.6%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 3.6%;"></div>
+                    <div class="progress-text">今天 2019.01.13 | 已耗 3.6% · 剩 352 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">一个YouTube视频搬运工的教训 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2019年01月13日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20190113.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="一个YouTube视频搬运工的教训 | aoao.life" data-url="https://aoao.life/20190113.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>我在11月底的时候，在知乎上看过一个帖子，讲的是某人通过搬运Ｂ站上面的视频，获取了很大的经济收益。我当然是很羡慕的，后来简单研究了一下，发现YouTube 有API供开发者调用，这意味着上传的工作完全可以由计算机来完成。我很快想到，既然别人能够搬运Ｂ站上面的视频，可能这些人，还没有技术，只是靠手动搬运。那么我是不是可以通过代码来实现，视频的全自动搬运呢？</p>
+
+<p>我觉得这是个不错的点子，后来又经过研究，<strong>得知YouTube上的视频，大概每千次观看量，视频的所有者可以得到大概5元人民币的收益(已经过换算)</strong>。而内容的影响力又是绵延不绝的，只要是好的内容，接下来就是躺着挣钱了。我当然是看好YouTube和他的收益情况的，毕竟我要做的，也不是自己制作视频，而是靠搬运。但紧接着，我又发现，谷歌对于YouTube频道的收益有一个门槛，只有达到了<strong>在过去的一年里，有1000个订阅者，4000个小时的累计播放量</strong>，才能够申请通过广告分成的方式获取收益。经过简单的计算，我发现，实际上，只需要每天10个小时的播放量，就可以达到4000小时累计播放量这个门槛，而只要有几个爆款视频，订阅者也会越来越多，这个门槛并没有多难以跨过。</p>
+
+<h1>说干就干</h1>
+
+<p>接下来就是写代码了。甚至不想看代码思路的直接跳过此部分。</p>
+
+<p>说一下，我搬运视频的代码思路。这种做法，毕竟是侵权的。</p>
+
+<p>首先，通过node爬虫，模拟浏览器的访问，获取到Ｂ站某个up主的所有视频，接下来通过node的child_process来执行<a href="https://github.com/soimort/you-get">you-get</a> 的命令行命令，使得这个up主的视频能够批量地被下载下来。当然，我并不想竭泽而渔，也觉得老视频没有多少意义，所以每个up主，我最多只爬去最新的100个视频。</p>
+
+<p>接下来，我会将视频通过YouTube接口的方式，批量地上传到指定的频道上面去。</p>
+
+<p>后来，随着我的开发，细节也越来越完善。</p>
+
+<ul>
+<li>支持持续订阅某个up主，思路也无非是隔一段时间，爬去最近这段时间内他的上传的视频。</li>
+<li>支持将同一个up主的视频放到同一个播放列表里，之所以这样做，一则是因为视频更方便管理和浏览。二则是害怕某天突然被告知，我偷了他的视频，这样删除的时候，也只需要找这个播放列表里的视频删除可以了。</li>
+<li>原有的视频下载和上传的脚本是隔离的，导致做不到自动化。后来，这个工作实现了自动化。只需要在一开始将某个up主进行订阅，之后，下载，上传，长期订阅和上传这个up主的视频都能够自动完成。</li>
+</ul>
+
+<p>坦白讲，写这个代码写得还挺开心，很大一部分因为是以前很少用到js里异步控制的<code>async await</code>,但是这次代码写起来，用了很多，也用得很爽吧。另外以前也很少写node的后台服务，最多也就是写两个爬虫，这次却借助这个想法，顺便学了一波node服务的部署和运维(为了做这件事情，也为了科学上网，我当时还买了一台阿里云vps，后来因为科学上网，服务挂了。我又换到了搬瓦工，这才一切稳定)。当然，有人可能会觉得我这种行为侵权，这个话题，我一会儿再聊。</p>
+
+<h1>过程</h1>
+
+<p>我便改进代码，边上传YouTube视频。由于最近六学火热，我最初选取的是Ｂ站上某个知名六学家作为我的实验样本。后来，又在Ｂ站上找到了几个体育类，搞笑类，影视类的up主，来上传他们的视频。我也在这个过程中慢慢发现，YouTube每个频道每天只允许上传最多100个视频。所以我这种bot也不可能像个疯狗一样毫无节制地去上传视频。这也意味着，我要选取尽量符合观众期望的视频来上传。因而，有很多天，我经常会打开YouTube的后台，去看最新的浏览量分析，来看哪些视频更受欢迎。去看最新的搜索词排行，来看到底用户喜欢看哪些视频，以决定我接下来要选取哪个up主作为我下一个订阅者。</p>
+
+<p>我的确从YouTube的后台看到，随着我的视频越来越多，代码功能越来越完备，各项数据也越来越好了。虽然一开始没有爆款的视频，但是凭借着人海战术，还是很快就达到了每天10小时的播放量，接下来，就只差多几个爆款，来增长一波粉丝了。</p>
+
+<p>但是，但是，但是</p>
+
+<h1>版权是个大问题</h1>
+
+<p>搬运视频，不可避免地会碰触到版权这件事。我最初对这件事，做个些简单的调查。当时考虑电视剧电影一定会是版权的高压线，而且在YouTube上搬运这类视频的人也不在少数，我并不想去趟这类混水。所以，我也是将搬运的内容，选择为了短视频，因为的确看到YouTube上面有大量来自国内视频网站的短视频，想到既然别人可以，我为什么不可以呢，于是也就选择了这个领域。</p>
+
+<p>但是，从搬运的前几天起，邮箱里就开始接收来自官方的版权警告。比如下面两个截图，就是我随意从邮箱里YouTube发来的邮件里截取到的。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-a0c1f79b0185840f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="版权警告" /></p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-f200760543186769.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="版权警告" /></p>
+
+<p>看过越来越多这种版权警告，发现YouTube很智能。这种版权警告，应该完全都是由机器来判断和筛选，因为有些刚刚上传的视频甚至都没有播放量。不过我并没有对这种版权警告有所警惕，只是觉得，既然YouTube很智能，能够帮我查找到哪些视频是侵权的，哪些不是，那我只需要把一些漏网之鱼搬运上去，也就很好了。</p>
+
+<p>但是随着我的频道观看量和订阅量越来越多，也收到了下面这种邮件。<br />
+<img src="https://upload-images.jianshu.io/upload_images/48180-12b471c560f539c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="版权警告" /></p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-0f372132065a7ae0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="版权警告" /></p>
+
+<p>这个视频，其实是这个视频频道刚刚创建之初上传的，YouTube大概反应了一段时间，才把这个视频封锁了，而且还给了我严厉的警告。这是第二次<strong>copyright strike</strong>，当第三次收到这种邮件之后，我那个视频频道就被封锁了，而且很快，我谷歌帐号关联的另外一个我平时看视频的频道，也被封锁了。</p>
+
+<p>我发了两封邮件过去，想要解释我的动机。我解释了我是个程序员，只是为了学习知识，不过，谷歌没有饶过我，截至到现在(2019年１月13日)，我的YouTube帐号仍然处于封锁状态。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-7bdff2b8ef4f70bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="申诉无效" /></p>
+
+<h1>我侵犯的谁的版权</h1>
+
+<p>接下来解释一下这个问题， 我侵犯的谁的版权？</p>
+
+<p>很多读者，可能从一开始就对我这种行为表示不屑，毕竟这涉及到侵犯版权。但我还是要辩解两句，首先，从上面我的侵权截图也可以看出来，我搬运的视频几乎都是影视片段和搞笑类的小视频，之所以侵权，侵的也是那些影视片段原作者的权益。再说明白点，虽然我是从Ｂ站搬运的视频，但YouTube并不认为我对他们有侵权行为，甚至，即便是那些Ｂ站up主把那些他们剪好的小视频发布到YouTube上，他们也依然会侵权。就像是前两年很火的谷阿莫那样，他的确付出了很多时间精力，但实际上他用到的素材也是涉及侵权的，在YouTube一样行不通。当然我也不否认，我的侵权行为，<strong>毕竟你从贼的手里偷到了路人的钱包，难道你就是清白的吗？</strong></p>
+
+<p>我还记得我那个频道刚刚建立十几天的时候，因为搬运了某个在Ｂ站上有１万+粉丝数量的up主的小视频，因为我的播放列表名字就是这个up主的名字，因而在YouTube上搜索很容易找到。那个up主在我搬运他的最新的一个视频下面留言，说他就是Ｂ站上的谁谁谁。也只是说了这么一句，我也并没有回复他,我又能说什么呢？</p>
+
+<h1>教训</h1>
+
+<p>关于盗版这件事情，我自己的态度一直模凌两可。我不认为这件事完全没有正面价值，不然，我也不会去做这样的事情。在写此文的时候，我甚至会想到13年去世的<a href="https://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8">亚伦·斯沃茨</a> ,他是个反对<a href="https://zh.wikipedia.org/wiki/%E7%A6%81%E6%AD%A2%E7%BD%91%E7%BB%9C%E7%9B%97%E7%89%88%E6%B3%95%E6%A1%88" title="禁止网络盗版法案">禁止网络盗版法案</a>的运动的人，很大程度上，我是欣赏这种黑客精神的。所以，我对版权上的问题，其实是没有多少反思的。因为如果真要较真的话，我搬运的那些Ｂ站视频up主们也毫无例外都有问题。</p>
+
+<p>当然我也要说，是谷歌为了版权方的利益，对YouTube进行了控制，让这个社区更能够良性发展，他也并没有错。只是，在谷歌YouTube这张大的鱼网之下，有的成为了漏网之鱼，因此你还是能够在YouTube看到大量的国内视频网站上的盗版视频。有的成为了网中之鱼，成为了牺牲品。这其中包括了我自己，也包括那个曾经依靠视频广告分成获利颇丰的“B站授权搬运工”。我也许可以做的更好，比如只搬运搞笑类的视频，不搬运视频剪辑类的视频，这都可以让我的视频频道活得更久一些。但是，我并不想那么做了，它终究有一种做贼的感觉。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20190113.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="一个YouTube视频搬运工的教训 | aoao.life" data-url="https://aoao.life/20190113.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20250909.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20160721.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

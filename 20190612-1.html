@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodejs event loop | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="1.线程的问题   2.各个方法优先级的问题   需要知道宏任务，微任务的概念。 process.nextTick()   3.对event loop的理解   事件循环机制可以让程序来执行非阻塞的io操作。虽然js语言本身是单线程的，把一些任务转移给操作系统内核来完成。   因为大多数现代操作系统内核是多线程的，因此他们能够控制多个操作在后台执行。当这些操作中有一个操作完成之后，这个内核就会告诉...">
+    <link rel="canonical" href="https://aoao.life/20190612-1.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20190612-1.html">
+    <meta property="og:title" content="nodejs event loop | aoao.life">
+    <meta property="og:description" content="1.线程的问题   2.各个方法优先级的问题   需要知道宏任务，微任务的概念。 process.nextTick()   3.对event loop的理解   事件循环机制可以让程序来执行非阻塞的io操作。虽然js语言本身是单线程的，把一些任务转移给操作系统内核来完成。   因为大多数现代操作系统内核是多线程的，因此他们能够控制多个操作在后台执行。当这些操作中有一个操作完成之后，这个内核就会告诉...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20190612-1.html">
+    <meta property="twitter:title" content="nodejs event loop | aoao.life">
+    <meta property="twitter:description" content="1.线程的问题   2.各个方法优先级的问题   需要知道宏任务，微任务的概念。 process.nextTick()   3.对event loop的理解   事件循环机制可以让程序来执行非阻塞的io操作。虽然js语言本身是单线程的，把一些任务转移给操作系统内核来完成。   因为大多数现代操作系统内核是多线程的，因此他们能够控制多个操作在后台执行。当这些操作中有一个操作完成之后，这个内核就会告诉...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "nodejs event loop | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 44.7%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 44.7%;"></div>
+                    <div class="progress-text">今天 2019.06.12 | 已耗 44.7% · 剩 202 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">nodejs event loop | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2019年06月12日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20190612-1.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="nodejs event loop | aoao.life" data-url="https://aoao.life/20190612-1.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>1.线程的问题</p>
+
+<p>2.各个方法优先级的问题</p>
+
+<p>需要知道宏任务，微任务的概念。<br />
+process.nextTick()</p>
+
+<p>3.对event loop的理解</p>
+
+<p>事件循环机制可以让程序来执行非阻塞的io操作。虽然js语言本身是单线程的，把一些任务转移给操作系统内核来完成。</p>
+
+<p>因为大多数现代操作系统内核是多线程的，因此他们能够控制多个操作在后台执行。当这些操作中有一个操作完成之后，这个内核就会告诉nodejs，这个操作已经完成，这个时候，callback函数就会被添加到队列中，等待执行。</p>
+
+<p>┌───────────────────────────┐<br />
+┌─&gt;│ timers │<br />
+│ └─────────────┬─────────────┘<br />
+│ ┌─────────────┴─────────────┐<br />
+│ │ pending callbacks │<br />
+│ └─────────────┬─────────────┘<br />
+│ ┌─────────────┴─────────────┐<br />
+│ │ idle, prepare │<br />
+│ └─────────────┬─────────────┘ ┌───────────────┐<br />
+│ ┌─────────────┴─────────────┐ │ incoming: │<br />
+│ │ poll │&lt;─────┤ connections, │<br />
+│ └─────────────┬─────────────┘ │ data, etc. │<br />
+│ ┌─────────────┴─────────────┐ └───────────────┘<br />
+│ │ check │<br />
+│ └─────────────┬─────────────┘<br />
+│ ┌─────────────┴─────────────┐<br />
+└──┤ close callbacks │<br />
+ └───────────────────────────┘</p>
+
+<p>从上面的流程图可以看出，timer的顺序是要高于poll的</p>
+
+<h2>各个阶段</h2>
+
+<p>各个阶段：</p>
+
+<p>timer=&gt;pending callback=&gt;</p>
+
+<p>pending callbacks:</p>
+
+<p>poll： callbacks池，一些callback放到这个队列中，等待执行，setTimeout的时间最少是设定的时间，因为还有从队列中取出来执行的时间。</p>
+
+<p>check: setImediate 的callback在这里执行</p>
+
+<p>close callback：一些关闭callback在这里执行</p>
+
+<h2>理解io操作</h2>
+
+<p>我们编写的程序除了自身会定义一些数据信息外，经常还会引用外界的数据，或是将自身的数据发送到外界。比如，我们编写的程序想读取一个文本文件，又或者我们想将程序中的某些数据写入到一个文件中。这时我们就要使用输入与输出。</p>
+
+<p>读取文件，我们可以使用读取文件的方法。比如fs.readFile(‘/path/to/file’, callback);</p>
+
+<h1>堆内存 栈内存</h1>
+
+<h2>堆</h2>
+
+<p>二叉树来进行维护</p>
+
+<p>堆是一种数据结构，是利用完全二叉树维护的一组数据，堆分为两种，一种为最大堆，一种为最小堆</p>
+
+<p>堆内存 栈内存<br />
+<a href="https://juejin.im/entry/589c29a9b123db16a3c18adf">https://juejin.im/entry/589c29a9b123db16a3c18adf</a></p>
+
+<p>与其他语言不通，JS的引用数据类型，比如数组Array，它们值的大小是不固定的。引用数据类型的值是保存在堆内存中的对象。JavaScript不允许直接访问堆内存中的位置，因此我们不能直接操作对象的堆内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。因此，引用类型的值都是按引用访问的。这里的引用，我们可以粗浅地理解为保存在栈内存中的一个地址，该地址与堆内存的实际值相关联。</p>
+
+<h3>二叉树</h3>
+
+<p>在计算机科学中，二叉树是每个结点最多有两个子树的树结构。通常子树被称作“左子树”（left subtree）和“右子树”（right subtree）。二叉树常被用于实现二叉查找树和二叉堆。<br />
+一棵深度为k，且有2^k-1个节点的二叉树，称为满二叉树。这种树的特点是每一层上的节点数都是最大节点数。而在一棵二叉树中，除最后一层外，若其余层都是满的，并且最后一层或者是满的，或者是在右边缺少连续若干节点，则此二叉树为完全二叉树。具有n个节点的完全二叉树的深度为floor(log2n)+1。深度为k的完全二叉树，至少有2k-1个叶子节点，至多有2k-1个节</p>
+
+<h2>setTimeout</h2>
+
+<p>解释：setTimeout/setInterval 的第二个参数取值范围是：[1, 2^31 - 1]，如果超过这个范围则会初始化为 1，即 setTimeout(fn, 0) === setTimeout(fn, 1)。</p>
+
+<p>setTimeout 的第二个参数只是说的，callback什么时候放到事件循环的队列中去。</p>
+
+<p>为什么timeout的时间不准</p>
+
+<p>setTimeout 的第二个参数只是说的，callback什么时候放到事件循环的队列中去。</p>
+
+<p>To reduce the load (and associated battery usage) from background tabs, timeouts are throttled to firing no more often than once per second (1000 ms) in inactive tabs.</p>
+
+<p>如果是非活跃标签页，那么它每1000ms会去检查一下callback执行。这个时候也是会出现时间不准的情况。</p>
+
+<p>dom.min_background_timeout_value</p>
+
+<p>For Firefox in particular, you can change the dom.min_background_timeout_value preference in about:config to a number of your liking in the profile that you use to run the tests. I wouldn’t suggest doing that in your default browsing profile, though: the reason for the high clamp is that it cuts down on web sites in background tabs chewing up CPU updating silly tickers and the like.</p>
+
+<p>Node uses libuv which a cross-platform abstraction layer for lower level system things like file-system</p>
+
+<p>In Node, if you specify setTimeout(callback, 1) then it will be executed one millisecond later (assuming the system doesn’t delay it due to be overwhelmed). In browsers, the minimum time will be 4 milliseconds as specified by the HTML5 spec:</p>
+
+<p><a href="https://stackoverflow.com/questions/7221504/does-node-js-enforce-a-minimum-delay-for-settimeout">https://stackoverflow.com/questions/7221504/does-node-js-enforce-a-minimum-delay-for-settimeout</a></p>
+
+<p>宏任务，微任务</p>
+
+<p>先执行同步任务，再执行微任务，最后执行宏任务。<br />
+宏任务有 setTimeout, setInerval, setImmerdate等，优先级不能确定</p>
+
+<p>微任务 process.nextTick , promise, 按照优先级排列</p>
+
+<p>当然是为了和浏览器更加趋同。<br />
+了解浏览器的eventloop可能就知道，浏览器的宏任务队列执行了一个，就会执行微任务。<br />
+简单的说，可以把浏览器的宏任务和node10的timers比较，就是node10只有全部执行了timers阶段队列的全部任务才执行微任务队列，而浏览器只要执行了一个宏任务就会执行微任务队列。<br />
+现在node11在timer阶段的setTimeout,setInterval…和在check阶段的immediate都在node11里面都修改为一旦执行一个阶段里的一个任务就立刻执行微任务队列。<br />
+最后<br />
+所以在生产环境建议还是不要特意的去利用node和浏览器不同的一些特性。即使是node和浏览器相同的特性，但规范没确定的一些特性，也建议小心使用。否则一次小小的node升级可能就会造成一次线上事故，而不只是啪啪打脸这么简单了。</p>
+
+<p>作者：zy445566<br />
+链接：<a href="https://juejin.im/post/5c3e8d90f265da614274218a">https://juejin.im/post/5c3e8d90f265da614274218a</a><br />
+来源：掘金<br />
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+<p>异步意味着任务不会阻塞，比如，如果我要下载一个比较忙的网络资源，我的程序不需要一直等待下载完成，它可以在等待下载时继续做其他事情。这与并行执行多个操作不同。 其实还是应用上了多线程，对于js语言而言，等于js的主线程上，再等待响应，去做了其他的事情。而系统的其他线程，则再处理相应。这是从系统层面来看这个问题，比如读取某个文件的操作，其实也是有两个线程，一个线程是js主线程，另一个线程是系统上读取文件的线程。</p>
+
+<h1>参考资料</h1>
+
+<p><a href="https://juejin.im/post/5c3d8956e51d4511dc72c200">https://juejin.im/post/5c3d8956e51d4511dc72c200</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/34182184">https://zhuanlan.zhihu.com/p/34182184</a></p>
+
+<p><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/</a><br />
+<a href="https://juejin.im/post/5c3d8956e51d4511dc72c200">https://juejin.im/post/5c3d8956e51d4511dc72c200</a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20190612-1.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="nodejs event loop | aoao.life" data-url="https://aoao.life/20190612-1.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20160413.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140825-12.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

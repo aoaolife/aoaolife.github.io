@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【PLC】D700变频器的学习笔记 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="遇到的问题1：  如果直接加装变频器连接电机的话，电机正转结束之后突然发转，造成声音很大，产热很多。所以考虑应当在这期间加上延时。   此问题后来已经圆满解决   变频器  经过下载了三菱D700（还有一款NIKON的相机也叫做D700）的说明书认真查看之后发现，事实上变频器也是属于一种智能的电子设备（至少我自己现在这样感觉的）。   接线问题  在研究三菱D700时，我们首先要将这个变频器与GE...">
+    <link rel="canonical" href="https://aoao.life/20150515-1.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150515-1.html">
+    <meta property="og:title" content="【PLC】D700变频器的学习笔记 | aoao.life">
+    <meta property="og:description" content="遇到的问题1：  如果直接加装变频器连接电机的话，电机正转结束之后突然发转，造成声音很大，产热很多。所以考虑应当在这期间加上延时。   此问题后来已经圆满解决   变频器  经过下载了三菱D700（还有一款NIKON的相机也叫做D700）的说明书认真查看之后发现，事实上变频器也是属于一种智能的电子设备（至少我自己现在这样感觉的）。   接线问题  在研究三菱D700时，我们首先要将这个变频器与GE...">
+    <meta property="og:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150515-1.html">
+    <meta property="twitter:title" content="【PLC】D700变频器的学习笔记 | aoao.life">
+    <meta property="twitter:description" content="遇到的问题1：  如果直接加装变频器连接电机的话，电机正转结束之后突然发转，造成声音很大，产热很多。所以考虑应当在这期间加上延时。   此问题后来已经圆满解决   变频器  经过下载了三菱D700（还有一款NIKON的相机也叫做D700）的说明书认真查看之后发现，事实上变频器也是属于一种智能的电子设备（至少我自己现在这样感觉的）。   接线问题  在研究三菱D700时，我们首先要将这个变频器与GE...">
+    <meta property="twitter:image" content="http://hktkdy.qiniudn.com/slogan.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "【PLC】D700变频器的学习笔记 | aoao.life",
+      "image": [
+        "http://hktkdy.qiniudn.com/slogan.jpg"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 37.0%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 37.0%;"></div>
+                    <div class="progress-text">今天 2015.05.15 | 已耗 37.0% · 剩 230 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">【PLC】D700变频器的学习笔记 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年05月15日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150515-1.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="【PLC】D700变频器的学习笔记 | aoao.life" data-url="https://aoao.life/20150515-1.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h1>遇到的问题1：</h1>
+
+<p><strong>如果直接加装变频器连接电机的话，电机正转结束之后突然发转，造成声音很大，产热很多。所以考虑应当在这期间加上延时。</strong></p>
+
+<p>此问题后来已经圆满解决</p>
+
+<h1>变频器</h1>
+
+<p>经过下载了三菱D700（还有一款NIKON的相机也叫做D700）的说明书认真查看之后发现，事实上变频器也是属于一种智能的电子设备（至少我自己现在这样感觉的）。</p>
+
+<h2>接线问题</h2>
+
+<p>在研究三菱D700时，我们首先要将这个变频器与GE PAC的模拟量输入模块进行连接，这个时候，如果拆开变频器的外壳就会发现里面的构造（事实上，如果要接变频器，这一步是不可少的，），就会发现<br />
+图图图图图图图图图</p>
+
+<h2>接变频器的原理：</h2>
+
+<p>交流变频器是微计算机及现代电力电子技术高度发展的结果，微计算机是变频器的核心，电力电子期间构成了变频器的主电路。<br />
+交流电动机的同步转速为<br />
+N0=60f/p</p>
+
+<p>我们如果将三相异步电动机直接接PLC的正转反转输出端的话，它是无法来调节转速的。而变频器的作用，就是来调节转速的。所以变频器应当放在电机和PLC中间，变频器就是作为一个桥的作用。</p>
+
+<p>三相异步电动机：在这里使用的是三相异步电动机，额定的转速是1400r/min,所以由此可以计算出它的额定转差率，虽然电机的铭牌上并没有给出。</p>
+
+<p>继电器：继电器是一个可以用来小电流控制大电流的期间，继电器又要接在变频器和plc之间。而继电器的正确的解法也是需要知道的。</p>
+
+<p>经验教训：而以上这些包括变频器和继电器的接线方法，其实都是可以直接查看他们的说明书来实现的，只是我当时没有耐心看而已。故接线方法不再细说。</p>
+
+<p><strong>此处需要重点看懂D700D的说明书。</strong><br />
+、  </p>
+
+<h2>D700的使用注意事项</h2>
+
+<p>三菱D700变频器作为一款比较智能的电子仪器，它的设置，其实很有点编码解码的过程的意思。在它的设置中有几个按键，包括RUN ,STOP/RESET MODE SET ,PU/EXT 等5个按键，事实上，它的功能很强大，屏幕只有一小块，为了尽可能地用来把变频器的功能体现出来，它采用的就是用参数代码的形式来展示的，这样的好处就是，没有任何其他自然语言的显示，只有数字，而数字背后代表的都有它们各自的意义。这一点很重要，但是我们最早接触变频器，往往会对此很不习惯，因为密密麻麻的全部都是数字，再者自己又太过着急，不肯看说明书。</p>
+
+<p>例如查看D700的使用说明书，可以知道D700有一个默认的参数，其中很重要的一个参数是pr.79，这个参数控制变频器的运行模式，pr79=2时为外部输入模式，此时就可以用plc来控制电机了。当然，还有其他的运行模式。</p>
+
+<p>经过查看D700的使用说明书还会发现，变频器还能够调节电机升到稳定频率和降到稳定频率的时间，这两个参数分别是pr.7和pr.8</p>
+
+<p>在最初我们实际上遇到的问题是这样的：将电机，继电器，变频器，plc都正确的连接好之后，将程序稍加修改。</p>
+
+<p>程序修改：程序修改部分我们参照的是基础篇中关于变频器控制电机调速的实验章节，这里必须吐槽一下，在网上竟然搜不到相关的资料，更准确的说应该是中文网页资料，我所说的基础篇是一本老师的书，正是靠着这本书才有了突破。当然，这也告诉了我，电气自动化行业不同于计算机行业，它的很多资料并不是以html文本的形式存放在网络上，可以通过搜索引擎来搜索，以便快捷地获得，它的资料很多时候是像这样，以图书，说明书文档的形式来存放的，有些（或者说绝大多数）是以英文的形式出现的，这也给了我一个启示是这个行业的学习，对于搜索引擎的依赖度并不高，依赖书本的知识，依赖英语水平却很高。</p>
+
+<p>转回来，继续说出现的问题，将程序稍加修改之后，连线正确之后，结果出现的问题是电机的转速不能够得到控制，这让我起初很郁闷，先后排查了程序，接线，均没有问题，之后又换了另外一台plc(索性，我们这个实验室有5台小型的rxi3 plc)，结果换到另外一台上，之后，就能够完好地实现电机在变频器的控制下的恒转速运行。</p>
+
+<p>后来经过同学DZX的解释，我想通了一个很简单的道理：也就是这个变频器不是说坏就坏的，尤其是这个变频器刚买过不久，价格也并不算便宜。再加上后来又有一台plc的变频器也遇到了和我的变频器一样的问题，这更加确定了，不是我的变频器硬件有什么问题，而更加可能的是，我的变频器中的参数没有设置完全成功。</p>
+
+<p>事实也是如此，将变频器的说明书拿出来，找到变频器的出厂参数，与当前的参数逐个进行比对，然后发现有一个数据存在着较大的差别，经过排查之后，将其改到出场设置值上，最终，使变频器能够很正常地实现了调速。</p>
+
+<p><strong>总结体会;变频器的参数设置很重要，变频器的说明书一定要仔细看，尤其是当出现了一些问题的时候更是如此。</strong></p>
+
+<p>————————————–分割线——————————<br />
+如果您喜欢本文，可以点下面的喜欢按钮，也可以关注<a href="https://www.jianshu.com/users/1c26e9e36267/latest_articles">本人简书</a><br />
+或简书专题：<a href="https://www.jianshu.com/collection/7b424559990a">我们在自己的世界里独自狂欢</a></p>
+
+<p>也可以阅读我的独立博客，了解更多内容。</p>
+
+<p><a href="http://hktkdy.com/"><img src="http://hktkdy.qiniudn.com/slogan.jpg" alt="" /></a></p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150515-1.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="【PLC】D700变频器的学习笔记 | aoao.life" data-url="https://aoao.life/20150515-1.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20140723.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20220904.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

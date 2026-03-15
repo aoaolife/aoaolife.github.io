@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个互联网产品的技术栈 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="简单介绍  前面提到了我在过去的五个月内，一个人维护开发一个系统 ,也正是有了这样的经历，让我想要总结一下。   先简单介绍一下这个产品，产品是移动端商城。根据情况，可以放到微信里，也可以放到app壳子里。   技术栈  前端  我自己并没有参与当初项目的选型，但是后来，我主导了项目的前端工程化的升级改造。后来，我也写了很多篇博客来说相关事宜。   前端方面主要的技术栈    react reac...">
+    <link rel="canonical" href="https://aoao.life/20190612.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20190612.html">
+    <meta property="og:title" content="一个互联网产品的技术栈 | aoao.life">
+    <meta property="og:description" content="简单介绍  前面提到了我在过去的五个月内，一个人维护开发一个系统 ,也正是有了这样的经历，让我想要总结一下。   先简单介绍一下这个产品，产品是移动端商城。根据情况，可以放到微信里，也可以放到app壳子里。   技术栈  前端  我自己并没有参与当初项目的选型，但是后来，我主导了项目的前端工程化的升级改造。后来，我也写了很多篇博客来说相关事宜。   前端方面主要的技术栈    react reac...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20190612.html">
+    <meta property="twitter:title" content="一个互联网产品的技术栈 | aoao.life">
+    <meta property="twitter:description" content="简单介绍  前面提到了我在过去的五个月内，一个人维护开发一个系统 ,也正是有了这样的经历，让我想要总结一下。   先简单介绍一下这个产品，产品是移动端商城。根据情况，可以放到微信里，也可以放到app壳子里。   技术栈  前端  我自己并没有参与当初项目的选型，但是后来，我主导了项目的前端工程化的升级改造。后来，我也写了很多篇博客来说相关事宜。   前端方面主要的技术栈    react reac...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "一个互联网产品的技术栈 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 44.7%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 44.7%;"></div>
+                    <div class="progress-text">今天 2019.06.12 | 已耗 44.7% · 剩 202 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">一个互联网产品的技术栈 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2019年06月12日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20190612.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="一个互联网产品的技术栈 | aoao.life" data-url="https://aoao.life/20190612.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h2>简单介绍</h2>
+
+<p>前面提到了我在过去的五个月内，<a href="https://www.jianshu.com/p/ae6752041b0b">一个人维护开发一个系统</a> ,也正是有了这样的经历，让我想要总结一下。</p>
+
+<p>先简单介绍一下这个产品，产品是移动端商城。根据情况，可以放到微信里，也可以放到app壳子里。</p>
+
+<h2>技术栈</h2>
+
+<h3>前端</h3>
+
+<p>我自己并没有参与当初项目的选型，但是后来，我主导了项目的前端工程化的升级改造。后来，我也写了很多篇博客来说相关事宜。</p>
+
+<p>前端方面主要的技术栈</p>
+
+<ul>
+<li>react</li>
+<li>react-router</li>
+<li>webback</li>
+<li>sass</li>
+<li>babel</li>
+</ul>
+
+<p>商城采用前后端分离的技术架构，前端的框架为React， 配合上相应的一些工程化的工具，达到快速响应开发的目的。</p>
+
+<h3>后端</h3>
+
+<p>后端使用python语言进行程序编写，版本为2.7，这是由于当初移动端商城开发之前，已经有一版PC端商城，PC端商城就用到了python2.7 ，后端框架也是基于python2.7 自主研发的，因此并不想在整个大的项目中，只能继续使用python2.7编程。</p>
+
+<ul>
+<li>python2.7</li>
+<li>jinjia2</li>
+<li>tasktiger</li>
+<li>ELK(Elasticsearch, logstash, kibana)</li>
+<li>git</li>
+</ul>
+
+<p>在这里，用到了jinjia2作为PC端商城的渲染引擎。它有点像是Django的模板引擎，总体来说，使用起来比较简单。另外，使用<a href="%5Bhttps://github.com/closeio/tasktiger%5D(https://github.com/closeio/tasktiger)">tasktiger</a>作为任务队列（消息队列）的处理引擎。使用ELK 进行日志监控和错误筛选。将项目部署到git私有服务器<br />
+，同时备份到github的私有仓库中，使用github的issue进行项目管理。</p>
+
+<h3>运维</h3>
+
+<p>自主研发的后端框架，支持运维的一系列工作。包括：</p>
+
+<ul>
+<li>两种部署方式</li>
+<li>容器</li>
+<li>git</li>
+</ul>
+
+<h4>部署方式</h4>
+
+<p>一一说来，两种部署方式分为patch和deploy两种。patch顾名思义就是打补丁，全程停机时间非常短，简单来说，只是将代码上的改动放到服务器上，并不涉及到依赖包的注册或更新，而deploy的方式，是全量更新，这样的更新方式，由于是做一遍全量的检查，因此会特别慢，也因此停机时间会很长。因为非常影响用户体验，所以往往选择在夜里进行这样的部署操作。由于财力物力的限制，不能做成服务器集群。因此每次部署又会短暂地停机。如果是通过deploy的方式来部署，那么这个停机的时间就会更长。框架也没有考虑这些情况</p>
+
+<p>原有的自研框架，是12年左右的时候，几个技术牛人开发的，后来就一直只是小修小改，但是其实站在19年来看已经无法满足当今的需求了。一个最明显可见的缺点是，它还在以python2.7 作为编程语言，而python官方已经明确提出，到了2020年，就会废弃python2.7，相应地，很多python2的第三方库也将不再对2.7版本进行支持。这样这个框架就显得十分落伍，相应地，性能上也无法跟上潮流。记得之前的老大曾经提到过，sanic异步框架。他还给我们科普了，如果以后上了python3，用上了sanic，去掉了tornado之后，整体的性能会有飞跃式的发展。然后，时隔近一年，他的想法也不会再在那个项目中得到施展了。</p>
+
+<h4>容器</h4>
+
+<p>并没有使用docker作为容器，而是使用了lxc这样的方式。从效果上看，lxc也有它的好处，但是还不够好。</p>
+
+<p>但是框架还是提供了很强大的能力的，从一个裸机安装好ubuntu系统之后，通过框架，自动安装好所需的环境，全程不再需要运维做过多的工作，其实是能够将人从运维的工作中解脱出来的，只是说，由于这个自研框架也没有一个完善的文档，导致一旦框架本身不符合要求，出了问题，就不得不去看源码，尝试修改框架源码，而框架源码又往往更加抽象，这时候，也就到了提高自己能力的时候。比如，我曾经就因为一个误操作，搞坏了测试环境的服务器，没办法，只能给这个机器重新安装环境，结果又出现了一些曲折，最后终于算是搞定了。但这个过程，需要对这个框架的源码深入了解。</p>
+
+<h4>git</h4>
+
+<p>据我了解，有些公司的项目，代码托管方式是，整一台自己的git服务器，然后安装上gitlab，gitlab实现了一个可视化的界面，也能够进行issue管理，项目管理等常规的项目操作。不过也由于历史原因，当时我们的项目，采用了git服务器+github的方式，即项目的真实git源是在自有的git服务器上，但会将代码备份到github上，也就使用了github 的项目管理操作。</p>
+
+<h2>感想</h2>
+
+<p>可以看出来，很多时候，一个项目开发好，只是它的初生。之后，如果这个项目不死亡，就需要不断地对它进行更新，变革，这样才能跟得上时代。但是往往，这种变革伴随着疼痛，也伴随着可能的力不从心。比如，给一个以万行代码计的项目从2.7升级到3.5，是一个巨大的工作量，如果又没有更高层领导的推动，如果更高层领导又对代码一所我所知，这就是一件很吃力不讨好的事情了。所以有时候，可能将一个项目放弃，推倒重来，或许是更好的选择。</p>
+
+<p>我在那家公司做了两年，其实经过这么一个过程，我看着一个产品生长，壮大，又慢慢半死不活。我看着这个庞大的项目，怎样发展，对我也是一种成长。我有一种欲望，把那段经历记录下来，总结自己的知识，所以也就有了这篇文了。</p>
+
+<p>也许再过几年，回过头来看这篇文，我会感念，现在的自己视野还蛮开阔的。因为我是一个全栈工程师，只要我想学，我就能够胜任计算机相关的任何工作，就能解决遇到的问题。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20190612.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="一个互联网产品的技术栈 | aoao.life" data-url="https://aoao.life/20190612.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20230614.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20140825-4.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

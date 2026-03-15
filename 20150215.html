@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糟心 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="   你以为    我的农历生日是腊月二十二，因为到了这个时候往往家里面已经没有活了，而我也已经是放假了（即便是在高三的那个寒假也是在生日前一天放的假），而这个时候大家往往也自动将日期从西元转换到农历来记了，所以我的生日从来没有被我以及家里人忘记过，从来都会在家里面度过。   从我记事起，我的生日基本上过得还是比较热闹的，有两年是打卤面（北方嘛，很寻常），后来也买过两年的蛋糕吃，不过蛋糕这东西我自...">
+    <link rel="canonical" href="https://aoao.life/20150215.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20150215.html">
+    <meta property="og:title" content="糟心 | aoao.life">
+    <meta property="og:description" content="   你以为    我的农历生日是腊月二十二，因为到了这个时候往往家里面已经没有活了，而我也已经是放假了（即便是在高三的那个寒假也是在生日前一天放的假），而这个时候大家往往也自动将日期从西元转换到农历来记了，所以我的生日从来没有被我以及家里人忘记过，从来都会在家里面度过。   从我记事起，我的生日基本上过得还是比较热闹的，有两年是打卤面（北方嘛，很寻常），后来也买过两年的蛋糕吃，不过蛋糕这东西我自...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20150215.html">
+    <meta property="twitter:title" content="糟心 | aoao.life">
+    <meta property="twitter:description" content="   你以为    我的农历生日是腊月二十二，因为到了这个时候往往家里面已经没有活了，而我也已经是放假了（即便是在高三的那个寒假也是在生日前一天放的假），而这个时候大家往往也自动将日期从西元转换到农历来记了，所以我的生日从来没有被我以及家里人忘记过，从来都会在家里面度过。   从我记事起，我的生日基本上过得还是比较热闹的，有两年是打卤面（北方嘛，很寻常），后来也买过两年的蛋糕吃，不过蛋糕这东西我自...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "糟心 | aoao.life",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 12.6%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 12.6%;"></div>
+                    <div class="progress-text">今天 2015.02.15 | 已耗 12.6% · 剩 319 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">糟心 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2015年02月15日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20150215.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="糟心 | aoao.life" data-url="https://aoao.life/20150215.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><blockquote>
+  <p>你以为</p>
+</blockquote>
+
+<p>我的农历生日是腊月二十二，因为到了这个时候往往家里面已经没有活了，而我也已经是放假了（即便是在高三的那个寒假也是在生日前一天放的假），而这个时候大家往往也自动将日期从西元转换到农历来记了，所以我的生日从来没有被我以及家里人忘记过，从来都会在家里面度过。</p>
+
+<p>从我记事起，我的生日基本上过得还是比较热闹的，有两年是打卤面（北方嘛，很寻常），后来也买过两年的蛋糕吃，不过蛋糕这东西我自己并不爱吃。后来又有两年请过我的朋友来家里面聚餐过，几个菜，热热闹闹，他们会送点小礼物。但是对我而言，受过的教育仍然是「生日是母亲的难日」，所以心里面更愿意是在家里面和家里人团聚。之后的几年的这个时候，我们全家，包括我，妹妹，父母，奶奶都会围坐在一起吃刷羊肉，吃这个的时间跨度也从在农村少见变得家家都有得吃见怪不怪了。最近的两三年，我觉得生日对于我，也没多大意思，所以又传统地吃起了打卤面。</p>
+
+<p>我与奶奶在一间屋住，只要我在家，只要我奶奶在我们家住，便一直都是这样。然而最近几年，奶奶与我妈的关系并不友好，当然这其实在中国并不少见，所谓「婆媳矛盾」嘛，然而，这个婆媳矛盾最近几年发展得越演越烈，一个看得见的变化是高中的时候我回到家里，父母和妹妹还会来到奶奶这屋在这屋吃饭，后来就变成了我妈做好了饭之后，给我奶奶拨出来足够的饭菜，然后我去端到她那间屋子，到了这次回家的时候，就变成了各自管各自的了。</p>
+
+<p>早在前三天的时间，奶奶就已经在和我说话聊天的时候给我算好了，我快过生日了，还问我是否记得。我自己的生日，自然不会忘记，但先是被奶奶提起，自然也是觉得很是温暖的。</p>
+
+<p>鉴于以上的情况，我的想法是这个生日还是像前两年一样，吃打卤面，然而当我早上去父母那屋后，母亲和我商量，说今天吃涮羊肉，已经叫妹妹请了妹妹的对象晚上过来。我当时告诉她我就是要吃面条，她告诉我涮羊肉吃到最后再涮面条吃也是一样的嘛。我对着她嚷，告诉她为什么不事先和我商量之后再请人家来呢，为什么不找我确定呢，我就是要吃面条。我妈又很委屈地告诉我，因为早上妹妹出门的时候她对象来了个电话，于是便顺便通知他晚上过来吃了。我无言以对，也不知道怎么样解决，只好说，你爱咋地咋地吧。</p>
+
+<p>后来和我妈在一块吃饭，两个人谁也没有说话，我看着电视，电视里面放着《大宅门》这部很经典的电视剧，正放到白景琦的母亲二奶奶抱走了白的私生子不归还孩子母亲了，白景琦对此虽然气愤，竟然也不敢向他的母亲说出半个不字，看到此处好像正与我刚刚的愤怒形成了鲜明的对比。</p>
+
+<p>吃饭的时候就在想，觉得自己也很委屈，夹在两个我爱的（爱我的）人中间左右为难，本来以为在这样一个特殊的日子，能够做一桩仍旧很妥协的事情，吃个打卤面不是很好嘛，做出来之后，我仍然可以像以往那样把拌好了的一碗打卤面端到奶奶屋里去，给她吃上一碗，这种也是我仅仅能做的，我不奢求一家子真的坐在一起，那样并不好，大眼瞪小眼，就像是仇人相见一般，但是却发现即便是这样折中的方法，也因为一个涮羊肉给弄得乱了。</p>
+
+<p>有时候，我在想，为什么别人不能理解我，为什么不能够把我的窘境化解掉，当然其实我也并没有理解过我的母亲，奶奶吧。当然，正像所有那些八卦的大陆电视剧说的那样，这里面没有所谓的谁对谁错，没有所谓的深仇大恨，这个时候需要的其实是作为丈夫，作为儿子的人的调节，然而我的父亲又是个粗枝大叶，又是个只顾养家糊口的人，而我呢，就这样夹在中间两头为难了，当然，我愿意和他们都能维持好的关系，一个是生我的母亲，她一年到头在家里面干活，一个是我的奶奶，在我小的时候，父母忙于生计无暇顾及我，是奶奶照顾着我，我们在一起住，那份恩情，此生难忘，正是因为这两个人对于我的好，而他们彼此之间又合不来，才让我困顿。</p>
+
+<p>很多事情并不像想象中那么简单，也许你看了这个胡说八道之后会给我讲，「你就不能和她们沟通吗？」之类，但是我告诉你，我在一两年前试过，但是行不通，婆媳关系，我自己曾经就很不屑于此的，然而要让我来搞这个，自然不在行，这tm是个科学啊。我懒的说，懒的做，只好逃避了，父亲的处理方式也是如此，其实她们不见面不说话是最好的了。</p>
+
+<p>其实我很想煽情的，只是一则笔力不够，二则所要交代的细枝末节背景太多太杂，三则我太懒。</p>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20150215.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="糟心 | aoao.life" data-url="https://aoao.life/20150215.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20140809.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20191017.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

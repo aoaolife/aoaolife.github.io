@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从个人工作实践聊聊云计算 | aoao.life - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="最近的工作，接触了很多云计算相关的皮毛知识，虽然是皮毛，但也毕竟让我对此多了几分认识。于是就再整理整理思路，写下来吧。   发展历史  曾经有段时间，哪怕是一点都不了解互联网的人，也能够经常听到“云计算”，“大数据”这样的词汇，他们的热门程度，类似于较早之前的“AI”,”VR”，“人工智能”。不过作为一个搞计算机的，“AI”和“VR”其实我一直也从没有能够从技术上应用过他们，以至于一直觉得十分遥远...">
+    <link rel="canonical" href="https://aoao.life/20181201-1.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20181201-1.html">
+    <meta property="og:title" content="从个人工作实践聊聊云计算 | aoao.life">
+    <meta property="og:description" content="最近的工作，接触了很多云计算相关的皮毛知识，虽然是皮毛，但也毕竟让我对此多了几分认识。于是就再整理整理思路，写下来吧。   发展历史  曾经有段时间，哪怕是一点都不了解互联网的人，也能够经常听到“云计算”，“大数据”这样的词汇，他们的热门程度，类似于较早之前的“AI”,”VR”，“人工智能”。不过作为一个搞计算机的，“AI”和“VR”其实我一直也从没有能够从技术上应用过他们，以至于一直觉得十分遥远...">
+    <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/48180-cec0cfd7578c277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20181201-1.html">
+    <meta property="twitter:title" content="从个人工作实践聊聊云计算 | aoao.life">
+    <meta property="twitter:description" content="最近的工作，接触了很多云计算相关的皮毛知识，虽然是皮毛，但也毕竟让我对此多了几分认识。于是就再整理整理思路，写下来吧。   发展历史  曾经有段时间，哪怕是一点都不了解互联网的人，也能够经常听到“云计算”，“大数据”这样的词汇，他们的热门程度，类似于较早之前的“AI”,”VR”，“人工智能”。不过作为一个搞计算机的，“AI”和“VR”其实我一直也从没有能够从技术上应用过他们，以至于一直觉得十分遥远...">
+    <meta property="twitter:image" content="https://upload-images.jianshu.io/upload_images/48180-cec0cfd7578c277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "从个人工作实践聊聊云计算 | aoao.life",
+      "image": [
+        "https://upload-images.jianshu.io/upload_images/48180-cec0cfd7578c277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+      ],
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01T06:20:12+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 91.8%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 91.8%;"></div>
+                    <div class="progress-text">今天 2018.12.01 | 已耗 91.8% · 剩 30 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoTemp.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoTemp</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">从个人工作实践聊聊云计算 | aoao.life</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2018年12月01日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月01日 06:20</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20181201-1.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="从个人工作实践聊聊云计算 | aoao.life" data-url="https://aoao.life/20181201-1.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>最近的工作，接触了很多云计算相关的皮毛知识，虽然是皮毛，但也毕竟让我对此多了几分认识。于是就再整理整理思路，写下来吧。</p>
+
+<h1>发展历史</h1>
+
+<p>曾经有段时间，哪怕是一点都不了解互联网的人，也能够经常听到“云计算”，“大数据”这样的词汇，他们的热门程度，类似于较早之前的“AI”,”VR”，“人工智能”。不过作为一个搞计算机的，“AI”和“VR”其实我一直也从没有能够从技术上应用过他们，以至于一直觉得十分遥远。但”云计算“却随着了解地越来越多，觉得不再那么高山仰止了。</p>
+
+<p>亚马逊应该是最早布局和应用云计算的。他从02年正式发布了AWS,之后这个业务也给他带来了很高的回报，股价一路飙升。后来微软和谷歌也紧随其后，开始布局云计算。国内云计算的发展稍晚了一下，但是也是很牛的。前一段时间，有篇《阿里云的这群疯子》的文章，讲了阿里云从初创到繁荣的历史转变，一时间也刷爆了朋友圈。阿里云诞生自09年，腾讯云诞生自10年，两个巨头也是你争我赶,虽然在我们外人看来已经很牛了吧，但毕竟亚马逊云计算发展的比较早，还是亚马逊的AWS更加给力一点。</p>
+
+<p>发展历史终究只是浮云，对于开发者来说重要的是能够实际应用这些云计算技术，并为自己创造价值。</p>
+
+<h1>saas, paas, laas</h1>
+
+<p>关于这三者其实网上已经有很多人在科普了，比如我文章下面参考链接里的阮一峰大大。但是我还是想将我的理解表达出来，给自己一个回顾。</p>
+
+<h2>saas</h2>
+
+<p>按照我的理解，这三种服务面向的群体实际上并不是重合的。</p>
+
+<h3>什么是基础设施</h3>
+
+<p>我先说说我自己觉得最好理解的，laas，Infrastructure-as-a-service, 也就是基础设施即是服务。那么问题来了，什么是基础设施呢，我们试想假如你已经有了一个好点子，要建立一个面向全国范围内的电商网站，这个网站一旦投入使用，立刻就会成为行业前十，但是你没有太多的投资。这个时候你需要自己在万网或者<a href="http://www.godaddy.com/">狗爹(goaddy)</a>买一个<strong>域名</strong>，如果是面向国内用户的站点，你要对你的域名进行备案，这些过程都还算简单。</p>
+
+<p>接下来你需要买一台<strong>服务器</strong>，如果你自己有一些特别的需求，你还可以定制你的服务器。有了服务器，有了IP，你需要你所购买的域名能够指向你的IP,你又需要<strong>DNS服务</strong>。</p>
+
+<p>你要给服务器装上系统，装上合适的<strong>数据库</strong>，之后你的程序能够在你的服务器上面跑起来了。但是即便如此，可能还是会有很多问题，比如为了容灾的需要，你可能有不止一台服务器，比如3台，但是你只能把这3台服务器放在一起，于是面临的第一个问题，那就是你可能只能保证你服务器所在地的访问速度，而其他区域则保证不了访问速度。但是你只是个小的创业者，根本没有能力在全国范围内，搭建多个服务器来满足全国高效的需要。于是你陷入了苦恼，感慨原来创业并不只是”就缺一个程序员了”。</p>
+
+<p>然后你姑且容忍了没有CDN的问题，你考虑到你的站点虽然面向全国，但是一半的用户来自北京，于是你把那几台服务器放到了北京的联通机房。除此之外，你还需要大量时间来做运维，来支持你的服务器的正常运转。我曾经见过公司从服务器选型到网站服务安全稳定运行的整个过程，的确是需要大量的时间成本以及很高的知识储备的。</p>
+
+<h3>解决方案</h3>
+
+<p>有了需求，接下来就要有人来做了。就拿亚马逊来说，他很早就做成了全美最大的电子商务平台，而他的站点规模，决定了他一定要使用上大规模的服务器，以及应用上CDN等技术。这个时候，亚马逊说，我想把我的空余的服务器租出去，注意，我不是像dell公司那样把服务器买给你再做做售后服务工作那么简单，我是把服务器租给你，如果你愿意的话，我还可以给你一整套的<strong>解决方案</strong>。也就是说，你服务器上安装的数据库也可以从我这里来租，数据库的配置我都可以预先给你配置好，保证是一个最佳实践，你无须再为此付出大量时间精力。</p>
+
+<p>我也可以把我自己成熟的<strong>CDN技术</strong>分享给你，让你的网站也能够无论在哪里，都能够有一个很快速的访问速度。如果你的网站上有大量的多媒体资源（图片，视频等等），你也可以把这些多媒体资源存放在我这里。我保证，你的多媒体资源的访问速度，与我们亚马逊自己的多媒体资源访问速度相当。凡此种种，还有很多。由此，其实我们不难看出来，当今互联网以及计算机发展的一大潮流，就是从原来的购买转变为后来的租用，类似的情况，单就美国来说，还有租用影片的netflix, 以及微软的office虽然也在卖，但也有更多的用户选择了office365。</p>
+
+<h3>租用的好处与坏处</h3>
+
+<p>让我们暂时岔开一下话题，聊一聊究竟这种租用的方式能够带来哪些好处呢？为了不岔开得太远，我们还是以云计算服务为例，我们来算一笔帐，假设一家小公司初创，为了自己的网站能够安全稳定的上线，他需要服务器以及上面提到的一套解决方案，他为此要付出很大的成本，而又由于是初创企业，自己无法准确估计自己的需求，可能最后买到了合适的服务器，以及应用上了一套解决方案，一旦业务突飞猛进，他又要对此进行升级，相应地，又要花费大量的时间人力成本。而租用的方式，则是能够在一定规模内，**实现付出最小，利益最大。**当然，我也说到了是一定规模内，我们看到公司一旦达到了一定规模，租用的成本要远远大于直接买的方式，因此我们也看到像dropbox就离放弃了AWS转而自建基础设施和网路。</p>
+
+<h3>都有哪些基础设施</h3>
+
+<p>为了方便，我们这次把视线瞄准国内，看看阿里云是怎么做的。下图是阿里云的产品一览</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-cec0cfd7578c277f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="阿里云产品一览" /></p>
+
+<p>我们也可以看到，就我们刚才所说的例子来看，用到了弹性计算(云服务器)、存储服务(oss等)、CDN技术以及数据库这些基础设施。阿里云将这些服务拆分成一个个的产品进行出售，我们可以根据自己的需要进行量身定制。</p>
+
+<p>感兴趣的同学，可以通过参考链接，进入阿里云的观望去瞅一瞅。</p>
+
+<h3>laas 的好处</h3>
+
+<p>所以回过头来再来看云计算中的laas，能够看到他是有很大的优势的。主要表现在：</p>
+
+<ul>
+<li>租用的方式能够让付出最少，收益最大。前面已经提到过</li>
+<li>快速完成基础设施的应用,专注业务核心</li>
+<li>运维成本降到最低</li>
+</ul>
+
+<h2>saas</h2>
+
+<p>软件即服务</p>
+
+<p>这个其实按照我的理解，并没有laas复杂。想对于laas而言，我认为主要区别在于：</p>
+
+<p>对于购买laas的使用者，他对于在基础设施之上所搭建起来的应用程序有非常高度的掌控权，毕竟laas只是提供了基础设施的服务，真正的应用程序，还是需要自己来开发。但是saas则并非如此，他聚焦在了更高的层次上，直接为你提供了应用程序，因此你对应用程序本身的掌控力非常差，如果让我举一个例子的话，我会说当今很流行的微商城服务，比如微盟，你通过购买他的这个微商城服务，然后再在自己的微信公众号后台进行一些简单的配置，可以快速地建立起一个微商城来，如果你有需要，当然也可以快速完成微信小程序的创建。相比laas而言， 这种方式更加高效了。只是，会更加受制于人。他有点像是曾经经常被讨论的自有商城和天猫店铺的区别，在这里就不再多做阐述了。</p>
+
+<h2>paas</h2>
+
+<p>paas，也就是“平台即服务”，我接触的比较少，也就简单说一下我的理解。我自己用过的是，2013年左右的GAE,当时通过一些简单的配置，完成了一个应用，也就是goagent的开发（相信经历过那个年代科学上网的朋友，对此定会不陌生）。为了写这篇文，我也找到了一篇2014年其他人的博文，介绍goagent的原理，感兴趣的朋友，可以通过参考链接过去看看。我用goagent 的时候，还对云计算这一块毫无所知，完全是根据网上的傻瓜教程来搭建服务的。现在会过头来看，就像是阮一峰博文中所述的那样，paas是正好介于laas与saas之间的一种服务</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/48180-cb28b2acfabffc8f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="阮一峰博文图片" /></p>
+
+<p>还就goagent所使用的GAE为例，他并不只是给你基础设施，他也给了你一个应用程序所必须的环境（在这里是python环境），他也不同于saas，他没有给你一个完整的软件服务，让你直接就能够使用，他还是要让你自己来写程序，来实现某些功能的。其实写到这里，我又想起了当年玩贴吧的时候，也有朋友基于百度的BAE(与GAE类似)，实现了百度贴吧的自动签订功能，当时依然觉得有趣，也仍不知所言。只是照猫画虎，但这照猫画虎，却让我对计算机有了更深的兴趣。</p>
+
+<h1>综述</h1>
+
+<p>其实说起来，我最早用的云服务是个人服务，百度云。后来，又用了很多其他的个人云服务，我早在4年多以前，我就说过要<a href="https://www.jianshu.com/p/8fc2994e1cf8">构建一个个人云端信息库</a>。我就表态过，自己对于“云”这件事很乐观。我想既然2c是这样的，2b也应该不无例外。包括前面我的许多分析，也都表明，我自己是支持云计算的，即便从社会分工的角度来说，<strong>让专业的人做专业的事，这件事，从来也没有错。</strong></p>
+
+<h1>注</h1>
+
+<p>标题说的个人工作实践指所见到的公司从服务器选型到网站服务安全稳定运行的整个过程，准备上云计算的过程，使用微盟微商城的体验，使用goagent的体验等等。</p>
+
+<h1>参考链接</h1>
+
+<ul>
+<li><a href="https://yq.aliyun.com/articles/653511">阿里云的这群疯子</a></li>
+<li><a href="https://baike.baidu.com/item/%E8%85%BE%E8%AE%AF%E4%BA%91">腾讯云历史</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">AWS介绍</a></li>
+<li><a href="https://baike.baidu.com/item/%E9%98%BF%E9%87%8C%E4%BA%91">阿里云介绍</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2017/07/iaas-paas-saas.html">阮一峰iaas-paas-saas</a></li>
+<li><a href="https://baijiahao.baidu.com/s?id=1578702416065871092&wfr=spider&for=pc">为什么Dropbox决定放弃AWS，打造自己的基础设施和网络？</a></li>
+<li><a href="https://www.aliyun.com/product/list?spm=5176.8789780.1146454.17.66eb57a8iZROV9">阿里云产品列表</a></li>
+<li><a href="http://daemon369.github.io/network/2014/06/01/use-goagent">使用GoAgent代理</a></li>
+</ul>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260312-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Archive - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-2.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">串门 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                    <a href="/20260312-3.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">唠叨 - aoao.life</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20181201-1.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="从个人工作实践聊聊云计算 | aoao.life" data-url="https://aoao.life/20181201-1.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20161223.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20150913-1.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
