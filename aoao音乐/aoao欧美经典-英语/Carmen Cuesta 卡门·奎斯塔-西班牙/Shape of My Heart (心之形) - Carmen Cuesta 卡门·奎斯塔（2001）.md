@@ -1,4 +1,4 @@
-![music_cover](https://img.aoao.life/aoao/music/music-Shape of My Heart-202603171317.webp)
+![](https://img.aoao.life/music-shapeofmyherart-2026031717172.webp)
 
 
 伴随着柔和的吉他拨弦与卡门·奎斯塔慵懒迷人的嗓音，《心之形》宛如一杯午后的醇香咖啡，在时光的缝隙中缓缓流淌。这首翻唱自经典名曲的作品，褪去了原版中凛冽的宿命感与孤独哲思，被赋予了一种独属于女性的温婉、从容与波澜不惊。她用Bossa Nova的轻盈节拍，将牌局中的博弈化作对情感的淡然凝视，让人在舒缓的旋律中，找到了一处可以安放疲惫灵魂的静谧角落。
