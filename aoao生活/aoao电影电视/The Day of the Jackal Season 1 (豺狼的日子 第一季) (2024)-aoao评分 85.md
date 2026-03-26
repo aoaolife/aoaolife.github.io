@@ -1,4 +1,4 @@
-The Day of the Jackal Season 1 (豺狼的日子 第一季) (2024)-aoao评分: 85
+给高点给88分，但是这个黑妹，而且好黑，扣五分，83分。 还有要支持下现在编剧，因为好难编了比以前
 
 > "I am an artisan. A craftsman. And I have a job to do."
 > “我是个工匠。一名手艺人。我有工作要做。”
