@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>writing-plans (编写计划) - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="这是一份为你翻译好的中文版本。保留了原文档的 Markdown 格式和代码块，对于专有技术名词（如 DRY, YAGNI, TDD, harness 等），我保留了英文或提供了对应的中文术语，以确保在开发环境中的准确性。     名称： writing-plans (编写计划)   描述： 在开始编写代码之前，当你拥有一个多步骤任务的规范说明（spec）或需求时使用。   编写计划  概述   编...">
+    <link rel="canonical" href="https://aoao.life/20260327-1.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20260327-1.html">
+    <meta property="og:title" content="writing-plans (编写计划)">
+    <meta property="og:description" content="这是一份为你翻译好的中文版本。保留了原文档的 Markdown 格式和代码块，对于专有技术名词（如 DRY, YAGNI, TDD, harness 等），我保留了英文或提供了对应的中文术语，以确保在开发环境中的准确性。     名称： writing-plans (编写计划)   描述： 在开始编写代码之前，当你拥有一个多步骤任务的规范说明（spec）或需求时使用。   编写计划  概述   编...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20260327-1.html">
+    <meta property="twitter:title" content="writing-plans (编写计划)">
+    <meta property="twitter:description" content="这是一份为你翻译好的中文版本。保留了原文档的 Markdown 格式和代码块，对于专有技术名词（如 DRY, YAGNI, TDD, harness 等），我保留了英文或提供了对应的中文术语，以确保在开发环境中的准确性。     名称： writing-plans (编写计划)   描述： 在开始编写代码之前，当你拥有一个多步骤任务的规范说明（spec）或需求时使用。   编写计划  概述   编...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "writing-plans (编写计划)",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-03-26",
+      "dateModified": "2026-03-26T22:16:03+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 23.6%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁 */
+            .like-section-container .like-text,
+            .like-section-container span:last-child {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 23.6%;"></div>
+                    <div class="progress-text">今天 2026.03.27 | 已耗 23.6% · 剩 279 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoIT技术项目.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoaoIT技术项目</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoaoIT技术项目_人工智能AI.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">人工智能AI</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">writing-plans (编写计划)</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2026年03月27日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年03月26日 22:16</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20260327-1.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="writing-plans (编写计划)" data-url="https://aoao.life/20260327-1.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><p>这是一份为你翻译好的中文版本。保留了原文档的 Markdown 格式和代码块，对于专有技术名词（如 DRY, YAGNI, TDD, harness 等），我保留了英文或提供了对应的中文术语，以确保在开发环境中的准确性。</p>
+
+<hr />
+
+<p><strong>名称：</strong> writing-plans (编写计划)</p>
+
+<p><strong>描述：</strong> 在开始编写代码之前，当你拥有一个多步骤任务的规范说明（spec）或需求时使用。</p>
+
+<h3>编写计划</h3>
+
+<p><strong>概述</strong></p>
+
+<p>编写全面的实施计划，假设执行工程师对我们的代码库毫无背景了解，且“品味存疑”。记录他们需要知道的一切信息：每个任务需要修改哪些文件、需要编写的代码、测试，他们可能需要查看哪些文档，以及如何进行测试。将整个计划拆解为极小粒度（bite-sized）的任务提供给他们。遵循 DRY（不重复造轮子）、YAGNI（不需要的不做）、TDD（测试驱动开发）原则。频繁提交代码。</p>
+
+<p>假设他们是熟练的开发者，但对我们的工具集或问题领域几乎一无所知。假设他们不太懂得什么是好的测试设计。</p>
+
+<p><strong>在开始时声明：</strong> “我正在使用 <code>writing-plans</code> (编写计划) 技能来创建实施计划。”</p>
+
+<p><strong>上下文：</strong> 这应该在一个专用的工作树（worktree，由 <code>brainstorming</code> 头脑风暴技能创建）中运行。</p>
+
+<p><strong>将计划保存至：</strong> <code>docs/superpowers/plans/YYYY-MM-DD-&lt;功能名称&gt;.md</code></p>
+
+<p><em>（如果用户对计划存放位置有自定义偏好，则覆盖此默认设置）</em></p>
+
+<p><strong>范围检查 (Scope Check)</strong></p>
+
+<p>如果规范涵盖了多个独立的子系统，那么它应该在头脑风暴阶段就被拆分成多个子项目规范。如果没有，请建议将其拆分为独立的计划——每个子系统对应一个计划。每个计划都应该能独立产出可运行、可测试的软件。</p>
+
+<p><strong>文件结构 (File Structure)</strong></p>
+
+<p>在定义任务之前，先规划好将要创建或修改哪些文件，以及每个文件的职责是什么。这是敲定拆解决策的关键环节。</p>
+
+<p>设计具有清晰边界和明确接口的单元。每个文件都应有单一明确的职责。</p>
+
+<p>你能最好地理解并推理那些可以一次性容纳在上下文中的代码，且当文件功能专注时，你的修改也会更可靠。倾向于使用较小、职责集中的文件，而不是承担过多任务的大文件。</p>
+
+<p>一起变动的文件应该放在一起。按职责进行拆分，而不是按技术层级拆分。</p>
+
+<p>在现有的代码库中，请遵循已建立的模式。如果代码库使用的是大文件，不要单方面去重构它——但是，如果你正在修改的文件已经变得臃肿不堪，在计划中包含拆分该文件的步骤是合理的。</p>
+
+<p>这种文件结构决定了任务的拆解方式。每个任务都应产生自洽的变更，且这些变更独立来看是有意义的。</p>
+
+<p><strong>极小粒度任务 (Bite-Sized Task Granularity)</strong></p>
+
+<p>每一步都是一个具体的动作（大约 2-5 分钟）：</p>
+
+<ul>
+<li>“编写预期会失败的测试” - 步骤</li>
+<li>“运行它以确保其失败” - 步骤</li>
+<li>“实现最小代码以使测试通过” - 步骤</li>
+<li>“运行测试并确保其通过” - 步骤</li>
+<li>“提交 (Commit)” - 步骤</li>
+</ul>
+
+<p><strong>计划文档头部 (Plan Document Header)</strong></p>
+
+<p>每个计划<strong>必须</strong>以此头部开始：</p>
+
+<p>Markdown</p>
+
+<pre><code># [功能名称] 实施计划
+
+&gt; **对于智能代理（Agentic workers）：** 必填项：使用 `superpowers:subagent-driven-development`（如果子代理可用）或 `superpowers:executing-plans` 来实施此计划。步骤需使用复选框（`- [ ]`）语法进行跟踪。
+
+**目标：** [用一句话描述这构建了什么]
+
+**架构：** [用 2-3 句话说明实现方法]
+
+**技术栈：** [关键技术/库]
+
+---
+</code></pre>
+
+<p><strong>任务结构 (Task Structure)</strong></p>
+
+<p>Markdown</p>
+
+<pre><code>### 任务 N：[组件名称]
+
+**文件：**
+- 创建：`exact/path/to/file.py`
+- 修改：`exact/path/to/existing.py:123-145`
+- 测试：`tests/exact/path/to/test.py`
+
+- [ ] **步骤 1：编写预期会失败的测试**
+
+```python
+def test_specific_behavior():
+    result = function(input)
+    assert result == expected
+</code></pre>
+
+<ul>
+<li><p>[ ] <strong>步骤 2：运行测试以验证其失败</strong></p>
+
+<p>运行：<code>pytest tests/path/test.py::test_name -v</code></p>
+
+<p>预期结果：失败（FAIL），提示 "function not defined"</p></li>
+
+<li><p>[ ] <strong>步骤 3：编写最小实现代码</strong></p></li>
+</ul>
+
+<p>Python</p>
+
+<pre><code>def function(input):
+    return expected
+</code></pre>
+
+<ul>
+<li><p>[ ] <strong>步骤 4：运行测试以验证其通过</strong></p>
+
+<p>运行：<code>pytest tests/path/test.py::test_name -v</code></p>
+
+<p>预期结果：通过（PASS）</p></li>
+
+<li><p>[ ] <strong>步骤 5：提交代码 (Commit)</strong></p></li>
+</ul>
+
+<p>Bash</p>
+
+<pre><code>git add tests/path/test.py src/path/file.py
+git commit -m "feat: add specific feature"
+**注意事项 (Remember)**
+* 始终使用精确的文件路径。
+* 计划中需包含完整的代码（不要只写“添加验证”这种模糊的话）。
+* 提供精确的执行命令和预期输出。
+* 使用 `@` 语法引用相关的技能。
+* 遵循 DRY、YAGNI、TDD 原则，频繁提交代码。
+
+**计划审查循环 (Plan Review Loop)**
+在编写完完整的计划后：
+* 分发一个名为 `plan-document-reviewer` 的子代理（参见 `plan-document-reviewer-prompt.md`），并为其提供精心准备的审查上下文——**绝不能提供你的会话历史记录**。这能让审查者专注于计划本身，而不是你的思考过程。
+* 提供信息：计划文档的路径、规范说明（spec）文档的路径。
+* 如果 ❌ 发现问题：修复这些问题，并重新分发审查者来审查整个计划。
+* 如果 ✅ 获得批准：进入执行交接阶段。
+
+**审查循环指南：**
+* 由编写该计划的同一个代理来修复问题（以保留上下文）。
+* 如果循环超过 3 次迭代，请向人类用户求助以获取指导。
+* 审查者的意见是建议性质的——如果你认为反馈不正确，请解释你的分歧原因。
+
+**执行交接 (Execution Handoff)**
+保存计划后：
+* 向用户说：“计划已完成并保存至 `docs/superpowers/plans/&lt;文件名&gt;.md`。准备好执行了吗？”
+
+执行路径取决于工具框架（harness）的能力：
+* **如果框架支持子代理（如 Claude Code 等）：**
+    * **必须：** 使用 `superpowers:subagent-driven-development`。
+    * **不要**提供选择——子代理驱动是标准做法。
+    * 每个任务使用一个全新的子代理 + 两阶段审查。
+* **如果框架不支持子代理：**
+    * 在当前会话中使用 `superpowers:executing-plans` 来执行计划。
+    * 批量执行并设置检查点（checkpoints）以供审查。
+</code></pre>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260329-1.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">所有的顶级域名</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月29日</div>
+                    </a>
+                    
+                    <a href="/20260324-13.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">网站系统挂掉故障修复报告</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月24日</div>
+                    </a>
+                    
+                    <a href="/20260303.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">Openclaw-aoaoopenclaw</div>
+                        <div style="color: #536471; font-size: 12px;">2026年03月03日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20260327-1.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="writing-plans (编写计划)" data-url="https://aoao.life/20260327-1.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+
+            <!-- 评论区域 -->
+            <style>
+            @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+            .comment-item { animation: fadeInDown 0.5s ease forwards; }
+            #toast-container {
+                position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.8); color: white; padding: 10px 20px;
+                border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity 0.3s ease;
+                pointer-events: none; z-index: 9999;
+            }
+            .toast-show { opacity: 1 !important; }
+            </style>
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+            <div id="interaction-section" data-post-id="aoaoIT技术项目/人工智能AI/writing-plans (编写计划).md">
+                <div id="comment-form" style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <h3 style="margin-top: 0; font-size: 18px; color: #333;">发表留言 <span style="font-size: 12px; color: #999; font-weight: normal; margin-left: 10px;">(所有选项均为必填)</span></h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;">
+                        <input type="text" id="comment-author" placeholder="你的昵称 *" required style="flex: 1; min-width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        <input type="email" id="comment-email" placeholder="邮箱(生成头像) *" required style="flex: 1; min-width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <textarea id="comment-content" placeholder="写下你的想法... *" required style="width: 100%; height: 80px; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                    <button id="submit-comment-btn" onclick="submitComment()" style="padding: 10px 20px; cursor: pointer; background: #1d9bf0; color: white; border: none; border-radius: 4px; font-weight: bold;">提交留言</button>
+                </div>
+                <div id="comment-list" style="margin-top: 30px;">
+                    <h3 style="font-size: 18px; color: #333; margin-bottom: 15px;">最新留言</h3>
+                    <ul id="comments-ul" style="list-style: none; padding: 0; margin: 0;"><li style="color: #666; font-size: 14px;">加载中...</li></ul>
+                </div>
+            </div>
+            <div id="toast-container"></div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20260326.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20260327-2.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js?v=20260323_01"></script>
+</body>
+</html>
