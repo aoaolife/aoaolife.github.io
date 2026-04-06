@@ -1,4 +1,4 @@
-![music_cover](https://img.aoao.life/aoao/music/music-Sealed with a Kiss-202604051621.webp)
+![](C:\aoaoimages\music\music-seaedwithkiss-202604062131.webp)
 
 
 《Sealed with a Kiss (以吻封缄)》是一首承载着浓厚离愁别绪的夏日情歌。布莱恩·海兰用纯净而略带伤感的嗓音，娓娓道出年轻恋人们在漫长暑期被迫分离的无奈与不舍。这首歌不仅捕捉了青春期初恋那种炽烈又脆弱的情感，更将“以吻封缄”这一浪漫之举化作了跨越时空的永恒象征，触动了一代又一代人的心弦，成为了不朽的岁月经典。
