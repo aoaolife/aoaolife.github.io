@@ -1,4 +1,4 @@
-![music_cover](https://img.aoao.life/aoao/music/music-Sealed with a Kiss-202604052237.webp)
+![](C:\aoaoimages\music\music-sealedwithakiss-202604061255.webp)
 
 
 丹娜·云妮（Dana Winner）翻唱的《Sealed with a Kiss（以吻封缄）》宛如一阵清冷的秋风，拂过夏日终结的惆怅。这首经典的离别情歌在她的演绎下，褪去了原版中些许的青涩与哀伤，转而焕发出一种成熟、从容且空灵的美感。她清透纯净的嗓音如同水晶般剔透，将离别时的不舍与对重逢的笃定交织在一起，化作跨越时空的深情倾诉，让每一个曾经历过分离的人都能在旋律中找到共鸣与慰藉。

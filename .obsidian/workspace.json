@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aoaoIT技术项目/人工智能AI/gemini.md",
+                "file": "aoao音乐/aoao欧美经典-英语/Brian Hyland 布莱恩·海兰-美国/Sealed with a Kiss (以吻封缄) - Brian Hyland 布莱恩·海兰（1962）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gemini"
+              "title": "Sealed with a Kiss (以吻封缄) - Brian Hyland 布莱恩·海兰（1962）"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sealed",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,6 +170,8 @@
   },
   "active": "386f65e6a121e469",
   "lastOpenFiles": [
+    "aoao音乐/aoao港台经典-国语/张惠妹-台湾/我可以抱你吗 - 张惠妹（1999）.md",
+    "aoaoIT技术项目/人工智能AI/gemini.md",
     "aoaoIT技术项目/人工智能AI/人口-生育率-新生儿.md",
     "马斯克中文日记/马斯克2026年日程日记/大家好，我是马斯克，今天是2026年03月16日.md",
     "aoao音乐/aoao欧美经典-英语/Sting 斯汀-英国/Shape of My Heart (心的形状) - Sting 斯汀（1993）.md",
@@ -194,8 +197,6 @@
     "aoaoTemp/我的2015年十佳图书 _ aoao.life.md",
     "aoaoTemp/从征婚说起 _ aoao.life.md",
     "aoaoTemp/我和推理小说（剧）的那点事 _ aoao.life.md",
-    "aoaoTemp/乌龟与阿基里斯之重要的事情要说三遍 _ aoao.life.md",
-    "aoaoTemp/殇 _ aoao.life.md",
     "aoao音乐/aoao大陆经典-国语/Paul Mauriat 保罗·莫里哀-法国",
     "aoao音乐/aoao古典交响/Leo Rojas 莱奥·罗哈斯-厄瓜多尔/Leo Rojas - El Condor Pasa - LEO ROJAS - official.jpg",
     "aoao音乐/aoao古典交响/Leo Rojas 莱奥·罗哈斯-厄瓜多尔/El Cóndor Pasa（老鹰之歌）- Leo Rojas 莱奥·罗哈斯（2011）.flac",
