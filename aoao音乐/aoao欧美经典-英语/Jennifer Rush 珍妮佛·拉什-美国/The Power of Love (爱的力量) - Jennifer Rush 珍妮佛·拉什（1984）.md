@@ -1,4 +1,4 @@
-![music_cover](https://img.aoao.life/aoao/music/music-The Power of Love-202604031352.webp)
+![](C:\aoaoimages\music\music-thepoweroflove-jenniferrush-202604071320.webp)
 
 
 《The Power of Love (爱的力量)》是 Jennifer Rush 珍妮佛·拉什 于 1984 年发行的一首跨越时代的爱情颂歌。这首歌以其磅礴的编曲和极具穿透力的嗓音，深深震撼了无数听众的心灵。它不仅仅是一首情歌，更像是一份神圣的誓言，将爱情的坚韧、无私与力量展现得淋漓尽致。在珍妮佛·拉什深情的演绎下，我们仿佛能感受到那股穿透黑夜的光芒，它给予人勇气去跨越一切障碍，让人相信在这浩瀚的世界中，真爱足以战胜一切，成为生命中最坚实的依靠与最温暖的归宿。
