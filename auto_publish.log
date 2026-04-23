@@ -994,3 +994,44 @@ Traceback (most recent call last):
 TypeError: strptime() argument 1 must be str, not None
 
 [2026-04-22 00:00:04] === Task Completed ===
+[2026-04-23 00:00:02] === Scheduled Publish Task Started ===
+[2026-04-23 00:00:02] --- Starting aoao.py ---
+[2026-04-23 00:00:05] ❌ aoao.py Failed (Code 1).
+Full Output:
+
+🚀 Generating Site: aoao.life...
+  Processing 766 files...
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/local/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/app/core/parsers.py", line 59, in process_single_file
+    art_time_str, art_progress, art_days_rem = calculate_progress_for_date(article_date, use_utc8)
+  File "/app/core/utils.py", line 42, in calculate_progress_for_date
+    dt = datetime.datetime.strptime(date_str, "%Y年%m月%d日")
+TypeError: strptime() argument 1 must be str, not None
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/aoao.py", line 71, in <module>
+    main()
+  File "/app/aoao.py", line 66, in main
+    run_generator(CONFIG_AOAO)
+  File "/app/aoao.py", line 53, in run_generator
+    pipeline.run()
+  File "/app/core/pipeline.py", line 30, in run
+    stage.process(self.context)
+  File "/app/core/parsers.py", line 128, in process
+    results = pool.map(process_single_file, worker_args)
+  File "/usr/local/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/local/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+TypeError: strptime() argument 1 must be str, not None
+
+[2026-04-23 00:00:05] === Task Completed ===
