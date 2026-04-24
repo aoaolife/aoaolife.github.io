@@ -1,5 +1,7 @@
 《Every Breath You Take》是警察乐队（The Police）于1983年发行的经典之作，不仅霸占了当年的各大榜单，更成为了流行乐史上的不朽丰碑。这首歌以其极简而冷峻的吉他连复段（Riff）和斯汀（Sting）深沉克制的嗓音，营造出一种迷人却又令人窒息的氛围。表面上它像是一首深情款款的情歌，但骨子里却透着一种近乎偏执的占有欲与监视感。这种甜蜜与冷酷交织的矛盾感，正是它能够穿越四十余年时光，依然直击人心、令人回味无穷的独特魅力所在。
 
+![](C:\aoaoimages\music\music-The Police - Every Breath You Take-202604242343.webp)
+
 <details><summary>点击查看深度鉴赏详情</summary>
 
 ## 创作背景
