@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP) - aoao.life</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="🟢 阶段一：服务器基础环境准备与面板安装  目标：成功安装 3x-ui 并在浏览器中看到登录界面。   步骤 1.1：SSH 登录服务器 1. 打开你的电脑终端（推荐配置为你习惯的绿字黑底极客配色，护眼且专注）。 2. 使用 ssh root@你的服务器公网IP 登录服务器。   步骤 1.2：执行一键安装脚本 1. 在终端中复制并按回车运行以下命令：        bash &lt;(curl ...">
+    <link rel="canonical" href="https://aoao.life/20260417-3.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aoao.life/20260417-3.html">
+    <meta property="og:title" content="自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)">
+    <meta property="og:description" content="🟢 阶段一：服务器基础环境准备与面板安装  目标：成功安装 3x-ui 并在浏览器中看到登录界面。   步骤 1.1：SSH 登录服务器 1. 打开你的电脑终端（推荐配置为你习惯的绿字黑底极客配色，护眼且专注）。 2. 使用 ssh root@你的服务器公网IP 登录服务器。   步骤 1.2：执行一键安装脚本 1. 在终端中复制并按回车运行以下命令：        bash &lt;(curl ...">
+    <meta property="og:image" content="https://img.aoao.life/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aoao.life/20260417-3.html">
+    <meta property="twitter:title" content="自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)">
+    <meta property="twitter:description" content="🟢 阶段一：服务器基础环境准备与面板安装  目标：成功安装 3x-ui 并在浏览器中看到登录界面。   步骤 1.1：SSH 登录服务器 1. 打开你的电脑终端（推荐配置为你习惯的绿字黑底极客配色，护眼且专注）。 2. 使用 ssh root@你的服务器公网IP 登录服务器。   步骤 1.2：执行一键安装脚本 1. 在终端中复制并按回车运行以下命令：        bash &lt;(curl ...">
+    <meta property="twitter:image" content="https://img.aoao.life/logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)",
+      "image": [
+        "https://img.aoao.life/logo.png"
+      ],
+      "datePublished": "2026-04-16",
+      "dateModified": "2026-04-16T20:11:52+08:00",
+      "author": [{
+          "@type": "Person",
+          "name": "aoao",
+          "url": "https://aoao.life/about.html"
+        }]
+    }
+    </script>
+
+    <!-- 添加 Favicon -->
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419;
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 29.3%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* ... */
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%; /* Force width */
+            box-sizing: border-box;
+        }
+        .article-header-info {
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 1px solid #eff3f4;
+            padding-bottom: 20px;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        .logo-text {
+            justify-self: start;
+            font-size: 22px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Target the placeholder div (last child) */
+        .header-top-row > div:last-child {
+            justify-self: end;
+        }
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .item .content > * {
+            max-width: 100%;
+        }
+        .item .content p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+        }
+        .item .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 10px auto;
+        }
+        .item .content pre, .item .content code {
+            white-space: pre-wrap; /* Wrap code blocks too */
+            word-break: break-all;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        /* Table Handling */
+        .item .content table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .item .content th, .item .content td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            white-space: nowrap; /* Keep table cells on one line if preferred, or remove for wrapping */
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eff3f4;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #536471; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+        
+        /* ... (previous styles) */
+        .copy-btn:hover {
+            background: #0a6db7 !important;
+        }
+
+        /* 底部操作按钮容器 */
+        .like-section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eff3f4;
+        }
+
+        .like-section-container .like-btn, 
+        .like-section-container .copy-btn, 
+        .like-section-container .share-btn {
+            flex: 1; /* 等宽分配 */
+            max-width: 160px; /* 限制最大宽度防止桌面端过长 */
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 2px solid #1d9bf0;
+            background: #fff;
+            color: #1d9bf0;
+            font-weight: 700;
+            white-space: nowrap; /* 禁止文字换行 */
+        }
+
+        .like-section-container .like-btn:hover,
+        .like-section-container .copy-btn:hover,
+        .like-section-container .share-btn:hover {
+            background: #f0f7ff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 0 10px; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .item { padding: 25px; }
+            .article-title { font-size: 1.3em; }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            /* Hide dummy div on mobile */
+            .header-top-row > div:last-child { display: none; }
+
+            /* 手机端按钮强行单行优化 */
+            .like-section-container {
+                gap: 8px; /* 减小间距 */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .like-section-container .like-btn, 
+            .like-section-container .copy-btn, 
+            .like-section-container .share-btn {
+                max-width: none;
+                padding: 8px 5px; /* 极小内边距确保挤进一行 */
+                font-size: 13px; /* 略微减小字号 */
+                letter-spacing: -0.5px; /* 紧凑文字 */
+            }
+            /* 手机端隐藏图标文字冗余，保持简洁，给数字留空间 */
+            .like-section-container .like-text {
+                display: none;
+            }
+            .like-section-container span:last-child {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- 文章正文 -->
+        <div class="item item-detail">
+            <!-- 进度信息 (整合在卡片内) -->
+            <div class="article-header-info">
+                <div class="header-top-row">
+                    <a href="/index.html" class="logo-text">aoao.life</a>
+                                        <div class="header-nav">
+                                                                    <a href="/index.html">主页</a>
+                                                                    <a href="/about.html">关于我</a>
+                                                                    <a href="/clocklife.html">aoao生命时钟</a>                                        </div>                    <!-- 占位符 (250px match search width on index) -->
+                    <div style="width: 250px;"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 29.3%;"></div>
+                    <div class="progress-text">今天 2026.04.17 | 已耗 29.3% · 剩 258 天</div>
+                </div>
+            </div>
+
+            <!-- 面包屑导航 (Breadcrumbs) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 15px; font-size: 14px; color: #536471; text-align: left; padding: 0 5px;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <a href="/aoao应用工具命令.html" style="color: #1d9bf0; text-decoration: none; font-weight: 600;">aoao应用工具命令</a>
+                    
+                    
+                
+                <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                <span style="color: #0f1419; font-weight: 500;">正文</span>
+            </nav>
+            
+
+            <div class="article-title">自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)</div>
+            <div class="article-meta" style="font-size: 14px; color: #536471; margin-top: -15px; margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <span>发布于：2026年04月17日</span>
+                <!-- Since base.html uses art_time_str which is derived from article_date, we need to pass updated too -->
+                
+                <span>更新于：2026年04月16日 20:11</span>
+                
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="copy-btn" class="copy-btn index-copy-btn" onclick="handleDetailCopy(this)">复制文章</button>
+                    <div class="index-like-wrapper">
+                        <button class="like-btn index-like-btn" data-article-id="aoao.life/20260417-3.html" onclick="handleLikeClick(this)">
+                            <span class="like-icon heart-icon">🤍</span> 
+                            <span class="like-count">...</span>
+                        </button>
+                    </div>
+                    <div class="index-like-wrapper">
+                        <button class="share-btn index-share-btn" onclick="handleShareClick(this)" data-title="自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)" data-url="https://aoao.life/20260417-3.html">
+                            <span>🔗</span>
+                            <span>分享</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content"><h2>🟢 阶段一：服务器基础环境准备与面板安装</h2>
+
+<p><strong>目标：成功安装 3x-ui 并在浏览器中看到登录界面。</strong></p>
+
+<p><strong>步骤 1.1：SSH 登录服务器</strong>
+1. 打开你的电脑终端（推荐配置为你习惯的绿字黑底极客配色，护眼且专注）。
+2. 使用 <code>ssh root@你的服务器公网IP</code> 登录服务器。</p>
+
+<p><strong>步骤 1.2：执行一键安装脚本</strong>
+1. 在终端中复制并按回车运行以下命令：
+   <div class="codehilite">
+   <pre><span></span><code>bash<span class="w"> </span>&lt;<span class="o">(</span>curl<span class="w"> </span>-Ls<span class="w"> </span>https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh<span class="o">)</span>
+   </code></pre>
+   </div></p>
+
+<ol start="2">
+<li>脚本运行中途会暂停并询问你是否确认安装，输入 <code>y</code> 回车。</li>
+<li><strong>设置账户信息（请务必记录）</strong>：
+<ul>
+<li><code>Username</code> (登录账号): 输入自定义账号并回车。</li>
+<li><code>Password</code> (登录密码): 输入自定义密码并回车。</li>
+<li><code>Port</code> (面板访问端口): 输入一个 10000 - 60000 之间的数字（<strong>强烈建议记下这个数字，例如 <code>54321</code></strong>）。</li>
+</ul></li>
+</ol>
+
+<blockquote>
+  <p>🛑 <strong>【Checkpoint 1：安全组放行面板端口】（极其重要，否则绝对卡住）</strong>
+  1. 登录微云（或其他云服务商）的网页控制台。
+  2. 找到该服务器的 <strong>“安全组”</strong> 或 <strong>“防火墙”</strong> 设置。
+  3. 添加一条入站规则：<strong>协议选择 TCP，端口填写你刚才设置的面板端口（如 <code>54321</code>），源地址填 <code>0.0.0.0/0</code>（允许所有）。</strong>
+  4. 保存生效。</p>
+</blockquote>
+
+<p><strong>步骤 1.3：验证面板登录</strong>
+1. 打开电脑浏览器，在地址栏输入：<code>http://你的服务器公网IP:54321</code> （替换为你实际的 IP 和端口）。
+2. 输入刚才设置的账号密码。成功进入后台即代表本阶段 100% 完成。</p>
+
+<hr />
+
+<h2>🟡 阶段二：配置 VLESS+Reality 节点（防坑核心区）</h2>
+
+<p><strong>目标：创建一个带数字加密签名且不被墙识别的安全节点。</strong></p>
+
+<p><strong>步骤 2.1：新建入站规则</strong>
+1. 在 3x-ui 面板左侧菜单点击 <strong>Inbounds (入站列表)</strong>。
+2. 点击绿色的 <strong>+ Add Inbound (添加入站)</strong> 按钮。</p>
+
+<p><strong>步骤 2.2：填写节点参数（请严格对照）</strong>
+* <strong>Remark (备注)</strong>：随便填（如 <code>HK-Node</code>）。
+* <strong>Protocol (协议)</strong>：选择 <code>vless</code>。
+* <strong>Port (端口)</strong>：随意输入一个未使用的端口（<strong>务必记下，例如 <code>57777</code></strong>）。
+* <strong>Network (网络)</strong>：选择 <code>tcp</code>。
+* <strong>Security (安全性)</strong>：选择 <code>reality</code>。
+* <strong>uTLS</strong>：保持默认 <code>chrome</code> 即可。</p>
+
+<p><strong>步骤 2.3：设置伪装目标 (Dest)</strong>
+向下滚动找到 <code>Reality</code> 设置区：
+* <strong>Dest (目标网站)</strong>：填入 <code>www.microsoft.com:443</code>
+* <strong>Server Names (SNI)</strong>：填入 <code>www.microsoft.com</code></p>
+
+<p><strong>步骤 2.4：生成专属密钥（新手必死坑位，必须点！）</strong>
+1. 在 Reality 设置区，找到 <code>Private Key</code> (私钥) 和 <code>Public Key</code> (公钥) 的输入框。它们此时是空的。
+2. <strong>点击输入框旁边的 🔄 (获取新密钥 / Get new keys) 按钮。</strong>
+3. 确认框内自动填满了长串的随机字符。
+4. 点击最下方的 <strong>Add (添加)</strong> 按钮保存。</p>
+
+<blockquote>
+  <p>🛑 <strong>【Checkpoint 2：重启核心与放行节点端口】（极其重要）</strong>
+  1. 回到面板左侧菜单的 <strong>Overview (系统状态)</strong>。
+  2. 找到 <code>Xray</code> 卡片，点击 <strong>Restart (重启)</strong>。等待 3 秒，确保 Xray 状态显示为绿色的 <strong>Active / Running</strong>。
+  3. <strong>立刻去云服务商的网页控制台</strong>，再次进入安全组/防火墙。
+  4. 添加一条入站规则：<strong>协议 TCP，端口填写你刚才新建的节点端口（如 <code>57777</code>），源地址 <code>0.0.0.0/0</code>。</strong>保存。</p>
+</blockquote>
+
+<hr />
+
+<h2>🔵 阶段三：手机端一键直连</h2>
+
+<p><strong>目标：手机成功解析节点配置并实现科学上网。</strong></p>
+
+<p><strong>步骤 3.1：获取节点二维码</strong>
+1. 回到电脑上的 3x-ui 面板，进入 <strong>Inbounds (入站列表)</strong>。
+2. 找到建好的节点，点击列表最左侧微小的 <strong><code>+</code> 号</strong> 展开详情。
+3. 点击底部的 <strong>二维码图标 (QR Code)</strong>，屏幕上会出现一个巨大的二维码。</p>
+
+<p><strong>步骤 3.2：下载正确架构的客户端</strong>
+1. 在你的 Galaxy Z Flip 4 上，打开浏览器访问 v2rayNG 的官方发布页：
+   <code>https://github.com/2dust/v2rayNG/releases</code>
+2. 认准带有 <code>Latest</code> 标签的版本，展开 <code>Assets</code>。
+3. <strong>点击下载 <code>v2rayNG_xxx_arm64-v8a.apk</code></strong> （专为该机型的骁龙处理器优化的 64 位版本，运行最稳定）。
+4. 安装并打开 App。</p>
+
+<p><strong>步骤 3.3：扫码连接</strong>
+1. 在 v2rayNG 主界面，点击右上角的 <strong><code>+</code> 号</strong>。
+2. 选择 <strong>【扫描二维码】</strong>。
+3. 对准电脑屏幕上的二维码扫描。节点会瞬间出现在手机列表里。
+4. 点击该节点（左侧出现竖线代表已选中）。
+5. 点击右下角的 <strong>V 字圆形按钮</strong> 启动连接（首次连接手机系统会弹出 VPN 授权提示，点击允许）。</p>
+
+<blockquote>
+  <p>🛑 <strong>【Checkpoint 3：最终连通性验证】</strong>
+  1. 连接启动后，点击 v2rayNG 底部的 <strong>“测试全部配置真连接”</strong>（或者直接点击节点的延迟数字区）。
+  2. 如果显示具体的延迟数字（例如 <code>150ms</code>），则说明大功告成！
+  3. 打开手机上的浏览器或 Twitter App 验证网页是否能正常加载。</p>
+</blockquote>
+
+<hr />
+
+<h3>📝 常见故障速查表（遇到问题不要慌，查表即解）</h3>
+
+<table>
+<thead>
+<tr>
+  <th style="text-align:left;">故障现象</th>
+  <th style="text-align:left;">根本原因</th>
+  <th style="text-align:left;">唯一解决动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left;"><strong>浏览器打不开 3x-ui 面板，一直转圈</strong></td>
+  <td style="text-align:left;">服务器面板端口未开放</td>
+  <td style="text-align:left;">去云服务商控制台安全组，<strong>放行面板端口</strong> (如 54321)。</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>面板内 Xray 状态显示红色 Error</strong></td>
+  <td style="text-align:left;">创建节点时忘记生成密钥</td>
+  <td style="text-align:left;">去入站列表编辑节点，在 Reality 区<strong>点击生成密钥</strong>并保存，再重启 Xray。</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>手机测速显示 <code>context deadline exceeded</code></strong></td>
+  <td style="text-align:left;">服务器节点端口未开放</td>
+  <td style="text-align:left;">去云服务商控制台安全组，<strong>放行节点端口</strong> (如 57777)。</td>
+</tr>
+<tr>
+  <td style="text-align:left;"><strong>手机软件报 <code>yaml: unmarshal error</code></strong></td>
+  <td style="text-align:left;">客户端软件老旧，不支持新协议</td>
+  <td style="text-align:left;">卸载原版 Clash，严格按照 3.2 步骤<strong>下载 v2rayNG</strong>。</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+            <!-- 相关文章推荐 (New) -->
+            
+            <div class="related-articles-section" style="margin-top: 50px; border-top: 2px solid #eff3f4; padding-top: 30px;">
+                <h3 style="font-size: 20px; font-weight: 800; color: #0f1419; margin-bottom: 20px;">🧐 您可能还感兴趣：</h3>
+                <div class="related-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    
+                    <a href="/20260412-9.html" class="related-card" style="text-decoration: none; background: #f7f9f9; border-radius: 12px; padding: 15px; border: 1px solid #eff3f4; transition: all 0.2s;">
+                        <div style="color: #1d9bf0; font-weight: 700; font-size: 15px; margin-bottom: 8px; line-height: 1.4;">下载工具-音乐下载工具-p2p下载工具-BT下载工具</div>
+                        <div style="color: #536471; font-size: 12px;">2026年04月12日</div>
+                    </a>
+                    
+                </div>
+            </div>
+            <style>
+                .related-card:hover { background: #eff3f4 !important; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            </style>
+            
+
+            <!-- 点赞区域 -->
+            <div class="like-section-container">
+                <button class="like-btn" data-article-id="aoao.life/20260417-3.html" onclick="handleLikeClick(this)">
+                    <span class="like-icon heart-icon">🤍</span> 
+                    <span class="like-text">点赞</span>
+                    <span class="like-count">...</span>
+                </button>
+                <button class="copy-btn" onclick="handleDetailCopy(this)">
+                    <span>📄</span>
+                    <span>复制文章</span>
+                </button>
+                <button class="share-btn" onclick="handleShareClick(this)" data-title="自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP)" data-url="https://aoao.life/20260417-3.html">
+                    <span>🔗</span>
+                    <span>分享文章</span>
+                </button>
+            </div>
+
+            <!-- 评论区域 -->
+            <style>
+            @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+            .comment-item { animation: fadeInDown 0.5s ease forwards; }
+            #toast-container {
+                position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.8); color: white; padding: 10px 20px;
+                border-radius: 20px; font-size: 14px; opacity: 0; transition: opacity 0.3s ease;
+                pointer-events: none; z-index: 9999;
+            }
+            .toast-show { opacity: 1 !important; }
+            </style>
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+            <div id="interaction-section" data-post-id="aoao应用工具命令/自己搭建个节点VPN-VLESS + Reality 极简部署标准作业程序 (SOP).md">
+                <div id="comment-form" style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <h3 style="margin-top: 0; font-size: 18px; color: #333;">发表留言 <span style="font-size: 12px; color: #999; font-weight: normal; margin-left: 10px;">(所有选项均为必填)</span></h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;">
+                        <input type="text" id="comment-author" placeholder="你的昵称 *" required style="flex: 1; min-width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        <input type="email" id="comment-email" placeholder="邮箱(生成头像) *" required style="flex: 1; min-width: 150px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <textarea id="comment-content" placeholder="写下你的想法... *" required style="width: 100%; height: 80px; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+                    <button id="submit-comment-btn" onclick="submitComment()" style="padding: 10px 20px; cursor: pointer; background: #1d9bf0; color: white; border: none; border-radius: 4px; font-weight: bold;">提交留言</button>
+                </div>
+                <div id="comment-list" style="margin-top: 30px;">
+                    <h3 style="font-size: 18px; color: #333; margin-bottom: 15px;">最新留言</h3>
+                    <ul id="comments-ul" style="list-style: none; padding: 0; margin: 0;"><li style="color: #666; font-size: 14px;">加载中...</li></ul>
+                </div>
+            </div>
+            <div id="toast-container"></div>
+        </div>
+    </div>
+    
+    
+        
+            <a href="/20260417-2.html" class="nav-arrow nav-arrow-left">&lt;上一页</a>
+        
+        
+            <a href="/20260417-4.html" class="nav-arrow nav-arrow-right">下一页&gt;</a>
+        
+    
+    
+    <div class="footer">
+                        <div class="footer-nav">
+                            <a href="/index.html">主页</a> |
+                            <a href="/about.html">关于我</a> |
+                            <a href="/clocklife.html">aoao生命时钟</a>
+                        </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+    
+    <script src="/static/script.js?v=20260323_01"></script>
+</body>
+</html>
