@@ -1,4 +1,9 @@
 Dear You (给阿嬷的情书) (2026)-aoao评分：9.1
+
+我闽南这边的这种看完更有感觉的。
+
+![](C:\aoaoimages\movie\movie-geianmadeqinshu-202609061646.webp)
+
 <details>
 <summary><strong>🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录</strong></summary>
 
