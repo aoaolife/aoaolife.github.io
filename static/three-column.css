@@ -189,6 +189,13 @@ body.three-column-page {
 }
 .article-page .article-three-column > .directory-sidebar.mobile-open { transform: translateX(0); }
 .article-page .directory-tree { max-height: calc(100vh - 76px); }
+.directory-load-status {
+    padding: 22px 10px;
+    color: #536471;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
 .directory-drawer-close {
     float: right;
     margin: -4px 0 8px 8px;
