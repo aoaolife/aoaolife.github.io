@@ -11,6 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (sidebar) {
         let savedPaths = [];
         try { savedPaths = JSON.parse(localStorage.getItem(stateKey) || '[]'); } catch (_) {}
+        if (document.body.classList.contains('article-page')) {
+            savedPaths = [];
+            sidebar.querySelectorAll('[data-tree-path].expanded').forEach(item => {
+                item.classList.remove('expanded');
+                const children = item.querySelector(':scope > .tree-children');
+                const node = item.querySelector(':scope > .tree-node');
+                const arrow = item.querySelector(':scope > .tree-node .tree-arrow');
+                if (children) children.style.display = 'none';
+                if (node) node.setAttribute('aria-expanded', 'false');
+                if (arrow) arrow.style.transform = 'rotate(0deg)';
+            });
+        }
         savedPaths.forEach(path => {
             const item = Array.from(sidebar.querySelectorAll('[data-tree-path]')).find(node => node.dataset.treePath === path);
             if (!item) return;
@@ -47,22 +59,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const randomButton = document.getElementById('random-article-button');
-    if (randomButton) {
-        randomButton.addEventListener('click', async () => {
-            randomButton.disabled = true;
-            try {
+    const randomList = document.getElementById('random-article-list');
+    let randomArticles = null;
+    async function showRandomArticles() {
+        if (!randomButton || !randomList) return;
+        randomButton.disabled = true;
+        try {
+            if (!randomArticles) {
                 const response = await fetch('/search_index.json');
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const articles = await response.json();
-                if (!articles.length) throw new Error('Empty search index');
-                const article = articles[Math.floor(Math.random() * articles.length)];
-                window.location.href = `/${article.rel_path}`;
-            } catch (error) {
-                console.error('Random article failed:', error);
-                randomButton.textContent = '暂时无法打开，请稍后重试';
-                randomButton.disabled = false;
+                randomArticles = await response.json();
             }
-        });
+            const pool = randomArticles.slice();
+            for (let index = pool.length - 1; index > 0; index -= 1) {
+                const swapIndex = Math.floor(Math.random() * (index + 1));
+                [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
+            }
+            randomList.replaceChildren(...pool.slice(0, 5).map(article => {
+                const link = document.createElement('a');
+                link.href = `/${article.rel_path}`;
+                link.textContent = article.title;
+                return link;
+            }));
+            randomButton.textContent = '换一批';
+        } catch (error) {
+            console.error('Random articles failed:', error);
+            randomList.textContent = '暂时无法加载，请稍后重试。';
+            randomButton.textContent = '重新加载';
+        } finally {
+            randomButton.disabled = false;
+        }
+    }
+    if (randomButton && randomList) {
+        randomButton.addEventListener('click', showRandomArticles);
+        showRandomArticles();
     }
 
     const tocCard = document.getElementById('article-toc-card');
