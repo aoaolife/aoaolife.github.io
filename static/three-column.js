@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (isArticleDrawer) {
-            directoryButton.textContent = '☰ 目录定位';
+            directoryButton.textContent = '☰ 目录';
             backdrop = document.createElement('div');
             backdrop.className = 'directory-backdrop';
             document.body.appendChild(backdrop);

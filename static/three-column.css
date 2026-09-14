@@ -139,17 +139,29 @@ body.three-column-page {
 
 /* Article pages prioritize reading width; the full directory opens as a drawer. */
 .article-page .site-header-main {
-    grid-template-columns: 200px minmax(0, 1fr) auto 260px;
+    grid-template-columns: 260px minmax(0, 1fr) 260px;
 }
 .article-page .mobile-directory-button {
     display: block;
-    padding: 8px 14px;
+    position: fixed;
+    z-index: 1200;
+    top: 130px;
+    left: 0;
+    padding: 10px 14px 10px 11px;
     border: 1px solid #1d9bf0;
-    border-radius: 999px;
+    border-left: 0;
+    border-radius: 0 999px 999px 0;
     background: #fff;
     color: #1d9bf0;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 4px 14px rgba(15, 20, 25, .12);
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.article-page .mobile-directory-button:hover {
+    background: #1d9bf0;
+    color: #fff;
+    transform: translateX(2px);
 }
 .article-page .article-three-column {
     width: min(1280px, calc(100% - 40px));
@@ -317,7 +329,6 @@ body.three-column-page {
     .three-column-page .content-wrapper,
     .three-column-page .article-three-column { grid-template-columns: 240px minmax(0, 1fr); }
     .three-column-page .article-three-column { width: min(1180px, calc(100% - 32px)); }
-    .article-page .site-header-main { grid-template-columns: 170px minmax(0, 1fr) auto 230px; }
     .article-page .article-three-column {
         width: min(1120px, calc(100% - 32px));
         grid-template-columns: minmax(0, 1fr) 220px;
@@ -329,7 +340,6 @@ body.three-column-page {
 @media (max-width: 1023px) {
     .article-page .article-three-column { display: block !important; }
     .article-page .right-sidebar { margin-top: 16px; }
-    .article-page .site-header-main { grid-template-columns: 150px 1fr auto 210px; gap: 12px; }
     .article-page .site-header .header-nav { gap: 12px; }
 }
 
@@ -346,6 +356,15 @@ body.three-column-page {
         padding: 10px 0;
         grid-template-columns: 1fr auto;
         gap: 10px;
+    }
+    .article-page .mobile-directory-button {
+        position: static;
+        z-index: auto;
+        padding: 7px 11px;
+        border: 1px solid #d8e0e6;
+        border-radius: 8px;
+        box-shadow: none;
+        transform: none;
     }
     .site-header .logo-text { font-size: 21px; }
     .site-header .header-nav { grid-column: 1 / -1; grid-row: 2; gap: 14px; }
