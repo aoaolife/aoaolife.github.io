@@ -1,0 +1,90 @@
+var AOAO_DOMAIN = 'WEB';
+var AOAO_TOOL = 'ThreeColumnLayout';
+var AOAO_SUMMARY = '三栏布局目录与文章导航交互';
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('directory-sidebar');
+    const directoryButton = document.querySelector('.mobile-directory-button');
+    const stateKey = 'aoao_directory_expanded';
+    const scrollKey = 'aoao_directory_scroll';
+
+    if (sidebar) {
+        let savedPaths = [];
+        try { savedPaths = JSON.parse(localStorage.getItem(stateKey) || '[]'); } catch (_) {}
+        savedPaths.forEach(path => {
+            const item = Array.from(sidebar.querySelectorAll('[data-tree-path]')).find(node => node.dataset.treePath === path);
+            if (!item) return;
+            item.classList.add('expanded');
+            const children = item.querySelector(':scope > .tree-children');
+            const node = item.querySelector(':scope > .tree-node');
+            const arrow = item.querySelector(':scope > .tree-node .tree-arrow');
+            if (children) children.style.display = 'block';
+            if (node) node.setAttribute('aria-expanded', 'true');
+            if (arrow) arrow.style.transform = 'rotate(90deg)';
+        });
+
+        const tree = sidebar.querySelector('.directory-tree');
+        if (tree) {
+            tree.scrollTop = Number(sessionStorage.getItem(scrollKey) || 0);
+            tree.addEventListener('scroll', () => sessionStorage.setItem(scrollKey, String(tree.scrollTop)), { passive: true });
+        }
+
+        sidebar.addEventListener('click', event => {
+            if (!event.target.closest('.tree-node')) return;
+            window.setTimeout(() => {
+                const expanded = Array.from(sidebar.querySelectorAll('[data-tree-path].expanded')).map(item => item.dataset.treePath);
+                localStorage.setItem(stateKey, JSON.stringify(expanded));
+            }, 0);
+        }, true);
+    }
+
+    if (directoryButton && sidebar) {
+        directoryButton.addEventListener('click', () => {
+            const open = sidebar.classList.toggle('mobile-open');
+            directoryButton.setAttribute('aria-expanded', String(open));
+            if (open) sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
+    const randomButton = document.getElementById('random-article-button');
+    if (randomButton) {
+        randomButton.addEventListener('click', async () => {
+            randomButton.disabled = true;
+            try {
+                const response = await fetch('/search_index.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const articles = await response.json();
+                if (!articles.length) throw new Error('Empty search index');
+                const article = articles[Math.floor(Math.random() * articles.length)];
+                window.location.href = `/${article.rel_path}`;
+            } catch (error) {
+                console.error('Random article failed:', error);
+                randomButton.textContent = '暂时无法打开，请稍后重试';
+                randomButton.disabled = false;
+            }
+        });
+    }
+
+    const tocCard = document.getElementById('article-toc-card');
+    const toc = document.getElementById('article-toc');
+    const headings = Array.from(document.querySelectorAll('.article-main .content h2, .article-main .content h3'));
+    if (tocCard && toc && headings.length) {
+        headings.forEach((heading, index) => {
+            if (!heading.id) heading.id = `section-${index + 1}`;
+            const link = document.createElement('a');
+            link.href = `#${heading.id}`;
+            link.textContent = heading.textContent.trim();
+            link.className = heading.tagName === 'H3' ? 'toc-level-3' : 'toc-level-2';
+            toc.appendChild(link);
+        });
+        tocCard.hidden = false;
+        const links = Array.from(toc.querySelectorAll('a'));
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                links.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
+            });
+        }, { rootMargin: '-100px 0px -70% 0px' });
+        headings.forEach(heading => observer.observe(heading));
+    }
+});
