@@ -32,7 +32,7 @@ body.three-column-page {
     width: min(1440px, calc(100% - 40px));
     min-height: 64px;
     margin: 0 auto;
-    display: grid;
+    display: grid !important;
     grid-template-columns: 260px 1fr 260px;
     align-items: center;
     gap: 24px;
@@ -121,7 +121,7 @@ body.three-column-page {
     max-width: none;
     margin: 24px auto 0;
     padding: 0;
-    display: grid;
+    display: grid !important;
     grid-template-columns: 260px minmax(0, 1fr) 260px;
     align-items: start;
     gap: 24px;
@@ -281,7 +281,7 @@ body.three-column-page {
     .three-column-page .article-three-column {
         width: calc(100% - 20px);
         margin-top: 12px;
-        display: block;
+        display: block !important;
     }
     .directory-sidebar {
         display: none;
