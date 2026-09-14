@@ -51,10 +51,65 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (directoryButton && sidebar) {
-        directoryButton.addEventListener('click', () => {
-            const open = sidebar.classList.toggle('mobile-open');
+        const isArticleDrawer = document.body.classList.contains('article-page');
+        let backdrop = null;
+        let closeButton = null;
+        let currentArticleLocated = false;
+
+        function locateCurrentArticle() {
+            if (!isArticleDrawer || currentArticleLocated) return;
+            const currentPath = window.location.pathname;
+            const currentLink = Array.from(sidebar.querySelectorAll('.tree-link'))
+                .find(link => link.getAttribute('href') === currentPath);
+            if (!currentLink) return;
+            let item = currentLink.closest('.tree-item');
+            while (item) {
+                const children = item.closest('.tree-children');
+                if (!children) break;
+                const parentItem = children.parentElement;
+                parentItem.classList.add('expanded');
+                children.style.display = 'block';
+                const node = parentItem.querySelector(':scope > .tree-node');
+                const arrow = parentItem.querySelector(':scope > .tree-node .tree-arrow');
+                if (node) node.setAttribute('aria-expanded', 'true');
+                if (arrow) arrow.style.transform = 'rotate(90deg)';
+                item = parentItem;
+            }
+            window.setTimeout(() => currentLink.scrollIntoView({ block: 'center' }), 50);
+            currentArticleLocated = true;
+        }
+
+        function setDirectoryOpen(open) {
+            sidebar.classList.toggle('mobile-open', open);
             directoryButton.setAttribute('aria-expanded', String(open));
-            if (open) sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (isArticleDrawer) {
+                document.body.classList.toggle('drawer-open', open);
+                if (open) locateCurrentArticle();
+            } else if (open) {
+                sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        if (isArticleDrawer) {
+            directoryButton.textContent = '☰ 目录定位';
+            backdrop = document.createElement('div');
+            backdrop.className = 'directory-backdrop';
+            document.body.appendChild(backdrop);
+            closeButton = document.createElement('button');
+            closeButton.type = 'button';
+            closeButton.className = 'directory-drawer-close';
+            closeButton.setAttribute('aria-label', '关闭目录');
+            closeButton.textContent = '×';
+            sidebar.prepend(closeButton);
+            backdrop.addEventListener('click', () => setDirectoryOpen(false));
+            closeButton.addEventListener('click', () => setDirectoryOpen(false));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') setDirectoryOpen(false);
+            });
+        }
+
+        directoryButton.addEventListener('click', () => {
+            setDirectoryOpen(!sidebar.classList.contains('mobile-open'));
         });
     }
 
