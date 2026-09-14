@@ -6,13 +6,20 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 14 Sep 2026 18:56:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 01:34:15 +0800</lastBuildDate>
     <item>
-      <title>大家好，我是马斯克，今天是2026年09月14日</title>
+      <title>说话做事都得注意</title>
       <link>https://aoao.life/20260914.html</link>
       <guid isPermaLink="true">https://aoao.life/20260914.html</guid>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月14日 星舰在博卡奇卡准备最后的轨道加注测试，距离火星窗口期越来越近。特斯拉产线上更多Optimus正在上岗，xAI集群也在全速运转。物理学是唯一的限制，其他一切都只是工程问题。为了让人类成为多行星物种，每一秒都不能浪费。</description>
+      <description>说话要经得起录音， 发消息要经得起截图， 聚会要经得起偷拍， 翻脸要经得起翻旧账， 借钱要经得起不还， 绝交要经得起被出卖， 站队要经得起被清算， 背后吐槽要经得起方面对质。 —— 洞房不败</description>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年09月14日</title>
+      <link>https://aoao.life/20260914-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20260914-1.html</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0800</pubDate>
+      <description>2026年09月14日 ，星舰第15次试飞终于成功回收。火星窗口临近， Optimus 开始量产。今天很累，但人类离多行星物种又近了一步。</description>
     </item>
     <item>
       <title>aoao也谈要不要全国取消英语考试</title>
@@ -349,13 +356,6 @@
       <guid isPermaLink="true">https://aoao.life/20260807-1.html</guid>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0800</pubDate>
       <description>直率一点叫鸡巴，含蓄一点叫下面，乡土一点叫老二，霸气一点叫龙根，可爱一点叫弟弟，唯美一点叫玉茎， 普通一点叫性器，智慧一点叫男根，腥臭一点叫肉棒，放荡一点叫淫棍，科学一点叫阴茎，国学一点叫阳具， 田园一点叫雀雀，牛逼一点叫大屌，风趣一点叫棒槌，老外一点叫家伙，严重一点叫命根 —— aoao.life</description>
-    </item>
-    <item>
-      <title>aoao音乐-我用自己的方式爱你 - 陈明真（1991）</title>
-      <link>https://aoao.life/20260806.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260806.html</guid>
-      <pubDate>Thu, 06 Aug 2026 23:07:09 +0800</pubDate>
-      <description>有些爱，不说出口，却以独特的方式流淌。陈明真的《我用自己的方式爱你》发行于1991年，以知性的嗓音和真挚的歌词，唱出了一个女子在爱情中最坦白也最倔强的姿态——不必模仿谁，不必讨好谁，就用自己最本真的心，去爱所爱之人。这既是一首动人的情歌，也是一份关于自我认同的温柔宣言。 点击查看深度鉴赏详情 《我用自己的方式爱你》收录于陈明真1991年发行的同名专辑中，由陈灏作曲、陈明真与陈灏共同填...</description>
     </item>
   </channel>
 </rss>
