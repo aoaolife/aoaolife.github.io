@@ -327,6 +327,21 @@ body.three-column-page {
 }
 .side-link-list a:last-child { border-bottom: 0; }
 .side-link-list a:hover { color: #1d9bf0; }
+.rss-card { padding: 0; }
+.rss-subscribe-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: #c55a11;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.rss-subscribe-link span { color: #f26522; font-size: 16px; }
+.rss-subscribe-link:hover { background: #fff7ed; color: #9a4310; }
 .numbered-links a > span {
     display: inline-grid;
     place-items: center;
