@@ -57,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let currentArticleLocated = false;
 
         let treeDataPromise = null;
-        let treeRendered = !isArticleDrawer;
+        let treeRendered = !sidebar.dataset.treeSource;
         const treeContainer = sidebar.querySelector('.directory-tree');
 
         function loadTreeData() {
             if (!treeDataPromise) {
-                treeDataPromise = fetch('/tree.json')
+                treeDataPromise = fetch(sidebar.dataset.treeSource || '/tree.json')
                     .then(response => {
                         if (!response.ok) throw new Error(`HTTP ${response.status}`);
                         return response.json();
@@ -131,6 +131,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 treeContainer.replaceChildren(renderTree(treeData, []));
                 treeRendered = true;
                 currentArticleLocated = false;
+
+                if (!isArticleDrawer) {
+                    let savedPaths = [];
+                    try { savedPaths = JSON.parse(localStorage.getItem(stateKey) || '[]'); } catch (_) {}
+                    const activePath = sidebar.dataset.activePath || '';
+                    sidebar.querySelectorAll('[data-tree-path]').forEach(item => {
+                        const nodePath = item.dataset.treePath;
+                        const expanded = savedPaths.includes(nodePath)
+                            || (activePath && (activePath === nodePath || activePath.startsWith(`${nodePath}/`)));
+                        if (!expanded) return;
+                        item.classList.add('expanded');
+                        const children = item.querySelector(':scope > .tree-children');
+                        const node = item.querySelector(':scope > .tree-node');
+                        const arrow = item.querySelector(':scope > .tree-node .tree-arrow');
+                        if (children) children.style.display = 'block';
+                        if (node) node.setAttribute('aria-expanded', 'true');
+                        if (arrow) arrow.style.transform = 'rotate(90deg)';
+                    });
+                    treeContainer.scrollTop = Number(sessionStorage.getItem(scrollKey) || 0);
+                }
             } catch (error) {
                 console.error('Directory tree failed:', error);
                 treeContainer.innerHTML = '<div class="directory-load-status">目录加载失败，请关闭后重试。</div>';
@@ -189,6 +209,20 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (_) {}
         }
 
+        sidebar.addEventListener('click', event => {
+            const node = event.target.closest('.tree-node');
+            if (!node || !treeContainer.contains(node)) return;
+            event.preventDefault();
+            const item = node.closest('.tree-item');
+            const children = item.querySelector(':scope > .tree-children');
+            const arrow = node.querySelector('.tree-arrow');
+            const expanded = !item.classList.contains('expanded');
+            item.classList.toggle('expanded', expanded);
+            node.setAttribute('aria-expanded', String(expanded));
+            if (children) children.style.display = expanded ? 'block' : 'none';
+            if (arrow) arrow.style.transform = expanded ? 'rotate(90deg)' : 'rotate(0deg)';
+        });
+
         if (isArticleDrawer) {
             directoryButton.textContent = '☰ 目录';
             backdrop = document.createElement('div');
@@ -206,20 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (event.key === 'Escape') setDirectoryOpen(false);
             });
 
-            sidebar.addEventListener('click', event => {
-                const node = event.target.closest('.tree-node');
-                if (!node || !treeContainer.contains(node)) return;
-                event.preventDefault();
-                const item = node.closest('.tree-item');
-                const children = item.querySelector(':scope > .tree-children');
-                const arrow = node.querySelector('.tree-arrow');
-                const expanded = !item.classList.contains('expanded');
-                item.classList.toggle('expanded', expanded);
-                node.setAttribute('aria-expanded', String(expanded));
-                if (children) children.style.display = expanded ? 'block' : 'none';
-                if (arrow) arrow.style.transform = expanded ? 'rotate(90deg)' : 'rotate(0deg)';
-            });
-
             // Warm only the small JSON response on intent; DOM nodes are still
             // created solely when the visitor actually opens the directory.
             const prefetchTree = () => { loadTreeData().catch(() => {}); };
@@ -232,6 +252,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isArticleDrawer && shouldOpen) openArticleDirectory();
             else setDirectoryOpen(shouldOpen);
         });
+
+        if (!isArticleDrawer) ensureTreeRendered().catch(() => {});
     }
 
     const randomButton = document.getElementById('random-article-button');

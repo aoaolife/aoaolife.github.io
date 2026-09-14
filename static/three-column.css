@@ -229,7 +229,9 @@ body.three-column-page {
 .article-pagination-prev { justify-self: start; }
 .article-pagination-next { justify-self: end; }
 .article-page .article-pagination .nav-arrow {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     position: static;
     width: auto;
     height: auto;
@@ -244,10 +246,20 @@ body.three-column-page {
     transform: none;
     box-shadow: none;
 }
+.article-pagination-next .nav-arrow { align-items: flex-end; text-align: right; }
+.pagination-direction { font-weight: 700; white-space: nowrap; }
+.pagination-title {
+    max-width: 360px;
+    color: #33404c;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+}
 .article-page .article-pagination .nav-arrow:hover {
     background: #1d9bf0;
     color: #fff;
 }
+.article-page .article-pagination .nav-arrow:hover .pagination-title { color: #fff; }
 
 .directory-sidebar,
 .right-sidebar {
