@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能 标签 - aoao.life</title>
+    <link rel="alternate" type="application/rss+xml" title="aoao.life RSS" href="https://aoao.life/rss.xml">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px 0;
+            color: #0f1419; /* Twitter black */
+        }
+
+        /* Animations */
+        @keyframes fillProgress {
+            from { width: 0; }
+            to { width: 70.7%; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* 顶部 Header */
+        .title-header {
+            width: 100%;
+            background: #fff;
+            border-radius: 16px 16px 0 0;
+            padding: 15px 25px;
+            margin-bottom: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            animation: fadeInUp 0.5s ease-out;
+        }
+        
+        .header-top-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        /* Ensure logo stays left */
+        .header-top-row > .logo-text {
+            justify-self: start;
+        }
+
+        .header-nav {
+            justify-self: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-nav a {
+            color: #536471;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover { color: #1d9bf0; }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 900;
+            color: #1d9bf0;
+            white-space: nowrap;
+            text-decoration: none; 
+        }
+        .logo-text:hover { opacity: 0.8; }
+
+        .header-search {
+            justify-self: end;
+            width: 250px; 
+            position: relative;
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px 20px;
+            border: 1px solid #eff3f4;
+            background: #eff3f4;
+            border-radius: 9999px;
+            outline: none;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .search-box:focus {
+            background: #fff;
+            border-color: #1d9bf0;
+            box-shadow: 0 0 0 1px #1d9bf0;
+        }
+        .search-results {
+            margin-top: 5px;
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            display: none;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .search-result-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f7f9f9;
+            cursor: pointer;
+        }
+        .search-result-item:hover {
+            background-color: #f7f9f9;
+        }
+
+        /* 进度条 */
+        .progress-container {
+            background-color: #eff3f4;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #1d9bf0;
+            animation: fillProgress 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .progress-text {
+            position: relative;
+            z-index: 2;
+            color: #0f1419;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        .sidebar-title { 
+            margin-top: 0; 
+            margin-bottom: 15px;
+            color: #1d9bf0;
+            font-weight: 800;
+        }
+        .tree-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-family: inherit;
+        }
+        /* 目录树文字颜色 */
+        .tree-container h3 { color: #1d9bf0; }
+        .tree-node { color: #1d9bf0; cursor: pointer; font-weight: 500; }
+        .tree-item a { color: #1d9bf0; text-decoration: none; }
+        .tree-arrow { color: #1d9bf0; }
+
+        /* 目录树交互 */
+        .tree-children { display: none; margin-left: 20px; }
+        .tree-item.expanded .tree-children { display: block; }
+        .tree-arrow { transition: transform 0.3s; display: inline-block; }
+        .tree-item.expanded .tree-arrow { transform: rotate(90deg); }
+
+        /* 主内容 */
+        .main-content {
+            flex-grow: 1;
+            min-width: 0; /* Crucial for text wrapping in Flexbox */
+            width: 100%; /* Fallback */
+        }
+
+        /* 文章卡片 */
+        .item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid #eff3f4;
+            font-family: inherit;
+            animation: fadeInUp 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .item-body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 12px;
+        }
+
+        .item .content {
+            flex: 1;
+            text-align: justify;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            /* 列表页取消首行缩进，更现代 */
+            text-indent: 0;
+            /* Force Wrap */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            min-width: 0; /* Fix flex overflow */
+        }
+        .item .content img {
+            display: none; /* Hide images in snippet */
+        }
+        
+        .article-title {
+            text-align: center; /* 列表页居中 */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .article-title a { 
+            text-decoration: none; 
+            color: #1d9bf0;
+            font-weight: 700;
+        }
+        .article-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-thumbnail {
+            width: 240px;
+            height: 160px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            background-color: #f7f9f9;
+        }
+        .article-thumbnail img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center;
+            transition: transform 0.3s ease; 
+        }
+        .article-thumbnail:hover img { transform: scale(1.05); }
+
+        .article-footer { 
+            font-size: 14px; 
+            color: #536471; 
+            margin-top: 15px;
+            border-top: 1px solid #f7f9f9;
+            padding-top: 12px;
+            display: flex;
+            justify-content: center; /* 底部对齐居中 */
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        .footer-nav { margin-bottom: 15px; }
+        .footer-nav a {
+            color: #536471;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        .footer-nav a:hover { color: #1d9bf0; }
+        .copyright { font-size: 0.9em; color: #999; }
+        .copyright a { color: #1d9bf0; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; order: 2; }
+            .header-top-row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .header-search {
+                width: 100%;
+                max-width: none;
+            }
+            .progress-text { font-size: 12px; }
+            .progress-container { height: 30px; }
+            
+            /* Mobile Card Layout */
+            .item-body {
+                flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
+            }
+            .article-thumbnail {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/static/three-column.css?v=20260915_10">
+</head>
+<body class="three-column-page">
+    
+        <header class="site-header">
+    <div class="site-header-main">
+        <a href="/index.html" class="logo-text">aoao.life</a>
+        <nav class="header-nav" aria-label="主导航">
+            <a href="/index.html">主页</a>
+            <a href="/about.html">关于我</a>
+            <a href="/clocklife.html">aoao生命时钟</a>
+        </nav>
+        <button class="mobile-directory-button" type="button" aria-controls="directory-sidebar" aria-expanded="false">☰ 目录</button>
+        <div class="header-search">
+            <label class="sr-only" for="searchBox">搜索文章</label>
+            <input type="search" id="searchBox" class="search-box" placeholder="搜索文章…" autocomplete="off">
+            <div id="searchResults" class="search-results" role="listbox"></div>
+        </div>
+    </div>
+    <div class="year-progress" aria-label="本年度进度 70.7%">
+        <span class="year-progress-fill" style="width: 70.7%;"></span>
+        <span class="year-progress-label">今天 2026.09.15 · 已过 70.7% · 剩 107 天</span>
+    </div>
+</header>
+    
+    <div class="content-wrapper">
+        <!-- Header -->
+        
+            <aside class="directory-sidebar" id="directory-sidebar" aria-label="文章目录" data-tree-source="/tree.json" data-active-path="">
+                <div class="side-heading">全部目录</div>
+                <div class="tree-container directory-tree" id="lazy-directory-tree">
+                    <div class="directory-load-status">目录加载中…</div>
+                </div>
+            </aside>
+        
+
+        <div class="main-content">
+            <!-- 面包屑导航 (For Category Pages) -->
+            
+            <nav class="breadcrumb-nav" style="margin-bottom: 20px; font-size: 14px; color: #536471; background: #fff; padding: 12px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eff3f4;">
+                
+                    
+                        <a href="/index.html" style="color: #1d9bf0; text-decoration: none; font-weight: 700;">首页</a>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <span style="color: #0f1419; font-weight: 700;">标签</span>
+                    
+                    
+                        <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+                    
+                
+                    
+                        <span style="color: #0f1419; font-weight: 700;">人工智能</span>
+                    
+                    
+                
+            </nav>
+            
+
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260913.html">aoao也谈要不要全国取消英语考试</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">虽然随着现在AI发展，全国取消英语考试呼声更大了，但我aoao觉得还是不要取消，至少高中前。   因为不管从国家角度还是个人角度其实还是建议要学习英语的。   从国家角度，还没有见过有哪个国家地区英语差的经济能好的，新加坡都把英语当国语了，香港、台台、日本、英语素质都非常高，印度因为被英国很殖民，英语素质其实很高的不然他们也不可能全球高端人才非常非常多特别是IT方面。   包括我们，经济这几十年发...</div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260913.html">
+                                    <img src="https://img.aoao.life/aoao/aoao-mrpig-202608281119.webp" alt="aoao也谈要不要全国取消英语考试" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年09月13日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="aoao也谈要不要全国取消英语考试" 
+                                    data-url="https://aoao.life/20260913.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260913.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="aoao也谈要不要全国取消英语考试" 
+                                        data-url="https://aoao.life/20260913.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月13日 17:46</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260912.html">大家好，我是马斯克，今天是2026年09月12日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年09月12日   Grok 4.7正在进行最后的权重校准与发布部署，xAI团队的推进速度令人振奋。至于好莱坞那些胡编乱造的纪录片与法律杂音，根本不值一驳，唯有扎实的硬核工程才是对抹黑最好的回击。从Cybercab到认知智能，我们必须全力加速人类文明的进程。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260912.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202602152114.webp" alt="大家好，我是马斯克，今天是2026年09月12日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年09月12日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年09月12日" 
+                                    data-url="https://aoao.life/20260912.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260912.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年09月12日" 
+                                        data-url="https://aoao.life/20260912.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260717.html">目前使用AI的困惑解惑</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">我有一台面包机，它几乎包办一切：揉面、发酵、烘焙。我把原料倒进去，按下一个按钮，三个小时后面包就出炉了。   嗯，三年里我大概只用过这台机器两次。相反，我每周都会去超市买一条包装好的预切片面包。   这解释了为什么即使 AI 可以轻松生成代码，但还是买服务方便。   —— aoao.life </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年07月17日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="目前使用AI的困惑解惑" 
+                                    data-url="https://aoao.life/20260717.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260717.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="目前使用AI的困惑解惑" 
+                                        data-url="https://aoao.life/20260717.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年07月17日 10:16</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260526-2.html">大家好，我是马斯克，今天是2026年05月26日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年05月26日   星舰测试数据传回，猛禽引擎效率仅提升3%，离火星殖民的愿景还是太慢。人类跨星际生存的窗口正在缩小，我们必须提速。   下午视察了得州工厂，Optimus机器人已正式接管部分核心装配线。同时，Grok最新集群算力翻倍，其推理能力正迅速逼近AGI的物理临界点。   今晚继续睡在车间地板，明天还要解决星链的带宽瓶颈。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260526-2.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202601280131.webp" alt="大家好，我是马斯克，今天是2026年05月26日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年05月26日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年05月26日" 
+                                    data-url="https://aoao.life/20260526-2.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260526-2.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年05月26日" 
+                                        data-url="https://aoao.life/20260526-2.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260515.html">大家好，我是马斯克，今天是2026年05月15日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年05月15日   今天在北京国宴上和Tim、雷军同席，对镜头做了鬼脸。   xAI今天正式发布了AI编程代理Grok Build，它将重塑软件工程。同时，X也与英国监管达成协议。   Delta因强制网页登录拒绝Starlink，真是太蠢了。顺便说一句，黄仁勋确实是我真正的朋友。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260515.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202602272031.webp" alt="大家好，我是马斯克，今天是2026年05月15日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年05月15日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年05月15日" 
+                                    data-url="https://aoao.life/20260515.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260515.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年05月15日" 
+                                        data-url="https://aoao.life/20260515.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260513.html">aoao音乐-向风而野 - 不是晚星（2024）</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">应该是AI生成的。不过还挺好听的。   点击查看深度鉴赏详情 在这首充满生命力的作品中，我们听到了对庸常生活的无畏反叛。“City behind me, getting small”不仅仅是物理距离上的远离，更是心理上对焦虑与压力的剥离。伴随着鼓点和轻盈的副歌节奏，歌曲构建出了一个没有天花板的旷野意象。   不是晚星的演绎带有一种纯粹的少年气与倔强，使得整首英文歌词听起来既国际化又充满东方的细腻情...</div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年05月13日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="aoao音乐-向风而野 - 不是晚星（2024）" 
+                                    data-url="https://aoao.life/20260513.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260513.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="aoao音乐-向风而野 - 不是晚星（2024）" 
+                                        data-url="https://aoao.life/20260513.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:40</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260513-1.html">aoao音乐-向风而野 - 不是晚星（2024）</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">应该是AI生成的。不过还挺好听的。   点击查看深度鉴赏详情 在这首充满生命力的作品中，我们听到了对庸常生活的无畏反叛。“City behind me, getting small”不仅仅是物理距离上的远离，更是心理上对焦虑与压力的剥离。伴随着鼓点和轻盈的副歌节奏，歌曲构建出了一个没有天花板的旷野意象。   不是晚星的演绎带有一种纯粹的少年气与倔强，使得整首英文歌词听起来既国际化又充满东方的细腻情...</div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年05月13日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="aoao音乐-向风而野 - 不是晚星（2024）" 
+                                    data-url="https://aoao.life/20260513-1.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260513-1.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="aoao音乐-向风而野 - 不是晚星（2024）" 
+                                        data-url="https://aoao.life/20260513-1.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:40</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260425-5.html">大家好，我是马斯克，今天是2026年04月25日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年04月25日   为让下周一庭审更聚焦，我今天撤回了对OpenAI及Altman的欺诈指控，直击其违背非营利初衷的核心。同时，加密通讯应用XChat于今日上线，正式向WhatsApp发起挑战。加上昨日Cybercab顺利投产，我们的AI愿景正加速化为现实。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260425-5.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202603050136.webp" alt="大家好，我是马斯克，今天是2026年04月25日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年04月25日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年04月25日" 
+                                    data-url="https://aoao.life/20260425-5.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260425-5.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年04月25日" 
+                                        data-url="https://aoao.life/20260425-5.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260419-5.html">大家好，我是马斯克，今天是2026年04月19日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年04月19日   看到欧洲人口急剧萎缩的数据，我必须再次警告：孩子才是未来。人口崩溃远比气候变暖的威胁更大。   今天也谈到了AI驱动的后稀缺经济，未来物质将极大丰富。   此外，我答复了已故女孩Liv的遗愿：我不造手机，最爱《你的名字》，她的毛绒玩具将成为SpaceX的吉祥物。为了未来，继续加速。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260419-5.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202603062124.webp" alt="大家好，我是马斯克，今天是2026年04月19日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年04月19日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年04月19日" 
+                                    data-url="https://aoao.life/20260419-5.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260419-5.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年04月19日" 
+                                        data-url="https://aoao.life/20260419-5.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260417-2.html">大家好，我是马斯克，今天是2026年04月17日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年04月17日   今天奥斯汀阳光刺眼，心情暴躁。因华盛顿政客阻X Money上线、质疑全民高收入计划而发火。中午推文解释AI机器人时代供给爆炸、通胀趋零。下午砍营销号收益60%。深夜感慨想逃离地球规则，直奔火星。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260417-2.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202601181140.webp" alt="大家好，我是马斯克，今天是2026年04月17日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年04月17日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年04月17日" 
+                                    data-url="https://aoao.life/20260417-2.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260417-2.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年04月17日" 
+                                        data-url="https://aoao.life/20260417-2.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260402-1.html">容百科技（688005.SH）深度投资分析报告总结（2026年4月2日视角）</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content"> 公司基本面与宏观背景容百科技是国内高端锂电正极材料龙头，2014年成立，是全球高镍三元正极材料市占率第一的企业，已形成“超高镍三元+磷酸锰铁锂（LMFP）+钠离子+前驱体”一体化全球化布局。在2026年AI算力、人形机器人、低空经济、固态电池等高端需求驱动下，公司正处于国内内卷出清+海外合规出海的双轮驱动转型期。2025年受原材料价格暴跌、价格战及高价库存减值影响出现阶段性亏损，但2025Q4已...</div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年04月02日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="容百科技（688005.SH）深度投资分析报告总结（2026年4月2日视角）" 
+                                    data-url="https://aoao.life/20260402-1.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260402-1.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="容百科技（688005.SH）深度投资分析报告总结（2026年4月2日视角）" 
+                                        data-url="https://aoao.life/20260402-1.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:38</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260319-1.html">大家好，我是马斯克，今天是2026年03月19日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年03月19日   I will search for key global events from March 19, 2026, to provide a factual basis for the diary entry. 中东能源设施遭袭导致油价冲破118美元，再次验证了文明过度依赖化石燃料的脆弱性。可持续能源转型必须加速。看到液氧甲烷火箭复飞成功，这种竞争对航天进步有益。AI算力...</div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260319-1.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202601281650.webp" alt="大家好，我是马斯克，今天是2026年03月19日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年03月19日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年03月19日" 
+                                    data-url="https://aoao.life/20260319-1.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260319-1.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年03月19日" 
+                                        data-url="https://aoao.life/20260319-1.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260314-4.html">大家好，我是马斯克，今天是2026年03月14日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">2026年3月14日   xAI必须推倒重来。架构缺陷致使Grok落后，我决定彻底重构并亲自抓招聘，年中必须赶超。   科技界在疯狂裁员，特斯拉则逆势扩招，AI将让产出极度飙升。   账面资产虽达8390亿美元，但这只是通往星际文明的燃料。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260314-4.html">
+                                    <img src="https://img.aoao.life/emusk/emusk-202603061746.webp" alt="大家好，我是马斯克，今天是2026年03月14日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年03月14日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年03月14日" 
+                                    data-url="https://aoao.life/20260314-4.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260314-4.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年03月14日" 
+                                        data-url="https://aoao.life/20260314-4.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:41</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260306.html">天天讲安全，特别是数据安全，现在全民龙虾，数据全走了</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">最高的系统权限，最多的用户密码，甚至你自己都忘记的，AI都知道，所有的文件全上传了。   上升到国家安全层面，躺下来享受吧。   —— aoao.life </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年03月06日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="天天讲安全，特别是数据安全，现在全民龙虾，数据全走了" 
+                                    data-url="https://aoao.life/20260306.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260306.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="天天讲安全，特别是数据安全，现在全民龙虾，数据全走了" 
+                                        data-url="https://aoao.life/20260306.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年03月06日 16:57</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260302-3.html">大家好，我是马斯克，今天是2026年03月02日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">又是乱糟糟的一天。那个负责无人出租车的负责人跑了，股价又跌，真没劲。还得去警告德国的工厂。好事是我的人工智能拿下了五角大楼的单子。晚上还要亲自去为一个面包店的订单付款，真是操心的命。  </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年03月02日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年03月02日" 
+                                    data-url="https://aoao.life/20260302-3.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260302-3.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年03月02日" 
+                                        data-url="https://aoao.life/20260302-3.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:40</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260228-6.html">大家好，我是马斯克，今天是2026年02月28日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">今天真扯。那媒体又翻旧账，非说我和那岛主有关系。我早拉黑他了，绝没去过那破岛，和我互喷那家伙才是常客。 今天搞定军方大单，我的大模型公司成主力，毕竟对手刚被禁。 无人车四月量产，自动驾驶下月获批。真累。  </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年02月28日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年02月28日" 
+                                    data-url="https://aoao.life/20260228-6.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260228-6.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年02月28日" 
+                                        data-url="https://aoao.life/20260228-6.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:40</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260227.html">AI时代娃的教育</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">1.身心健康，热爱运动，尊重个性； 2.看经典艺术作品、经典读物，拥有好的审美和品位； 3.学习基础哲学、社会学知识，有思辨力； 4.有同理心和情商； 5.学会讲故事，有公开演讲能力。   —— aoao.life </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年02月27日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="AI时代娃的教育" 
+                                    data-url="https://aoao.life/20260227.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260227.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="AI时代娃的教育" 
+                                        data-url="https://aoao.life/20260227.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年02月28日 00:44</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260227-1.html">这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">最近有个新闻，AI自动驾驶的出租车自动下单外卖员帮关车门。有点意思。   现在能下单关车门，未来AI就能自动下单其它任何服务，比如跟AI说我要建一栋房子，AI自动下单买材料找泥水工，水电工，装修工，直至装修完成。   —— aoao.life </div>
+                        
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年02月27日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作" 
+                                    data-url="https://aoao.life/20260227-1.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260227-1.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作" 
+                                        data-url="https://aoao.life/20260227-1.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年02月27日 11:28</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260226-8.html">大家好，我是马斯克，今天是2026年02月26日</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">看到做空我们的操作系统老头因丑闻道歉，我回了因果报应。边做空边装环保圣人，太虚伪。   无聊报告又说我快成万亿富翁。刚在平台提了句人工智能回归，同名山寨币竟暴涨四倍。居然还有人开盘赌我会发几条动态。人类真幽默，我去造火箭了。     </div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260226-8.html">
+                                    <img src="https://img.aoao.life/emusk-2026022415561.webp" alt="大家好，我是马斯克，今天是2026年02月26日" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年02月26日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="大家好，我是马斯克，今天是2026年02月26日" 
+                                    data-url="https://aoao.life/20260226-8.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260226-8.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="大家好，我是马斯克，今天是2026年02月26日" 
+                                        data-url="https://aoao.life/20260226-8.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:40</span>
+                        
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <div class="article-title">
+                        <a href="/20260225.html">Gemini  Pro 独享一个月全程质保</a>
+                    </div>
+                    
+                    <div class="item-body">
+                        <div class="content">   【少量现货·Gemini 3.1 Pro 独享一个月|全程质保】 Nano Banana Pro 独享一个月 ｜全程质保 Deep Research 深度研究、Veo视频生成 最强的图片生成视频生成，没有水印没有水印没有水印 质保一个月：期间如不可使用，可选择换号或按天计费退款 购买须知    请提前确认可访问 Google 官方地址，您啥也不用做 虚拟商品，拍下即发 售出非账户无法登录问题...</div>
+                        
+                        
+                            <div class="article-thumbnail">
+                                <a href="/20260225.html">
+                                    <img src="https://img.aoao.life/other-gemini-202602251458.webp" alt="Gemini  Pro 独享一个月全程质保" loading="lazy">
+                                </a>
+                            </div>
+                        
+                    </div>
+
+                    <div class="article-footer">
+                        <span class="meta-item">发布于：2026年02月25日</span>
+                        
+                        <span class="meta-divider">·</span>
+                        
+                        <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
+                            <button class="copy-btn index-copy-btn" 
+                                    data-title="Gemini  Pro 独享一个月全程质保" 
+                                    data-url="https://aoao.life/20260225.html"
+                                    onclick="handleIndexCopy(this)">
+                                复制
+                            </button>
+
+                            <div class="index-like-wrapper">
+                                <button class="like-btn index-like-btn" data-article-id="aoao.life/20260225.html" onclick="handleLikeClick(this)">
+                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-count">...</span>
+                                </button>
+                            </div>
+
+                            <span class="meta-divider">·</span>
+
+                            <div class="index-like-wrapper">
+                                <button class="share-btn index-share-btn" 
+                                        data-title="Gemini  Pro 独享一个月全程质保" 
+                                        data-url="https://aoao.life/20260225.html"
+                                        onclick="handleShareClick(this)">
+                                    <span>🔗</span>
+                                    <span>分享</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <span class="meta-divider">·</span>
+                        <span class="meta-item">更新于：2026年09月15日 15:38</span>
+                        
+                    </div>
+                </div>
+            
+
+            <div class="pagination-container">
+                
+
+                
+                    <div class="more-articles">
+                        <a href="/tags/人工智能_2.html" class="more-articles-link">更多文章 →</a>
+                    </div>
+                
+            </div>
+        </div>
+        
+            
+            <aside class="right-sidebar" aria-label="辅助内容">
+    
+    <section class="side-card random-card">
+        <div class="side-heading">随便看看</div>
+        <div class="side-link-list random-article-list" id="random-article-list">
+            <span class="random-loading">正在挑选文章…</span>
+        </div>
+        <button type="button" id="random-article-button">换一批</button>
+    </section>
+    
+    <section class="side-card">
+        <div class="side-heading">站长推荐</div>
+        <div class="side-link-list numbered-links">
+            
+            <a href="/20260225.html"><span>1</span>Gemini  Pro 独享一个月全程质保</a>
+            
+            <a href="/20250918-1.html"><span>2</span>aoao.life网页截图系统</a>
+            
+            <a href="/20250918-2.html"><span>3</span>aoao无效邮箱地址清除系统</a>
+            
+            <a href="/20250910-2.html"><span>4</span>aoao网站网页拉取系统数据采集</a>
+            
+            <a href="/20250910-3.html"><span>5</span>aoao邮件EDM发送系统邮件群发系统</a>
+            
+        </div>
+    </section>
+    
+    
+    <section class="side-card">
+        <div class="side-heading">最近更新</div>
+        <div class="side-link-list updated-links">
+            
+            <a href="/20260914-1.html"><span>大家好，我是马斯克，今天是2026年09月14日</span><small>2026年09月15日 15:41</small></a>
+            
+            <a href="/20260913-1.html"><span>大家好，我是马斯克，今天是2026年09月13日</span><small>2026年09月15日 15:41</small></a>
+            
+            <a href="/20260912.html"><span>大家好，我是马斯克，今天是2026年09月12日</span><small>2026年09月15日 15:41</small></a>
+            
+            <a href="/20260911.html"><span>大家好，我是马斯克，今天是2026年09月11日</span><small>2026年09月15日 15:41</small></a>
+            
+            <a href="/20260910.html"><span>大家好，我是马斯克，今天是2026年09月10日</span><small>2026年09月15日 15:41</small></a>
+            
+        </div>
+    </section>
+    
+    
+    <section class="side-card tag-cloud-card">
+        <div class="side-heading">热门标签</div>
+        <div class="tag-cloud" aria-label="热门标签">
+            
+            <a href="/tags/spacex.html" class="tag-chip tag-size-lg" title="SpaceX：73 篇文章">
+                SpaceX <small>· 73</small>
+            </a>
+            
+            <a href="/tags/马斯克.html" class="tag-chip tag-size-lg" title="马斯克：62 篇文章">
+                马斯克 <small>· 62</small>
+            </a>
+            
+            <a href="/tags/星舰.html" class="tag-chip tag-size-lg" title="星舰：51 篇文章">
+                星舰 <small>· 51</small>
+            </a>
+            
+            <a href="/tags/xai.html" class="tag-chip tag-size-lg" title="xAI：47 篇文章">
+                xAI <small>· 47</small>
+            </a>
+            
+            <a href="/tags/特斯拉.html" class="tag-chip tag-size-md" title="特斯拉：45 篇文章">
+                特斯拉 <small>· 45</small>
+            </a>
+            
+            <a href="/tags/optimus.html" class="tag-chip tag-size-md" title="Optimus：42 篇文章">
+                Optimus <small>· 42</small>
+            </a>
+            
+            <a href="/tags/人工智能.html" class="tag-chip tag-size-md" title="人工智能：42 篇文章">
+                人工智能 <small>· 42</small>
+            </a>
+            
+            <a href="/tags/影评.html" class="tag-chip tag-size-md" title="影评：42 篇文章">
+                影评 <small>· 42</small>
+            </a>
+            
+            <a href="/tags/ipo.html" class="tag-chip tag-size-md" title="IPO：41 篇文章">
+                IPO <small>· 41</small>
+            </a>
+            
+            <a href="/tags/aoao生活.html" class="tag-chip tag-size-md" title="aoao生活：31 篇文章">
+                aoao生活 <small>· 31</small>
+            </a>
+            
+            <a href="/tags/grok.html" class="tag-chip tag-size-sm" title="Grok：30 篇文章">
+                Grok <small>· 30</small>
+            </a>
+            
+            <a href="/tags/openai.html" class="tag-chip tag-size-sm" title="OpenAI：29 篇文章">
+                OpenAI <small>· 29</small>
+            </a>
+            
+            <a href="/tags/幽默笑话.html" class="tag-chip tag-size-sm" title="幽默笑话：28 篇文章">
+                幽默笑话 <small>· 28</small>
+            </a>
+            
+            <a href="/tags/火星计划.html" class="tag-chip tag-size-sm" title="火星计划：22 篇文章">
+                火星计划 <small>· 22</small>
+            </a>
+            
+            <a href="/tags/terafab.html" class="tag-chip tag-size-sm" title="Terafab：21 篇文章">
+                Terafab <small>· 21</small>
+            </a>
+            
+            <a href="/tags/华语流行.html" class="tag-chip tag-size-sm" title="华语流行：21 篇文章">
+                华语流行 <small>· 21</small>
+            </a>
+            
+            <a href="/tags/星链.html" class="tag-chip tag-size-sm" title="星链：21 篇文章">
+                星链 <small>· 21</small>
+            </a>
+            
+            <a href="/tags/欧美流行.html" class="tag-chip tag-size-sm" title="欧美流行：20 篇文章">
+                欧美流行 <small>· 20</small>
+            </a>
+            
+        </div>
+    </section>
+    
+    <section class="side-card rss-card">
+        <a class="rss-subscribe-link" href="/rss.xml" type="application/rss+xml" title="订阅 aoao.life 最新文章">
+            <span aria-hidden="true">●</span>
+            RSS 订阅本站
+        </a>
+    </section>
+    
+
+    
+</aside>
+        
+    </div>
+    
+            <div class="footer">
+    
+                <div class="footer-nav">
+    
+                    <a href="/index.html">主页</a> |
+    
+                    <a href="/about.html">关于我</a> |
+    
+                    <a href="/clocklife.html">aoao生命时钟</a> |
+
+                    <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
+    
+                </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
+    </div>
+
+    <script>
+        window.allArticles = [];
+    </script>
+    <script src="/static/script.js"></script>
+    <script src="/static/search.js"></script>
+    <script src="/static/three-column.js?v=20260914_08"></script>
+</body>
+</html>
