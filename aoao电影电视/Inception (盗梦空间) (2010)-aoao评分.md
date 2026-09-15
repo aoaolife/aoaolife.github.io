@@ -1,3 +1,8 @@
+---
+title: Inception (盗梦空间) (2010)-aoao评分
+date: 2026-03-07
+tags: 盗梦空间, 诺兰, 科幻电影, 影评
+---
 Inception (盗梦空间) (2010)-aoao评分:
 
 > Your mind is the scene of the crime. / 你的思维就是犯罪现场

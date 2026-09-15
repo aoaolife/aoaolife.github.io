@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Easily Hurt Woman (容易受伤的女人) - Faye Wong 王菲（1992）- 粤语版
+date: 2026-03-27
+tags: 王菲, 容易受伤的女人, 中岛美雪, 粤语经典
+---
 ![](https://img.aoao.life/music-rysxdnr-wanfei-202603271850.webp)
 
 

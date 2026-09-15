@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - More Than I Can Say (爱你在心口难开) - Leo Sayer 里奥·塞耶（1980）
+date: 2026-04-05
+tags: 爱你在心口难开, 里奥·塞耶, 经典老歌, 欧美流行
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-More Than I Can Say-202604051049.webp)
 
 

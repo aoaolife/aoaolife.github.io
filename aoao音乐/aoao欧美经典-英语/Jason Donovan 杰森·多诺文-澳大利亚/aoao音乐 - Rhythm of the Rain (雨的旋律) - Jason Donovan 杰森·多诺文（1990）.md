@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Rhythm of the Rain (雨的旋律) - Jason Donovan 杰森·多诺文（1990）
+date: 2026-04-03
+tags: 雨的旋律, 杰森·多诺文, 经典老歌, 欧美流行
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Rhythm of the Rain-202604031439.webp)
 
 

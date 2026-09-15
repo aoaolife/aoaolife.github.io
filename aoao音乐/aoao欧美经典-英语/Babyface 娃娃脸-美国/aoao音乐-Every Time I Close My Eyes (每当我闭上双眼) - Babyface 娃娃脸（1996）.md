@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Every Time I Close My Eyes (每当我闭上双眼) - Babyface 娃娃脸（1996）
+date: 2026-05-02
+tags: Babyface, 每当我闭上双眼, R&B, 萨克斯
+---
 闭上双眼的瞬间，脑海中浮现的不仅是爱人的脸庞，更是内心那份安宁与感激的倒影。Babyface在这首《Every Time I Close My Eyes》中，将浓郁的R&B柔情与Mariah Carey和声的空灵、Kenny G萨克斯的婉转完美交织。这不仅是一首情歌，更像是一封写给岁月的感谢信，它提醒着我们去珍惜生命中那些如同“六月的圣诞节”般珍贵而不可思议的美好相遇。在这温柔如水的旋律中，爱被具象化为一种深深的信仰与庆幸。
 
 ![](C:\aoaoimages\music\music-Every Time I Close My Eyes_itunes_2-202605021544.webp)

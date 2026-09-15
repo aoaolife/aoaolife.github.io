@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Waka Waka (This Time for Africa) (非洲时刻) - Shakira, Freshlyground 夏奇拉, 清新土地（2010）
+date: 2026-03-21
+tags: 夏奇拉, Waka Waka, 世界杯主题曲
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Waka Waka (This Time for Africa)-202603211459.webp)
 
 

@@ -1,3 +1,8 @@
+---
+title: Triangle (恐怖游轮) (2009)-aoao评分：79
+date: 2026-05-03
+tags: 恐怖游轮, 悬疑电影, 惊悚片, 影评
+---
 这个不是恐怖片。这个适合精神分裂者看。 79分吧
 
 > You have to go back for them, don't you? Otherwise, they can't leave.

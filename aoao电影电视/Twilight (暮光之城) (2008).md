@@ -1,3 +1,8 @@
+---
+title: Twilight (暮光之城) (2008)
+date: 2026-04-05
+tags: 暮光之城, 爱情电影, 奇幻电影, 影评
+---
 老了看不得这种片子了。不过娃特别是小女生还是很喜欢，男女主还是很漂亮，风景也还不错。-aoao评分: 72
 
 > "I don't have the strength to stay away from you anymore."

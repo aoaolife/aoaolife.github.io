@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）
+date: 2026-03-13
+tags: ROSÉ, Bruno Mars, APT., 流行朋克
+---
 ![music_cover](https://img.aoao.life/music_covers/music-APT. ROSÉ & Bruno Mars album c-202603132228.jpg)
 
 

@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Because I Love You (因为我爱你) - Shakin' Stevens 沙金·史蒂文斯（1986）
+date: 2026-04-03
+tags: 沙金·史蒂文斯, 欧美经典, 抒情情歌, Because I Love You
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Because I Love You-202604031635.webp)
 
 

@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Funkytown (放克镇) - Lipps Inc. 利普斯公司（1980）
+date: 2026-04-19
+tags: Funkytown, Lipps Inc., 迪斯科, 电子音乐
+---
 当《Funkytown》那极具标志性的合成器旋律响起，仿佛瞬间将人拉回到了1980年代光怪陆离的迪斯科舞池。Lipps Inc. 以极简却充满魔力的电音节拍，编织出一个逃离现实、追寻激情与活力的梦幻乌托邦。这首歌不仅是迪斯科时代的绝响，更是一场永不落幕的狂欢，它用机械而又充满生机的律动，精准击中了每个人心中渴望自由与释放的灵魂角落。
 
 ![](C:\aoaoimages\music\music-Funkytown_bing_2-202604190011.webp)

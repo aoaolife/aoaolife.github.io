@@ -3,6 +3,7 @@ title: 《Love You Like a Love Song 像一首情歌-Selena Gomez & the Scene》�
 
 date: 2025-10-08
 updated: 2025-10-08 12:00:00
+tags: Selena Gomez, Love You Like a Love Song, 流行音乐, 欧美歌曲
 ---
 ## 歌曲背景故事
 

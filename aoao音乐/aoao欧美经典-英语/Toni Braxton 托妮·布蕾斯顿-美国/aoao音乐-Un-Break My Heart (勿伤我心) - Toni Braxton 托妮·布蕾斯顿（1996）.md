@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Un-Break My Heart (勿伤我心) - Toni Braxton 托妮·布蕾斯顿（1996）
+date: 2026-04-28
+tags: 托妮·布蕾斯顿, R&B, 失恋情歌, Un-Break My Heart
+---
 《Un-Break My Heart》是90年代R&B情歌的巅峰之作，托妮·布蕾斯顿以她标志性低沉浑厚的嗓音，将失恋后那种撕心裂肺、几近绝望的哀求演绎得淋漓尽致。这首歌不仅仅是关于失去，更是对重塑破碎心灵的渴望。旋律起伏间，仿佛能听到心碎的声响，每一次高音的迸发都是对过往深情的绝望呼唤，直击灵魂深处最柔软的痛楚。
 
 ![](C:\aoaoimages\music\music-Un-Break My Heart_bing_0-202604282044.webp)

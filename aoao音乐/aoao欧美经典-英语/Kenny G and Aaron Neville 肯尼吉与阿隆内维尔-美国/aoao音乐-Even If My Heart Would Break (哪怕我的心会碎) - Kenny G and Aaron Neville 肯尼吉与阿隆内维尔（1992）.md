@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Even If My Heart Would Break (哪怕我的心会碎) - Kenny G and Aaron Neville 肯尼吉与阿隆内维尔（1992）
+date: 2026-05-04
+tags: Kenny G, 阿隆·内维尔, 萨克斯, 电影保镖
+---
 《Even If My Heart Would Break》是一首触动灵魂的经典之作。当Kenny G那如泣如诉的萨克斯风与Aaron Neville那天使般纯净细腻的嗓音交织在一起，仿佛在听众耳边低语着一段关于爱与执着的誓言。这首歌不仅展现了流行爵士与R&B的完美融合，更在旋律的起伏间，传递出一种即使面对心碎也绝不退缩的深情。它像是在寂静深夜里的一束暖光，温柔地抚慰着每一颗曾在爱中受过伤的心。
 
 ![](C:\aoaoimages\music\music-evenifmyheartwouldbreak-202605042303.webp)

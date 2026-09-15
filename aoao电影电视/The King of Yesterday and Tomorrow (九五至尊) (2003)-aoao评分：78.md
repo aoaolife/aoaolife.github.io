@@ -1,3 +1,8 @@
+---
+title: The King of Yesterday and Tomorrow (九五至尊) (2003)-aoao评分：78
+date: 2026-08-27
+tags: 九五至尊, 港剧, 穿越剧, 剧评
+---
 The King of Yesterday and Tomorrow (九五至尊) (2003)-aoao评分: 7.8
 
 现在看是没那么好，但是当时看那是相当牛逼。

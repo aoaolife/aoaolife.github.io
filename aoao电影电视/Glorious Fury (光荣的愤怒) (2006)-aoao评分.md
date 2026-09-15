@@ -1,3 +1,8 @@
+---
+title: Glorious Fury (光荣的愤怒) (2006)-aoao评分
+date: 2026-02-20
+tags: 光荣的愤怒, 国产电影, 剧情片, 影评
+---
 Glorious Fury (光荣的愤怒) (2006)-aoao评分:
 
 > 忍了这么久，骨头都软了，再不站起来，就真成畜生了。 / After enduring for so long, my bones have gone soft. If I don't stand up now, I'll truly become an animal.

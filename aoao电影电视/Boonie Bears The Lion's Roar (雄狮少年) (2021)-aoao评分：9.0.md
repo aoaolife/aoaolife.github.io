@@ -1,3 +1,8 @@
+---
+title: Boonie Bears The Lion's Roar (雄狮少年) (2021)-aoao评分：9.0
+date: 2026-08-22
+tags: 雄狮少年, 国产动画, 舞狮, 励志电影
+---
 Boonie Bears The Lion's Roar (雄狮少年) (2021)-aoao评分: 9.0
 > The lion dance is not just a performance; it is a roar of the soul, a testament to the unbreakable spirit within.
 > 舞狮不只是一场表演，那是灵魂的怒吼，是内心深处那股永不熄灭的少年意气。

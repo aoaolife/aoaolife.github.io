@@ -1,3 +1,8 @@
+---
+title: Lord of War (战争之王) (2005)-aoao评分 88
+date: 2026-03-27
+tags: 战争之王, 犯罪电影, 军火商, 影评
+---
 这个电影也好多切片，不看下你都看不懂。特别是那个为了不被抓，一飞机的军火免费送当地村民，一晚上连一颗螺丝都没有了。
 
 > There are over 550 million firearms in worldwide circulation. That's one firearm for every twelve people on the planet. The only question is: How do we arm the other 11?

@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Shape of My Heart (心之形) - Carmen Cuesta 卡门·奎斯塔（2001）
+date: 2026-03-17
+tags: 卡门·奎斯塔, 心之形, Bossa Nova
+---
 ![](https://img.aoao.life/music-shapeofmyherart-2026031717172.webp)
 
 

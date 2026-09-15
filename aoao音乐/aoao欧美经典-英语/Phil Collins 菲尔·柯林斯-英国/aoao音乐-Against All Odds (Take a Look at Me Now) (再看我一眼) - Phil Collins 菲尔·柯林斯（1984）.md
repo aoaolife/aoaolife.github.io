@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Against All Odds (Take a Look at Me Now) (再看我一眼) - Phil Collins 菲尔·柯林斯（1984）
+date: 2026-05-05
+tags: Against All Odds, 菲尔·柯林斯, 电影主题曲, 抒情歌曲
+---
 在爱情的灰烬中，菲尔·柯林斯以《Against All Odds (Take a Look at Me Now)》勾勒出一幅心碎的凄美画卷。这首诞生于1984年的经典抒情曲，仿佛是夜深人静时无法抑制的叹息，将失去挚爱后的空洞与绝望展现得淋漓尽致。钢琴的清冷与嗓音的沙哑交织，诉说着“即使希望渺茫，依然在原地等待”的深情。它不仅是一首情歌，更是一种穿越时光的情感共鸣，让每一个曾在爱中失落的灵魂，都能在旋律中找到自己伤痕累累却又无比执着的倒影。
 
 ![](C:\aoaoimages\music\music-takealookatmenow-202605051454.webp)

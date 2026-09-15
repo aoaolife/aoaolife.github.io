@@ -1,3 +1,8 @@
+---
+title: Her Story (好东西) (2024)-aoao评分：86
+date: 2026-05-04
+tags: 好东西, 邵艺辉, 女性题材, 影评
+---
 很不错。那个小娃丑了点。这剧本牛逼。
 
 > "Why do we have to do everything well? Who is the judge? Why can't we just mess things up?"

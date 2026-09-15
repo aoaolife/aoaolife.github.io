@@ -2,6 +2,7 @@
 updated: 2026-02-09 21:45:13
 title: gemini
 date: 2026-02-09
+tags: Gemini, Chrome DevTools, 前端调试, 开发者工具
 ---
 
 ## skills- chrome-devtools  skill

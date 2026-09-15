@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - More Than I Can Say (爱你在心口难开) - Bobby Vee 鲍比·维（1961）
+date: 2026-04-05
+tags: 鲍比·维, 爱你在心口难开, 怀旧经典
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-More Than I Can Say-202604051041.webp)
 
 

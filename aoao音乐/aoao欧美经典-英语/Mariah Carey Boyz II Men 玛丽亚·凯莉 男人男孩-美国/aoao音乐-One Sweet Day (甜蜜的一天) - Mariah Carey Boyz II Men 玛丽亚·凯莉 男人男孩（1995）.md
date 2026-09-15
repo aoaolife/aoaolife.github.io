@@ -1,3 +1,8 @@
+---
+title: aoao音乐-One Sweet Day (甜蜜的一天) - Mariah Carey Boyz II Men 玛丽亚·凯莉 男人男孩（1995）
+date: 2026-04-25
+tags: One Sweet Day, 玛丽亚·凯莉, Boyz II Men, 灵魂乐
+---
 《One Sweet Day》是一首深情款款的灵魂乐杰作，由流行天后玛丽亚·凯莉与顶级R&B男团Boyz II Men共同倾情演绎。这首歌以对逝去亲友的深切缅怀为主题，旋律悲伤而不失温暖，极致完美的多声部和声犹如天籁，直击人心。它不仅在当时创下了惊人的公告牌十六周连冠历史纪录，更跨越了时代的洪流，成为了无数人在经历离别与丧恸时，能够从中汲取无尽慰藉与力量的不朽金曲。每一次聆听，都仿佛是一场跨越生死边界的温柔心灵对话。
 
 ![](C:\aoaoimages\music\music-One Sweet Day_bing_0-202604250001.webp)

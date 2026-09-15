@@ -1,3 +1,8 @@
+---
+title: Godspeed (一路顺风) (2016)-aoao评分：80
+date: 2026-04-21
+tags: 一路顺风, 台湾电影, 公路片, 影评
+---
 台湾的片子怎么就这么有温度呢。多给点80分吧。
 
 > Actually, we are born with nothing in this world. Since we have nothing, what is there to lose?

@@ -1,3 +1,8 @@
+---
+title: Departures (入殓师) (2008)aoao评分85
+date: 2026-04-12
+tags: 入殓师, 日本电影, 剧情片, 生命哲思
+---
 专门给死人化装的职业介绍。。。这种片子就是走心。aoao评分: 85
 
 ![](C:\aoaoimages\movie\movie-rulianshi- 2008-202604122241-4.webp)

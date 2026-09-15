@@ -3,6 +3,7 @@ title: aoao.life网页截图系统
 
 date: 2025-09-18
 updated: 2025-09-18 12:00:00
+tags: 网页截图, 长截图, 桌面工具, 屏幕截图
 ---
 aoao.life网页截图系统 
 

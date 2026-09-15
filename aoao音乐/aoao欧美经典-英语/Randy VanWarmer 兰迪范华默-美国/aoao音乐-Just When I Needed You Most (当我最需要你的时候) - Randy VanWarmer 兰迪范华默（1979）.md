@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Just When I Needed You Most (当我最需要你的时候) - Randy VanWarmer 兰迪范华默（1979）
+date: 2026-05-03
+tags: Just When I Needed You Most, 兰迪·范华默, 欧美民谣, 经典老歌
+---
 《Just When I Needed You Most》如同一场未曾落幕的绵绵秋雨，浸透着无法挽回的离别哀愁。兰迪·范华默用极度克制却又无比脆弱的嗓音，唱出了在人生最低谷时遭遇爱人离去的锥心之痛。没有歇斯底里的控诉，只有清晨窗前那无言的凝望和雨中未关的门扉。这首歌不仅仅是关于失恋的哀叹，更深刻地触及了人性中对陪伴的极度渴望与脆弱。当和弦的旋律缓缓流淌，它精准地击中了每一个曾在孤独黑夜里无助等待的心灵，成为了永恒抚慰伤痕的时代经典。
 
 ![](C:\aoaoimages\music\music-Just When I Needed You Most_bing_1-202605031139.webp)

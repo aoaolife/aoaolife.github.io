@@ -1,3 +1,8 @@
+---
+title: Pegasus (飞驰人生) (123)-aoao评分：70
+date: 2026-05-01
+tags: 飞驰人生, 喜剧电影, 赛车, 影评
+---
 就这样吧，可看可不看。爆米花电影。有些电影看完有说法，这个系列没有。aoao评分：70
 
 > You have no story in your life and want to have one; I have too many stories and want to give mine an ending.

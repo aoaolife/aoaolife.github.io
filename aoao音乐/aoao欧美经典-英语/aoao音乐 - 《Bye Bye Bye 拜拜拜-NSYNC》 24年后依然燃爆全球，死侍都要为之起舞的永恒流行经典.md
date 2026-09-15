@@ -3,6 +3,7 @@ title: 《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都�
 
 date: 2025-09-29
 updated: 2025-09-29 12:00:00
+tags: NSYNC, 欧美流行, 流行舞曲, Bye Bye Bye
 ---
 ## 歌曲的背景故事
 

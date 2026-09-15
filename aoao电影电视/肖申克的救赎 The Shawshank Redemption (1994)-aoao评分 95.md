@@ -1,3 +1,8 @@
+---
+title: 肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95
+date: 2026-04-07
+tags: 肖申克的救赎, 经典电影, 剧情片, 影评
+---
 必看电影，什么榜单都是排名第一名的。
 
 ![movie-xiaoshenkedejiushu The Shawshank Redemption (1994)-202604070013-0](C:\aoaoimages\movie\movie-xiaoshenkedejiushu The Shawshank Redemption (1994)-202604070013-0.webp)

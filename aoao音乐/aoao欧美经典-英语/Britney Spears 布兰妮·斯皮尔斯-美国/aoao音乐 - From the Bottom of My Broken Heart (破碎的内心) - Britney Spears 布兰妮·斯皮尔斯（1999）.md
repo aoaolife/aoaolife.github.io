@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - From the Bottom of My Broken Heart (破碎的内心) - Britney Spears 布兰妮·斯皮尔斯（1999）
+date: 2026-04-03
+tags: 布兰妮·斯皮尔斯, 破碎的内心, 抒情曲
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-From the Bottom of My Broken Heart-202604031222.webp)
 
 

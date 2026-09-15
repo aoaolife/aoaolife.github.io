@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - (Everything I Do) I Do It for You (一切皆为你) - Bryan Adams 布莱恩·亚当斯（1991）
+date: 2026-04-11
+tags: 布莱恩·亚当斯, 一切皆为你, 侠盗王子罗宾汉, 电影主题曲
+---
 《(Everything I Do) I Do It for You》是一首能够瞬间击中灵魂的深情之作。布莱恩·亚当斯以其略带沙哑却极具穿透力的嗓音，将爱情中毫无保留的付出与坚定诠释得淋漓尽致。这首歌不仅是电影《侠盗王子罗宾汉》的完美注脚，更是一首跨越时代的爱情颂歌。每当那悠扬的钢琴与深情的吉他交织响起，总能唤醒人们内心深处对于纯粹与永恒的渴望，让人沉浸在那份不求回报的痴情与感动之中。
 
 ![](C:\aoaoimages\music\music-(Everything I Do) I Do It for You (一切为了你) - 202604112224.webp)

@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - El Cóndor Pasa (老鹰之歌) - Leo Rojas 莱奥·罗哈斯（2011）
+date: 2026-03-15
+tags: 老鹰之歌, 莱奥·罗哈斯, 排箫, 古典音乐
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-El Cóndor Pasa-202603151907.webp)
 
 

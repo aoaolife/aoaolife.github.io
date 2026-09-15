@@ -1,3 +1,8 @@
+---
+title: One Battle After Another (一战再战) (2025)-aoao评分：80
+date: 2026-05-02
+tags: 一战再战, 保罗·托马斯·安德森, 剧情片, 影评
+---
 这个电影很多人会看不懂吧，我都看得很吃力。 电影提到的内容太多了没个重点。那个女反动分子把那个Gay反派日了情节很AI。
 
 ![](C:\aoaoimages\movie\movie-yizhanzaizhan-202605022335-4.webp)

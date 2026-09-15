@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Sealed with a Kiss (以吻封缄) - Brian Hyland 布莱恩·海兰（1962）
+date: 2026-04-06
+tags: 布莱恩·海兰, 以吻封缄, 欧美经典, 离别情歌
+---
 ![](C:\aoaoimages\music\music-seaedwithkiss-202604062131.webp)
 
 

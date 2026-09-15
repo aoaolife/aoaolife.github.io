@@ -1,3 +1,8 @@
+---
+title: aoao音乐-La Isla Bonita (美丽岛) - Madonna 麦当娜（1986）
+date: 2026-04-22
+tags: La Isla Bonita, 麦当娜, 拉丁流行, 欧美经典
+---
 《La Isla Bonita》是麦当娜对拉丁风情的深情礼赞，歌曲以迷人的西班牙吉他与轻快的打击乐交织，营造出一座宛如乌托邦的热带岛屿。它不仅是麦当娜首次涉足拉丁流行风格的尝试，更以其梦幻般的旋律和对纯真自由的向往，成为跨越时代的经典，让人在每一个音符中都能感受到海风的轻抚与灵魂的释放。
 
 ![](C:\aoaoimages\music\music-LaIsla Bonita_bing_0-202604221413.webp)

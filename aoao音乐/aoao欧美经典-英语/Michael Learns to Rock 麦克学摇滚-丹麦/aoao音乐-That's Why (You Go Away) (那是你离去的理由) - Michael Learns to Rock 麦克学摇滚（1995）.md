@@ -1,3 +1,8 @@
+---
+title: aoao音乐-That's Why (You Go Away) (那是你离去的理由) - Michael Learns to Rock 麦克学摇滚（1995）
+date: 2026-05-06
+tags: That's Why You Go Away, 麦克学摇滚, 流行摇滚, 抒情歌曲
+---
 《That's Why (You Go Away)》是丹麦流行摇滚乐队Michael Learns to Rock（麦克学摇滚）于1995年推出的一首经典抒情金曲。这首歌曲以其优美流畅的旋律、简单却直击人心的歌词，将失恋时的无奈、伤感与对逝去爱情的眷恋表达得淋漓尽致。前奏中清澈的吉他与深情的钢琴交织，主唱Jascha Richter温暖而略带忧郁的嗓音，如同老朋友在耳边诉说一个关于离别的故事。跨越近三十年，这首歌依然是许多人心中无法抹去的青春印记，在夜深人静时轻轻抚慰着每一颗曾为爱受挫的心。
 
 ![](C:\aoaoimages\music\music-thatswhayyougoaway-202605061923.webp)

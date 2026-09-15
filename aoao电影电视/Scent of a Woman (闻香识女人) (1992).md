@@ -1,3 +1,8 @@
+---
+title: Scent of a Woman (闻香识女人) (1992)
+date: 2026-04-02
+tags: 闻香识女人, 经典电影, 剧情片, 影评
+---
 Scent of a Woman (闻香识女人) (1992)-aoao评分: 96
 
 > There are no mistakes in the tango, not like life. If you make a mistake, get all tangled up, just tango on.

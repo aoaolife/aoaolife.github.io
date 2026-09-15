@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Casablanca (卡萨布兰卡) - Bertie Higgins 贝蒂·希金斯（1981）
+date: 2026-04-03
+tags: 贝蒂·希金斯, 卡萨布兰卡, 怀旧情歌
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Casablanca-202604032220.webp)
 
 

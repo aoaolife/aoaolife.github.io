@@ -1,3 +1,8 @@
+---
+title: aoao音乐-The Power of Love (爱的力量) - Celine Dion 席琳迪翁（1993）
+date: 2026-04-03
+tags: 席琳·迪翁, 爱的力量, 流行情歌
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-The Power of Love-202604031327.webp)
 
 

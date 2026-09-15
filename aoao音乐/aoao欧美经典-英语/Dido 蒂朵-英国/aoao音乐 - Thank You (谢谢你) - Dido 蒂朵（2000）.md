@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Thank You (谢谢你) - Dido 蒂朵（2000）
+date: 2026-04-06
+tags: Thank You, Dido, 治愈系音乐, 欧美流行
+---
 ![](C:\aoaoimages\music\music-Thank You-202604040052.webp)
 
 

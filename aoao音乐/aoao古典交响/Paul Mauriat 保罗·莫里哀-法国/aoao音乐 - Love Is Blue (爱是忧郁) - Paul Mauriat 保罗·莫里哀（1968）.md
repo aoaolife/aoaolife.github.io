@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Love Is Blue (爱是忧郁) - Paul Mauriat 保罗·莫里哀（1968）
+date: 2026-03-15
+tags: 爱是忧郁, 保罗·莫里哀, 轻音乐, 古典交响
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Love Is Blue-202603151631.webp)
 
 

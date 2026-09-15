@@ -1,3 +1,8 @@
+---
+title: The Terminal (幸福终点站) (2004)-aoao评分：8.8
+date: 2026-08-31
+tags: 幸福终点站, 斯皮尔伯格, 汤姆·汉克斯, 剧情片, 影评
+---
 The Terminal (幸福终点站) (2004)-aoao评分: 8.8
 > Life is waiting.
 > 生活就在等待中展开。

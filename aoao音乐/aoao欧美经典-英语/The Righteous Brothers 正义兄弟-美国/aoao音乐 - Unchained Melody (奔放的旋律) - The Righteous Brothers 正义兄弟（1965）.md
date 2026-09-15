@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Unchained Melody (奔放的旋律) - The Righteous Brothers 正义兄弟（1965）
+date: 2026-04-04
+tags: 正义兄弟, 灵魂乐, 电影金曲, Unchained Melody
+---
 
 《Unchained Melody》（奔放的旋律）是流行音乐史上最历久弥新的情歌之一。The Righteous Brothers（正义兄弟）以其极具灵魂深度的“蓝眼灵魂乐”唱腔，将跨越生死的深情与无尽的渴望演绎得淋漓尽致。那由低吟浅唱逐渐攀升至情感顶峰的旋律，仿佛是孤独灵魂在向时间与空间发出最诚挚的呼唤，触动着每一代听众内心最柔软的角落。
 

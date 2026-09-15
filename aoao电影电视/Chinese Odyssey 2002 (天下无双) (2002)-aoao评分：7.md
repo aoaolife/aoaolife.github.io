@@ -1,3 +1,8 @@
+---
+title: Chinese Odyssey 2002 (天下无双) (2002)-aoao评分：7
+date: 2026-08-21
+tags: 天下无双, 香港电影, 古装喜剧, 爱情电影
+---
 一般好看。可看可不看。但是这种电影怎么好像比较不费神。aoao评分: 7
 > Sometimes people seem so close, yet their hearts are a world apart; only true devotion makes a love peerless.
 > 有些时候，两个人看着很近，其实心隔得很远。情到浓时情转薄，天下无双唯此情。

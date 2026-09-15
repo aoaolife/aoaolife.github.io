@@ -2,6 +2,7 @@
 updated: 2026-01-28 15:55:44
 title: 最近苹果找我们合作，准备把星链集成的Iphone,明年你们就应该能见到
 date: 2026-01-28
+tags: 星链, 苹果, iPhone, 卫星通信, 商业合作
 ---
 ![emusk/emusk-202601271812.webp](https://img.aoao.life/emusk/emusk-202601271812.webp)
 最近苹果找我们合作，准备把星链集成的Iphone,明年你们就应该能见到

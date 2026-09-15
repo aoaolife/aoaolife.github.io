@@ -1,3 +1,8 @@
+---
+title: Dying to Survive (我不是药神) (2018)-aoao评分：85
+date: 2026-04-15
+tags: 我不是药神, 现实主义, 剧情电影, 高分电影
+---
 还不错，现在不让拍了吧。真操蛋。
 
 > He just wants to live, what crime has he committed?

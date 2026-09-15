@@ -1,3 +1,8 @@
+---
+title: Breaking Bad (绝命毒师) (2008)-aoao评分 9.9
+date: 2026-03-08
+tags: 绝命毒师, 美剧, 犯罪剧, 经典剧集
+---
 > 这个不用介绍了，没看过，绝对这辈子白活了。
 >
 > "I am not in danger, Skyler. I am the danger." (斯凯勒，我没有危险。我就是危险。)

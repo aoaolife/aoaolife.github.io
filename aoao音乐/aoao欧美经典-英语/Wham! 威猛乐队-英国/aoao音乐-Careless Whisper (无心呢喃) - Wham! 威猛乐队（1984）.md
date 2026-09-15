@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Careless Whisper (无心呢喃) - Wham! 威猛乐队（1984）
+date: 2026-05-05
+tags: 威猛乐队, 乔治·迈克尔, 欧美经典, Careless Whisper
+---
 《Careless Whisper》是一首令人心碎的经典之作，萨克斯的悠扬前奏犹如一阵带着悔意的微风，瞬间将听众拉入那个充满遗憾与眷恋的旋律中。乔治·迈克尔（George Michael）用深情而性感的嗓音，将爱情中因背叛而产生的愧疚、失去后的痛楚演绎得淋漓尽致。这不仅仅是一首情歌，更是一次关于青春、冲动与无法挽回之爱的深刻反思。它跨越了时代的界限，成为无数人心中触动灵魂的永恒回音。
 
 ![](C:\aoaoimages\music\music-Careless Whisper_bing_2-202605051413.webp)

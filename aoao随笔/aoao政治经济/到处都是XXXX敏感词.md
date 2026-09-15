@@ -3,6 +3,7 @@ title: 到处都是XXXX敏感词
 
 date: 2025-10-01
 updated: 2025-10-01 12:00:00
+tags: 敏感词, 言论审查, 网络审查
 ---
 ![](https://img.aoao.life/aoaoclubIMG-202503090001-001.jpg)
 

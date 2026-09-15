@@ -1,3 +1,8 @@
+---
+title: Catch Me If You Can (猫鼠游戏) (2002)-aoao评分：92
+date: 2026-04-01
+tags: 猫鼠游戏, 犯罪剧情, 传记电影, 经典电影
+---
 大学英语听力课，英语老师播放的。这个好看。 aoao评分：92
 
 > Two little mice fell into a bucket of cream. The first mouse quickly gave up and drowned. The second mouse, wouldn't quit. He struggled so hard that eventually he churned that cream into butter and crawled out. Gentlemen, as of this moment, I am that second mouse.

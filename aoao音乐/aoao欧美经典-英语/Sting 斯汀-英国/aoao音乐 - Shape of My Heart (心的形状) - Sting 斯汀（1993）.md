@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Shape of My Heart (心的形状) - Sting 斯汀（1993）
+date: 2026-03-16
+tags: 斯汀, 欧美经典, 英伦流行, Shape of My Heart
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Shape of My Heart-202603162120.webp)
 
 

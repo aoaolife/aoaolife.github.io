@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Can You Feel the Love Tonight (今夜何温馨) - Elton John 艾尔顿·约翰（1994）
+date: 2026-04-03
+tags: 今夜何温馨, 艾尔顿·约翰, 狮子王, 电影原声
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Can You Feel the Love Tonight-202604032317.webp)
 
 

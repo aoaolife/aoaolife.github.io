@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Last Christmas (去年圣诞) - Wham! 威猛乐队（1984）
+date: 2026-04-19
+tags: 威猛乐队, 乔治·迈克尔, 圣诞歌曲, Last Christmas
+---
 《Last Christmas》是一首跨越时代的冬日悲歌，用最欢快的合成器节拍包裹着最深情的失落与遗憾。每当圣诞季的铃声响起，乔治·迈克尔那温柔而略带心碎的嗓音便如雪花般飘落，将听众带回那个关于爱与背叛的往昔。这不仅是一首节日金曲，更是一段关于成长、释怀与重新出发的情感独白。
 
 ![](C:\aoaoimages\music\music-Last Christmas_douban-202604191523.webp)

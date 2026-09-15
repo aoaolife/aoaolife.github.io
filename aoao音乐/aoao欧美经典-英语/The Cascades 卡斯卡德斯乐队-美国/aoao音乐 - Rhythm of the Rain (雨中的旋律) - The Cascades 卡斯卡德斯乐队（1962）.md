@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Rhythm of the Rain (雨中的旋律) - The Cascades 卡斯卡德斯乐队（1962）
+date: 2026-04-03
+tags: 卡斯卡德斯乐队, 欧美经典, 怀旧金曲, Rhythm of the Rain
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Rhythm of the Rain-202604031456.webp)
 
 

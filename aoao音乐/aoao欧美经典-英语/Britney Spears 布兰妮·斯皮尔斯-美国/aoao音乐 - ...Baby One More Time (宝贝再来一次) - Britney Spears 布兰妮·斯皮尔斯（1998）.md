@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）
+date: 2026-03-23
+tags: 布兰妮·斯皮尔斯, 宝贝再来一次, 流行舞曲
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-...Baby One More Time-202603230146.webp)
 
 

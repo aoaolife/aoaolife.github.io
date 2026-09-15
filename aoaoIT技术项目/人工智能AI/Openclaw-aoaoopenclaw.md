@@ -2,6 +2,7 @@
 updated: 2026-03-03 23:49:29
 title: Openclaw-aoaoopenclaw
 date: 2026-03-03
+tags: OpenClaw, 内容总结, 工具技能, 长文本处理
 ---
 
 # openclaw skills

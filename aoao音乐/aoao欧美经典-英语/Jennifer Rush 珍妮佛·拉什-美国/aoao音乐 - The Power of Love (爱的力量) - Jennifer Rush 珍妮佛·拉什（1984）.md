@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - The Power of Love (爱的力量) - Jennifer Rush 珍妮佛·拉什（1984）
+date: 2026-04-07
+tags: 爱的力量, 珍妮佛·拉什, 爱情歌曲, 欧美流行
+---
 ![](C:\aoaoimages\music\music-thepoweroflove-jenniferrush-202604071320.webp)
 
 

@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Big Big World (大千世界) - Emilia 艾米莉亚（1998）
+date: 2026-03-14
+tags: Big Big World, 艾米莉亚, 欧美流行, 经典老歌
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Big Big World-202603140000.webp)
 
 

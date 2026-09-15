@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Right Here Waiting (此情可待) - Richard Marx 理查·马克斯（1989）
+date: 2026-04-03
+tags: 此情可待, 理查·马克斯, 抒情摇滚, 爱情歌曲
+---
 ![music_cover](https://img.aoao.life/aoao/music/music-Right Here Waiting-202604032347.webp)
 
 

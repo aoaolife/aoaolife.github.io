@@ -1,3 +1,8 @@
+---
+title: aoao音乐-The One You Love (你的至爱) - Glenn Frey 格雷佛勒（1982）
+date: 2026-05-04
+tags: The One You Love, 格伦·弗雷, 萨克斯, 欧美经典
+---
 《The One You Love》是 Glenn Frey 单飞后的一首萨克斯风经典之作，那迷人的前奏一起，便仿佛将人拉入了一个深邃而忧伤的午夜酒吧。歌曲以极度温柔却又无比残酷的方式，抛出了一个爱情里最经典的灵魂拷问：“你是选择那个你爱的人，还是那个爱你的人？” 在慵懒的旋律与Glenn Frey充满故事感的嗓音中，无奈与深情交织，抚慰着每一颗在爱中迷惘纠结的心。
 
 ![](C:\aoaoimages\music\music-The One You Love_bing_0-202605041402.webp)

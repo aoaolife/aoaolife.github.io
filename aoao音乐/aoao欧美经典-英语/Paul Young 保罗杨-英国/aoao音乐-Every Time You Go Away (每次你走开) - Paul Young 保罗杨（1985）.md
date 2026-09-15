@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Every Time You Go Away (每次你走开) - Paul Young 保罗杨（1985）
+date: 2026-05-06
+tags: Every Time You Go Away, 保罗·杨, 蓝眼灵魂乐, 欧美经典
+---
 保罗·杨（Paul Young）那标志性的磨砂嗓音，将这首原属于 Daryl Hall 的灵魂乐作品演绎出了全新的高度。在 1985 年那个充满电子合成器的年代，这首歌却凭借着略带忧郁的贝斯线条和空灵的西塔尔琴点缀，勾勒出一种既复古又现代的蓝眼灵魂乐（Blue-eyed Soul）色彩。它唱出了爱情中那种令人疲惫的循环——一次次的离开，一次次的带走彼此的一部分。保罗·杨的演绎没有歇斯底里的宣泄，只有一种近乎宿命般的温柔与哀伤，让每一个在爱中感到孤独的人都能找到共鸣。
 
 ![](C:\aoaoimages\music\music-everytimeyougoaway-202605062224.webp)

@@ -1,3 +1,8 @@
+---
+title: aoao音乐 - Sealed with a Kiss (以吻封缄) - Dana Winner 丹娜·云妮（2002）
+date: 2026-04-06
+tags: 丹娜·云妮, 以吻封缄, 经典翻唱
+---
 ![](C:\aoaoimages\music\music-sealedwithakiss-202604061255.webp)
 
 

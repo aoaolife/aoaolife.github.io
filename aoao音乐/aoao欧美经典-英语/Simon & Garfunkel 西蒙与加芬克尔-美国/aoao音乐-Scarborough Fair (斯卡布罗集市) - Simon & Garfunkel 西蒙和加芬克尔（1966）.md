@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Scarborough Fair (斯卡布罗集市) - Simon & Garfunkel 西蒙和加芬克尔（1966）
+date: 2026-04-18
+tags: 西蒙与加芬克尔, 欧美民谣, 反战歌曲, Scarborough Fair
+---
 《Scarborough Fair》是一首充满神秘与忧思的传世之作，其旋律仿佛来自古老的时光，带着中世纪的薄雾和泥土芬芳。这首歌不仅仅是一段动人的旋律，更是一首交织着爱情、忠诚与不可能完成之任务的诗篇。Simon & Garfunkel用他们标志性的和谐声线，将这首古老民谣演绎得如梦如幻，双声部的对位演唱，一个声部唱出爱情的请求，另一个声部则在背景中吟唱着战争的残酷，赋予了歌曲超越时空的深度与悲悯情怀，让人沉醉在那份既纯粹又复杂的意境之中。
 
 ![](C:\aoaoimages\music\music-Scarborough Fair_itunes_2-202604182247.webp)

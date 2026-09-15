@@ -1,3 +1,8 @@
+---
+title: Old Fox (老狐狸) (2023)-aoao评分：85
+date: 2026-06-24
+tags: 老狐狸, 台湾电影, 电影影评, 萧雅全
+---
 Old Fox (老狐狸) (2023)-aoao评分: 85
 > "You can choose to be a fox, or you can choose to be human."
 > "你可以选择做一只狐狸，也可以选择做一个人。"

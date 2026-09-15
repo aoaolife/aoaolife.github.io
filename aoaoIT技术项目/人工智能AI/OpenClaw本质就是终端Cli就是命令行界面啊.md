@@ -2,6 +2,7 @@
 updated: 2026-02-28 12:50:37
 title: OpenClaw本质就是终端Cli就是命令行界面啊
 date: 2026-02-28
+tags: OpenClaw, 命令行, CLI, 终端工具
 ---
 
 OpenClaw本质就是终端Cli就是命令行界面,  opclaw tui 显示内容跟 telgram 对接内容完全一样啊。 

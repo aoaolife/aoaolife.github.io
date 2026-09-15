@@ -1,3 +1,8 @@
+---
+title: aoao音乐-When a Man Loves a Woman (当男人爱上女人) - Michael Bolton 迈克尔鲍顿（1991）
+date: 2026-05-05
+tags: When a Man Loves a Woman, 迈克尔·波顿, 蓝眼灵魂乐, 经典老歌
+---
 当迈克尔·鲍顿充满沙哑与撕裂感的嗓音响起，爱情中最盲目、最奋不顾身的痴狂便被刻画得入木三分。《When a Man Loves a Woman》宛如一首爱情的圣歌，诉说着男人在坠入爱河时甘愿倾其所有的灵魂悸动。这不仅是一首情歌，更是一份以整个生命作为筹码的深情告白。在鲍顿极致的演绎下，我们仿佛看到了一颗毫无保留、为你跳动的赤诚之心，感受到了那种即便失去全世界也只愿换取你一个微笑的极致浪漫与执着。
 
 ![](C:\aoaoimages\music\music-whenamanloveawoman-202605051658.webp)

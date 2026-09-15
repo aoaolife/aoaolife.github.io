@@ -1,3 +1,8 @@
+---
+title: The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88
+date: 2026-03-27
+tags: 华尔街之狼, 传记电影, 金融, 犯罪电影, 影评
+---
 黄、赌、毒全有的电影。内涵是少了点。但是爽就够了。 aoao评分：85
 
 > The only thing standing between you and your goal is the bullshit story you keep telling yourself as to why you can't achieve it.

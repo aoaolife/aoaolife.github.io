@@ -1,3 +1,8 @@
+---
+title: Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5
+date: 2026-02-19
+tags: 风林火山, 香港电影, 犯罪电影, 影评
+---
 Sons of the Neon Night (风林火山) (2025)-aoao评分: 7.0
 
 我竟然有点看不懂，不过还是要感谢，不一样风格。

@@ -1,3 +1,8 @@
+---
+title: aoao音乐-I Will Always Love You (我将永远爱你) - Whitney Houston 惠特尼·休斯顿（1992）
+date: 2026-05-04
+tags: 惠特尼·休斯顿, 欧美流行, 经典情歌, I Will Always Love You
+---
 当那震慑灵魂的无伴奏清唱在耳畔响起时，《I Will Always Love You》便注定成为跨越时代的永恒不朽。惠特尼·休斯顿以其标志性的磅礴嗓音，将离别的不舍与深深的祝福交织成一曲情感的狂澜。这不仅仅是一首情歌，更是一种对爱最纯粹、最高贵的释怀与成全，每一次聆听，都能直击内心最柔软的深处。
 
 ![](C:\aoaoimages\music\music-I Will Always Love You_bing_0-202605041802.webp)

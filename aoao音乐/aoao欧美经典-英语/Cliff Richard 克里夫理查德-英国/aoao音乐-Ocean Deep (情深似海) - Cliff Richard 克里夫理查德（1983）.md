@@ -1,3 +1,8 @@
+---
+title: aoao音乐-Ocean Deep (情深似海) - Cliff Richard 克里夫理查德（1983）
+date: 2026-05-04
+tags: Cliff Richard, 情深似海, 欧美抒情
+---
 在这首《Ocean Deep》中，Cliff Richard用他那如同深海般辽阔而温柔的嗓音，缓缓铺陈出一段无疾而终的单恋故事。歌词里那份无法触及对方心底的无奈，如同深海的孤独般将人淹没。没有声嘶力竭的呐喊，只有伴随着轻柔旋律娓娓道来的心碎，让每一个在爱里求而不得的灵魂，都能在这首歌中找到情感的共鸣与些许慰藉。
 
 ![](C:\aoaoimages\music\music-oceandeep-202605040051.webp)
