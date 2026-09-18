@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 17 Sep 2026 23:07:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 14:55:21 +0800</lastBuildDate>
+    <item>
+      <title>很快我们每月就要多项固定支出费用了</title>
+      <link>https://aoao.life/20260918.html</link>
+      <guid isPermaLink="true">https://aoao.life/20260918.html</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0800</pubDate>
+      <description>很快我们每月就要多项固定支出费用了 (正文...) —— aoao.life</description>
+      <category>aoao随笔</category>
+    </item>
     <item>
       <title>抓特务 (2026)-aoao评分：8.5</title>
       <link>https://aoao.life/20260917.html</link>
@@ -44,7 +52,7 @@
       <link>https://aoao.life/20260917-4.html</link>
       <guid isPermaLink="true">https://aoao.life/20260917-4.html</guid>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月17日 星舰第14次试飞进入倒计时，全轨道测试与星链V3部署不容有失。外界又在炒作合并传闻，全是噪音。我更关心孟菲斯Colossus超算的扩容与涡轮降噪。物理法则从不妥协，通往火星与AGI的每一步，唯有极度专注才能跨越。</description>
+      <description>2026年09月17日 星舰第十二次试飞终于完全成功，热分离干净利落。特斯拉FSD v14在欧洲获批，比预期快三个月。今天在X上说了，火星城市首批模块2029年落地。有人说我疯了，但历史从不等人。</description>
       <category>马斯克中文日记</category>
     </item>
     <item>
@@ -499,18 +507,6 @@
       <pubDate>Thu, 20 Aug 2026 14:01:55 +0800</pubDate>
       <description>﻿--- title: 光威复材结合最新补充材料的深度20260820140155 date: 2026-08-20 tags: 光威复材, 碳纤维, 国防军工, 新材料 光威复材（300699.SZ）结合最新补充材料的深度投资分析报告1. 核心投资逻辑与资本市场最新动态作为国内碳纤维行业及国防军工配套材料领域的龙头企业，威海光威复合材料股份有限公司（光威复材，300699.SZ）正处于从单...</description>
       <category>aoao生活</category>
-    </item>
-    <item>
-      <title>aoao音乐-只要有你 - 那英 孙楠（2000）</title>
-      <link>https://aoao.life/20260813.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260813.html</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0800</pubDate>
-      <description>这首由那英与孙楠联袂演绎的《只要有你》，是电视剧《少年包青天》片尾曲，更是一代人的集体记忆。两位实力唱将的嗓音交织缠绕，将歌词中那份穿越生死的坚定与温柔诠释得淋漓尽致。旋律一起，仿佛瞬间被拉回那个守着电视机的年代，感受到的不仅是角色的深情，更是岁月沉淀后依然滚烫的感动。 点击查看深度鉴赏详情 创作背景：《只要有你》由陈颂红作词作曲，收录于2000年发行的专辑《少年包青天 电视剧原声带》中。...</description>
-      <category>那英</category>
-      <category>孙楠</category>
-      <category>只要有你</category>
-      <category>少年包青天</category>
-      <category>影视片尾曲</category>
     </item>
   </channel>
 </rss>
