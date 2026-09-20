@@ -6,7 +6,7 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 20 Sep 2026 13:10:16 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 03:36:36 +0800</lastBuildDate>
     <item>
       <title>月饼必死</title>
       <link>https://aoao.life/20260920.html</link>
@@ -14,6 +14,22 @@
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
       <description>看到竟然还有卖月饼的盆友圈，哎又快中秋了。 多少年不吃月饼了，记得原来公司每年都会发月饼，还是五星酒店的，最后都不吃扔掉了（边送人都不想送）。 听市场部的说一袋要135呢，就四个。不过那袋子真有质感，老妈都拿去当LV手提包。 现在老龄化月饼更是没人吃。 月饼。表面看这是老登食品，其实过去真正消化月饼的，不一定是送礼的老登，而是家里的孩子。商业活动旺的时候，单位发、客户送、亲戚互相拎，一...</description>
       <category>aoao随笔</category>
+    </item>
+    <item>
+      <title>美国人想不到，我们也想不到</title>
+      <link>https://aoao.life/20260920-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20260920-1.html</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
+      <description>美国人打死也想不到，怎么全世界绕了半天，工厂还是中国人开的。 中国人打死也想不到，怎么全世界干了半年，钱还是让美国人赚了。 —— aoao.life</description>
+      <category>网友名人名言</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年09月20日</title>
+      <link>https://aoao.life/20260920-2.html</link>
+      <guid isPermaLink="true">https://aoao.life/20260920-2.html</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
+      <description>2026年09月20日 ，得州。星舰第12次试飞终于完全复用成功。Optimus在弗里蒙特工厂拧了第100万颗螺丝。Grok 5的推理能耗又降了四成。火星窗口还有四个月，这次得带上足够的人。</description>
+      <category>马斯克中文日记</category>
     </item>
     <item>
       <title>又是一些鸡汤-aoao2013年</title>
@@ -471,22 +487,6 @@
       <category>港剧</category>
       <category>穿越剧</category>
       <category>剧评</category>
-    </item>
-    <item>
-      <title>容百科技深度投资分析与量化基本_20260825_141234</title>
-      <link>https://aoao.life/20260825.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260825.html</guid>
-      <pubDate>Tue, 25 Aug 2026 14:12:34 +0800</pubDate>
-      <description>﻿--- title: 容百科技深度投资分析与量化基本20260825141234 date: 2026-08-25 tags: 容百科技, 锂电池, 正极材料, 科创板 容百科技（688005.SH）深度投资分析与量化-基本面决策报告1. 股票基本信息宁波容百新能源科技股份有限公司（证券简称：容百科技，证券代码：688005.SH）成立于2014年9月18日，于2019年7月22日首批登陆...</description>
-      <category>aoao生活</category>
-    </item>
-    <item>
-      <title>奇安信全方位深度投资分析报告置_20260825_135702</title>
-      <link>https://aoao.life/20260825-1.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260825-1.html</guid>
-      <pubDate>Tue, 25 Aug 2026 13:57:02 +0800</pubDate>
-      <description>﻿--- title: 奇安信全方位深度投资分析报告置20260825135702 date: 2026-08-25 tags: 奇安信, A股, 投资策略, 股票分析 奇安信-U（688561.SH）全方位深度投资分析报告置顶投资结论与策略建议对于“今天是否应当购买奇安信-U（688561.SH）股票”的投资决策，综合基本面、财务拐点、舆情动态及技术面信号，决策结论为：暂不建议即刻买入（建...</description>
-      <category>aoao生活</category>
     </item>
   </channel>
 </rss>
