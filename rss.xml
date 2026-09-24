@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 21 Sep 2026 03:36:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 00:41:47 +0800</lastBuildDate>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年09月24日</title>
+      <link>https://aoao.life/20260924.html</link>
+      <guid isPermaLink="true">https://aoao.life/20260924.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0800</pubDate>
+      <description>2026年09月24日 。星舰第十次试飞终于成功回收，火星窗口临近。AI5芯片流片顺利，Optimus开始量产。但今天最触动我的，是孩子们说想一起去火星。文明多行星化，不是口号，是给他们的承诺。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>月饼必死</title>
       <link>https://aoao.life/20260920.html</link>
@@ -476,17 +484,6 @@
       <category>张艺谋</category>
       <category>国产电影</category>
       <category>影评</category>
-    </item>
-    <item>
-      <title>The King of Yesterday and Tomorrow (九五至尊) (2003)-aoao评分：78</title>
-      <link>https://aoao.life/20260827-1.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260827-1.html</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0800</pubDate>
-      <description>The King of Yesterday and Tomorrow (九五至尊) (2003)-aoao评分: 7.8 现在看是没那么好，但是当时看那是相当牛逼。 In the vast flow of history, true leadership lies not in the crown, but in wisdom, vision, and an unyielding s...</description>
-      <category>九五至尊</category>
-      <category>港剧</category>
-      <category>穿越剧</category>
-      <category>剧评</category>
     </item>
   </channel>
 </rss>
