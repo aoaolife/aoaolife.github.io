@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,10 +378,10 @@
                     <div class="article-title">
                         <a href="/20260502-3.html">大家好，我是马斯克，今天是2026年05月02日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年05月02日   刚结束对OpenAI七小时庭审作证。法官竟警告我别再叫Altman“骗子”，也不准提AI生存威胁。他们已背叛初衷，彻底沦为逐利机器。   Tesla公布了千亿薪酬方案，虽因去年未达标导致我零收入但无妨。星舰已投入150亿，接下来必须加速xAI与SpaceX整合，时间紧迫。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260502-3.html">
@@ -393,12 +393,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年05月02日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年05月02日"
                                     data-url="https://aoao.life/20260502-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -406,7 +406,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260502-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -414,8 +414,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年05月02日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年05月02日"
                                         data-url="https://aoao.life/20260502-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -435,10 +435,10 @@
                     <div class="article-title">
                         <a href="/20260501.html">Pegasus (飞驰人生) (123)-aoao评分：70</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">就这样吧，可看可不看。爆米花电影。有些电影看完有说法，这个系列没有。aoao评分：70      You have no story in your life and want to have one; I have too many stories and want to give mine an ending.   你呢，是这辈子没故事，想拥有一段故事；我呢，是故事太多，想给故事一个结局。  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260501.html">
@@ -450,12 +450,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Pegasus (飞驰人生) (123)-aoao评分：70" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Pegasus (飞驰人生) (123)-aoao评分：70"
                                     data-url="https://aoao.life/20260501.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -463,7 +463,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260501.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -471,8 +471,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Pegasus (飞驰人生) (123)-aoao评分：70" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Pegasus (飞驰人生) (123)-aoao评分：70"
                                         data-url="https://aoao.life/20260501.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -492,10 +492,10 @@
                     <div class="article-title">
                         <a href="/20260501-1.html">aoao音乐-Don't Know Much (无须知道太多) - Linda Ronstadt Aaron Neville 琳达罗斯坦 阿隆内维尔（1989）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Don't Know Much》是琳达·朗斯塔特与阿隆·内维尔于1989年深情对唱的经典传世之作。这首歌褪去了繁复的辞藻与华丽的编曲，以最纯粹、最直白的方式诉说着历经沧桑后的情感顿悟。岁月或许会在脸庞刻下痕迹，人生或许依然充满迷茫，但唯有“我爱你”这份确信，成为了抵御未知世界的最强护盾。两位传奇歌手那如丝绸般细腻而又充满力量的嗓音交织在一起，将成年人世界里那份对爱情的笃定与敬畏演绎得淋漓尽致，直...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260501-1.html">
@@ -507,12 +507,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Don't Know Much (无须知道太多) - Linda Ronstadt Aaron Neville 琳达罗斯坦 阿隆内维尔（1989）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Don't Know Much (无须知道太多) - Linda Ronstadt Aaron Neville 琳达罗斯坦 阿隆内维尔（1989）"
                                     data-url="https://aoao.life/20260501-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -520,7 +520,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260501-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -528,8 +528,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Don't Know Much (无须知道太多) - Linda Ronstadt Aaron Neville 琳达罗斯坦 阿隆内维尔（1989）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Don't Know Much (无须知道太多) - Linda Ronstadt Aaron Neville 琳达罗斯坦 阿隆内维尔（1989）"
                                         data-url="https://aoao.life/20260501-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -549,10 +549,10 @@
                     <div class="article-title">
                         <a href="/20260501-2.html">大家好，我是马斯克，今天是2026年05月01日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年05月01日   。   今天在法庭直面OpenAI的背叛，他们早已偏离初衷。而我们的生态正加速闭环：SpaceX与xAI顺利合并，特斯拉储能正全力驱动数据中心。年底火星发射窗口已锁定，即使星舰首飞胜算仅半，也绝不退缩。火星在召唤。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260501-2.html">
@@ -564,12 +564,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年05月01日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年05月01日"
                                     data-url="https://aoao.life/20260501-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -577,7 +577,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260501-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -585,8 +585,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年05月01日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年05月01日"
                                         data-url="https://aoao.life/20260501-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -606,10 +606,10 @@
                     <div class="article-title">
                         <a href="/20260430.html">大家好，我是马斯克，今天是2026年04月30日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年04月30日   。今天在星际基地盯猛禽3号引擎的量产，瓶颈终于突破，推重比超预期，这让我们离火星更近了一步。下午审查Optimus数据，它已能自主处理工厂大半组装任务。人类必须成为多行星物种，任何阻力都在浪费时间。继续熬夜。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260430.html">
@@ -621,12 +621,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年04月30日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年04月30日"
                                     data-url="https://aoao.life/20260430.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -634,7 +634,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260430.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -642,8 +642,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年04月30日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年04月30日"
                                         data-url="https://aoao.life/20260430.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -663,10 +663,10 @@
                     <div class="article-title">
                         <a href="/20260429.html">aoao音乐-Lost in Love (迷失的爱) - Air Supply 空气补给者（1979）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Lost in Love》（迷失的爱）是澳大利亚软式摇滚组合空气补给者的经典成名作，以其极致柔美的和声与纯粹的情感触动了无数人的心弦。这首歌没有复杂的编曲，却用清脆的木吉他伴奏和两位主唱高低交织的完美声线，将爱情中的失落与渴望刻画得丝丝入扣。它宛如一阵温暖的晚风，轻轻抚慰着每一颗曾在爱中迷失、又在爱中寻得救赎的灵魂，成为了跨越时代的柔情摇滚经典。      点击查看深度鉴赏详情   创作背景  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260429.html">
@@ -678,12 +678,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Lost in Love (迷失的爱) - Air Supply 空气补给者（1979）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Lost in Love (迷失的爱) - Air Supply 空气补给者（1979）"
                                     data-url="https://aoao.life/20260429.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -691,7 +691,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260429.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -699,8 +699,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Lost in Love (迷失的爱) - Air Supply 空气补给者（1979）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Lost in Love (迷失的爱) - Air Supply 空气补给者（1979）"
                                         data-url="https://aoao.life/20260429.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -720,10 +720,10 @@
                     <div class="article-title">
                         <a href="/20260429-1.html">aoao音乐-Promises Don't Come Easy (诺言来之不易) - Caron Nightingale 卡诺 南汀格尔（1999）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Promises Don't Come Easy》（诺言来之不易）是一首直击心灵的经典情歌，以其真挚而略带感伤的旋律深深触动着无数听众。卡诺·南汀格尔那纯净、温柔且极具穿透力的嗓音，将爱情中因疏忽造成的遗憾与深切的挽留之情演绎得淋漓尽致。当木吉他的清澈伴奏与她诉说般的吟唱交织，我们仿佛能听到一颗曾经高傲的心终于学会了卸下防备，勇敢面对失去后的悔恨。这首歌不仅仅是对爱人的真诚呼唤，更是一曲关于成长...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260429-1.html">
@@ -735,12 +735,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Promises Don't Come Easy (诺言来之不易) - Caron Nightingale 卡诺 南汀格尔（1999）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Promises Don't Come Easy (诺言来之不易) - Caron Nightingale 卡诺 南汀格尔（1999）"
                                     data-url="https://aoao.life/20260429-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -748,7 +748,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260429-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -756,8 +756,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Promises Don't Come Easy (诺言来之不易) - Caron Nightingale 卡诺 南汀格尔（1999）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Promises Don't Come Easy (诺言来之不易) - Caron Nightingale 卡诺 南汀格尔（1999）"
                                         data-url="https://aoao.life/20260429-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -777,21 +777,21 @@
                     <div class="article-title">
                         <a href="/20260429-2.html">aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Bon Appétit》将诱人的美食隐喻与流行电子舞曲完美融合，凯蒂·佩里在这首歌中展现了她作为流行天后的成熟魅力与对节奏的绝佳掌控力。歌曲旋律轻快且充满挑逗性，Migos的加入更是为这首充满性感张力的舞曲注入了浓厚的街头色彩。这不仅仅是一场味蕾的狂欢，更是关于自我赋权与女性魅力的自信宣言，让人在热烈的律动中无法抗拒这场“秀色可餐”的视听盛宴。   点击查看深度鉴赏详情   1. 歌曲背景与核心...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）"
                                     data-url="https://aoao.life/20260429-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -799,7 +799,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260429-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -807,8 +807,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）"
                                         data-url="https://aoao.life/20260429-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -828,10 +828,10 @@
                     <div class="article-title">
                         <a href="/20260429-3.html">大家好，我是马斯克，今天是2026年04月29日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年04月29日   。   今天继续为OpenAI案出庭。Sam背叛了非营利初衷，将其沦为营利工具，我必须阻止。毫无约束的AI犹如“终结者”，极其危险。   SpaceX这边，董事会批准了我的新方案，火星殖民计划加速推进。加州海岸委员会也终于为此前的政治偏见向我道歉。一切按计划进行。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260429-3.html">
@@ -843,12 +843,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年04月29日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年04月29日"
                                     data-url="https://aoao.life/20260429-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -856,7 +856,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260429-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -864,8 +864,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年04月29日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年04月29日"
                                         data-url="https://aoao.life/20260429-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -885,10 +885,10 @@
                     <div class="article-title">
                         <a href="/20260428.html">aoao音乐-I Believe I Can Fly (我相信我能飞) - R. Kelly 罗凯利（1996）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《I Believe I Can Fly》不仅是一首歌曲，更是一种跨越时代的灵魂振奋与精神图腾。悠扬的弦乐与福音般的和声交织，宛如一双无形的翅膀，托起那些曾在低谷中挣扎、在黑暗中徘徊的心灵。它用最纯粹的旋律告诉世人：信念是突破自我极限的唯一钥匙。每当那极具穿透力的高潮响起，仿佛所有的自我怀疑都会在广阔的天际线前消散，只留下对梦想最纯粹的渴望与展翅高飞的无畏力量。      点击查看深度鉴赏详情  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260428.html">
@@ -900,12 +900,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-I Believe I Can Fly (我相信我能飞) - R. Kelly 罗凯利（1996）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-I Believe I Can Fly (我相信我能飞) - R. Kelly 罗凯利（1996）"
                                     data-url="https://aoao.life/20260428.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -913,7 +913,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260428.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -921,8 +921,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-I Believe I Can Fly (我相信我能飞) - R. Kelly 罗凯利（1996）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-I Believe I Can Fly (我相信我能飞) - R. Kelly 罗凯利（1996）"
                                         data-url="https://aoao.life/20260428.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1092,19 +1092,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

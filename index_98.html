@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,10 +378,10 @@
                     <div class="article-title">
                         <a href="/20250913.html">美国漂亮女生公交车上被割喉</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">近日美国一公交车上，一名20岁左右的漂亮女生，无缘无故突然被一个黑人从后面连续割喉，   当场身亡，看了高清全程视频后，场面实在是太恐怖。需要原视频可以联系aoao。       1、无缘无故事，没有理由，莫名其妙补杀害。   2、行凶者已有案底十几次，刚被关6年放出来。   3、美国没有死刑，这种狠人就算再被关监狱也是舒服着。   4、美国也是全国封杀新闻，不报道。   —— aoao.life...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250913.html">
@@ -393,12 +393,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="美国漂亮女生公交车上被割喉" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="美国漂亮女生公交车上被割喉"
                                     data-url="https://aoao.life/20250913.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -406,7 +406,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250913.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -414,8 +414,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="美国漂亮女生公交车上被割喉" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="美国漂亮女生公交车上被割喉"
                                         data-url="https://aoao.life/20250913.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -435,10 +435,10 @@
                     <div class="article-title">
                         <a href="/20250913-1.html">aoao谈西贝-aoao谈预制菜</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">近日罗永浩吐槽他贝餐饮都是预制菜，西贝老板贾国龙坚持说不是预制菜，开放厨房随便人家参观，   还要起诉罗永浩。   结果西贝后厨上菜都是一包一包的预制菜加热完上桌。    1、这个老板怎么想的？   2、它馒头一个卖21块钱，这没问题。卖10000元也没问题。但是有涉及到虚假宣传，就是不对了，可以骂它坑人，赔钱了。   3、预制菜本身没问题，麦当劳和肯德基也都是。但你说你不是，那就是你不对了   ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250913-1.html">
@@ -450,12 +450,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao谈西贝-aoao谈预制菜" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao谈西贝-aoao谈预制菜"
                                     data-url="https://aoao.life/20250913-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -463,7 +463,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250913-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -471,8 +471,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao谈西贝-aoao谈预制菜" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao谈西贝-aoao谈预制菜"
                                         data-url="https://aoao.life/20250913-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -492,10 +492,10 @@
                     <div class="article-title">
                         <a href="/20250913-2.html">电池发展，电车越来越不错。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天看到两条新闻，应该很快能直进我们生活了。固态锂电池已经进入量产阶段了。未来，   每台电动车都成为国家的储能集群节点，晚上充电白天，白天放电使用，可以做到免费，甚至可以挣钱。      —— 霸气侧漏 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250913-2.html">
@@ -507,12 +507,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="电池发展，电车越来越不错。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="电池发展，电车越来越不错。"
                                     data-url="https://aoao.life/20250913-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -520,7 +520,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250913-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -528,8 +528,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="电池发展，电车越来越不错。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="电池发展，电车越来越不错。"
                                         data-url="https://aoao.life/20250913-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -549,10 +549,10 @@
                     <div class="article-title">
                         <a href="/20250912.html">深圳海贝湾有一家便利店，坐落在悬崖之上，面朝大海，在网上被称为“深圳最美便利店”。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— 看谁谁怀孕 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250912.html">
@@ -564,12 +564,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="深圳海贝湾有一家便利店，坐落在悬崖之上，面朝大海，在网上被称为“深圳最美便利店”。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="深圳海贝湾有一家便利店，坐落在悬崖之上，面朝大海，在网上被称为“深圳最美便利店”。"
                                     data-url="https://aoao.life/20250912.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -577,7 +577,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -585,8 +585,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="深圳海贝湾有一家便利店，坐落在悬崖之上，面朝大海，在网上被称为“深圳最美便利店”。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="深圳海贝湾有一家便利店，坐落在悬崖之上，面朝大海，在网上被称为“深圳最美便利店”。"
                                         data-url="https://aoao.life/20250912.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -606,10 +606,10 @@
                     <div class="article-title">
                         <a href="/20250912-1.html">不需要外部电力的电动列车</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">一家澳大利亚矿业公司，正在建造不需要（外部）充电的电动列车。    他们的矿山位于山顶，列车装满沉重的矿石后，将一路开到山下。   他们设想，重力会推动火车下行，在这个过程中，可以让势能转变为电能，为电池充电。   当列车回到平地，再次开上山时，列车是空载，自身重量不大，可以使用下山时产生的电能来推动。 因此理论上，它可以不需要外部电力而长期运行。   —— 明人不放暗屁 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250912-1.html">
@@ -621,12 +621,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="不需要外部电力的电动列车" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="不需要外部电力的电动列车"
                                     data-url="https://aoao.life/20250912-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -634,7 +634,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -642,8 +642,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="不需要外部电力的电动列车" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="不需要外部电力的电动列车"
                                         data-url="https://aoao.life/20250912-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -663,21 +663,21 @@
                     <div class="article-title">
                         <a href="/20250912-2.html">笑，全世界便与你同声笑，哭，你便独自哭。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">笑，全世界便与你同声笑，哭，你便独自哭。   —— ❐张爱玲《花凋》 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="笑，全世界便与你同声笑，哭，你便独自哭。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="笑，全世界便与你同声笑，哭，你便独自哭。"
                                     data-url="https://aoao.life/20250912-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -685,7 +685,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -693,8 +693,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="笑，全世界便与你同声笑，哭，你便独自哭。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="笑，全世界便与你同声笑，哭，你便独自哭。"
                                         data-url="https://aoao.life/20250912-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -714,21 +714,21 @@
                     <div class="article-title">
                         <a href="/20250912-3.html">挣钱不容易的</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">知道与会做，差10倍；   会做到做好，又差了10倍；   做好到赚到，也差了10倍；   赚了到赚大了，又一个10倍。   知道点皮毛是发不了大财的，任何一个行业、专业，皆是如此。从训练到熟练，再到商业化和资本化，每一步都是巨大的鸿沟。   —— 做贼肾虚 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="挣钱不容易的" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="挣钱不容易的"
                                     data-url="https://aoao.life/20250912-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -736,7 +736,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -744,8 +744,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="挣钱不容易的" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="挣钱不容易的"
                                         data-url="https://aoao.life/20250912-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -765,21 +765,21 @@
                     <div class="article-title">
                         <a href="/20250912-4.html">蝉真的是世界.上最摇滚的生物</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">蝉真的是世界.上最摇滚的生物了。   -生大部分时间都在地下，爬到地上来只为大叫:   我要交配!我要交配!我要交配!快来和我交配!快来和我交配!快来和我交配!   然后交配完死掉。   盛夏，音乐，性，死亡。   这太摇滚了。   —— 黑丝配小高 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="蝉真的是世界.上最摇滚的生物" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="蝉真的是世界.上最摇滚的生物"
                                     data-url="https://aoao.life/20250912-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -787,7 +787,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -795,8 +795,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="蝉真的是世界.上最摇滚的生物" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="蝉真的是世界.上最摇滚的生物"
                                         data-url="https://aoao.life/20250912-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -816,10 +816,10 @@
                     <div class="article-title">
                         <a href="/20250912-5.html">长大后发现童话故事原来是寓言故事</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">小时候以为，公主只能配王子。   长大了之后才发现配公主的不是王子，是王总。      —— 善解人衣 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250912-5.html">
@@ -831,12 +831,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="长大后发现童话故事原来是寓言故事" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="长大后发现童话故事原来是寓言故事"
                                     data-url="https://aoao.life/20250912-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -844,7 +844,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -852,8 +852,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="长大后发现童话故事原来是寓言故事" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="长大后发现童话故事原来是寓言故事"
                                         data-url="https://aoao.life/20250912-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -873,10 +873,10 @@
                     <div class="article-title">
                         <a href="/20250911.html">华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">一条挂线600块，一个取卡针60。这个就算了，那电池使用时间为什么还有人能忍？    以下是一些观察：   华为:航天员，公务员、国企人员、高端商务人士、医生、老师、工程师、律师、企业高管、做生意的老板。   苹果:前台(90%的前台) 厂妹、厂仔、女大学生、明星、都市白领，富二代、在KTV和会所、酒吧工作的女孩子。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250911.html">
@@ -888,12 +888,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月11日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。"
                                     data-url="https://aoao.life/20250911.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -901,7 +901,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250911.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -909,8 +909,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。"
                                         data-url="https://aoao.life/20250911.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1080,19 +1080,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

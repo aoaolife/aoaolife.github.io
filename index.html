@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,21 +378,21 @@
                     <div class="article-title">
                         <a href="/20261003.html">aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《扑克脸》把欲望藏进冷静的表情，又让身体在电子节拍中泄露秘密。嘎嘎小姐以克制与挑逗交错的声音，将亲密关系写成一场信息不对称的牌局。它令人着迷的地方，是越容易跟着旋律起舞，越能感到那张面具背后，仍有难以坦白的自我。    点击查看深度鉴赏详情   创作背景：歌曲由Lady Gaga与RedOne共同创作，RedOne制作，首次发表于2008年的首张专辑《The Fame》，同年成为专辑第二支单曲。首...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）"
                                     data-url="https://aoao.life/20261003.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -400,7 +400,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261003.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -408,8 +408,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）"
                                         data-url="https://aoao.life/20261003.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -429,21 +429,21 @@
                     <div class="article-title">
                         <a href="/20261003-1.html">aoao音乐-护花使者 - 李克勤（1991）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《护花使者》把街头邂逅的心动唱成一场轻快的自我鼓舞。李克勤清晰而富有弹性的咬字，让急促旋律中的兴奋与羞怯同时浮现。歌曲动人的地方，在于它把尚未得到回应的倾慕，化为愿意靠近、陪伴与守候的想象；热闹节拍之下，仍是一个普通人面对爱情时的忐忑。    点击查看深度鉴赏详情   创作背景：歌曲于1991年发行，收录于《雨中街头剧》，由长谷川集平作曲、潘伟源填词、苏德华编曲、黄祖辉制作。这些年份与署名可由环球...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-护花使者 - 李克勤（1991）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-护花使者 - 李克勤（1991）"
                                     data-url="https://aoao.life/20261003-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -451,7 +451,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261003-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -459,8 +459,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-护花使者 - 李克勤（1991）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-护花使者 - 李克勤（1991）"
                                         data-url="https://aoao.life/20261003-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -480,10 +480,10 @@
                     <div class="article-title">
                         <a href="/20261002.html">大家好，我是马斯克，今天是2026年10月02日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年10月02日   。星舰第15次试飞终于完全成功，筷子夹住了超重助推器。团队在控制室拥抱。火星窗口只剩三年，时间不多了。今晚得陪X Æ A-Xii写作业。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20261002.html">
@@ -495,12 +495,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年10月02日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年10月02日"
                                     data-url="https://aoao.life/20261002.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -508,7 +508,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261002.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -516,8 +516,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年10月02日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年10月02日"
                                         data-url="https://aoao.life/20261002.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -537,10 +537,10 @@
                     <div class="article-title">
                         <a href="/20261001.html">大家好，我是马斯克，今天是2026年10月01日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年10月01日   。星舰第五飞终于拿到FAA批文，明年火星窗口稳了。特斯拉FSD v14推送首日，干预率降了七成。今天只睡四小时，但值得。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20261001.html">
@@ -552,12 +552,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年10月01日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年10月01日"
                                     data-url="https://aoao.life/20261001.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -565,7 +565,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261001.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -573,8 +573,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年10月01日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年10月01日"
                                         data-url="https://aoao.life/20261001.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -594,10 +594,10 @@
                     <div class="article-title">
                         <a href="/20260930.html">大家好，我是马斯克，今天是2026年09月30日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2026年09月30日   ，星舰第十二次复用成功，单公斤成本压到两百美元。Neuralink第三例患者用意念玩《星际争霸》。特斯拉FSD入华获批。同天，中国可回收火箭首飞。竞争让人清醒，离火星又近一步。     </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260930.html">
@@ -609,12 +609,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年09月30日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年09月30日"
                                     data-url="https://aoao.life/20260930.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -622,7 +622,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260930.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -630,8 +630,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年09月30日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年09月30日"
                                         data-url="https://aoao.life/20260930.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -651,10 +651,10 @@
                     <div class="article-title">
                         <a href="/20260929.html">大濛 (2025)-aoao评分：8.1</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">大濛 (2025)-aoao评分：8.1      我們什麼都沒有，只有勇敢。    一定要看完最后几分钟增加了不少评分。台湾也有那种历史，还那么多年，不过太蜻蜓点水了。       🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：大濛国家：中国台湾语言：汉语普通话 / 闽南语 / 粤语导演：陈玉勋主演：方郁...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260929.html">
@@ -666,12 +666,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大濛 (2025)-aoao评分：8.1" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大濛 (2025)-aoao评分：8.1"
                                     data-url="https://aoao.life/20260929.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -679,7 +679,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260929.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -687,8 +687,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大濛 (2025)-aoao评分：8.1" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大濛 (2025)-aoao评分：8.1"
                                         data-url="https://aoao.life/20260929.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -708,10 +708,10 @@
                     <div class="article-title">
                         <a href="/20260929-1.html">突然发现改革没用，革名才有用</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">改革被推行的目的是维系现有制度，但问题的根源恰恰却是制度本身，因此无解。   举个例子，去办个事，需要好几个窗口办理，然后大家都很有意见，最后改革窗口变成统一一个办理。 但是，还是需要等那边久，因为还是需要   那么多部门那么多领导审批才可以。   所以我们 5000 年就这样轮轮回回的。      —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260929-1.html">
@@ -723,12 +723,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="突然发现改革没用，革名才有用" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="突然发现改革没用，革名才有用"
                                     data-url="https://aoao.life/20260929-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -736,7 +736,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260929-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -744,8 +744,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="突然发现改革没用，革名才有用" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="突然发现改革没用，革名才有用"
                                         data-url="https://aoao.life/20260929-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -765,21 +765,21 @@
                     <div class="article-title">
                         <a href="/20260929-2.html">aoao笑话 2026</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">生活就像根屌，​​简单、柔软、直接、放松且自然下垂，直到一个女人把它变硬。  —— 日最野的狗 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao笑话 2026" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao笑话 2026"
                                     data-url="https://aoao.life/20260929-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -787,7 +787,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260929-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -795,8 +795,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao笑话 2026" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao笑话 2026"
                                         data-url="https://aoao.life/20260929-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -816,21 +816,21 @@
                     <div class="article-title">
                         <a href="/20260929-3.html">aoao笑话2026 年 10 月</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">不能砸我头  男人在酒吧表演绝活：他把老二放进鳄鱼嘴里，一分钟后拿酒瓶猛砸鳄鱼头，鳄鱼乖乖张嘴，他毫发无伤。   赢得免费酒水后，男人掏出一百块大喊：“谁敢来试试？”   全场沉默了一会儿，一个金发女郎羞涩地举手说：“我愿意试，但你得保证不能用酒瓶砸我的头。”   妓女的一次错误选择  三人去嫖，甲说我的12厘米；乙说我的16厘米；丙说我的6厘米。   妓女说：“那我要最短的。”   一会妓女疯子...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao笑话2026 年 10 月" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao笑话2026 年 10 月"
                                     data-url="https://aoao.life/20260929-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -838,7 +838,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260929-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -846,8 +846,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao笑话2026 年 10 月" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao笑话2026 年 10 月"
                                         data-url="https://aoao.life/20260929-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -867,10 +867,10 @@
                     <div class="article-title">
                         <a href="/20260929-4.html">经典嘿嘿笑话格言</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">命运就像强奸，你反抗不了就要学会享受   工作就像轮奸，你不行了别人就上   生活就像自慰，什么都得靠自己双手   学习就像嫖娼，出完钱后又出力   工资就像例假，一月不来你就傻眼   谈判就像口交，费尽了口舌也就那点收获   捐款就像发情，一想起来马上就要   奖金就像阴毛，掉的要比长的多   领导就像阴道，总是欺软怕硬   开会就像乱伦，搞不清谁该搞谁   兄弟像避孕套，捅多大的娄子都帮你兜着...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260929-4.html">
@@ -882,12 +882,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="经典嘿嘿笑话格言" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="经典嘿嘿笑话格言"
                                     data-url="https://aoao.life/20260929-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -895,7 +895,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260929-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -903,8 +903,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="经典嘿嘿笑话格言" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="经典嘿嘿笑话格言"
                                         data-url="https://aoao.life/20260929-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1070,19 +1070,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

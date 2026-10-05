@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260427-1.html">aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Playing With Fire (玩火)》是韩国女子演唱组合BLACKPINK于2016年发行的一首充满活力的流行舞曲。歌曲以热烈的热带印第安节奏为基底，巧妙融合了强劲的电子合成器与充满感染力的旋律。女孩们用独特的声线将陷入爱情时的炙热、迷茫与危险感展现得淋漓尽致，仿佛在玩一场危险而迷人的爱情游戏。这首歌不仅标志着BLACKPINK在音乐风格上的多变与成熟，更成为了她们席卷全球的代表作之一，...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）"
                                     data-url="https://aoao.life/20260427-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260427-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）"
                                         data-url="https://aoao.life/20260427-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,10 +450,10 @@
                     <div class="article-title">
                         <a href="/20260407-4.html">aoao音乐 - Wannabe (就想这样) - Spice Girls 辣妹组合（1996）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Wannabe》是一首充满无限活力与不羁青春的时代狂想曲。当那句标志性的“Tell me what you want, what you really, really want”响起，仿佛瞬间将人拉回那个色彩斑斓的90年代。这首歌不仅是辣妹组合的成名作，更是女性力量与真挚友谊的激昂宣言。它以欢快的舞曲节奏和直白大胆的歌词，打破了当时流行乐坛的沉闷，宣示着女孩们也可以张扬、独立、将友情置于爱情之上...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260407-4.html">
@@ -465,12 +465,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - Wannabe (就想这样) - Spice Girls 辣妹组合（1996）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - Wannabe (就想这样) - Spice Girls 辣妹组合（1996）"
                                     data-url="https://aoao.life/20260407-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -478,7 +478,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260407-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -486,8 +486,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - Wannabe (就想这样) - Spice Girls 辣妹组合（1996）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - Wannabe (就想这样) - Spice Girls 辣妹组合（1996）"
                                         data-url="https://aoao.life/20260407-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -507,10 +507,10 @@
                     <div class="article-title">
                         <a href="/20260323-2.html">aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   布兰妮·斯皮尔斯的《宝贝再来一次》是上世纪末流行乐坛的一声惊雷。那标志性的三个和弦一经响起，便宣告了一个全新偶像时代的到来。这首歌不仅是一首极具感染力的舞曲，更是青春期悸动与渴望的完美宣泄。它用充满活力的节奏和极具辨识度的声线，成为了无数人青春记忆中不可磨灭的流行文化符号。    点击查看深度鉴赏详情   🎵 背景故事  1998年，这首由瑞典金牌制作人马克斯·马丁创作的单曲原本是为TLC组...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260323-2.html">
@@ -522,12 +522,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）"
                                     data-url="https://aoao.life/20260323-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -535,7 +535,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260323-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -543,8 +543,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - ...Baby One More Time (宝贝再来一次) - Britney Spears 布兰妮·斯皮尔斯（1998）"
                                         data-url="https://aoao.life/20260323-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -564,21 +564,21 @@
                     <div class="article-title">
                         <a href="/20251005-4.html">That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《That Girl》是英国流行歌手Olly Murs于2016年11月发布的单曲，收录在其第五张录音室专辑《24 Hrs》中。这首歌由Murs与Steve Mac和Claude-Michel Schönberg共同创作，灵感源于Murs本人的情感经历——他曾因骄傲和犹豫错失一段真挚的恋情，歌曲捕捉了那种挥之不去的悔意。Murs作为《X Factor》亚军出道后，以轻松却深情的流...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                     data-url="https://aoao.life/20251005-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -586,7 +586,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251005-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -594,8 +594,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                         data-url="https://aoao.life/20251005-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -615,21 +615,21 @@
                     <div class="article-title">
                         <a href="/20250929-4.html">《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《Bye Bye Bye》是NSYNC于2000年发行的划时代经典作品，由Kristian Lundin、Jake Schulze和Andreas Carlsson共同创作 。这首歌的诞生充满戏剧性——它最初是为英国男团5ive量身打造的，但被拒绝后才落入NSYNC手中，成就了流行音乐史上的传奇 。歌曲的创作背景极其特殊，正值NSYNC与前经纪人Lou Pearlman和RCA唱...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                     data-url="https://aoao.life/20250929-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -637,7 +637,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250929-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -645,8 +645,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                         data-url="https://aoao.life/20250929-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -666,21 +666,21 @@
                     <div class="article-title">
                         <a href="/20250929-5.html">《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《Bye Bye Bye》是NSYNC于2000年发行的划时代经典作品，由Kristian Lundin、Jake Schulze和Andreas Carlsson共同创作 。这首歌的诞生充满戏剧性——它最初是为英国男团5ive量身打造的，但被拒绝后才落入NSYNC手中，成就了流行音乐史上的传奇 。歌曲的创作背景极其特殊，正值NSYNC与前经纪人Lou Pearlman和RCA唱...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                     data-url="https://aoao.life/20250929-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -688,7 +688,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250929-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -696,8 +696,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                         data-url="https://aoao.life/20250929-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -859,19 +859,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

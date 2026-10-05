@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,21 +378,21 @@
                     <div class="article-title">
                         <a href="/20260131-3.html">大家好，我是马斯克，今天是2026年01月31日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">得克萨斯这边的风大得要命，把星舰发射塔吹得呜呜响，但也吹散了所有云，天空蓝得不像话。我的心情？大概是“加速主义”混合了一点被误解的疲惫感，外加看到真正突破时的那种多巴胺激增。今天主要是盯着内华达那边的新实体注册（媒体终于挖到了，哈），跟英国那边的脑机接口团队开了个庆功会，顺便在X上跟那帮赌我发推数量的赌狗们开了个玩笑。   早上醒来先看了眼X，算法推给我一堆关于2012年那些旧邮件的陈芝麻烂谷子。...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月31日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月31日"
                                     data-url="https://aoao.life/20260131-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -400,7 +400,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260131-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -408,8 +408,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月31日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月31日"
                                         data-url="https://aoao.life/20260131-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -429,21 +429,21 @@
                     <div class="article-title">
                         <a href="/20260130.html">这该死的口音</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">年轻的时候当电工，师傅和我说:有活儿的时候就干，没活儿的时候就偷电缆，别太拿公司当回事，身体和健康是自己的不能太拼。   六年了，从监狱出来的那一刻，我终于想明白了，师傅当时说的是:没活儿的时候就偷点懒。   —— emusk.cn </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="这该死的口音" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="这该死的口音"
                                     data-url="https://aoao.life/20260130.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -451,7 +451,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260130.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -459,8 +459,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="这该死的口音" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="这该死的口音"
                                         data-url="https://aoao.life/20260130.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -480,10 +480,10 @@
                     <div class="article-title">
                         <a href="/20260130-1.html">我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260130-1.html">
@@ -495,12 +495,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?"
                                     data-url="https://aoao.life/20260130-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -508,7 +508,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260130-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -516,8 +516,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="我准备把我的公司SpaceX、xAI、Tesla合并，叫什么呢？叫马斯克集团？Musk Corp ? Musk Group?"
                                         data-url="https://aoao.life/20260130-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -537,10 +537,10 @@
                     <div class="article-title">
                         <a href="/20260130-2.html">生孩子是对未来的投票。如果你打算要孩子，那说明你关心未来。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260130-2.html">
@@ -552,12 +552,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="生孩子是对未来的投票。如果你打算要孩子，那说明你关心未来。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="生孩子是对未来的投票。如果你打算要孩子，那说明你关心未来。"
                                     data-url="https://aoao.life/20260130-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -565,7 +565,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260130-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -573,8 +573,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="生孩子是对未来的投票。如果你打算要孩子，那说明你关心未来。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="生孩子是对未来的投票。如果你打算要孩子，那说明你关心未来。"
                                         data-url="https://aoao.life/20260130-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -594,10 +594,10 @@
                     <div class="article-title">
                         <a href="/20260130-3.html">大家好，我是马斯克，今天是2026年01月30日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">     ​   德州博卡奇卡的天气又是那种该死的、带着咸味的大风天，但我的心情？可以说是“轨道级”的。今天的多巴胺分泌量大概相当于猛禽发动机全推力燃烧。全世界都在盯着那些为了“效率”而建立的内华达空壳公司，他们终于开始拼凑出那个名为“X帝国”的拼图了。   媒体那些所谓的“内幕消息”真是跑得比光速还慢。Reuters和Bloomberg今天像无头苍蝇一样嗡嗡叫，说我要把SpaceX、xAI和Te...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260130-3.html">
@@ -609,12 +609,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月30日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月30日"
                                     data-url="https://aoao.life/20260130-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -622,7 +622,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260130-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -630,8 +630,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月30日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月30日"
                                         data-url="https://aoao.life/20260130-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -651,10 +651,10 @@
                     <div class="article-title">
                         <a href="/20260129.html">95年末，我和金巴尔几乎每天晚上都在埃尔卡米诺的杰克快餐店吃晚饭。几年前有人食物中毒身亡，所以价格很低。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260129.html">
@@ -666,12 +666,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="95年末，我和金巴尔几乎每天晚上都在埃尔卡米诺的杰克快餐店吃晚饭。几年前有人食物中毒身亡，所以价格很低。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="95年末，我和金巴尔几乎每天晚上都在埃尔卡米诺的杰克快餐店吃晚饭。几年前有人食物中毒身亡，所以价格很低。"
                                     data-url="https://aoao.life/20260129.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -679,7 +679,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260129.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -687,8 +687,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="95年末，我和金巴尔几乎每天晚上都在埃尔卡米诺的杰克快餐店吃晚饭。几年前有人食物中毒身亡，所以价格很低。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="95年末，我和金巴尔几乎每天晚上都在埃尔卡米诺的杰克快餐店吃晚饭。几年前有人食物中毒身亡，所以价格很低。"
                                         data-url="https://aoao.life/20260129.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -708,21 +708,21 @@
                     <div class="article-title">
                         <a href="/20260129-1.html">大家好，我是马斯克，今天是2026年01月29日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天外面德州的天空灰蒙蒙的，像被一层薄雾笼罩，气温在70华氏度左右，不冷不热，但总觉得空气里有股工业味儿，让人提不起劲。我心情有点混沌，昨晚又失眠了，脑子里全是那些AI计算的轨道数据，兴奋夹杂着疲惫。今天主要在X总部和火箭团队远程开会，推了几个关于Optimus的更新，还处理了些监管机构的扯皮事。   早上起来第一件事就是刷X，看看那些预测我推文数量的Polymarket赌局，哈哈，那些家伙真闲，...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月29日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月29日"
                                     data-url="https://aoao.life/20260129-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -730,7 +730,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260129-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -738,8 +738,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月29日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月29日"
                                         data-url="https://aoao.life/20260129-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -759,10 +759,10 @@
                     <div class="article-title">
                         <a href="/20260128.html">我是不是应该去跳楼</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 那年金价还只有230的时候，我觉得我所有钱只能换一块手机大小的金块，然后就一点也不想碰纸黄金。然后就跑去牢A被割惨了。割完剩下去付了首付，你说我要不要去跳楼。   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260128.html">
@@ -774,12 +774,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="我是不是应该去跳楼" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="我是不是应该去跳楼"
                                     data-url="https://aoao.life/20260128.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -787,7 +787,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260128.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -795,8 +795,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="我是不是应该去跳楼" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="我是不是应该去跳楼"
                                         data-url="https://aoao.life/20260128.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -816,10 +816,10 @@
                     <div class="article-title">
                         <a href="/20260128-1.html">我是个爱折腾的人，小时候我搞过很多事</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 我小时候做过模型飞机、火车模型、火箭（自己配制火药）、炸药（我居然手指都还在，真是有点惊讶）、收音机，还开发过很多软件。   大学的时候还组装过一台简易的核磁共振成像仪。   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260128-1.html">
@@ -831,12 +831,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="我是个爱折腾的人，小时候我搞过很多事" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="我是个爱折腾的人，小时候我搞过很多事"
                                     data-url="https://aoao.life/20260128-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -844,7 +844,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260128-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -852,8 +852,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="我是个爱折腾的人，小时候我搞过很多事" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="我是个爱折腾的人，小时候我搞过很多事"
                                         data-url="https://aoao.life/20260128-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -873,10 +873,10 @@
                     <div class="article-title">
                         <a href="/20260128-2.html">所有的特斯拉车主，你们平时车不用的时候，可以让车自己出去挣钱</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 特斯拉车主可以将你们的汽车添加到 我们Robotaxi 网络中，你们平时车不用的时候，可以让车自己出去挣钱，不过我们将收取 25% 的收入。   —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260128-2.html">
@@ -888,12 +888,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="所有的特斯拉车主，你们平时车不用的时候，可以让车自己出去挣钱" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="所有的特斯拉车主，你们平时车不用的时候，可以让车自己出去挣钱"
                                     data-url="https://aoao.life/20260128-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -901,7 +901,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260128-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -909,8 +909,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="所有的特斯拉车主，你们平时车不用的时候，可以让车自己出去挣钱" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="所有的特斯拉车主，你们平时车不用的时候，可以让车自己出去挣钱"
                                         data-url="https://aoao.life/20260128-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1080,19 +1080,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

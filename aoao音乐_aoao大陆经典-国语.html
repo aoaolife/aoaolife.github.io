@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260905-1.html">aoao音乐-执迷不悔 - 王菲（1993）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">真正的执迷并非看不见代价，而是在清醒之后仍愿为自己的选择负责。王菲以冷静、疏离却坚定的声音，把爱情中的固执唱成一种自我确认：不求旁人理解，也不借后悔逃避。这首歌最动人的地方，正是柔弱表象下那份不肯交出人生解释权的坚决。    点击查看深度鉴赏详情   《执迷不悔》由袁惟仁作曲、唐奕聪编曲、梁荣骏制作，收录于王菲1993年以“王靖雯”名义发行的同名专辑。国语版歌词由王菲本人创作，是她早期重要的填词作...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-执迷不悔 - 王菲（1993）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-执迷不悔 - 王菲（1993）"
                                     data-url="https://aoao.life/20260905-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-执迷不悔 - 王菲（1993）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-执迷不悔 - 王菲（1993）"
                                         data-url="https://aoao.life/20260905-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20260830.html">aoao音乐-看海 - 周迅（2003）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">周迅独特的沙哑嗓音与明快清爽的雷鬼波萨诺瓦节奏碰撞，交织出千禧年华语乐坛不可复制的灵动与自由。《看海》没有矫揉造作的宏大抒情，而是以纯粹洒脱的姿态迎向海风与日光，将海浪拍岸的惬意与无拘无束的心跳定格为永恒的夏日记忆。    点击查看深度鉴赏详情   歌曲背景与创作  《看海》收录于周迅 2003 年发行的首张个人录音室专辑《夏天》。这首歌曲由莫艳琳作曲、刘捷与莫艳琳共同作词，著名音乐人火星电台操刀...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-看海 - 周迅（2003）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-看海 - 周迅（2003）"
                                     data-url="https://aoao.life/20260830.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260830.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-看海 - 周迅（2003）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-看海 - 周迅（2003）"
                                         data-url="https://aoao.life/20260830.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260824.html">aoao音乐-飞舞 - 王冰洋（2006）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《飞舞》以极富张力的流行摇滚编曲与深情坚韧的旋律线条，勾勒出都市情感中在伤痛中挣扎、在涅槃中重生的坚韧生命力。王冰洋富有穿透力与金属质感的磁性嗓音，将爱恨交织的执念与决绝释放得淋漓尽致。当激昂的副歌如狂风骤起，漫天风雪与飘零花瓣化作羽翼，在岁月的苍茫里展翅翱翔，唤醒了无数人心中对自由与真爱的勇敢向往。    点击查看深度鉴赏详情   创作背景与时代风云  《飞舞》由音乐制作人小岛包揽词曲创作，收录...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-飞舞 - 王冰洋（2006）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-飞舞 - 王冰洋（2006）"
                                     data-url="https://aoao.life/20260824.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260824.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-飞舞 - 王冰洋（2006）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-飞舞 - 王冰洋（2006）"
                                         data-url="https://aoao.life/20260824.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,21 +552,21 @@
                     <div class="article-title">
                         <a href="/20260813.html">aoao音乐-只要有你 - 那英 孙楠（2000）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首由那英与孙楠联袂演绎的《只要有你》，是电视剧《少年包青天》片尾曲，更是一代人的集体记忆。两位实力唱将的嗓音交织缠绕，将歌词中那份穿越生死的坚定与温柔诠释得淋漓尽致。旋律一起，仿佛瞬间被拉回那个守着电视机的年代，感受到的不仅是角色的深情，更是岁月沉淀后依然滚烫的感动。   点击查看深度鉴赏详情   创作背景：《只要有你》由陈颂红作词作曲，收录于2000年发行的专辑《少年包青天 电视剧原声带》中。...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-只要有你 - 那英 孙楠（2000）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-只要有你 - 那英 孙楠（2000）"
                                     data-url="https://aoao.life/20260813.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -574,7 +574,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260813.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -582,8 +582,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-只要有你 - 那英 孙楠（2000）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-只要有你 - 那英 孙楠（2000）"
                                         data-url="https://aoao.life/20260813.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -603,21 +603,21 @@
                     <div class="article-title">
                         <a href="/20260807.html">aoao音乐-你的柔情我永远不懂 - 陈琳（1993）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">1993年，陈琳用一首《你的柔情我永远不懂》叩开了无数人的心扉。这首歌不仅是她的成名作，更是90年代内地流行乐坛的一枚烙印——它唱出了爱情里那说不清的迷惘与执着，旋律一响起，便把人拉回到那个纯真又充满期盼的年代。   点击查看深度鉴赏详情   这首由洛兵作词、周笛作曲的作品，以平实却直击人心的歌词，勾勒出一段感情中“不懂”与“想懂”的矛盾。陈琳的嗓音清亮而不失厚度，她将那种少女式的倔强与脆弱糅合得...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-你的柔情我永远不懂 - 陈琳（1993）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-你的柔情我永远不懂 - 陈琳（1993）"
                                     data-url="https://aoao.life/20260807.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -625,7 +625,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260807.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -633,8 +633,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-你的柔情我永远不懂 - 陈琳（1993）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-你的柔情我永远不懂 - 陈琳（1993）"
                                         data-url="https://aoao.life/20260807.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -654,21 +654,21 @@
                     <div class="article-title">
                         <a href="/20260718.html">aoao音乐-那么骄傲 - 金海心（2000）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">二十年前的那个夏天，金海心用她略带沙哑又清澈透亮的嗓音，把《那么骄傲》唱进了无数人的青春记忆。这首歌如同一阵微凉的风，吹散了年少时那些欲言又止的倔强与矜持。如今再听，旋律里依然藏着当年的心跳——原来我们曾经都那么骄傲，明明在乎得要命，却偏要装作毫不在意。   点击查看深度鉴赏详情   《那么骄傲》由厉曼婷作词、刘成华作曲，收录于金海心2000年发行的同名专辑中。作为千禧年初华语乐坛的代表性女声之一...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年07月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-那么骄傲 - 金海心（2000）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-那么骄傲 - 金海心（2000）"
                                     data-url="https://aoao.life/20260718.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -676,7 +676,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260718.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -684,8 +684,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-那么骄傲 - 金海心（2000）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-那么骄傲 - 金海心（2000）"
                                         data-url="https://aoao.life/20260718.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -705,10 +705,10 @@
                     <div class="article-title">
                         <a href="/20260531-1.html">aoao音乐-渴望 - 毛阿敏（1990）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">毛阿敏演唱的《渴望》，是1990年同名国民级电视剧的主题曲，它不仅是一首歌曲，更是一个时代的集体记忆。毛阿敏深沉、大气、充满情感张力的嗓音，将那种在沧桑岁月中对真诚生活的执着追求演绎得直击人心。悠扬的旋律搭配深沉的歌词，“悠悠岁月，欲说当年好困惑”，不仅唱出了剧中人物刘慧芳的悲欢离合，也唱出了那一代人在社会变革期内心的迷茫与渴望。这首歌陪伴着千家万户的荧屏时光，至今听来，依然能感受到那种跨越时代的...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260531-1.html">
@@ -720,12 +720,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-渴望 - 毛阿敏（1990）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-渴望 - 毛阿敏（1990）"
                                     data-url="https://aoao.life/20260531-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -733,7 +733,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260531-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -741,8 +741,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-渴望 - 毛阿敏（1990）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-渴望 - 毛阿敏（1990）"
                                         data-url="https://aoao.life/20260531-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -762,10 +762,10 @@
                     <div class="article-title">
                         <a href="/20260531-2.html">aoao音乐-香水有毒 - 胡杨林（2005）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">胡杨林的《香水有毒》是一首充满时代印记的伤感情歌。2005年，随着网络音乐的兴起，这首歌凭借其直白凄美的歌词和极具辨识度的旋律，迅速席卷了大街小巷。歌曲细腻地刻画了一个深陷爱情甚至有些卑微的女性形象，“擦掉一切陪你睡”的痴情与绝望，道出了许多人在感情中爱而不得、飞蛾扑火的痛楚。胡杨林略带沙哑且饱含深情的嗓音，将这种被背叛却又无法割舍的纠结演绎得淋漓尽致，成为了无数人青春记忆中一段难以抹去的独特旋律...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260531-2.html">
@@ -777,12 +777,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-香水有毒 - 胡杨林（2005）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-香水有毒 - 胡杨林（2005）"
                                     data-url="https://aoao.life/20260531-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -790,7 +790,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260531-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -798,8 +798,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-香水有毒 - 胡杨林（2005）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-香水有毒 - 胡杨林（2005）"
                                         data-url="https://aoao.life/20260531-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -819,10 +819,10 @@
                     <div class="article-title">
                         <a href="/20260531-3.html">aoao音乐-香水有毒 - 胡杨林（2005）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">胡杨林的《香水有毒》是一首充满时代印记的伤感情歌。2005年，随着网络音乐的兴起，这首歌凭借其直白凄美的歌词和极具辨识度的旋律，迅速席卷了大街小巷。歌曲细腻地刻画了一个深陷爱情甚至有些卑微的女性形象，“擦掉一切陪你睡”的痴情与绝望，道出了许多人在感情中爱而不得、飞蛾扑火的痛楚。胡杨林略带沙哑且饱含深情的嗓音，将这种被背叛却又无法割舍的纠结演绎得淋漓尽致，成为了无数人青春记忆中一段难以抹去的独特旋律...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260531-3.html">
@@ -834,12 +834,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-香水有毒 - 胡杨林（2005）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-香水有毒 - 胡杨林（2005）"
                                     data-url="https://aoao.life/20260531-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -847,7 +847,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260531-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -855,8 +855,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-香水有毒 - 胡杨林（2005）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-香水有毒 - 胡杨林（2005）"
                                         data-url="https://aoao.life/20260531-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -876,10 +876,10 @@
                     <div class="article-title">
                         <a href="/20260528-1.html">aoao音乐-一个真实的故事 - 朱哲琴（1990）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《一个真实的故事》（又名《丹顶鹤的故事》）由朱哲琴首唱，是一首催人泪下、凄美动人的环保主义赞歌。歌曲以1987年为救丹顶鹤而牺牲的环保女孩徐秀娟的真实事迹为蓝本，旋律如泣如诉。朱哲琴空灵且极具穿透力的嗓音仿佛从天堂传来，将女孩对自然生灵的深沉大爱化作不朽的音符。这不仅是一首流行歌曲，更是一座竖立在人们心底的生态丰碑，每次聆听都会被其中纯粹而高尚的灵魂深深触动。      点击查看深度鉴赏详情   ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260528-1.html">
@@ -891,12 +891,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）"
                                     data-url="https://aoao.life/20260528-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -904,7 +904,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260528-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -912,8 +912,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）"
                                         data-url="https://aoao.life/20260528-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -933,10 +933,10 @@
                     <div class="article-title">
                         <a href="/20260528-2.html">aoao音乐-一个真实的故事 - 朱哲琴（1990）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《一个真实的故事》（又名《丹顶鹤的故事》）由朱哲琴首唱，是一首催人泪下、凄美动人的环保主义赞歌。歌曲以1987年为救丹顶鹤而牺牲的环保女孩徐秀娟的真实事迹为蓝本，旋律如泣如诉。朱哲琴空灵且极具穿透力的嗓音仿佛从天堂传来，将女孩对自然生灵的深沉大爱化作不朽的音符。这不仅是一首流行歌曲，更是一座竖立在人们心底的生态丰碑，每次聆听都会被其中纯粹而高尚的灵魂深深触动。      点击查看深度鉴赏详情   ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260528-2.html">
@@ -948,12 +948,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）"
                                     data-url="https://aoao.life/20260528-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -961,7 +961,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260528-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -969,8 +969,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-一个真实的故事 - 朱哲琴（1990）"
                                         data-url="https://aoao.life/20260528-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -990,10 +990,10 @@
                     <div class="article-title">
                         <a href="/20260525.html">aoao音乐-陪你去那拉提 - 丁一凡（2021）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《陪你去那拉提》是丁一凡演唱的一首充满浪漫与向往的民谣作品。那拉提，这座位于新疆的美丽空中草原，在歌声中化作了纯洁爱情与自由心灵的最佳见证地。清新的旋律搭配丁一凡温暖且充满故事感的嗓音，让人仿佛能感受到微风拂过草原的惬意。这首歌不仅表达了对心上人深切的思念，更寄托了对抛开世俗压力、回归自然纯粹生活的美好向往，听后令人心生安宁，久久回味。      点击查看深度鉴赏详情   创作背景与时代回响  《...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260525.html">
@@ -1005,12 +1005,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）"
                                     data-url="https://aoao.life/20260525.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1018,7 +1018,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1026,8 +1026,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）"
                                         data-url="https://aoao.life/20260525.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1047,10 +1047,10 @@
                     <div class="article-title">
                         <a href="/20260525-1.html">aoao音乐-陪你去那拉提 - 丁一凡（2021）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《陪你去那拉提》是丁一凡演唱的一首充满浪漫与向往的民谣作品。那拉提，这座位于新疆的美丽空中草原，在歌声中化作了纯洁爱情与自由心灵的最佳见证地。清新的旋律搭配丁一凡温暖且充满故事感的嗓音，让人仿佛能感受到微风拂过草原的惬意。这首歌不仅表达了对心上人深切的思念，更寄托了对抛开世俗压力、回归自然纯粹生活的美好向往，听后令人心生安宁，久久回味。      点击查看深度鉴赏详情   创作背景与时代回响  《...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260525-1.html">
@@ -1062,12 +1062,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）"
                                     data-url="https://aoao.life/20260525-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1075,7 +1075,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1083,8 +1083,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-陪你去那拉提 - 丁一凡（2021）"
                                         data-url="https://aoao.life/20260525-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1104,10 +1104,10 @@
                     <div class="article-title">
                         <a href="/20260525-2.html">aoao音乐-奢香夫人 - 凤凰传奇（2009）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">凤凰传奇在2009年推出的《奢香夫人》，是一首将浓郁的民族风情与现代流行节奏完美融合的神曲。它以贵州彝族女英雄奢香夫人的历史传奇为背景，通过玲花高亢入云、极具穿透力的嗓音，以及曾毅那标志性的说唱点缀，勾勒出了一幅磅礴大气、连绵不绝的乌蒙山画卷。这首歌不仅在当年席卷大江南北，更在十几年后凭借其令人忍不住合唱的“血脉觉醒”旋律，在年轻一代中再次爆红。它不仅仅是一首广场舞金曲，更是一首充满着民族自豪感、...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260525-2.html">
@@ -1119,12 +1119,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）"
                                     data-url="https://aoao.life/20260525-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1132,7 +1132,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1140,8 +1140,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）"
                                         data-url="https://aoao.life/20260525-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1161,10 +1161,10 @@
                     <div class="article-title">
                         <a href="/20260525-3.html">aoao音乐-奢香夫人 - 凤凰传奇（2009）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">凤凰传奇在2009年推出的《奢香夫人》，是一首将浓郁的民族风情与现代流行节奏完美融合的神曲。它以贵州彝族女英雄奢香夫人的历史传奇为背景，通过玲花高亢入云、极具穿透力的嗓音，以及曾毅那标志性的说唱点缀，勾勒出了一幅磅礴大气、连绵不绝的乌蒙山画卷。这首歌不仅在当年席卷大江南北，更在十几年后凭借其令人忍不住合唱的“血脉觉醒”旋律，在年轻一代中再次爆红。它不仅仅是一首广场舞金曲，更是一首充满着民族自豪感、...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260525-3.html">
@@ -1176,12 +1176,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）"
                                     data-url="https://aoao.life/20260525-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1189,7 +1189,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1197,8 +1197,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-奢香夫人 - 凤凰传奇（2009）"
                                         data-url="https://aoao.life/20260525-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1218,21 +1218,21 @@
                     <div class="article-title">
                         <a href="/20260525-4.html">aoao音乐-白桦林 - 朴树（1999）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《白桦林》是朴树的经典代表作，也是一首充满苏联民谣风情的感人悲歌。朴树以其低沉而深情的嗓音，讲述了一个关于战争、爱情与漫长等待的凄美故事。手风琴的悠扬前奏瞬间将听众带入那片飘着白雪的寂静村庄，而歌声中的哀婉则如同一把利刃，刻画出那些在战火中消逝的年轻生命和无望的守候。这首歌不仅是一曲对坚贞爱情的赞歌，更是一声对和平的深沉呼唤，历经岁月洗礼，依旧能轻易触碰人们内心最柔软的角落，令人潸然泪下。   点...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-白桦林 - 朴树（1999）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-白桦林 - 朴树（1999）"
                                     data-url="https://aoao.life/20260525-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1240,7 +1240,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1248,8 +1248,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-白桦林 - 朴树（1999）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-白桦林 - 朴树（1999）"
                                         data-url="https://aoao.life/20260525-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1269,21 +1269,21 @@
                     <div class="article-title">
                         <a href="/20260525-5.html">aoao音乐-白桦林 - 朴树（1999）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《白桦林》是朴树的经典代表作，也是一首充满苏联民谣风情的感人悲歌。朴树以其低沉而深情的嗓音，讲述了一个关于战争、爱情与漫长等待的凄美故事。手风琴的悠扬前奏瞬间将听众带入那片飘着白雪的寂静村庄，而歌声中的哀婉则如同一把利刃，刻画出那些在战火中消逝的年轻生命和无望的守候。这首歌不仅是一曲对坚贞爱情的赞歌，更是一声对和平的深沉呼唤，历经岁月洗礼，依旧能轻易触碰人们内心最柔软的角落，令人潸然泪下。   点...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-白桦林 - 朴树（1999）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-白桦林 - 朴树（1999）"
                                     data-url="https://aoao.life/20260525-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1291,7 +1291,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260525-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1299,8 +1299,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-白桦林 - 朴树（1999）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-白桦林 - 朴树（1999）"
                                         data-url="https://aoao.life/20260525-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1320,10 +1320,10 @@
                     <div class="article-title">
                         <a href="/20260524.html">aoao音乐-我要他 - 任夏（2022）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">任夏在2022年推出的《我要他》，是一首在网络上引发强烈共鸣的情感宣泄之作。不同于传统情歌里的卑微挽留或默默祝福，这首歌以一种罕见的决绝和犀利，唱出了在感情中被深深辜负后的愤懑与不甘。任夏极具爆发力和穿透力的嗓音，将歌词中那份近乎诅咒般的“狠话”演绎得淋漓尽致。它像是一场痛快的大雨，浇灭了心头的委屈，为那些曾在爱情里遍体鳞伤的人们，提供了一个绝佳的情绪出口，让人在听完后感受到一种释然与痛快。   ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260524.html">
@@ -1335,12 +1335,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-我要他 - 任夏（2022）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-我要他 - 任夏（2022）"
                                     data-url="https://aoao.life/20260524.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1348,7 +1348,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260524.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1356,8 +1356,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-我要他 - 任夏（2022）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-我要他 - 任夏（2022）"
                                         data-url="https://aoao.life/20260524.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1377,10 +1377,10 @@
                     <div class="article-title">
                         <a href="/20260524-1.html">aoao音乐-我要他 - 任夏（2022）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">任夏在2022年推出的《我要他》，是一首在网络上引发强烈共鸣的情感宣泄之作。不同于传统情歌里的卑微挽留或默默祝福，这首歌以一种罕见的决绝和犀利，唱出了在感情中被深深辜负后的愤懑与不甘。任夏极具爆发力和穿透力的嗓音，将歌词中那份近乎诅咒般的“狠话”演绎得淋漓尽致。它像是一场痛快的大雨，浇灭了心头的委屈，为那些曾在爱情里遍体鳞伤的人们，提供了一个绝佳的情绪出口，让人在听完后感受到一种释然与痛快。   ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260524-1.html">
@@ -1392,12 +1392,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-我要他 - 任夏（2022）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-我要他 - 任夏（2022）"
                                     data-url="https://aoao.life/20260524-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1405,7 +1405,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260524-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1413,8 +1413,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-我要他 - 任夏（2022）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-我要他 - 任夏（2022）"
                                         data-url="https://aoao.life/20260524-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1434,10 +1434,10 @@
                     <div class="article-title">
                         <a href="/20260421-3.html">aoao音乐-飘摇 - 周迅（2000）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《飘摇》是周迅以其特有的低沉、沙哑而慵懒的嗓音演绎的一首经典情歌。这首歌没有撕心裂肺的呐喊，却在云淡风轻的吟唱中，将爱情里的无奈、随波逐流与淡淡的哀愁展现得淋漓尽致。它像是一阵秋风，轻轻拂过心田，让人在岁月的沉淀中感受到一种释然的美丽，仿佛所有的爱恨痴缠最终都在风中飘摇散去。       点击查看深度鉴赏详情   创作背景与音乐风格  《飘摇》发行于2000年，由陈耀川作曲，楼南蔚作词。当时正值周...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260421-3.html">
@@ -1449,12 +1449,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-飘摇 - 周迅（2000）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-飘摇 - 周迅（2000）"
                                     data-url="https://aoao.life/20260421-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1462,7 +1462,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260421-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1470,8 +1470,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-飘摇 - 周迅（2000）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-飘摇 - 周迅（2000）"
                                         data-url="https://aoao.life/20260421-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1491,10 +1491,10 @@
                     <div class="article-title">
                         <a href="/20260421-4.html">aoao音乐-飘摇 - 周迅（2000）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《飘摇》是周迅以其特有的低沉、沙哑而慵懒的嗓音演绎的一首经典情歌。这首歌没有撕心裂肺的呐喊，却在云淡风轻的吟唱中，将爱情里的无奈、随波逐流与淡淡的哀愁展现得淋漓尽致。它像是一阵秋风，轻轻拂过心田，让人在岁月的沉淀中感受到一种释然的美丽，仿佛所有的爱恨痴缠最终都在风中飘摇散去。       点击查看深度鉴赏详情   创作背景与音乐风格  《飘摇》发行于2000年，由陈耀川作曲，楼南蔚作词。当时正值周...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260421-4.html">
@@ -1506,12 +1506,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-飘摇 - 周迅（2000）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-飘摇 - 周迅（2000）"
                                     data-url="https://aoao.life/20260421-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1519,7 +1519,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260421-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1527,8 +1527,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-飘摇 - 周迅（2000）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-飘摇 - 周迅（2000）"
                                         data-url="https://aoao.life/20260421-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1548,10 +1548,10 @@
                     <div class="article-title">
                         <a href="/20260407-1.html">aoao音乐 - 梦底 - 海来阿木（2026）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《梦底》是海来阿木深情演绎的一首佳作，细腻而沧桑的嗓音如泣如诉，将内心深处的情感缓缓道来。旋律中带着一丝忧伤与释然，歌词直击灵魂，仿佛诉说着我们在梦境与现实边缘的挣扎、期盼与妥协。这首歌不仅是一次听觉的抚慰，更是对过往岁月的轻声叹息，让人在夜深人静时忍不住反复聆听，于音符间寻找内心那一抹宁静的归宿。       鉴赏详情   背景故事  海来阿木一直以其独特的嗓音和真挚的情感打动听众。《梦底》延续...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260407-1.html">
@@ -1563,12 +1563,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 梦底 - 海来阿木（2026）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 梦底 - 海来阿木（2026）"
                                     data-url="https://aoao.life/20260407-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1576,7 +1576,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260407-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1584,8 +1584,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 梦底 - 海来阿木（2026）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 梦底 - 海来阿木（2026）"
                                         data-url="https://aoao.life/20260407-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1605,10 +1605,10 @@
                     <div class="article-title">
                         <a href="/20260406-3.html">aoao音乐 - 离别的车站 - 赵薇（2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   《离别的车站》是赵薇为经典电视剧《情深深雨濛濛》演唱的著名插曲。这首歌以悠扬凄婉的旋律和深情款款的歌词，完美刻画了恋人离别时依依不舍、撕心裂肺的愁绪。在时代的站台前，火车的汽笛声伴随着离人的眼泪，成为了无数观众心中关于离愁别绪的最经典记忆，歌声中那份对重逢的期盼与分离的无奈，至今依然能够深深触动每一个人的心弦。    展开查看更多关于《离别的车站》的深度解析与背后的故事   创作背景  这首...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260406-3.html">
@@ -1620,12 +1620,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 离别的车站 - 赵薇（2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 离别的车站 - 赵薇（2001）"
                                     data-url="https://aoao.life/20260406-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1633,7 +1633,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260406-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1641,8 +1641,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 离别的车站 - 赵薇（2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 离别的车站 - 赵薇（2001）"
                                         data-url="https://aoao.life/20260406-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1662,10 +1662,10 @@
                     <div class="article-title">
                         <a href="/20260405-1.html">aoao音乐 - 好想好想 - 赵薇（2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   《好想好想》是赵薇演唱的一首经典情歌，作为2001年现象级电视剧《情深深雨濛濛》的插曲，承载了无数人的青春记忆。歌曲旋律婉转悠扬，歌词直白而深情，将那种不可抑制的思念之情表达得淋漓尽致。赵薇用她极具辨识度的嗓音，唱出了爱情中甜蜜与苦涩交织的纠葛，让人在歌声中真切感受到那份跨越时空的深情与悸动。    展开查看更多关于这首歌的背景、赏析与反响   背景故事  这首歌由琼瑶亲自作词，尤景仰作曲。...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260405-1.html">
@@ -1677,12 +1677,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 好想好想 - 赵薇（2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 好想好想 - 赵薇（2001）"
                                     data-url="https://aoao.life/20260405-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1690,7 +1690,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260405-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1698,8 +1698,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 好想好想 - 赵薇（2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 好想好想 - 赵薇（2001）"
                                         data-url="https://aoao.life/20260405-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1719,10 +1719,10 @@
                     <div class="article-title">
                         <a href="/20260405-2.html">aoao音乐 - 情深深雨濛濛 - 赵薇（2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   《情深深雨濛濛》是2001年同名经典琼瑶剧的主题曲，由赵薇倾情演绎。这首歌以婉转凄美的旋律和深情隽永的歌词，将战火纷飞年代里的爱恨情仇娓娓道来。赵薇清亮而富有感染力的嗓音，完美契合了女主角陆依萍坚韧又脆弱的性格特质，唱出了对命运的抗争与对爱情的执着。每当旋律响起，仿佛总能带人回到那段烟雨濛濛的旧时光，让人在泪光中体会爱情的千回百转与动人心魄，成为了无数人心中不可磨灭的时代记忆。    展开查...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260405-2.html">
@@ -1734,12 +1734,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 情深深雨濛濛 - 赵薇（2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 情深深雨濛濛 - 赵薇（2001）"
                                     data-url="https://aoao.life/20260405-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1747,7 +1747,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260405-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1755,8 +1755,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 情深深雨濛濛 - 赵薇（2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 情深深雨濛濛 - 赵薇（2001）"
                                         data-url="https://aoao.life/20260405-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1776,10 +1776,10 @@
                     <div class="article-title">
                         <a href="/20260325-1.html">aoao音乐 - 匆匆那年 - 王菲（2014）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   时光的列车呼啸而过，王菲空灵婉转的嗓音宛如一阵轻风，轻轻拂开青春的记忆画卷。《匆匆那年》不只是一首简单的影视原声，它更像是一场对过往岁月的集体告别。林夕那字字珠玑的歌词，配合着梁翘柏细腻动人的旋律，将那些年少时的悸动、遗憾与释怀，化作了心底最深处的共鸣。在光影交错间，我们仿佛又看到了那个曾在黑板前偷看某人的自己，这首歌承载着每一代人独一无二的青春回音。    点击查看深度鉴赏详情   🎵 背...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260325-1.html">
@@ -1791,12 +1791,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 匆匆那年 - 王菲（2014）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 匆匆那年 - 王菲（2014）"
                                     data-url="https://aoao.life/20260325-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1804,7 +1804,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260325-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1812,8 +1812,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 匆匆那年 - 王菲（2014）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 匆匆那年 - 王菲（2014）"
                                         data-url="https://aoao.life/20260325-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1833,10 +1833,10 @@
                     <div class="article-title">
                         <a href="/20260320.html">aoao音乐 - 爱就爱了- （2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   《爱就爱了》不仅仅是一首歌，更像是一份世纪初都市女性的独立宣言。它用最直白的旋律和歌词，刻画了一种决绝而纯粹的爱情观：爱了，便无悔，不解释，不纠结。陈琳的演绎充满了力量感，那种略带沙哑又坚定的声线，将爱情中的奋不顾身与事后的坦然一并道出。这首歌捕捉了一个时代的精神，即使在今天，那种“别再说了”的干脆，依然能瞬间击中人心，让人在复杂的感情世界里，找到一丝洒脱的慰藉。  点击查看深度鉴赏详情  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260320.html">
@@ -1848,12 +1848,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 爱就爱了- （2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 爱就爱了- （2001）"
                                     data-url="https://aoao.life/20260320.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1861,7 +1861,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260320.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1869,8 +1869,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 爱就爱了- （2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 爱就爱了- （2001）"
                                         data-url="https://aoao.life/20260320.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1890,10 +1890,10 @@
                     <div class="article-title">
                         <a href="/20260319.html">aoao音乐 - 潮湿的心 - 甘萍（1994）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   《潮湿的心》是九十年代华语流行乐坛的一颗璀璨明珠。甘萍以其细腻温婉而又略带哀怨的嗓音，将深陷爱情泥沼中的无奈与期盼演绎得淋漓尽致。那旋律如同绵绵细雨，悄无声息地打湿了无数听众的心房。在那个卡带风靡的年代，这首歌不仅是一个时代的流行记忆，更是一代人关于青春、暗恋与痴情的深情告白。每一次旋律响起，都仿佛能触碰到岁月深处那份最柔软、最真挚的感动。    点击查看深度鉴赏详情   🎵 背景故事  1...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260319.html">
@@ -1905,12 +1905,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月19日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 潮湿的心 - 甘萍（1994）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 潮湿的心 - 甘萍（1994）"
                                     data-url="https://aoao.life/20260319.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1918,7 +1918,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260319.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1926,8 +1926,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 潮湿的心 - 甘萍（1994）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 潮湿的心 - 甘萍（1994）"
                                         data-url="https://aoao.life/20260319.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1947,10 +1947,10 @@
                     <div class="article-title">
                         <a href="/20260314.html">aoao音乐 - 相思 - 毛阿敏（2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   毛阿敏演唱的《相思》是2000年电视剧《西游记后传》的片尾曲，也是无数人心中无法逾越的童年经典。这首歌由三宝作曲，赵小源作词，借用唐代诗人王维“红豆生南国”的意象，却以“最不屑一顾是相思”的反语，刻画出一种深入骨髓的孤独与无奈。毛阿敏那深沉厚实且富有磁性的嗓音，如同一位历经沧桑的诉说者，在悠扬婉转的弦乐中，将一段跨越时空的缠绵爱恋演绎得淋漓尽致。在那个特效尚显简陋的年代，这首哀婉凄美的旋律，...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260314.html">
@@ -1962,12 +1962,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 相思 - 毛阿敏（2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 相思 - 毛阿敏（2001）"
                                     data-url="https://aoao.life/20260314.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1975,7 +1975,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260314.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1983,8 +1983,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 相思 - 毛阿敏（2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 相思 - 毛阿敏（2001）"
                                         data-url="https://aoao.life/20260314.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -2004,10 +2004,10 @@
                     <div class="article-title">
                         <a href="/20260314-1.html">aoao音乐 - 暗香 - 沙宝亮（2003）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   一曲《暗香》如泣如诉，将爱恨交织的缠绵悱恻演绎得淋漓尽致。沙宝亮用极具辨识度的沙哑嗓音，在古典与现代交融的旋律中，勾勒出一幅落花流水的凄美画卷。这首歌不仅仅是电视剧《金粉世家》的灵魂点缀，更是一代人对于繁华落尽、物是人非的深刻共鸣。每一次旋律响起，仿佛都能闻到那股穿越时光的幽暗花香，让人在岁月的沉淀中感受到无尽的唏嘘与感动。    点击查看深度鉴赏详情   🎵 背景故事  《暗香》是2003...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260314-1.html">
@@ -2019,12 +2019,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 暗香 - 沙宝亮（2003）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 暗香 - 沙宝亮（2003）"
                                     data-url="https://aoao.life/20260314-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -2032,7 +2032,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260314-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -2040,8 +2040,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 暗香 - 沙宝亮（2003）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 暗香 - 沙宝亮（2003）"
                                         data-url="https://aoao.life/20260314-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -2203,19 +2203,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

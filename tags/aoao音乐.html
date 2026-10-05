@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20261003.html">aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《扑克脸》把欲望藏进冷静的表情，又让身体在电子节拍中泄露秘密。嘎嘎小姐以克制与挑逗交错的声音，将亲密关系写成一场信息不对称的牌局。它令人着迷的地方，是越容易跟着旋律起舞，越能感到那张面具背后，仍有难以坦白的自我。    点击查看深度鉴赏详情   创作背景：歌曲由Lady Gaga与RedOne共同创作，RedOne制作，首次发表于2008年的首张专辑《The Fame》，同年成为专辑第二支单曲。首...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）"
                                     data-url="https://aoao.life/20261003.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261003.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）"
                                         data-url="https://aoao.life/20261003.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20261003-1.html">aoao音乐-护花使者 - 李克勤（1991）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《护花使者》把街头邂逅的心动唱成一场轻快的自我鼓舞。李克勤清晰而富有弹性的咬字，让急促旋律中的兴奋与羞怯同时浮现。歌曲动人的地方，在于它把尚未得到回应的倾慕，化为愿意靠近、陪伴与守候的想象；热闹节拍之下，仍是一个普通人面对爱情时的忐忑。    点击查看深度鉴赏详情   创作背景：歌曲于1991年发行，收录于《雨中街头剧》，由长谷川集平作曲、潘伟源填词、苏德华编曲、黄祖辉制作。这些年份与署名可由环球...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年10月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-护花使者 - 李克勤（1991）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-护花使者 - 李克勤（1991）"
                                     data-url="https://aoao.life/20261003-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20261003-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-护花使者 - 李克勤（1991）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-护花使者 - 李克勤（1991）"
                                         data-url="https://aoao.life/20261003-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260918-2.html">aoao音乐-I'm Gonna Getcha Good! (我要彻底俘获你) - Shania Twain 仙妮亚·唐恩（2002）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把爱情写成一场自信而坦率的主动追逐：目标不是短暂欢愉，而是一段长久关系。仙妮亚以明亮、略带挑衅的演唱掌握叙事权，将渴望表达得大胆却不失幽默。强劲节拍与层层推进的副歌，使这种笃定成为极具感染力的情感宣言。    点击查看深度鉴赏详情   作品由仙妮亚·唐恩与当时的丈夫兼长期合作伙伴Robert John "Mutt" Lange共同创作，并由Lange制作，作为第四张录音室专辑《Up!》的首支...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-I'm Gonna Getcha Good! (我要彻底俘获你) - Shania Twain 仙妮亚·唐恩（2002）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-I'm Gonna Getcha Good! (我要彻底俘获你) - Shania Twain 仙妮亚·唐恩（2002）"
                                     data-url="https://aoao.life/20260918-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260918-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-I'm Gonna Getcha Good! (我要彻底俘获你) - Shania Twain 仙妮亚·唐恩（2002）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-I'm Gonna Getcha Good! (我要彻底俘获你) - Shania Twain 仙妮亚·唐恩（2002）"
                                         data-url="https://aoao.life/20260918-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,21 +552,21 @@
                     <div class="article-title">
                         <a href="/20260917-1.html">aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把“热”化为一种毫不收敛的生命状态：强烈节拍、轮番说唱与反复呼喊不断推高现场温度。它不依靠复杂叙事，而以声音的冲击力展示自信、团结和舞台统治感，也凝结了早期YG嘻哈由地下姿态走向大众娱乐的鲜明瞬间。    点击查看深度鉴赏详情   《HOT 뜨거》收录于1TYM于2003年发行的第四张正规专辑《Once N 4 All》，是该专辑的代表曲之一；题述视频则是MBC《Music Camp》在20...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月17日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）"
                                     data-url="https://aoao.life/20260917-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -574,7 +574,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260917-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -582,8 +582,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）"
                                         data-url="https://aoao.life/20260917-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -603,10 +603,10 @@
                     <div class="article-title">
                         <a href="/20260917-2.html">aoao音乐-Stronger (冰河时代) - Inez 伊内兹（2005）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">冰冷的电子节拍包裹着炽热的思念，歌者在欲望、失落与自我重建之间反复拉扯。所谓“更强”，并非忘却亲密关系留下的伤痕，而是在一次次回望和下坠中，逐渐夺回内心的重心，让脆弱本身成为继续前行的力量。       点击查看深度鉴赏详情   创作背景：这是丹麦歌手Inez的出道单曲，由Inez与Morgan Jalsing共同创作，最早于2005年发行，曾在丹麦舞曲榜停留约30周；随后获得国际发行，并于200...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260917-2.html">
@@ -618,12 +618,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月17日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Stronger (冰河时代) - Inez 伊内兹（2005）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Stronger (冰河时代) - Inez 伊内兹（2005）"
                                     data-url="https://aoao.life/20260917-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -631,7 +631,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260917-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -639,8 +639,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Stronger (冰河时代) - Inez 伊内兹（2005）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Stronger (冰河时代) - Inez 伊内兹（2005）"
                                         data-url="https://aoao.life/20260917-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -660,21 +660,21 @@
                     <div class="article-title">
                         <a href="/20260917-3.html">aoao音乐-Family Affair (家庭聚会) - Mary J. Blige 玛丽·布莱姬（2001）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把舞池写成暂时卸下敌意与烦恼的公共空间。玛丽·布莱姬并未回避现实生活的沉重，而是以坚定、略带沙哑的歌声邀请所有人停止争斗，在节拍中重新获得尊严与快乐。它表面的热闹之下，是一种主动拒绝消耗、选择共同欢庆的成熟力量。    点击查看深度鉴赏详情   创作背景：歌曲收录于玛丽·布莱姬第五张录音室专辑《No More Drama》，由布莱姬、Bruce Miller、Dr. Dre、Mike Eli...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月17日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Family Affair (家庭聚会) - Mary J. Blige 玛丽·布莱姬（2001）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Family Affair (家庭聚会) - Mary J. Blige 玛丽·布莱姬（2001）"
                                     data-url="https://aoao.life/20260917-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -682,7 +682,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260917-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -690,8 +690,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Family Affair (家庭聚会) - Mary J. Blige 玛丽·布莱姬（2001）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Family Affair (家庭聚会) - Mary J. Blige 玛丽·布莱姬（2001）"
                                         data-url="https://aoao.life/20260917-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -853,19 +853,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

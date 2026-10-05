@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260917-1.html">aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把“热”化为一种毫不收敛的生命状态：强烈节拍、轮番说唱与反复呼喊不断推高现场温度。它不依靠复杂叙事，而以声音的冲击力展示自信、团结和舞台统治感，也凝结了早期YG嘻哈由地下姿态走向大众娱乐的鲜明瞬间。    点击查看深度鉴赏详情   《HOT 뜨거》收录于1TYM于2003年发行的第四张正规专辑《Once N 4 All》，是该专辑的代表曲之一；题述视频则是MBC《Music Camp》在20...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月17日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）"
                                     data-url="https://aoao.life/20260917-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260917-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-HOT 뜨거 - 원타임 (1TYM) 1TYM组合（2003）"
                                         data-url="https://aoao.life/20260917-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20260905-2.html">aoao音乐-전화받어 (电话情缘) - 米娜（2002）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">电话无人接听，本是日常小事，在歌里却成为爱情失衡的确证。米娜以明艳舞曲包装猜疑、欺骗与失落，让急促铃声般的节奏反复催逼情绪。越是热烈喧闹，越显出等待回应之人的孤独，也凝固了移动电话初兴年代独特的情感记忆。    点击查看深度鉴赏详情   《전화받어》收录于米娜2002年11月7日发行的首张专辑《Rendezvous》，是对韩国女子组合KISS于2001年录制版本的重新演绎。米娜因2002年韩日世界...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                     data-url="https://aoao.life/20260905-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                         data-url="https://aoao.life/20260905-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260829.html">aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《내가 제일 잘 나가 (我最红 / I Am The Best)》是韩国传奇女团 2NE1 于 2011 年推出的划时代标志性神曲。全曲融合了强劲激昂的电子舞曲与硬朗嘻哈节拍，配合四位成员极具张力与辨识度的声线，将不迎合、不妥协、唯我独尊的 Girl Crush 态度释放得淋漓尽致，瞬间引爆全场狂潮，成为了定义一个时代流行文化的巅峰之作。    点击查看深度鉴赏详情   创作背景与时代风潮  《...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）"
                                     data-url="https://aoao.life/20260829.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260829.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）"
                                         data-url="https://aoao.life/20260829.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,21 +552,21 @@
                     <div class="article-title">
                         <a href="/20260427-1.html">aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Playing With Fire (玩火)》是韩国女子演唱组合BLACKPINK于2016年发行的一首充满活力的流行舞曲。歌曲以热烈的热带印第安节奏为基底，巧妙融合了强劲的电子合成器与充满感染力的旋律。女孩们用独特的声线将陷入爱情时的炙热、迷茫与危险感展现得淋漓尽致，仿佛在玩一场危险而迷人的爱情游戏。这首歌不仅标志着BLACKPINK在音乐风格上的多变与成熟，更成为了她们席卷全球的代表作之一，...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）"
                                     data-url="https://aoao.life/20260427-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -574,7 +574,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260427-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -582,8 +582,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Playing With Fire (玩火) - BLACKPINK 粉墨（2016）"
                                         data-url="https://aoao.life/20260427-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -603,10 +603,10 @@
                     <div class="article-title">
                         <a href="/20260314-2.html">aoao音乐 - 不怕不怕 - 郭美美（2006）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   当那句熟悉的“蚂蚁牙黑”前奏响起，仿佛瞬间将我们拉回了2006年那个彩铃风靡大街小巷的时代。《不怕不怕》不仅是一首拥有极度洗脑旋律的神曲，更是无数80后、90后的青春记忆。郭美美用她清亮娇憨的嗓音，唱出了一种属于平凡人的倔强与勇敢。这首歌以极度轻快的节奏消解了生活中的胆怯与不安，像是一件看不见的防弹衣，让每一个在黑夜中独行或在挫折前畏缩的人，都能在“神经比较大”的自我调侃中，找回直面惨淡现实...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260314-2.html">
@@ -618,12 +618,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - 不怕不怕 - 郭美美（2006）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - 不怕不怕 - 郭美美（2006）"
                                     data-url="https://aoao.life/20260314-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -631,7 +631,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260314-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -639,8 +639,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - 不怕不怕 - 郭美美（2006）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - 不怕不怕 - 郭美美（2006）"
                                         data-url="https://aoao.life/20260314-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -660,10 +660,10 @@
                     <div class="article-title">
                         <a href="/20260313.html">aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   在虚拟与现实的暧昧交织中，《APT.》以一场充满怀旧色彩的韩国酒桌游戏为引，奏响了都市男女渴望真实碰撞的狂欢节奏。它巧妙剥离了屏幕后的克制，用轻快洗脑的流行朋克旋律，将心跳加速的荷尔蒙冲动化作直白热烈的邀约。这不仅是一场打破界限的跨界音乐狂欢，更是对当下快餐式社交的俏皮反叛，以极致的听觉感染力释放出属于这个时代的流行魔力。   点击查看更多背景与专业剖析   背景故事   创作灵感：歌曲灵感...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260313.html">
@@ -675,12 +675,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）"
                                     data-url="https://aoao.life/20260313.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -688,7 +688,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260313.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -696,8 +696,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - APT. (公寓游戏) - ROSÉ & Bruno Mars 朴彩英 & 布鲁诺·马尔斯（2024）"
                                         data-url="https://aoao.life/20260313.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -717,21 +717,21 @@
                     <div class="article-title">
                         <a href="/20251009-3.html">《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲背景故事  《APT.》是BLACKPINK成员ROSÉ的solo首秀与Bruno Mars的跨界合作，于2024年10月18日发行，由The Black Label和Atlantic Records联合推出。这首歌源于工作室里的即兴玩笑：ROSÉ分享了她钟爱的韩国饮酒游戏“아파트”（Apartment，简称APT），一种叠手匹配数字的派对游戏，Bruno Mars被其趣味性吸引，两人迅速创作...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月09日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花"
                                     data-url="https://aoao.life/20251009-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -739,7 +739,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251009-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -747,8 +747,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《APT. (公寓游戏)-ROSÉ & Bruno Mars》 如一场韩式叠手游戏，虚拟调情瞬间崩塌成真实狂欢，“Kissy face”背后的渴望，点燃都市夜的自由火花"
                                         data-url="https://aoao.life/20251009-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -768,21 +768,21 @@
                     <div class="article-title">
                         <a href="/20251006.html">《Imagine 想象-John Lennon》 从“无天堂”到“活如一体”，这旋律化身为反战圣歌，激发人性中尘封的共享与纯真，永不过时。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《Imagine》是约翰·列侬于1971年发布的个人专辑同名主打单曲，作为披头士解散后的第二张专辑核心，标志着他从摇滚偶像向和平主义者的转型。这首歌的创作灵感源于妻子小野洋子的1964年诗集《Grapefruit》，其中“Imagine this”或“Imagine that”的短语直接激发了列侬的旋律与歌词框架。他在越南战争高峰期的纽约公寓中创作，旨在通过音乐对抗全球冲突与分裂...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《Imagine 想象-John Lennon》 从“无天堂”到“活如一体”，这旋律化身为反战圣歌，激发人性中尘封的共享与纯真，永不过时。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《Imagine 想象-John Lennon》 从“无天堂”到“活如一体”，这旋律化身为反战圣歌，激发人性中尘封的共享与纯真，永不过时。"
                                     data-url="https://aoao.life/20251006.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -790,7 +790,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251006.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -798,8 +798,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《Imagine 想象-John Lennon》 从“无天堂”到“活如一体”，这旋律化身为反战圣歌，激发人性中尘封的共享与纯真，永不过时。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《Imagine 想象-John Lennon》 从“无天堂”到“活如一体”，这旋律化身为反战圣歌，激发人性中尘封的共享与纯真，永不过时。"
                                         data-url="https://aoao.life/20251006.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -819,21 +819,21 @@
                     <div class="article-title">
                         <a href="/20251005-2.html">That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《That Girl》是英国流行歌手Olly Murs于2016年11月发布的单曲，收录在其第五张录音室专辑《24 Hrs》中。这首歌由Murs与Steve Mac和Claude-Michel Schönberg共同创作，灵感源于Murs本人的情感经历——他曾因骄傲和犹豫错失一段真挚的恋情，歌曲捕捉了那种挥之不去的悔意。Murs作为《X Factor》亚军出道后，以轻松却深情的流...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                     data-url="https://aoao.life/20251005-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -841,7 +841,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251005-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -849,8 +849,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                         data-url="https://aoao.life/20251005-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -870,21 +870,21 @@
                     <div class="article-title">
                         <a href="/20250929-4.html">《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《Bye Bye Bye》是NSYNC于2000年发行的划时代经典作品，由Kristian Lundin、Jake Schulze和Andreas Carlsson共同创作 。这首歌的诞生充满戏剧性——它最初是为英国男团5ive量身打造的，但被拒绝后才落入NSYNC手中，成就了流行音乐史上的传奇 。歌曲的创作背景极其特殊，正值NSYNC与前经纪人Lou Pearlman和RCA唱...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                     data-url="https://aoao.life/20250929-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -892,7 +892,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250929-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -900,8 +900,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《Bye Bye Bye 拜拜拜-NSYNC》 24年后依然燃爆全球，死侍都要为之起舞的永恒流行经典"
                                         data-url="https://aoao.life/20250929-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -921,21 +921,21 @@
                     <div class="article-title">
                         <a href="/20250928-6.html">《La La Love On My Mind 爱在我心中-Ann Winsborn》 青春女性的大胆追爱宣言，自由与热烈交错，忠于真实的心跳瞬间。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《La La Love On My Mind》是瑞典歌手Ann Winsborn于2005年发布的突破性单曲，收录在她第二张专辑《Pink-Collar-Crime》中，由资深瑞典词曲作者Bobby Ljunggren和Ingela Forsman创作。这首歌的灵感源于Ann Winsborn早年对浪漫爱情的憧憬，她作为1981年出生于马尔默的年轻艺人，正值职业生涯起步阶段，歌曲...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="《La La Love On My Mind 爱在我心中-Ann Winsborn》 青春女性的大胆追爱宣言，自由与热烈交错，忠于真实的心跳瞬间。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="《La La Love On My Mind 爱在我心中-Ann Winsborn》 青春女性的大胆追爱宣言，自由与热烈交错，忠于真实的心跳瞬间。"
                                     data-url="https://aoao.life/20250928-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -943,7 +943,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250928-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -951,8 +951,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="《La La Love On My Mind 爱在我心中-Ann Winsborn》 青春女性的大胆追爱宣言，自由与热烈交错，忠于真实的心跳瞬间。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="《La La Love On My Mind 爱在我心中-Ann Winsborn》 青春女性的大胆追爱宣言，自由与热烈交错，忠于真实的心跳瞬间。"
                                         data-url="https://aoao.life/20250928-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1114,19 +1114,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,10 +378,10 @@
                     <div class="article-title">
                         <a href="/20251002-5.html">尊龙林青霞双胞胎转世？</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— 掐指一算、此奶大胸之罩 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251002-5.html">
@@ -393,12 +393,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="尊龙林青霞双胞胎转世？" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="尊龙林青霞双胞胎转世？"
                                     data-url="https://aoao.life/20251002-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -406,7 +406,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251002-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -414,8 +414,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="尊龙林青霞双胞胎转世？" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="尊龙林青霞双胞胎转世？"
                                         data-url="https://aoao.life/20251002-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -435,10 +435,10 @@
                     <div class="article-title">
                         <a href="/20251002-6.html">网络时代新名词_</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   1、工资现在叫-----窝囊费   2、能力不行现在叫-----小趴菜   3、上当现在叫------智商税   4、追求平淡现在叫-----佛系   5、- -对现在叫------CP   6、画大饼现在叫-----PUA   7、分手现在叫------及时止损   8、随波逐流现在叫----躺平   9、做事不靠谱的人现在叫------老六   10、眼高手低现在叫----当代孔乙己  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251002-6.html">
@@ -450,12 +450,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="网络时代新名词_" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="网络时代新名词_"
                                     data-url="https://aoao.life/20251002-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -463,7 +463,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251002-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -471,8 +471,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="网络时代新名词_" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="网络时代新名词_"
                                         data-url="https://aoao.life/20251002-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -492,10 +492,10 @@
                     <div class="article-title">
                         <a href="/20251002-7.html">能源效率的诅咒</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">我们为了降低能源消耗，发明了节省能源的 LED 照明。 结果，更高效的照明导致了更多的照明，从而使得社会整体能源消耗增加。 很多事情都是这样，为了省电，我们提高了能源效率，结果人们因此买更多的电器，消耗更多的电。    —— 如果可爱犯法那就抓我吧 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251002-7.html">
@@ -507,12 +507,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="能源效率的诅咒" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="能源效率的诅咒"
                                     data-url="https://aoao.life/20251002-7.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -520,7 +520,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251002-7.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -528,8 +528,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="能源效率的诅咒" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="能源效率的诅咒"
                                         data-url="https://aoao.life/20251002-7.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -549,10 +549,10 @@
                     <div class="article-title">
                         <a href="/20251001.html">张学友公开和弟弟张学智断绝关系</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">1994年，张学智向弟弟张学友借600万还债，没想到，张学友公开说：“我和张学智断绝关系，他的债务跟我无关。”父亲葬礼上，20年未往来的哥哥，看都没看张学友一眼，直接走人！   张学友说：“我很后悔，不应该对他这么绝情。”可为时已晚。有人说张家辉是不是你的弟弟？怎么你们长得这么像？   张学友和张家辉，两人经常被人当成兄弟。在一次采访中，张家辉开玩笑说自己是“歌神的亲弟”。   为什么现在才公开？...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001.html">
@@ -564,12 +564,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="张学友公开和弟弟张学智断绝关系" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="张学友公开和弟弟张学智断绝关系"
                                     data-url="https://aoao.life/20251001.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -577,7 +577,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -585,8 +585,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="张学友公开和弟弟张学智断绝关系" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="张学友公开和弟弟张学智断绝关系"
                                         data-url="https://aoao.life/20251001.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -606,10 +606,10 @@
                     <div class="article-title">
                         <a href="/20251001-1.html">到处都是XXXX敏感词</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   起初，他们XX，我没有说话。   后来，他们XXX,我没有说话。   再后来，他们XXXX，我没有说话。   现在他们XXXX你，也没有一个人为你说话。   到处都是敏感词   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-1.html">
@@ -621,12 +621,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="到处都是XXXX敏感词" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="到处都是XXXX敏感词"
                                     data-url="https://aoao.life/20251001-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -634,7 +634,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -642,8 +642,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="到处都是XXXX敏感词" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="到处都是XXXX敏感词"
                                         data-url="https://aoao.life/20251001-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -663,10 +663,10 @@
                     <div class="article-title">
                         <a href="/20251001-2.html">鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里， 雏鸟孵化得很快，出生后会本能地把巢里的其他鸟蛋或雏鸟推下去。 这样，巢里的“养父母”鸟只能专心喂养这只杜鹃雏鸟，从而保证它的生存。   —— 天赐良鸡 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-2.html">
@@ -678,12 +678,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里"
                                     data-url="https://aoao.life/20251001-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -691,7 +691,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -699,8 +699,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="鸠占雀巢，鸠就是杜鹃，不自己筑巢，而是把蛋产在别的小鸟（如鹊、莺等）的巢里"
                                         data-url="https://aoao.life/20251001-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -720,10 +720,10 @@
                     <div class="article-title">
                         <a href="/20251001-3.html">2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。    —— 辣逼，小心！ </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-3.html">
@@ -735,12 +735,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。"
                                     data-url="https://aoao.life/20251001-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -748,7 +748,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -756,8 +756,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="2023年28岁的蔡天凤时尚名媛蔡天凤遭前夫一家合谋杀害，遗体被肢解烹煮，手法冷血残酷。现最近终于判刑成立。"
                                         data-url="https://aoao.life/20251001-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -777,10 +777,10 @@
                     <div class="article-title">
                         <a href="/20251001-4.html">不如牛马</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">牛有牛群，马有马群，牛马只有工作群，   牛会哞，马会叫，牛马只会喊收到    —— 装乖卖萌小能手 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-4.html">
@@ -792,12 +792,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="不如牛马" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="不如牛马"
                                     data-url="https://aoao.life/20251001-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -805,7 +805,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -813,8 +813,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="不如牛马" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="不如牛马"
                                         data-url="https://aoao.life/20251001-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -834,10 +834,10 @@
                     <div class="article-title">
                         <a href="/20251001-5.html">好的习惯</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 排名第一的是：自律；   排名第二的是：终身学习；   排名第三的是：保持运动。   拥有这三种习惯，美好人生垂手可得。   —— 绞尽乳汁 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-5.html">
@@ -849,12 +849,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="好的习惯" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="好的习惯"
                                     data-url="https://aoao.life/20251001-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -862,7 +862,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -870,8 +870,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="好的习惯" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="好的习惯"
                                         data-url="https://aoao.life/20251001-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -891,10 +891,10 @@
                     <div class="article-title">
                         <a href="/20251001-6.html">朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。   熟悉朱茵的人都知道，早年她在拍摄《大话西游》时曾与周星驰热恋，但这段感情只维持了3年。    —— 姐姐要抱抱 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251001-6.html">
@@ -906,12 +906,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。"
                                     data-url="https://aoao.life/20251001-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -919,7 +919,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251001-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -927,8 +927,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="朱茵：如果能让我回到20岁，我会直接去找我的老公黄贯中。"
                                         data-url="https://aoao.life/20251001-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1098,19 +1098,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,10 +399,10 @@
                     <div class="article-title">
                         <a href="/20260323-1.html">铁血战士：杀戮之地（2025） aoao评分：74</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   aoao评分：74。还行吧 可看可不看。有点菜这个铁血战士。    铁血战士：杀戮之地  核心元数据 *   类型：科幻 / 动作 / 惊悚 *   导演：丹·特拉亨伯格 (Dan Trachtenberg) *   主演：艾丽·范宁 (Elle Fanning) / 迪米特里乌斯·舒斯特-科罗马坦吉 (Dimitrius Schuster-Koloamatangi) *   上映年份：20...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260323-1.html">
@@ -414,12 +414,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="铁血战士：杀戮之地（2025） aoao评分：74" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="铁血战士：杀戮之地（2025） aoao评分：74"
                                     data-url="https://aoao.life/20260323-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -427,7 +427,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260323-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -435,8 +435,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="铁血战士：杀戮之地（2025） aoao评分：74" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="铁血战士：杀戮之地（2025） aoao评分：74"
                                         data-url="https://aoao.life/20260323-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -456,10 +456,10 @@
                     <div class="article-title">
                         <a href="/20260307.html">Inception (盗梦空间) (2010)-aoao评分</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Inception (盗梦空间) (2010)-aoao评分:      Your mind is the scene of the crime. / 你的思维就是犯罪现场        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录         🎬 基本元数据 (Metadata)       原名：Inception国家：🇺🇸 美国 / 🇬🇧 英国 &nbsp;   &nbs...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260307.html">
@@ -471,12 +471,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Inception (盗梦空间) (2010)-aoao评分" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Inception (盗梦空间) (2010)-aoao评分"
                                     data-url="https://aoao.life/20260307.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -484,7 +484,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260307.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -492,8 +492,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Inception (盗梦空间) (2010)-aoao评分" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Inception (盗梦空间) (2010)-aoao评分"
                                         data-url="https://aoao.life/20260307.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -513,21 +513,21 @@
                     <div class="article-title">
                         <a href="/20250922-4.html">电影《头号玩家》（Ready Player One）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">推荐电影。不是因为它有多精彩，而是因为这部电影就是未来的真实场景。   未来存在两种世界：真实世界和电子游戏创造的虚拟世界。真实世界里面，你是一个其貌不扬、处处受挫、穷困无聊的鲁蛇（loser）。没关系，你可以去虚拟世界。那里，你会有一个俊美潇洒的化身（avatar），在各种壮丽好玩的场所漫游，还可能成为众人景仰的英雄。   《头号玩家》的主人公就是这样的人物，他不上学也没工作，住在贫民区的集装箱...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="电影《头号玩家》（Ready Player One）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="电影《头号玩家》（Ready Player One）"
                                     data-url="https://aoao.life/20250922-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -535,7 +535,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250922-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -543,8 +543,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="电影《头号玩家》（Ready Player One）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="电影《头号玩家》（Ready Player One）"
                                         data-url="https://aoao.life/20250922-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -706,19 +706,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,10 +399,10 @@
                     <div class="article-title">
                         <a href="/20260325.html">匆匆那年 (2014)-aoao评分72</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   这个歌曲好听。这个很有青春的味道。有空可以看一看。 75分吧。       ` tag), and file naming conventions.   Since this is a movie archive, should I follow the exact naming and structure conventions defined for 'music_archive' in...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260325.html">
@@ -414,12 +414,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="匆匆那年 (2014)-aoao评分72" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="匆匆那年 (2014)-aoao评分72"
                                     data-url="https://aoao.life/20260325.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -427,7 +427,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260325.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -435,8 +435,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="匆匆那年 (2014)-aoao评分72" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="匆匆那年 (2014)-aoao评分72"
                                         data-url="https://aoao.life/20260325.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -456,10 +456,10 @@
                     <div class="article-title">
                         <a href="/20260323.html">你行！你上！（2025）aoao评分：59</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">59分。发出来主要就是为了骂人的。拍的什么狗屁。    折叠详情区 (`    `)：     *   背景故事：涵盖“键盘侠”现实主义题材、范伟的“范式幽默”演绎，以及片中关于虚拟与现实边界的探讨。     *   反响与评价：记录社会对网络暴力的反思、范伟演技的口碑评价及影片的讽刺艺术水准。    </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260323.html">
@@ -471,12 +471,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="你行！你上！（2025）aoao评分：59" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="你行！你上！（2025）aoao评分：59"
                                     data-url="https://aoao.life/20260323.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -484,7 +484,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260323.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -492,8 +492,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="你行！你上！（2025）aoao评分：59" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="你行！你上！（2025）aoao评分：59"
                                         data-url="https://aoao.life/20260323.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -513,10 +513,10 @@
                     <div class="article-title">
                         <a href="/20260323-1.html">铁血战士：杀戮之地（2025） aoao评分：74</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   aoao评分：74。还行吧 可看可不看。有点菜这个铁血战士。    铁血战士：杀戮之地  核心元数据 *   类型：科幻 / 动作 / 惊悚 *   导演：丹·特拉亨伯格 (Dan Trachtenberg) *   主演：艾丽·范宁 (Elle Fanning) / 迪米特里乌斯·舒斯特-科罗马坦吉 (Dimitrius Schuster-Koloamatangi) *   上映年份：20...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260323-1.html">
@@ -528,12 +528,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="铁血战士：杀戮之地（2025） aoao评分：74" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="铁血战士：杀戮之地（2025） aoao评分：74"
                                     data-url="https://aoao.life/20260323-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -541,7 +541,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260323-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -549,8 +549,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="铁血战士：杀戮之地（2025） aoao评分：74" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="铁血战士：杀戮之地（2025） aoao评分：74"
                                         data-url="https://aoao.life/20260323-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -570,10 +570,10 @@
                     <div class="article-title">
                         <a href="/20260307.html">Inception (盗梦空间) (2010)-aoao评分</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Inception (盗梦空间) (2010)-aoao评分:      Your mind is the scene of the crime. / 你的思维就是犯罪现场        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录         🎬 基本元数据 (Metadata)       原名：Inception国家：🇺🇸 美国 / 🇬🇧 英国 &nbsp;   &nbs...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260307.html">
@@ -585,12 +585,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Inception (盗梦空间) (2010)-aoao评分" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Inception (盗梦空间) (2010)-aoao评分"
                                     data-url="https://aoao.life/20260307.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -598,7 +598,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260307.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -606,8 +606,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Inception (盗梦空间) (2010)-aoao评分" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Inception (盗梦空间) (2010)-aoao评分"
                                         data-url="https://aoao.life/20260307.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -627,10 +627,10 @@
                     <div class="article-title">
                         <a href="/20260307-1.html">New World (新世界) (2013)-aoao评分8.9</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   好多抖音梗，你不看都会out,都看不懂笑点。看个两三遍没问题。电梯战神、延边F4.       “嘿，兄弟... 要是... 我活着，你能应付我吗？”   "Hey, brother... if... if I were to live, could you handle me?"        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录         🎬 基本元数据 (...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260307-1.html">
@@ -642,12 +642,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="New World (新世界) (2013)-aoao评分8.9" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="New World (新世界) (2013)-aoao评分8.9"
                                     data-url="https://aoao.life/20260307-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -655,7 +655,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260307-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -663,8 +663,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="New World (新世界) (2013)-aoao评分8.9" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="New World (新世界) (2013)-aoao评分8.9"
                                         data-url="https://aoao.life/20260307-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -684,10 +684,10 @@
                     <div class="article-title">
                         <a href="/20260220.html">Glorious Fury (光荣的愤怒) (2006)-aoao评分</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Glorious Fury (光荣的愤怒) (2006)-aoao评分:      忍了这么久，骨头都软了，再不站起来，就真成畜生了。 / After enduring for so long, my bones have gone soft. If I don't stand up now, I'll truly become an animal.            🔽 点击展开：详细档案 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260220.html">
@@ -699,12 +699,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分"
                                     data-url="https://aoao.life/20260220.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -712,7 +712,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260220.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -720,8 +720,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分"
                                         data-url="https://aoao.life/20260220.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -741,10 +741,10 @@
                     <div class="article-title">
                         <a href="/20260220-1.html">Glorious Fury (光荣的愤怒) (2006)-aoao评分85</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Glorious Fury (光荣的愤怒) (2006)-aoao评分:85      写实的黑色一些社会视角，看一部少一部。。。 看后祷告，谢谢。       忍了这么久，骨头都软了，再不站起来，就真成畜生了。 / After enduring for so long, my bones have gone soft. If I don't stand up now, I'll truly be...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260220-1.html">
@@ -756,12 +756,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分85" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分85"
                                     data-url="https://aoao.life/20260220-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -769,7 +769,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260220-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -777,8 +777,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分85" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Glorious Fury (光荣的愤怒) (2006)-aoao评分85"
                                         data-url="https://aoao.life/20260220-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -798,10 +798,10 @@
                     <div class="article-title">
                         <a href="/20260220-2.html">Monga (艋舺) (2010)-aoao评分88</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Monga (艋舺) (2010)-aoao评分:88      台湾古惑仔，aoao非常喜欢，而且是那种会刷很多遍的那种。评分改成90吧。       意义是三小？我只听过义气，没听过意义。 (What is the meaning of anything? I only know about loyalty, not about meaning.)            🔽 点击展开：详细档案...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260220-2.html">
@@ -813,12 +813,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Monga (艋舺) (2010)-aoao评分88" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Monga (艋舺) (2010)-aoao评分88"
                                     data-url="https://aoao.life/20260220-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -826,7 +826,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260220-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -834,8 +834,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Monga (艋舺) (2010)-aoao评分88" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Monga (艋舺) (2010)-aoao评分88"
                                         data-url="https://aoao.life/20260220-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -855,21 +855,21 @@
                     <div class="article-title">
                         <a href="/20260220-3.html">Tropical Fish (热带鱼) (1995)-aoao评分82</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Tropical Fish (热带鱼) (1995)-aoao评分:82      还不错，不过这片名，这海报，狗都不看的。编剧厉害。 适合14岁左右孩子看。 82分推荐。       献给所有爱做白日梦的人 (Dedicated to all those who love to daydream)     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录         🎬 基本元数...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Tropical Fish (热带鱼) (1995)-aoao评分82" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Tropical Fish (热带鱼) (1995)-aoao评分82"
                                     data-url="https://aoao.life/20260220-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -877,7 +877,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260220-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -885,8 +885,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Tropical Fish (热带鱼) (1995)-aoao评分82" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Tropical Fish (热带鱼) (1995)-aoao评分82"
                                         data-url="https://aoao.life/20260220-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -906,10 +906,10 @@
                     <div class="article-title">
                         <a href="/20260219.html">Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Sons of the Neon Night (风林火山) (2025)-aoao评分: 7.0   我竟然有点看不懂，不过还是要感谢，不一样风格。         "当铜锣湾下起大雪，那不是奇迹，是这个世界的苍白。" (When it snows in Causeway Bay, it's not a miracle, it's the pallor of this world.)     🔽 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260219.html">
@@ -921,12 +921,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月19日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5"
                                     data-url="https://aoao.life/20260219.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -934,7 +934,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260219.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -942,8 +942,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Sons of the Neon Night (风林火山) (2025)-aoao评分 7.5"
                                         data-url="https://aoao.life/20260219.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -963,21 +963,21 @@
                     <div class="article-title">
                         <a href="/20260119.html">Zootopia 2 (疯狂动物城2) (2025)-aoao评分_ 79</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">续集没有第一次看惊艳了，又可能现代的吸引眼球的东西实在是太多了。79分。      "The world will never be a better place if no one is brave enough to do the right thing." 世界如果没有人勇敢地做正确的事，就永远不会变得更好。     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录       ...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月19日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Zootopia 2 (疯狂动物城2) (2025)-aoao评分_ 79" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Zootopia 2 (疯狂动物城2) (2025)-aoao评分_ 79"
                                     data-url="https://aoao.life/20260119.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -985,7 +985,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260119.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -993,8 +993,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Zootopia 2 (疯狂动物城2) (2025)-aoao评分_ 79" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Zootopia 2 (疯狂动物城2) (2025)-aoao评分_ 79"
                                         data-url="https://aoao.life/20260119.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1014,10 +1014,10 @@
                     <div class="article-title">
                         <a href="/20260105.html">无言的山丘 (Hill of No Return) (1992)-aoao评分_93</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">一段台湾历史。全闽南话。 那个叫天天流鼻血的娃这种幽默很台湾。    你們男人就這麼傻這麼掘，非要去地下拚那看不見的，就不能在田地裡拚拚看得見的營生嗎？最後留下女人孤苦無依   这样好吧，你住我隔壁。如果我看得惯。再花几个钱，把你招过来一起做。”一起做，而不是一起做爱。连“爱”字都省略了。爱说不出口，性事反而能脱口而出。伦理的颠倒，苦笑后又是温暖。王童／吴念真的世界是原始力量，绝望而忧伤的。不同于...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260105.html">
@@ -1029,12 +1029,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="无言的山丘 (Hill of No Return) (1992)-aoao评分_93" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="无言的山丘 (Hill of No Return) (1992)-aoao评分_93"
                                     data-url="https://aoao.life/20260105.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1042,7 +1042,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260105.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1050,8 +1050,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="无言的山丘 (Hill of No Return) (1992)-aoao评分_93" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="无言的山丘 (Hill of No Return) (1992)-aoao评分_93"
                                         data-url="https://aoao.life/20260105.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1071,21 +1071,21 @@
                     <div class="article-title">
                         <a href="/20251223.html">Mahjong (麻将) (1996) - aoao评分_6.9</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">没get到点啊，很少有让我失望的台湾片啊，为什么分数这么高？      "Nobody knows what they want. They're all waiting for someone to tell them what to do." (这个世界上没有人知道自己要什么，每个人都在等别人告诉他该怎么做。)     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录       ...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年12月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Mahjong (麻将) (1996) - aoao评分_6.9" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Mahjong (麻将) (1996) - aoao评分_6.9"
                                     data-url="https://aoao.life/20251223.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1093,7 +1093,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251223.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1101,8 +1101,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Mahjong (麻将) (1996) - aoao评分_6.9" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Mahjong (麻将) (1996) - aoao评分_6.9"
                                         data-url="https://aoao.life/20251223.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1122,10 +1122,10 @@
                     <div class="article-title">
                         <a href="/20251223-1.html">浪浪山小妖怪 (Nobody) (2025) -aoao评分___70</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">没看懂，不喜欢。。。只是为了记录。动画片就好挣钱么。。。     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：Nobody国家：🇨🇳 中国大陆 &nbsp;|&nbsp; 时长/单集：118分钟导演/制作：於水主演：陈子平 / 路扬 / 董汶亮 / 刘琮（主要配音）类型：动画 / 喜剧 / 奇幻 / 剧情...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251223-1.html">
@@ -1137,12 +1137,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年12月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="浪浪山小妖怪 (Nobody) (2025) -aoao评分___70" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="浪浪山小妖怪 (Nobody) (2025) -aoao评分___70"
                                     data-url="https://aoao.life/20251223-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1150,7 +1150,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251223-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1158,8 +1158,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="浪浪山小妖怪 (Nobody) (2025) -aoao评分___70" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="浪浪山小妖怪 (Nobody) (2025) -aoao评分___70"
                                         data-url="https://aoao.life/20251223-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1179,10 +1179,10 @@
                     <div class="article-title">
                         <a href="/20251128-1.html">The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">为什么更喜欢美国动画，看了几十年美国动画。 日本的吉普力比较不那么喜欢。 中国现在的大红大紫的相对比较不喜欢。 小时候那些动画片除外。       “Good? Bad? Honey, those are just labels for people who don't know how to accessorize.”   “好人？坏人？亲爱的，那只是给不懂得如何搭配风格的人贴的标签。”    ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251128-1.html">
@@ -1194,12 +1194,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80"
                                     data-url="https://aoao.life/20251128-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1207,7 +1207,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251128-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1215,8 +1215,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Bad Guys 2 (坏蛋联盟2) (2025) -aoao评分_80"
                                         data-url="https://aoao.life/20251128-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1236,10 +1236,10 @@
                     <div class="article-title">
                         <a href="/20251122.html">The Shadow's Edge (捕风追影) (2025)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">才多少年就改编啊《跟踪》(2007)，扣1分79分。不过这个电影开局就高潮有88分。梁家辉的小刀战也有点模仿意思。 “科技捕捉的是脸孔，直觉捕捉的是影子。在这座满是电子眼的城市里，唯一的藏身之处就是众目睽睽之下。”       🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：捕风追影 (The Shadow's Edge)   国家：🇨🇳 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251122.html">
@@ -1251,12 +1251,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Shadow's Edge (捕风追影) (2025)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Shadow's Edge (捕风追影) (2025)"
                                     data-url="https://aoao.life/20251122.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1264,7 +1264,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251122.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1272,8 +1272,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Shadow's Edge (捕风追影) (2025)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Shadow's Edge (捕风追影) (2025)"
                                         data-url="https://aoao.life/20251122.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1293,10 +1293,10 @@
                     <div class="article-title">
                         <a href="/20251121.html">南京照相馆 (Dead to Rights) (2025)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">本来对这种片子是不想看的，看完还行电影质量。80分。刚好最近中日非常紧张。- 我们不是朋友，绝对不是。      🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：南京照相馆 (Dead to Rights)国家：🇨🇳 中国大陆 &nbsp;|&nbsp; 时长/单集：137分钟导演/制作：申奥主演：刘昊然 /...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251121.html">
@@ -1308,12 +1308,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="南京照相馆 (Dead to Rights) (2025)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="南京照相馆 (Dead to Rights) (2025)"
                                     data-url="https://aoao.life/20251121.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1321,7 +1321,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251121.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1329,8 +1329,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="南京照相馆 (Dead to Rights) (2025)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="南京照相馆 (Dead to Rights) (2025)"
                                         data-url="https://aoao.life/20251121.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1350,10 +1350,10 @@
                     <div class="article-title">
                         <a href="/20251026.html">罗小黑战记 (2019)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">aoao评分90。娃非常喜欢。一看就是个有艺术的人。      这是一个人类和妖怪共存的世界，他们相安无事，惬意悠然。宁静的大森林中，黑色猫妖罗小黑（山新 配音）赖以生存的家园被毁，它只能四处流浪，无所依靠。在城市角落觅食的时候，罗小黑受到人类的欺负。关键时刻，同为妖怪的风息（郝祥海 配音）出手相助，并将其带回妖怪们的聚集点。本以为终于找到了家庭的温暖，可谁想到强悍的人类无限（刘明月 配音）的出现...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251026.html">
@@ -1365,12 +1365,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="罗小黑战记 (2019)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="罗小黑战记 (2019)"
                                     data-url="https://aoao.life/20251026.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1378,7 +1378,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251026.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1386,8 +1386,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="罗小黑战记 (2019)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="罗小黑战记 (2019)"
                                         data-url="https://aoao.life/20251026.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1407,21 +1407,21 @@
                     <div class="article-title">
                         <a href="/20251026-1.html">罗小黑战记 (2019)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这是一个人类和妖怪共存的世界，他们相安无事，惬意悠然。宁静的大森林中，黑色猫妖罗小黑（山新 配音）赖以生存的家园被毁，它只能四处流浪，无所依靠。在城市角落觅食的时候，罗小黑受到人类的欺负。关键时刻，同为妖怪的风息（郝祥海 配音）出手相助，并将其带回妖怪们的聚集点。本以为终于找到了家庭的温暖，可谁想到强悍的人类无限（刘明月 配音）的出现，打破了小黑期望的一切。而在乱斗中，小黑更被无限掳走。  在与无...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="罗小黑战记 (2019)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="罗小黑战记 (2019)"
                                     data-url="https://aoao.life/20251026-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1429,7 +1429,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251026-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1437,8 +1437,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="罗小黑战记 (2019)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="罗小黑战记 (2019)"
                                         data-url="https://aoao.life/20251026-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1458,21 +1458,21 @@
                     <div class="article-title">
                         <a href="/20250922-4.html">电影《头号玩家》（Ready Player One）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">推荐电影。不是因为它有多精彩，而是因为这部电影就是未来的真实场景。   未来存在两种世界：真实世界和电子游戏创造的虚拟世界。真实世界里面，你是一个其貌不扬、处处受挫、穷困无聊的鲁蛇（loser）。没关系，你可以去虚拟世界。那里，你会有一个俊美潇洒的化身（avatar），在各种壮丽好玩的场所漫游，还可能成为众人景仰的英雄。   《头号玩家》的主人公就是这样的人物，他不上学也没工作，住在贫民区的集装箱...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="电影《头号玩家》（Ready Player One）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="电影《头号玩家》（Ready Player One）"
                                     data-url="https://aoao.life/20250922-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1480,7 +1480,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250922-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1488,8 +1488,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="电影《头号玩家》（Ready Player One）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="电影《头号玩家》（Ready Player One）"
                                         data-url="https://aoao.life/20250922-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1659,19 +1659,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

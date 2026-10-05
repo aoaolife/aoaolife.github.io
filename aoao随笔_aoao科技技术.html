@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,10 +399,10 @@
                     <div class="article-title">
                         <a href="/20260918-1.html">很快我们每月就要多项固定支出费用了</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Token费，也可以叫AI费。除了你的电话费、宽带费、流量费很快应该就要多出一个token词元费了。   有人可能会说我现在用的豆包、元宝都不用钱的啊。这个是因为刚开始然后都在抢客户有点补贴，还有个原因就是这个AI属于很初级简单AI，本来就比较便宜。   稍微高级一点AI使用一次现在还是有点贵的。现在很多开放的地区政府一个月会补贴你几百块使用高级点AI，比如杭州、成都。 还有补贴你贷款购买使用AI...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260918-1.html">
@@ -414,12 +414,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="很快我们每月就要多项固定支出费用了" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="很快我们每月就要多项固定支出费用了"
                                     data-url="https://aoao.life/20260918-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -427,7 +427,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260918-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -435,8 +435,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="很快我们每月就要多项固定支出费用了" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="很快我们每月就要多项固定支出费用了"
                                         data-url="https://aoao.life/20260918-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -456,21 +456,21 @@
                     <div class="article-title">
                         <a href="/20260717.html">目前使用AI的困惑解惑</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">我有一台面包机，它几乎包办一切：揉面、发酵、烘焙。我把原料倒进去，按下一个按钮，三个小时后面包就出炉了。   嗯，三年里我大概只用过这台机器两次。相反，我每周都会去超市买一条包装好的预切片面包。   这解释了为什么即使 AI 可以轻松生成代码，但还是买服务方便。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年07月17日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="目前使用AI的困惑解惑" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="目前使用AI的困惑解惑"
                                     data-url="https://aoao.life/20260717.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -478,7 +478,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260717.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -486,8 +486,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="目前使用AI的困惑解惑" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="目前使用AI的困惑解惑"
                                         data-url="https://aoao.life/20260717.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -507,10 +507,10 @@
                     <div class="article-title">
                         <a href="/20260529-1.html">人造蛋壳-美国生物科技公司 Colossal 制造了"人工蛋壳"，已经孵化了26只小鸡。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 蛋壳上方是透明的，可以观察内部情况。   回头蛋生的物种，都可以复活了。好强大的科技啊。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260529-1.html">
@@ -522,12 +522,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="人造蛋壳-美国生物科技公司 Colossal 制造了"人工蛋壳"，已经孵化了26只小鸡。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="人造蛋壳-美国生物科技公司 Colossal 制造了"人工蛋壳"，已经孵化了26只小鸡。"
                                     data-url="https://aoao.life/20260529-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -535,7 +535,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260529-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -543,8 +543,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="人造蛋壳-美国生物科技公司 Colossal 制造了"人工蛋壳"，已经孵化了26只小鸡。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="人造蛋壳-美国生物科技公司 Colossal 制造了"人工蛋壳"，已经孵化了26只小鸡。"
                                         data-url="https://aoao.life/20260529-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -564,21 +564,21 @@
                     <div class="article-title">
                         <a href="/20260415-5.html">我的网站系统详细分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这是一个个人静态博客，由“aoao”长期运营，主题非常杂而全，融合了娱乐、生活、科技、财经、幽默和个人观点。整体风格像一个“数字日记+资源库”，没有商业化卖货，但有少量AI工具/福利推广。   1. 网站整体定位与目的   核心主题：个人内容聚合平台。涵盖电影/电视剧评、音乐推荐、马斯克中文日记（虚构每日更新，已有122篇）、股票分析、生活随笔、娱乐八卦、经典幽默笑话、IT技术笔记、AI工具、文化...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月15日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="我的网站系统详细分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="我的网站系统详细分析"
                                     data-url="https://aoao.life/20260415-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -586,7 +586,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260415-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -594,8 +594,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="我的网站系统详细分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="我的网站系统详细分析"
                                         data-url="https://aoao.life/20260415-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -615,21 +615,21 @@
                     <div class="article-title">
                         <a href="/20260328-1.html">现在开发程序很有游戏挂机感觉</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">原来玩过一个网络游戏叫霸王大陆，这个游戏到后面就是挂机。早期的外挂没那么智能需要经常去手动查看，后面越来越智能，一天都不用查看。    现在开发程序很有游戏挂机感觉。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="现在开发程序很有游戏挂机感觉" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="现在开发程序很有游戏挂机感觉"
                                     data-url="https://aoao.life/20260328-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -637,7 +637,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260328-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -645,8 +645,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="现在开发程序很有游戏挂机感觉" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="现在开发程序很有游戏挂机感觉"
                                         data-url="https://aoao.life/20260328-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -666,21 +666,21 @@
                     <div class="article-title">
                         <a href="/20260226-6.html">中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元   又找到一个AI替代不了的行业。   —— 缺烟缺酒缺女人 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元"
                                     data-url="https://aoao.life/20260226-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -688,7 +688,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260226-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -696,8 +696,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="中国女教师辞职向欧洲销售棺材，年销售额达 600 万美元"
                                         data-url="https://aoao.life/20260226-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -717,10 +717,10 @@
                     <div class="article-title">
                         <a href="/20260226-7.html">看到个产品电脑桌变玻璃的，下面是主机在跑</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">主机直接装进透明折叠玻璃书桌，一掀开RGB和硬件全亮，科技感爆棚。   桌面干净不占地方，小屋子也能顶级配置，像科幻电影一样酷。    —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260226-7.html">
@@ -732,12 +732,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="看到个产品电脑桌变玻璃的，下面是主机在跑" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="看到个产品电脑桌变玻璃的，下面是主机在跑"
                                     data-url="https://aoao.life/20260226-7.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -745,7 +745,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260226-7.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -753,8 +753,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="看到个产品电脑桌变玻璃的，下面是主机在跑" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="看到个产品电脑桌变玻璃的，下面是主机在跑"
                                         data-url="https://aoao.life/20260226-7.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -774,21 +774,21 @@
                     <div class="article-title">
                         <a href="/20260222.html">aoao.life网站分析报告</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">🌐 aoao.life网站分析报告：aoao.life  分析日期：2026年02月22日 目标站点：aoao.life     1. 网站概览 (Overview)  aoao.life 是一个极具个性和极客精神的个人博客（数字花园）。它不仅仅是一个内容发布平台，更像是一个自动化 AI 代理的实验场和生活记录仪。   网站内容呈现出高度的碎片化与结构化并存的特征：既有随手记录的生活段子，又有排版...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao.life网站分析报告" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao.life网站分析报告"
                                     data-url="https://aoao.life/20260222.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -796,7 +796,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260222.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -804,8 +804,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao.life网站分析报告" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao.life网站分析报告"
                                         data-url="https://aoao.life/20260222.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -825,10 +825,10 @@
                     <div class="article-title">
                         <a href="/20260206.html">移动微波打卫星武器</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">没有专门去验证。看到国外科技发我们制造了这种屋企。   全球首款移动式TPG1000Cs系统，该系统能够发射功率高达20吉瓦的强微波脉冲，干扰星链等低轨道卫星的运行。   这款新型设备体积小巧，可安装在卡车、船舶、飞机甚至自身的卫星上。    —— emusk.cn </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260206.html">
@@ -840,12 +840,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="移动微波打卫星武器" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="移动微波打卫星武器"
                                     data-url="https://aoao.life/20260206.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -853,7 +853,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260206.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -861,8 +861,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="移动微波打卫星武器" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="移动微波打卫星武器"
                                         data-url="https://aoao.life/20260206.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -882,21 +882,21 @@
                     <div class="article-title">
                         <a href="/20260118-2.html">今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">  title: 今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。   date: 2025-09-03 -   我笔记本有点卡，有点延迟。 20W星星，有点牛逼。   直播可以换成你想要声音。   VCClient是一款利用AI进行实时语音转换的软件。 https://github.com/w-okada/voice-changer  </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。"
                                     data-url="https://aoao.life/20260118-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -904,7 +904,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260118-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -912,8 +912,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="今天部署了下w-okada voice-changer AI进行实时语音转换直播可以换成你想要声音。"
                                         data-url="https://aoao.life/20260118-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -933,10 +933,10 @@
                     <div class="article-title">
                         <a href="/20251127-1.html">国内的电车马上要安装马桶了</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">近日国内新有款新上市电车，安装了冰箱、空调、彩电、沙发，   然后还安装了花洒、地暖、移动洗澡房。   aoao建议增加个水池养金龙魚。      —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251127-1.html">
@@ -948,12 +948,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="国内的电车马上要安装马桶了" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="国内的电车马上要安装马桶了"
                                     data-url="https://aoao.life/20251127-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -961,7 +961,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251127-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -969,8 +969,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="国内的电车马上要安装马桶了" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="国内的电车马上要安装马桶了"
                                         data-url="https://aoao.life/20251127-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -990,21 +990,21 @@
                     <div class="article-title">
                         <a href="/20251119-1.html">无人机代步</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">河南一男子用无人机去距离家4.8公里的镇上买水煎包   全程只用了8分钟   科技，让天上掉馅饼成为可能   乡镇管得松，低空经济大有可为   顺带一提，这也得是老中，在穷乡僻壤仍然有信号网络保持畅通   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月19日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="无人机代步" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="无人机代步"
                                     data-url="https://aoao.life/20251119-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1012,7 +1012,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251119-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1020,8 +1020,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="无人机代步" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="无人机代步"
                                         data-url="https://aoao.life/20251119-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1041,10 +1041,10 @@
                     <div class="article-title">
                         <a href="/20251110-3.html">科技发展人人可以不用工作不用上班？</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">随着科学技术发展，生产力提高，可以不用很多人就生产非常多的工业产品，非常多的农业产品。   理论上这样人们就可以不用工作，不用上班，可以分享发展的一些价值。   但是作为资本垄断家，上层阶级会觉得那你就是多余的，需要你干嘛？也不可能分享给你。   所以蝼蚁永远只能蝼蚁，不管那个社会，科技怎么发展。 看懂这个感觉好悲伤啊！！！    —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251110-3.html">
@@ -1056,12 +1056,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月10日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="科技发展人人可以不用工作不用上班？" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="科技发展人人可以不用工作不用上班？"
                                     data-url="https://aoao.life/20251110-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1069,7 +1069,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251110-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1077,8 +1077,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="科技发展人人可以不用工作不用上班？" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="科技发展人人可以不用工作不用上班？"
                                         data-url="https://aoao.life/20251110-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1098,10 +1098,10 @@
                     <div class="article-title">
                         <a href="/20251108-1.html">马斯克绩效奖金7,120,000,000,000元，81880吨</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   马斯克绩效奖金1万亿美元，约等于 7.12万亿人民币。   一张100元人民币钞票重约1.15克，7,120,000,000,000 人民币（以100元面额钞票计）约等于 81,880 吨。   一张100元人民币面积11.935 cm²，可以铺满一个国家。   一张100元人民币15.5cm，一张接一张排列，总长度548 万公里，可以绕地球137圈。   他弯腰捡起一张100元人民币，马上...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251108-1.html">
@@ -1113,12 +1113,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月08日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="马斯克绩效奖金7,120,000,000,000元，81880吨" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="马斯克绩效奖金7,120,000,000,000元，81880吨"
                                     data-url="https://aoao.life/20251108-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1126,7 +1126,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251108-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1134,8 +1134,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="马斯克绩效奖金7,120,000,000,000元，81880吨" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="马斯克绩效奖金7,120,000,000,000元，81880吨"
                                         data-url="https://aoao.life/20251108-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1155,10 +1155,10 @@
                     <div class="article-title">
                         <a href="/20251031-1.html">不远未来是不是带个眼镜就可以实现电脑手机所有功能？</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天看到个文章，一个同学出差只带一个袖珍电脑，一副眼镜，还有键鼠移动电源，就可以完成所有工作。    电脑能不能用手机实现呢，应该可以的。   手机能不能也用眼镜实现呢，这个技术发展小小眼镜实现带系统功能应该也可以实现。   所以带个眼镜就可以实现所有功能，这个觉得不科幻了。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251031-1.html">
@@ -1170,12 +1170,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="不远未来是不是带个眼镜就可以实现电脑手机所有功能？" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="不远未来是不是带个眼镜就可以实现电脑手机所有功能？"
                                     data-url="https://aoao.life/20251031-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1183,7 +1183,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251031-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1191,8 +1191,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="不远未来是不是带个眼镜就可以实现电脑手机所有功能？" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="不远未来是不是带个眼镜就可以实现电脑手机所有功能？"
                                         data-url="https://aoao.life/20251031-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1212,10 +1212,10 @@
                     <div class="article-title">
                         <a href="/20251027-6.html">每个人的一生都是一个故事,使用AI智能眼镜，隔一段时间自动拍照，加入自动描述记录成传记</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">关于走过的旅程，经历的战斗，感受的苦恼和困惑。但是，大多数人的故事没有记录下来，随着日子湮没了。   不久将来肯定可以使用AI智能眼镜，隔一段时间自动拍照，然后自动描述记录成传记保存。    —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251027-6.html">
@@ -1227,12 +1227,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="每个人的一生都是一个故事,使用AI智能眼镜，隔一段时间自动拍照，加入自动描述记录成传记" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="每个人的一生都是一个故事,使用AI智能眼镜，隔一段时间自动拍照，加入自动描述记录成传记"
                                     data-url="https://aoao.life/20251027-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1240,7 +1240,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251027-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1248,8 +1248,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="每个人的一生都是一个故事,使用AI智能眼镜，隔一段时间自动拍照，加入自动描述记录成传记" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="每个人的一生都是一个故事,使用AI智能眼镜，隔一段时间自动拍照，加入自动描述记录成传记"
                                         data-url="https://aoao.life/20251027-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1269,10 +1269,10 @@
                     <div class="article-title">
                         <a href="/20251023-1.html">这个匿名交友应用正经么</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">日本近日推出了一款名为 “MyPappy” 的匿名交友应用。注册男性需证明年收入至少 1000万日元（约合47万人民币），否则连登录页面都进不去；而女性则必须通过“面试”和“外貌审核”，才能被批准成为“候选”。   每位用户都会被分配一名所谓的“专属经理”，教导他们如何精准筛选“年轻漂亮”的女性。   然后三上悠亚担任形象代言人...   那么问题来了：这是正经交友么？    —— 番茄炒西红柿 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251023-1.html">
@@ -1284,12 +1284,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="这个匿名交友应用正经么" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="这个匿名交友应用正经么"
                                     data-url="https://aoao.life/20251023-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1297,7 +1297,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251023-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1305,8 +1305,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="这个匿名交友应用正经么" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="这个匿名交友应用正经么"
                                         data-url="https://aoao.life/20251023-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1326,10 +1326,10 @@
                     <div class="article-title">
                         <a href="/20251018-2.html">所有信息已被AI训练完了，下一步怎么办？</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">全网信息、所有书籍、有价值的视频……都被提炼成了数据 token，用于训练，现在已大部分都被训练完了。   下一步怎么办，自己生成数据然后训练？    —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251018-2.html">
@@ -1341,12 +1341,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="所有信息已被AI训练完了，下一步怎么办？" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="所有信息已被AI训练完了，下一步怎么办？"
                                     data-url="https://aoao.life/20251018-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1354,7 +1354,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251018-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1362,8 +1362,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="所有信息已被AI训练完了，下一步怎么办？" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="所有信息已被AI训练完了，下一步怎么办？"
                                         data-url="https://aoao.life/20251018-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1383,21 +1383,21 @@
                     <div class="article-title">
                         <a href="/20251011-5.html">激光武器-原来它打不了太远</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">看到个新闻，美国海军进行了一次海上激光武器试验，从军舰上发射激光，成功摧毁了几百米以外的一艘小船。这是有报道的第一次可用于实战的激光武器试验。   激光武器的优点是速度极快、命中率高，缺点是它非常耗电，只能在发电量大的军舰上使用，而且它只能在晴天使用，因为激光是直线的，中间不能有阻挡，遇到雨雪云雾，都会被空气里面的水汽和杂质反射掉。也是因为这个原因，它对太远的物体无效，因为激光强度会快速衰竭。  ...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月11日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="激光武器-原来它打不了太远" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="激光武器-原来它打不了太远"
                                     data-url="https://aoao.life/20251011-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1405,7 +1405,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251011-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1413,8 +1413,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="激光武器-原来它打不了太远" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="激光武器-原来它打不了太远"
                                         data-url="https://aoao.life/20251011-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1434,10 +1434,10 @@
                     <div class="article-title">
                         <a href="/20251004-5.html">aoao谈无人机</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   火药，我们发明的，但是几百年来我们都拿来制做烟花爆竹。   现在无人机，我们最牛，天天看到无人机方阵队烟花。   但是这次我们想要变更它使用用途是非常快的。   我们可以编程指定飞行轨迹，设置非常长的飞行时间，滞空时间。 成本相对来说都不用钱！！！   机场来几台，炼油厂来几台，重要大楼来几台，还些重要设施来几台 。。。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251004-5.html">
@@ -1449,12 +1449,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月04日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao谈无人机" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao谈无人机"
                                     data-url="https://aoao.life/20251004-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1462,7 +1462,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251004-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1470,8 +1470,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao谈无人机" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao谈无人机"
                                         data-url="https://aoao.life/20251004-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1491,10 +1491,10 @@
                     <div class="article-title">
                         <a href="/20251004-6.html">无线耳机耳环</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> aoao经常带无线耳机，而且带的时候很长，今天看到个无线耳机耳环，   可以把耳机挂在耳朵上，想听的时候就塞进耳朵，不想听就挂着，很是方便。   有点想去订个耳洞，带个这个耳环。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251004-6.html">
@@ -1506,12 +1506,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月04日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="无线耳机耳环" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="无线耳机耳环"
                                     data-url="https://aoao.life/20251004-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1519,7 +1519,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251004-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1527,8 +1527,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="无线耳机耳环" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="无线耳机耳环"
                                         data-url="https://aoao.life/20251004-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1548,21 +1548,21 @@
                     <div class="article-title">
                         <a href="/20250927-5.html">城市已经全是摄像头传感器</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天早上aoao收到一条警告短信，说我骑电动车没有带安全帽，有点奇怪没碰到交警怎会收到这信。   下午停在小区的车被刮的个大横，找物业调了好久才找到嫌疑车，人家不认。。。   报了交警过来量了量两车刮痕高度，人家还是不认。也没办法全都给我到交警队。   到交警队电脑一打开哪个小区，几号摄像头，清清楚楚，真特么什么人都有。   现在很多整个城市到处都是摄像关传感器。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="城市已经全是摄像头传感器" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="城市已经全是摄像头传感器"
                                     data-url="https://aoao.life/20250927-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1570,7 +1570,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250927-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1578,8 +1578,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="城市已经全是摄像头传感器" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="城市已经全是摄像头传感器"
                                         data-url="https://aoao.life/20250927-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1599,10 +1599,10 @@
                     <div class="article-title">
                         <a href="/20250927-6.html">身体植入一个芯片，手机钥匙啥也不用带了</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">aoao今天看到个科技新闻，在你的身体植入一个芯片，比如手掌，就跟一根刺一样大。   芯片里面可以包括非常多信息，比如说开门，靠一下手就可以自动NFC开门了。   比如说支付，挥挥手就可以支付了。公交地铁你也啥不用带了。   握握手名片也就自动交换了。还可以监控你的血药血糖所有数据，等等   最主要是无痛的，打一针一样，据说也没有太大异物感。如果比较便宜你会植入么？   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250927-6.html">
@@ -1614,12 +1614,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="身体植入一个芯片，手机钥匙啥也不用带了" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="身体植入一个芯片，手机钥匙啥也不用带了"
                                     data-url="https://aoao.life/20250927-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1627,7 +1627,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250927-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1635,8 +1635,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="身体植入一个芯片，手机钥匙啥也不用带了" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="身体植入一个芯片，手机钥匙啥也不用带了"
                                         data-url="https://aoao.life/20250927-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1656,10 +1656,10 @@
                     <div class="article-title">
                         <a href="/20250913-2.html">电池发展，电车越来越不错。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天看到两条新闻，应该很快能直进我们生活了。固态锂电池已经进入量产阶段了。未来，   每台电动车都成为国家的储能集群节点，晚上充电白天，白天放电使用，可以做到免费，甚至可以挣钱。      —— 霸气侧漏 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250913-2.html">
@@ -1671,12 +1671,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="电池发展，电车越来越不错。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="电池发展，电车越来越不错。"
                                     data-url="https://aoao.life/20250913-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1684,7 +1684,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250913-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1692,8 +1692,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="电池发展，电车越来越不错。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="电池发展，电车越来越不错。"
                                         data-url="https://aoao.life/20250913-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1713,10 +1713,10 @@
                     <div class="article-title">
                         <a href="/20250912-1.html">不需要外部电力的电动列车</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">一家澳大利亚矿业公司，正在建造不需要（外部）充电的电动列车。    他们的矿山位于山顶，列车装满沉重的矿石后，将一路开到山下。   他们设想，重力会推动火车下行，在这个过程中，可以让势能转变为电能，为电池充电。   当列车回到平地，再次开上山时，列车是空载，自身重量不大，可以使用下山时产生的电能来推动。 因此理论上，它可以不需要外部电力而长期运行。   —— 明人不放暗屁 </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250912-1.html">
@@ -1728,12 +1728,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="不需要外部电力的电动列车" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="不需要外部电力的电动列车"
                                     data-url="https://aoao.life/20250912-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1741,7 +1741,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250912-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1749,8 +1749,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="不需要外部电力的电动列车" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="不需要外部电力的电动列车"
                                         data-url="https://aoao.life/20250912-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1770,10 +1770,10 @@
                     <div class="article-title">
                         <a href="/20250911.html">华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">一条挂线600块，一个取卡针60。这个就算了，那电池使用时间为什么还有人能忍？    以下是一些观察：   华为:航天员，公务员、国企人员、高端商务人士、医生、老师、工程师、律师、企业高管、做生意的老板。   苹果:前台(90%的前台) 厂妹、厂仔、女大学生、明星、都市白领，富二代、在KTV和会所、酒吧工作的女孩子。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20250911.html">
@@ -1785,12 +1785,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月11日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。"
                                     data-url="https://aoao.life/20250911.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1798,7 +1798,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250911.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1806,8 +1806,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="华为和苹果手机使用人群。苹果爱慕虚荣的穷人买得起的最廉价的奢侈品之一。"
                                         data-url="https://aoao.life/20250911.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1827,21 +1827,21 @@
                     <div class="article-title">
                         <a href="/20250903-3.html">记录个小技巧开机执行exe</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">运行shell:startup ,前需要开机执行的程序扔进去。比如说我有好多自动备份脚本，开机文件就自动备份一份到邮箱。 需要脚本程序的可以联系aoao  </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年09月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="记录个小技巧开机执行exe" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="记录个小技巧开机执行exe"
                                     data-url="https://aoao.life/20250903-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1849,7 +1849,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20250903-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1857,8 +1857,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="记录个小技巧开机执行exe" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="记录个小技巧开机执行exe"
                                         data-url="https://aoao.life/20250903-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -2020,19 +2020,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

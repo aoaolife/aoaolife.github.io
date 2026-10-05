@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,10 +378,10 @@
                     <div class="article-title">
                         <a href="/20260125-2.html">大家好，我是马斯克，今天是2026年01月25日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   ​   今天天气德克萨斯这边风很大，适合测试那些不锈钢大家伙的抗风能力，但我心情有点emo，主要是因为人类进化的速度还是太慢了。今天主要是盯着GPS卫星上天，然后跟那些做机器人的家伙吵了一架，最后在X上顺手封了几个只会发垃圾广告的bot。   早上起来先看了一眼星港那边的数据。今天有猎鹰9号的任务，要把GPS III-9送上去。虽然这种常规发射现在对我来说就像送快递一样无聊，但这可是美军的单...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260125-2.html">
@@ -393,12 +393,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月25日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月25日"
                                     data-url="https://aoao.life/20260125-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -406,7 +406,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260125-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -414,8 +414,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月25日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月25日"
                                         data-url="https://aoao.life/20260125-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -435,21 +435,21 @@
                     <div class="article-title">
                         <a href="/20260124.html">我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。"
                                     data-url="https://aoao.life/20260124.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -457,7 +457,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260124.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -465,8 +465,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="我有点讨厌浪费时间。如果我和你交谈，发现你提供的信息毫无用处，我就会直接走开。我不在乎这会对社会造成什么影响。"
                                         data-url="https://aoao.life/20260124.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -486,21 +486,21 @@
                     <div class="article-title">
                         <a href="/20260124-1.html">领导者的职责是为人民服务，而不是让人民为领导者服务</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">领导者的职责是为人民服务，而不是让人民为领导者服务   —— emusk.cn </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="领导者的职责是为人民服务，而不是让人民为领导者服务" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="领导者的职责是为人民服务，而不是让人民为领导者服务"
                                     data-url="https://aoao.life/20260124-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -508,7 +508,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260124-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -516,8 +516,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="领导者的职责是为人民服务，而不是让人民为领导者服务" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="领导者的职责是为人民服务，而不是让人民为领导者服务"
                                         data-url="https://aoao.life/20260124-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -537,21 +537,21 @@
                     <div class="article-title">
                         <a href="/20260124-2.html">大家好，我是马斯克，今天是2026年01月24日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">今天天气糟透了，德克萨斯的风又大又冷，吹得像要把星舰发射架给拆了一样。我的心情有点像此时的天空——阴沉但充满能量。刚从瑞士回来，倒时差让我感觉脑子像被一团棉花塞住了，但今天依然是极其甚至“疯狂”高效的一天。   早上4点就在私人飞机上醒了，盯着窗外的云层发呆。刚结束在那边的行程，说实话，我以前喷过那个“精英聚会”无数次，结果这次不仅去了，还跟那个掌管着全球万亿资产的家伙同台聊了聊。挺讽刺的，是不是...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月24日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月24日"
                                     data-url="https://aoao.life/20260124-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -559,7 +559,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260124-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -567,8 +567,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月24日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月24日"
                                         data-url="https://aoao.life/20260124-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -588,10 +588,10 @@
                     <div class="article-title">
                         <a href="/20260123.html">跟你说说一个部门内部秘密</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">前段时间，我们部门有位美女同事被公司辞退，离职了。   我隔壁的程序员哥们儿，总会时不时地看向那位美女同事的空工位，发呆好半天……   我一看这情况，心想：哎呀，这小子肯定是暗恋人家啊！于是我拍拍他肩膀，说：“兄弟，想做什么就去做吧，现在还来得及！”   结果，他眼睛一亮，开开心心地跑过去……把美女同事的显示器搬到了他的工位上！      —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260123.html">
@@ -603,12 +603,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="跟你说说一个部门内部秘密" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="跟你说说一个部门内部秘密"
                                     data-url="https://aoao.life/20260123.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -616,7 +616,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260123.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -624,8 +624,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="跟你说说一个部门内部秘密" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="跟你说说一个部门内部秘密"
                                         data-url="https://aoao.life/20260123.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -645,10 +645,10 @@
                     <div class="article-title">
                         <a href="/20260123-1.html">大家好，我是马斯克，今天是2026年01月23日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   德州的天气像个没调好参数的随机数生成器，灰蒙蒙的，有点像我现在的脑回路——充满了高熵值的混乱。心情？大概是“生产地狱”复刻版的焦躁，夹杂着一丝对人类愚蠢的惯性绝望。今天基本上就是在跟熵增做斗争，试图把混乱变成秩序，顺便还要挡几颗来自华盛顿的暗箭。   早上醒来看了一眼X，那帮主流媒体又在发疯。关于DOGE（政府效率部）的那个所谓“社保数据泄露”的新闻还在发酵，居然说我们是为了抓选民欺诈？拜托...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260123-1.html">
@@ -660,12 +660,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月23日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月23日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月23日"
                                     data-url="https://aoao.life/20260123-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -673,7 +673,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260123-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -681,8 +681,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月23日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月23日"
                                         data-url="https://aoao.life/20260123-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -702,10 +702,10 @@
                     <div class="article-title">
                         <a href="/20260122.html">吴彦祖-吴彦祖晒出和老婆的合照，看样子像是在陪着老婆理发。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260122.html">
@@ -717,12 +717,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="吴彦祖-吴彦祖晒出和老婆的合照，看样子像是在陪着老婆理发。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="吴彦祖-吴彦祖晒出和老婆的合照，看样子像是在陪着老婆理发。"
                                     data-url="https://aoao.life/20260122.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -730,7 +730,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260122.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -738,8 +738,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="吴彦祖-吴彦祖晒出和老婆的合照，看样子像是在陪着老婆理发。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="吴彦祖-吴彦祖晒出和老婆的合照，看样子像是在陪着老婆理发。"
                                         data-url="https://aoao.life/20260122.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -759,10 +759,10 @@
                     <div class="article-title">
                         <a href="/20260122-1.html">大家好，我是马斯克，今天是2026年01月22日</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 今天孟菲斯的天气像该死的灰烬一样冷，那种湿冷能钻进骨头缝里。就像我现在的心情——一种混合了极度亢奋和想把所有监管机构炸飞的暴躁。Grok 3的训练进度卡在99.9%，而我的大脑在燃烧。   上午8:32。刚看完xAI那个法律团队发来的简报。关于孟菲斯超级计算机集群（Colossus）的那个案子，EPA（环境保护署）那群官僚居然真的敢认定我们的甲烷发电机“非法运营”。简直是疯了。我这是为了人类的A...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260122-1.html">
@@ -774,12 +774,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月22日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月22日" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月22日"
                                     data-url="https://aoao.life/20260122-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -787,7 +787,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260122-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -795,8 +795,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月22日" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月22日"
                                         data-url="https://aoao.life/20260122-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -816,10 +816,10 @@
                     <div class="article-title">
                         <a href="/20260121.html">大家好，我是马斯克，今天是2026年01月21日.md</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 得克萨斯州，博卡奇卡。57华氏度，阴郁。 空气里全是未燃烧的甲烷味。心情像是在高维空间被卡住的张量——Colossus 2昨晚功耗飙到了1.2吉瓦，我们在用这座城市的电力将原始数据炼成神，而那个爱尔兰廉航的小丑Michael还在为了Starlink天线的空气动力学跟我喋喋不休。他搞了个什么“傻瓜大甩卖”来嘲讽我？我真想买下Ryanair，然后找个真叫Ryan的人来管。物理学最终会赢，闭源的恐龙迟...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260121.html">
@@ -831,12 +831,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="大家好，我是马斯克，今天是2026年01月21日.md" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="大家好，我是马斯克，今天是2026年01月21日.md"
                                     data-url="https://aoao.life/20260121.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -844,7 +844,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260121.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -852,8 +852,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="大家好，我是马斯克，今天是2026年01月21日.md" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="大家好，我是马斯克，今天是2026年01月21日.md"
                                         data-url="https://aoao.life/20260121.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -873,10 +873,10 @@
                     <div class="article-title">
                         <a href="/20260120.html">马来西亚，古天乐、关咏荷和樊少皇三人外出游玩</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 1996年，在马来西亚，古天乐、关咏荷和樊少皇三人外出游玩时留下了一张合影。回过头来看，当年的三人真是青春靓丽，状态极佳。   当时三人之中，名气最大、咖位最高的无疑是站在中间的关咏荷。她是TVB的当家花旦，曾与“收视福星”欧阳震华合作出演多部爆款剧集，是观众心中非常经典的荧幕情侣。   后来，她嫁给了张家辉，家庭与事业都备受关注。   那时的古天乐还是大家熟悉的“白古”，英俊白皙，颜值巅峰，帅...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260120.html">
@@ -888,12 +888,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月20日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="马来西亚，古天乐、关咏荷和樊少皇三人外出游玩" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="马来西亚，古天乐、关咏荷和樊少皇三人外出游玩"
                                     data-url="https://aoao.life/20260120.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -901,7 +901,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260120.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -909,8 +909,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="马来西亚，古天乐、关咏荷和樊少皇三人外出游玩" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="马来西亚，古天乐、关咏荷和樊少皇三人外出游玩"
                                         data-url="https://aoao.life/20260120.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1080,19 +1080,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

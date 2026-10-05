@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260507.html">202605071322</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度研究报告：梅花生物（600873.SH）基本面透视、周期波动与2026年5月投资决策分析  第一章 核心投资叩问与战略决策基调  针对2026年5月7日午后是否应当投资买入梅花生物（600873.SH）这一具体而微的交易决策，本研究通过对公司深度财务报表、全球氨基酸与合成生物学产业周期、宏观资本流动性以及管理层资本运作路径的系统性剥离与综合考量，得出明确的战略与战术分离结论。在短线战术博弈层面...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="202605071322" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="202605071322"
                                     data-url="https://aoao.life/20260507.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260507.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="202605071322" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="202605071322"
                                         data-url="https://aoao.life/20260507.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20260421.html">202604210035</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">以下是对这份埃斯顿（002747.SZ）深度投资分析报告的全景总结：     公司基本面：扭亏为盈的历史性拐点  南京埃斯顿自动化股份有限公司是中国工业自动化与机器人领域的头部企业，2025年全年实现营业收入48.88亿元（同比+21.93%），归母净利润约4,134–4,497万元，从2024年高达8.10亿元的巨亏成功翻身。更具里程碑意义的是，2025年埃斯顿工业机器人出货量以约3.34万台、...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="202604210035" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="202604210035"
                                     data-url="https://aoao.life/20260421.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260421.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="202604210035" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="202604210035"
                                         data-url="https://aoao.life/20260421.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260227-2.html">哎十吨-202602271055</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度战略投资分析与股权估值报告：埃斯顿自动化（SZSE: 002747 / HKEX: 02715）  核心投资结论与决策导向  针对“如果在今天（2026年2月27日）是否会买入埃斯顿（002747.SZ）”这一核心战略投资命题，本报告经过对宏观产业周期、公司财务重构、资本市场催化剂以及前沿技术护城河的深度穿透分析，得出明确且坚定的结论：当前时点是极其罕见且具备极高胜率的战略性建仓/买入节点。 ...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="哎十吨-202602271055" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="哎十吨-202602271055"
                                     data-url="https://aoao.life/20260227-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260227-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="哎十吨-202602271055" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="哎十吨-202602271055"
                                         data-url="https://aoao.life/20260227-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,21 +552,21 @@
                     <div class="article-title">
                         <a href="/20260226.html">立方制药-202602261812</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度研究报告：立方制药（003020.SZ）基本面重构、集采续约周期与短期及中长期投资决策剖析  核心投资结论与决策推演  针对当前资本市场对于“在当前时点（即下一个交易日）是否应当确立对合肥立方制药股份有限公司（证券代码：003020.SZ）的买入头寸”这一核心命题，通过对该标的宏观政策免疫度、财务基本面重构、战略剥离成效、核心大单品集采续约落地情况以及最新研发管线的深度解构，本报告得出明确的投...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="立方制药-202602261812" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="立方制药-202602261812"
                                     data-url="https://aoao.life/20260226.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -574,7 +574,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260226.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -582,8 +582,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="立方制药-202602261812" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="立方制药-202602261812"
                                         data-url="https://aoao.life/20260226.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -603,21 +603,21 @@
                     <div class="article-title">
                         <a href="/20260224.html">新希望股票分析-202602241002</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度研报：新希望（000876.SZ）2026年投资价值与基本面剖析——基于“成本-需求”双重挤压与猪周期拐点的战略博弈  一、 核心投资决策与战略研判：今天是否应该买入新希望？  针对核心命题——“在2026年2月24日的当前时点，是否应当买入新希望（000876.SZ）这支股票”，基于对宏观经济基本面、生猪产业周期位置、公司资产负债状况及最新财务数据的深度剖析，本报告得出明确而审慎的结论：当前...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月24日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="新希望股票分析-202602241002" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="新希望股票分析-202602241002"
                                     data-url="https://aoao.life/20260224.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -625,7 +625,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260224.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -633,8 +633,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="新希望股票分析-202602241002" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="新希望股票分析-202602241002"
                                         data-url="https://aoao.life/20260224.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -654,21 +654,21 @@
                     <div class="article-title">
                         <a href="/20260214.html">亿纬锂能研究20260213</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">亿纬锂能（300014.SZ）深度投资价值研究报告：2026年业绩拐点与全球化布局的戴维斯双击  报告日期： 2026年2月13日   投资评级： 买入（Buy）/ 强力增持   风险等级： 中高风险（R4）   1. 核心投资逻辑与决策建议  站在2026年2月13日这一时间节点，对于“今日是否购买亿纬锂能股票”这一问题，本报告基于详尽的基本面分析、财务预测模型及行业趋势研判，给出明确的肯定回答...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="亿纬锂能研究20260213" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="亿纬锂能研究20260213"
                                     data-url="https://aoao.life/20260214.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -676,7 +676,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260214.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -684,8 +684,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="亿纬锂能研究20260213" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="亿纬锂能研究20260213"
                                         data-url="https://aoao.life/20260214.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -705,21 +705,21 @@
                     <div class="article-title">
                         <a href="/20260125-1.html">歌尔股份涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌尔股份 (002241.SZ) 深度投资研究报告：2026年1月26日及未来一周行情全景推演与价值重估  报告日期： 2026年1月25日   研究标的： 歌尔股份 (002241.SZ)   报告类型： 深度策略/周度展望/事件驱动   关键词： 消费电子、XR产业链、Meta财报、苹果Vision Pro、北向资金、技术面分析   ---  1. 核心观点与投资摘要   1.1 报告综述：超...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月25日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="歌尔股份涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="歌尔股份涨跌概率分析"
                                     data-url="https://aoao.life/20260125-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -727,7 +727,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260125-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -735,8 +735,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="歌尔股份涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="歌尔股份涨跌概率分析"
                                         data-url="https://aoao.life/20260125-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -756,21 +756,21 @@
                     <div class="article-title">
                         <a href="/20260115-1.html">中国中车涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">中国中车涨跌概率分析：后高铁时代的全球博弈、产业转型与估值逻辑重构研究报告  摘要：核心增长引擎的范式转移  中国中车（601766.SH, 1766.HK）作为全球规模最大的轨道交通装备供应商，其股价波动逻辑正处于一个历史性的转折点。过去十年，中国中车的估值高度依赖于国内大规模高铁网络建设的“增量需求”；而在2024至2026年的预测周期内，驱动股价涨跌的核心变量已悄然演变为“存量维保红利”、“...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月15日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="中国中车涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="中国中车涨跌概率分析"
                                     data-url="https://aoao.life/20260115-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -778,7 +778,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260115-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -786,8 +786,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="中国中车涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="中国中车涨跌概率分析"
                                         data-url="https://aoao.life/20260115-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -807,21 +807,21 @@
                     <div class="article-title">
                         <a href="/20260114-3.html">梅花生物股价涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">梅花生物（600873.SH）2026年1月15日股价走势概率分析与资本市场博弈深度研究报告  绪论：宏观经济周期与生物发酵产业的交织博弈  在2026年初的资本市场版图中，梅花生物（600873.SH）作为全球氨基酸与合成生物学产业的领军企业，其股价波动不仅受到微观交易结构的影响，更深刻地反映了基础化工向精细生物发酵转型过程中的估值重构逻辑。截至2026年1月14日，该股的盘面表现呈现出一种极度...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="梅花生物股价涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="梅花生物股价涨跌概率分析"
                                     data-url="https://aoao.life/20260114-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -829,7 +829,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -837,8 +837,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="梅花生物股价涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="梅花生物股价涨跌概率分析"
                                         data-url="https://aoao.life/20260114-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -858,21 +858,21 @@
                     <div class="article-title">
                         <a href="/20260114-4.html">科陆电子下午盘涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度权益研究报告：科陆电子 (002121.SZ) 2026年1月14日午盘资金面博弈与涨跌概率全景分析  核心摘要：午盘关键窗口期的多空决战  本报告旨在对 科陆电子 (002121.SZ) 在 2026年1月14日 下午交易时段的股价走势概率进行详尽的深度剖析。基于上午盘面展现出的极端市场特征——包括全市场成交额突破2.47万亿的历史性天量、商业航天板块的集体退潮以及科陆电子自身即将在下午14...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="科陆电子下午盘涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="科陆电子下午盘涨跌概率分析"
                                     data-url="https://aoao.life/20260114-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -880,7 +880,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -888,8 +888,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="科陆电子下午盘涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="科陆电子下午盘涨跌概率分析"
                                         data-url="https://aoao.life/20260114-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -909,21 +909,21 @@
                     <div class="article-title">
                         <a href="/20260113.html">阿特斯中国股价异动分析预测</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度研究报告：阿特斯（688472.SH）1月13日“V型”反转深度归因、政策博弈与后市量化预测  摘要  2026年1月13日，科创板上市公司阿特斯（688472.SH）经历了一个极具标志性的交易日，股价走势呈现惊心动魄的“V型”反转——从早盘一度深跌超5%至收盘强势上涨近4%。这一剧烈的日内波动并非单一因素所致，而是宏观贸易政策剧变（出口退税取消）、跨境资本运作（美股转债发行）以及行业供给侧改...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月13日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="阿特斯中国股价异动分析预测" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="阿特斯中国股价异动分析预测"
                                     data-url="https://aoao.life/20260113.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -931,7 +931,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260113.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -939,8 +939,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="阿特斯中国股价异动分析预测" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="阿特斯中国股价异动分析预测"
                                         data-url="https://aoao.life/20260113.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1102,19 +1102,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

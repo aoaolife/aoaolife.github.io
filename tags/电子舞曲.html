@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260905-2.html">aoao音乐-전화받어 (电话情缘) - 米娜（2002）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">电话无人接听，本是日常小事，在歌里却成为爱情失衡的确证。米娜以明艳舞曲包装猜疑、欺骗与失落，让急促铃声般的节奏反复催逼情绪。越是热烈喧闹，越显出等待回应之人的孤独，也凝固了移动电话初兴年代独特的情感记忆。    点击查看深度鉴赏详情   《전화받어》收录于米娜2002年11月7日发行的首张专辑《Rendezvous》，是对韩国女子组合KISS于2001年录制版本的重新演绎。米娜因2002年韩日世界...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                     data-url="https://aoao.life/20260905-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                         data-url="https://aoao.life/20260905-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20260829.html">aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《내가 제일 잘 나가 (我最红 / I Am The Best)》是韩国传奇女团 2NE1 于 2011 年推出的划时代标志性神曲。全曲融合了强劲激昂的电子舞曲与硬朗嘻哈节拍，配合四位成员极具张力与辨识度的声线，将不迎合、不妥协、唯我独尊的 Girl Crush 态度释放得淋漓尽致，瞬间引爆全场狂潮，成为了定义一个时代流行文化的巅峰之作。    点击查看深度鉴赏详情   创作背景与时代风潮  《...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）"
                                     data-url="https://aoao.life/20260829.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260829.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-내가 제일 잘 나가 (我最红) - 2NE1（2011）"
                                         data-url="https://aoao.life/20260829.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260429-2.html">aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Bon Appétit》将诱人的美食隐喻与流行电子舞曲完美融合，凯蒂·佩里在这首歌中展现了她作为流行天后的成熟魅力与对节奏的绝佳掌控力。歌曲旋律轻快且充满挑逗性，Migos的加入更是为这首充满性感张力的舞曲注入了浓厚的街头色彩。这不仅仅是一场味蕾的狂欢，更是关于自我赋权与女性魅力的自信宣言，让人在热烈的律动中无法抗拒这场“秀色可餐”的视听盛宴。   点击查看深度鉴赏详情   1. 歌曲背景与核心...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月29日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）"
                                     data-url="https://aoao.life/20260429-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260429-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-Bon Appétit (秀色可餐) - Katy Perry ft. Migos 凯蒂·佩里 ft. Migos（2017）"
                                         data-url="https://aoao.life/20260429-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,10 +552,10 @@
                     <div class="article-title">
                         <a href="/20260416-3.html">aoao音乐 - Judas (犹大) - Lady Gaga 女神卡卡（2011）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">《Judas》是流行音乐史上一场华丽而狂野的宗教流行实验。Lady Gaga以极具视觉冲击力与充满暗黑工业色彩的电音节拍，探讨了内心光明与黑暗的激烈交锋。这首歌不仅是一首洗脑的舞曲，更是对背叛、宽恕以及人性复杂面的深刻反思，展现了她在艺术表达上无所畏惧的先锋精神，每一次聆听都仿佛置身于一场极具戏剧张力的灵魂狂欢。      点击查看深度鉴赏详情   1. 创作背景与灵感  收录于Lady Gaga...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260416-3.html">
@@ -567,12 +567,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月16日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - Judas (犹大) - Lady Gaga 女神卡卡（2011）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - Judas (犹大) - Lady Gaga 女神卡卡（2011）"
                                     data-url="https://aoao.life/20260416-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -580,7 +580,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260416-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -588,8 +588,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - Judas (犹大) - Lady Gaga 女神卡卡（2011）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - Judas (犹大) - Lady Gaga 女神卡卡（2011）"
                                         data-url="https://aoao.life/20260416-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -609,10 +609,10 @@
                     <div class="article-title">
                         <a href="/20260407-3.html">aoao音乐 - Butterfly (蝴蝶) - SMiLE.dk 微笑组合（1998）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首由瑞典组合 SMiLE.dk（微笑组合）于 1998 年推出的《Butterfly》，是一代人心中永恒的电音记忆。轻快跳跃的“Ay, ay, ay”副歌响起，瞬间将听众带回那个五彩斑斓、充满活力的千禧年代。作为《劲舞革命》的标志性神曲，它那极具洗脑性的旋律与甜美的嗓音，跨越了地域与语言，从街机厅风靡至每一个角落。这不仅是一首简单的泡泡糖舞曲，更是属于 90 年代末那份纯粹、快乐与对未来无限憧憬...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260407-3.html">
@@ -624,12 +624,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐 - Butterfly (蝴蝶) - SMiLE.dk 微笑组合（1998）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐 - Butterfly (蝴蝶) - SMiLE.dk 微笑组合（1998）"
                                     data-url="https://aoao.life/20260407-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -637,7 +637,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260407-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -645,8 +645,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐 - Butterfly (蝴蝶) - SMiLE.dk 微笑组合（1998）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐 - Butterfly (蝴蝶) - SMiLE.dk 微笑组合（1998）"
                                         data-url="https://aoao.life/20260407-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -666,21 +666,21 @@
                     <div class="article-title">
                         <a href="/20251005-2.html">That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">歌曲的背景故事  《That Girl》是英国流行歌手Olly Murs于2016年11月发布的单曲，收录在其第五张录音室专辑《24 Hrs》中。这首歌由Murs与Steve Mac和Claude-Michel Schönberg共同创作，灵感源于Murs本人的情感经历——他曾因骄傲和犹豫错失一段真挚的恋情，歌曲捕捉了那种挥之不去的悔意。Murs作为《X Factor》亚军出道后，以轻松却深情的流...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年10月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                     data-url="https://aoao.life/20251005-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -688,7 +688,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251005-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -696,8 +696,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="That Girl (那个女孩) - Olly Murs 奥利·默斯（2016）骄傲如隐形枷锁，囚禁真爱于脑海幽谷，“I let her get away”一叹，唤醒错过的永恒回响，教我们拥抱脆弱的救赎。"
                                         data-url="https://aoao.life/20251005-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -859,19 +859,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

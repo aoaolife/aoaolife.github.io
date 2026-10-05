@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,21 +378,21 @@
                     <div class="article-title">
                         <a href="/20260114.html">DeepSeekV4大模型分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度研报：DeepSeek V4 深度全景分析  报告日期： 2026年1月14日 报告类型： 深度行业策略报告 / TMT 专题研究 主要覆盖领域： 半导体、人工智能、消费电子、计算机软件、通信基础设施   ---  摘要：从“云端算力垄断”到“端侧智能普惠”的范式转移   2025年初，DeepSeek（深度求索）凭借DeepSeek-V3与R1模型的发布，以极低的训练成本和媲美顶尖闭源模型的...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="DeepSeekV4大模型分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="DeepSeekV4大模型分析"
                                     data-url="https://aoao.life/20260114.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -400,7 +400,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -408,8 +408,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="DeepSeekV4大模型分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="DeepSeekV4大模型分析"
                                         data-url="https://aoao.life/20260114.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -429,21 +429,21 @@
                     <div class="article-title">
                         <a href="/20260114-1.html">容百科技停牌原因与涨跌分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">容百科技（688005.SH）深度权益研究报告：停牌机制解析、战略合同评估与短期交易博弈分析  报告日期： 2026年1月14日 研究标的： 容百科技（688005.SH） 所属板块： 科创板 / 新能源材料 / 锂离子电池正极 事件性质： 重大经营合同签署、监管问询函回复、股票临时停牌   ---  1. 核心摘要与投资逻辑综述   2026年1月14日，宁波容百新能源科技股份有限公司（以下简称...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="容百科技停牌原因与涨跌分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="容百科技停牌原因与涨跌分析"
                                     data-url="https://aoao.life/20260114-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -451,7 +451,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -459,8 +459,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="容百科技停牌原因与涨跌分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="容百科技停牌原因与涨跌分析"
                                         data-url="https://aoao.life/20260114-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -480,21 +480,21 @@
                     <div class="article-title">
                         <a href="/20260114-2.html">景嘉微明日涨跌分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">景嘉微（300474.SZ）2026年1月15日股价走势深度研判与产业趋势前瞻报告  宏观地缘政治变局与半导体产业的结构性动能  2026年1月14日，中国A股半导体板块在经历了前期的充分震荡后，迎来了一次具有深远战略意义的集体喷发。这一波行情的底层逻辑并非单纯的资金博弈，而是由全球算力供应链格局的剧烈震动所驱动。根据最新获悉的国际动态，美国政府在当地时间1月13日正式批准了英伟达（NVIDIA）...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="景嘉微明日涨跌分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="景嘉微明日涨跌分析"
                                     data-url="https://aoao.life/20260114-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -502,7 +502,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -510,8 +510,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="景嘉微明日涨跌分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="景嘉微明日涨跌分析"
                                         data-url="https://aoao.life/20260114-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -531,21 +531,21 @@
                     <div class="article-title">
                         <a href="/20260114-3.html">梅花生物股价涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">梅花生物（600873.SH）2026年1月15日股价走势概率分析与资本市场博弈深度研究报告  绪论：宏观经济周期与生物发酵产业的交织博弈  在2026年初的资本市场版图中，梅花生物（600873.SH）作为全球氨基酸与合成生物学产业的领军企业，其股价波动不仅受到微观交易结构的影响，更深刻地反映了基础化工向精细生物发酵转型过程中的估值重构逻辑。截至2026年1月14日，该股的盘面表现呈现出一种极度...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="梅花生物股价涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="梅花生物股价涨跌概率分析"
                                     data-url="https://aoao.life/20260114-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -553,7 +553,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -561,8 +561,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="梅花生物股价涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="梅花生物股价涨跌概率分析"
                                         data-url="https://aoao.life/20260114-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -582,21 +582,21 @@
                     <div class="article-title">
                         <a href="/20260114-4.html">科陆电子下午盘涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">深度权益研究报告：科陆电子 (002121.SZ) 2026年1月14日午盘资金面博弈与涨跌概率全景分析  核心摘要：午盘关键窗口期的多空决战  本报告旨在对 科陆电子 (002121.SZ) 在 2026年1月14日 下午交易时段的股价走势概率进行详尽的深度剖析。基于上午盘面展现出的极端市场特征——包括全市场成交额突破2.47万亿的历史性天量、商业航天板块的集体退潮以及科陆电子自身即将在下午14...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="科陆电子下午盘涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="科陆电子下午盘涨跌概率分析"
                                     data-url="https://aoao.life/20260114-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -604,7 +604,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -612,8 +612,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="科陆电子下午盘涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="科陆电子下午盘涨跌概率分析"
                                         data-url="https://aoao.life/20260114-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -633,21 +633,21 @@
                     <div class="article-title">
                         <a href="/20260114-5.html">紫光国微开盘涨跌预测</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">紫光国微（002049.SZ）重大资产重组停复牌时点及复牌后市场表现深度研判报告  1. 核心观点与投资摘要  本次深度研究报告旨在针对紫光国微（002049.SZ）因筹划收购瑞能半导体（WeEn Semiconductors）而停牌这一重大资本运作事件，提供详尽的时点预测与价值分析。基于对监管法规、公司公告、标的资产历史沿革及当前半导体行业周期的全方位梳理，本报告核心结论如下：   复牌时点研判...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="紫光国微开盘涨跌预测" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="紫光国微开盘涨跌预测"
                                     data-url="https://aoao.life/20260114-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -655,7 +655,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -663,8 +663,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="紫光国微开盘涨跌预测" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="紫光国微开盘涨跌预测"
                                         data-url="https://aoao.life/20260114-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -684,21 +684,21 @@
                     <div class="article-title">
                         <a href="/20260114-6.html">容百科技停牌原因与涨跌分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">容百科技（688005.SH）深度权益研究报告：停牌机制解析、战略合同评估与短期交易博弈分析  报告日期： 2026年1月14日 研究标的： 容百科技（688005.SH） 所属板块： 科创板 / 新能源材料 / 锂离子电池正极 事件性质： 重大经营合同签署、监管问询函回复、股票临时停牌   ---  1. 核心摘要与投资逻辑综述   2026年1月14日，宁波容百新能源科技股份有限公司（以下简称...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="容百科技停牌原因与涨跌分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="容百科技停牌原因与涨跌分析"
                                     data-url="https://aoao.life/20260114-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -706,7 +706,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -714,8 +714,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="容百科技停牌原因与涨跌分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="容百科技停牌原因与涨跌分析"
                                         data-url="https://aoao.life/20260114-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -735,21 +735,21 @@
                     <div class="article-title">
                         <a href="/20260114-7.html">梅花生物股价涨跌概率分析</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">梅花生物（600873.SH）2026年1月15日股价走势概率分析与资本市场博弈深度研究报告  绪论：宏观经济周期与生物发酵产业的交织博弈  在2026年初的资本市场版图中，梅花生物（600873.SH）作为全球氨基酸与合成生物学产业的领军企业，其股价波动不仅受到微观交易结构的影响，更深刻地反映了基础化工向精细生物发酵转型过程中的估值重构逻辑。截至2026年1月14日，该股的盘面表现呈现出一种极度...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="梅花生物股价涨跌概率分析" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="梅花生物股价涨跌概率分析"
                                     data-url="https://aoao.life/20260114-7.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -757,7 +757,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-7.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -765,8 +765,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="梅花生物股价涨跌概率分析" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="梅花生物股价涨跌概率分析"
                                         data-url="https://aoao.life/20260114-7.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -786,21 +786,21 @@
                     <div class="article-title">
                         <a href="/20260114-8.html">从小养成的习惯</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">小时候，大我2岁的哥哥喜欢在家里不穿内裤跑来跑去，   我妈为了鼓励我哥乖乖穿内裤就说:"要穿内裤，小鸟才不会飞走喔!"   后来，我也学我哥在家里不穿内裤跑来跑去，被我妈阻止，我哭着说:"我又没有小鸟，不用担心小鸟会飞出去"，   我妈:"不穿内裤，小鸟会飞进来啊" 从此以后，我连洗澡都把窗户关好   —— 娶了个村姑当老婆 </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="从小养成的习惯" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="从小养成的习惯"
                                     data-url="https://aoao.life/20260114-8.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -808,7 +808,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-8.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -816,8 +816,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="从小养成的习惯" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="从小养成的习惯"
                                         data-url="https://aoao.life/20260114-8.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -837,21 +837,21 @@
                     <div class="article-title">
                         <a href="/20260114-9.html">老女人如滔滔洪水，可疏不可堵</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">30如狼   40如虎   50坐地能吸土   60隔墙吸老鼠   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年01月14日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="老女人如滔滔洪水，可疏不可堵" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="老女人如滔滔洪水，可疏不可堵"
                                     data-url="https://aoao.life/20260114-9.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -859,7 +859,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260114-9.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -867,8 +867,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="老女人如滔滔洪水，可疏不可堵" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="老女人如滔滔洪水，可疏不可堵"
                                         data-url="https://aoao.life/20260114-9.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1038,19 +1038,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

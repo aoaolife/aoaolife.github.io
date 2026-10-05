@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,21 +378,21 @@
                     <div class="article-title">
                         <a href="/20251109-3.html">当你老了，躺在床上时，谁会对你亲呢？</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">①兄弟姐妹概率3%   ②孙女概率5%   ③孙子概率2%   ④侄女的概率1%   ⑤侄子概率0.5%   ⑥闺蜜/兄弟的概率0.2%   ⑦学霸儿女概率5%   ⑧学渣儿女概率90%   ⑨保姆概率5%   ⑩老伴概率99.99%   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月09日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="当你老了，躺在床上时，谁会对你亲呢？" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="当你老了，躺在床上时，谁会对你亲呢？"
                                     data-url="https://aoao.life/20251109-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -400,7 +400,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251109-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -408,8 +408,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="当你老了，躺在床上时，谁会对你亲呢？" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="当你老了，躺在床上时，谁会对你亲呢？"
                                         data-url="https://aoao.life/20251109-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -429,10 +429,10 @@
                     <div class="article-title">
                         <a href="/20251108.html">恋爱脑袋下场</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content"> 这张照片拍摄于1991年的云南德宏，陶静被押赴刑场，准备执行死刑前，留下的一张老照片。镜头中的她留着短发，看起来非常有气质。 陶静，一个年仅20岁的女孩，因为执着的爱情走上了犯罪之路，最终走向了悲剧的结局。   原来陶静在打工期间，认识了一个叫杨某的男子，很快坠入了爱河。然而她不知道的是，杨某是一名毒贩，经常参与贩毒活动。为了支持和保护男友，陶静毅然决然地决定代替他运送一批毒品。   她不知道的...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251108.html">
@@ -444,12 +444,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月08日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="恋爱脑袋下场" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="恋爱脑袋下场"
                                     data-url="https://aoao.life/20251108.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -457,7 +457,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251108.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -465,8 +465,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="恋爱脑袋下场" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="恋爱脑袋下场"
                                         data-url="https://aoao.life/20251108.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -486,10 +486,10 @@
                     <div class="article-title">
                         <a href="/20251108-1.html">马斯克绩效奖金7,120,000,000,000元，81880吨</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   马斯克绩效奖金1万亿美元，约等于 7.12万亿人民币。   一张100元人民币钞票重约1.15克，7,120,000,000,000 人民币（以100元面额钞票计）约等于 81,880 吨。   一张100元人民币面积11.935 cm²，可以铺满一个国家。   一张100元人民币15.5cm，一张接一张排列，总长度548 万公里，可以绕地球137圈。   他弯腰捡起一张100元人民币，马上...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251108-1.html">
@@ -501,12 +501,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月08日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="马斯克绩效奖金7,120,000,000,000元，81880吨" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="马斯克绩效奖金7,120,000,000,000元，81880吨"
                                     data-url="https://aoao.life/20251108-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -514,7 +514,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251108-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -522,8 +522,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="马斯克绩效奖金7,120,000,000,000元，81880吨" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="马斯克绩效奖金7,120,000,000,000元，81880吨"
                                         data-url="https://aoao.life/20251108-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -543,10 +543,10 @@
                     <div class="article-title">
                         <a href="/20251107.html">Maggie Q，吴彦祖为她流泪，陈冠希对她念念不忘</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">吴彦祖为她流泪，陈冠希对她念念不忘。年轻时谈遍男神是快乐，中年与素人结婚是清醒。凡事只求“我开心就好”的 Maggie Q，真的活出了女王级别的人生。      Maggie Q 出生于美国，是一位亚裔女演员兼模特。她因担任谢霆锋的模特而进入演艺圈，后来跨界成为演员，还出演过《碟中谍3》《虎胆龙威4》等著名影片。不过，她最出名的标签，还是“帅到成形容词的吴彦祖都放不下的奇女子”。   她是吴彦祖出...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251107.html">
@@ -558,12 +558,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Maggie Q，吴彦祖为她流泪，陈冠希对她念念不忘" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Maggie Q，吴彦祖为她流泪，陈冠希对她念念不忘"
                                     data-url="https://aoao.life/20251107.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -571,7 +571,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -579,8 +579,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Maggie Q，吴彦祖为她流泪，陈冠希对她念念不忘" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Maggie Q，吴彦祖为她流泪，陈冠希对她念念不忘"
                                         data-url="https://aoao.life/20251107.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -600,10 +600,10 @@
                     <div class="article-title">
                         <a href="/20251107-1.html">罗慧娟对周星驰说神经病</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   1990年，罗慧娟对周星驰说：“要不我们结婚吧，我想为你生个孩子！”没想到周星驰却怼了回去：“神经病！”罗慧娟心灰意冷。可周星驰转身却兴奋地跟刘镇伟说：“我想我要结婚了。”   1982年，周星驰想报考无线艺员训练班，于是拉上好友梁朝伟陪他一起去报名。结果梁朝伟顺利进入第11期无线电视艺员训练班，而周星驰却落榜了。之后的梁朝伟演艺事业一路开挂，先后拿下了15个影帝。而周星驰跑了好多年的龙套，...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251107-1.html">
@@ -615,12 +615,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="罗慧娟对周星驰说神经病" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="罗慧娟对周星驰说神经病"
                                     data-url="https://aoao.life/20251107-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -628,7 +628,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -636,8 +636,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="罗慧娟对周星驰说神经病" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="罗慧娟对周星驰说神经病"
                                         data-url="https://aoao.life/20251107-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -657,10 +657,10 @@
                     <div class="article-title">
                         <a href="/20251107-2.html">67岁的梁锦松为了让41岁的伏明霞再拼第4胎,为什么土豪爱娶明星，而真正的富豪却娶运动员</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   生了三胎后，67岁的梁锦松为了让41岁的伏明霞再拼第4胎，他花了100亿买下了亚洲最奢华的大医院。 伏明霞无奈地说：“我5年都生了3个了，还不够吗？”丈夫却笑着说：“越多越好！”   而此时，陈慧珊已经成了落寞之人。 作为TVB的当红花旦，她原本有一段不太幸福的婚姻。 直到遇到身家百亿的梁锦松，她看到了希望，于是毅然离婚，与梁锦松同居。   只可惜，梁锦松和前妻离婚后，一直没有再婚。 陈慧珊...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251107-2.html">
@@ -672,12 +672,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="67岁的梁锦松为了让41岁的伏明霞再拼第4胎,为什么土豪爱娶明星，而真正的富豪却娶运动员" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="67岁的梁锦松为了让41岁的伏明霞再拼第4胎,为什么土豪爱娶明星，而真正的富豪却娶运动员"
                                     data-url="https://aoao.life/20251107-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -685,7 +685,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -693,8 +693,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="67岁的梁锦松为了让41岁的伏明霞再拼第4胎,为什么土豪爱娶明星，而真正的富豪却娶运动员" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="67岁的梁锦松为了让41岁的伏明霞再拼第4胎,为什么土豪爱娶明星，而真正的富豪却娶运动员"
                                         data-url="https://aoao.life/20251107-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -714,10 +714,10 @@
                     <div class="article-title">
                         <a href="/20251107-3.html">为什么土豪爱娶明星，而真正的富豪却娶运动员,67岁的梁锦松为了让41岁的伏明霞再拼第4胎</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   生了三胎后，67岁的梁锦松为了让41岁的伏明霞再拼第4胎，他花了100亿买下了亚洲最奢华的大医院。   伏明霞无奈地说：“我5年都生了3个了，还不够吗？”丈夫却笑着说：“越多越好！”   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251107-3.html">
@@ -729,12 +729,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="为什么土豪爱娶明星，而真正的富豪却娶运动员,67岁的梁锦松为了让41岁的伏明霞再拼第4胎" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="为什么土豪爱娶明星，而真正的富豪却娶运动员,67岁的梁锦松为了让41岁的伏明霞再拼第4胎"
                                     data-url="https://aoao.life/20251107-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -742,7 +742,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -750,8 +750,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="为什么土豪爱娶明星，而真正的富豪却娶运动员,67岁的梁锦松为了让41岁的伏明霞再拼第4胎" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="为什么土豪爱娶明星，而真正的富豪却娶运动员,67岁的梁锦松为了让41岁的伏明霞再拼第4胎"
                                         data-url="https://aoao.life/20251107-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -771,10 +771,10 @@
                     <div class="article-title">
                         <a href="/20251107-4.html">没钱办婚礼，发帖拉了赞助办了个超大婚礼</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   有个同学没钱办婚礼，为婚礼的费用发愁。   他在网上发帖，询问有没有公司愿意赞助他的婚礼。作为回报，他将在婚礼上展示它们的名字。   结果有非常多家公司赞助他。然后婚礼上很多广告。   —— aoao.life </div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20251107-4.html">
@@ -786,12 +786,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="没钱办婚礼，发帖拉了赞助办了个超大婚礼" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="没钱办婚礼，发帖拉了赞助办了个超大婚礼"
                                     data-url="https://aoao.life/20251107-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -799,7 +799,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -807,8 +807,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="没钱办婚礼，发帖拉了赞助办了个超大婚礼" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="没钱办婚礼，发帖拉了赞助办了个超大婚礼"
                                         data-url="https://aoao.life/20251107-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -828,21 +828,21 @@
                     <div class="article-title">
                         <a href="/20251107-5.html">谁说现在是冬天呢_当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">谁说现在是冬天呢?当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="谁说现在是冬天呢_当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="谁说现在是冬天呢_当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。"
                                     data-url="https://aoao.life/20251107-5.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -850,7 +850,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-5.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -858,8 +858,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="谁说现在是冬天呢_当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="谁说现在是冬天呢_当你在我身旁时，我感到百花齐放，鸟唱蝉鸣。"
                                         data-url="https://aoao.life/20251107-5.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -879,21 +879,21 @@
                     <div class="article-title">
                         <a href="/20251107-6.html">擦屁股对比生活</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">擦屁股的最后一下，并不是你擦干净了，   而是它的颜色淡到,你能接受了而已。   生活也是如此，大差不差就行了。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2025年11月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="擦屁股对比生活" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="擦屁股对比生活"
                                     data-url="https://aoao.life/20251107-6.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -901,7 +901,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20251107-6.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -909,8 +909,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="擦屁股对比生活" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="擦屁股对比生活"
                                         data-url="https://aoao.life/20251107-6.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1080,19 +1080,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

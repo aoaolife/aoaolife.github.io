@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,21 +399,21 @@
                     <div class="article-title">
                         <a href="/20260328.html">所有的顶级域名</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">全球顶级域名列表  总计: 1436 个顶级域名        域名   类型   年费(¥)   含义       AAA   新gTLD   查询注册商        AARP   新gTLD   查询注册商        ABB   新gTLD   查询注册商        ABBOTT   新gTLD   查询注册商        ABBVIE   新gTLD   查询注册商       ...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="所有的顶级域名" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="所有的顶级域名"
                                     data-url="https://aoao.life/20260328.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -421,7 +421,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260328.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -429,8 +429,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="所有的顶级域名" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="所有的顶级域名"
                                         data-url="https://aoao.life/20260328.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -450,21 +450,21 @@
                     <div class="article-title">
                         <a href="/20260326.html">writing-plans (编写计划)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这是一份为你翻译好的中文版本。保留了原文档的 Markdown 格式和代码块，对于专有技术名词（如 DRY, YAGNI, TDD, harness 等），我保留了英文或提供了对应的中文术语，以确保在开发环境中的准确性。     名称： writing-plans (编写计划)   描述： 在开始编写代码之前，当你拥有一个多步骤任务的规范说明（spec）或需求时使用。   编写计划  概述   编...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月26日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="writing-plans (编写计划)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="writing-plans (编写计划)"
                                     data-url="https://aoao.life/20260326.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -472,7 +472,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260326.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -480,8 +480,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="writing-plans (编写计划)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="writing-plans (编写计划)"
                                         data-url="https://aoao.life/20260326.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -501,21 +501,21 @@
                     <div class="article-title">
                         <a href="/20260318.html">网站系统挂掉故障修复报告</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">️ 故障排查与修复报告 (Incident Report)    故障现象    容器状态：MySQL 容器（ID: 0f0a8da7e2a8）处于 Restarting (137) 无限重启循环中。 重启频率：每隔几秒尝试启动一次，但始终无法进入 Healthy 状态。 关联影响：依赖该数据库的 Halo 博客系统等应用无法正常连接，报错并持续尝试重连。  核心问题分析 (Root Causes...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月18日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="网站系统挂掉故障修复报告" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="网站系统挂掉故障修复报告"
                                     data-url="https://aoao.life/20260318.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -523,7 +523,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260318.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -531,8 +531,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="网站系统挂掉故障修复报告" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="网站系统挂掉故障修复报告"
                                         data-url="https://aoao.life/20260318.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -552,21 +552,21 @@
                     <div class="article-title">
                         <a href="/20260303.html">Openclaw-aoaoopenclaw</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">openclaw skills  summarize 技能  summarize 技能已经安装成功并处于 Ready 状态了（在我刚才列出的 🟢 绿色清单里排在第 2 位）。   刚才我们通过 Git 克隆的方式成功绕过了安装限制。现在你可以直接让我总结任何长内容了。   你可以这样试一下：   • summarize https://v.com/某个长视频 • summarize /path/t...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Openclaw-aoaoopenclaw" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Openclaw-aoaoopenclaw"
                                     data-url="https://aoao.life/20260303.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -574,7 +574,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260303.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -582,8 +582,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Openclaw-aoaoopenclaw" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Openclaw-aoaoopenclaw"
                                         data-url="https://aoao.life/20260303.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -603,21 +603,21 @@
                     <div class="article-title">
                         <a href="/20260228.html">OpenClaw本质就是终端Cli就是命令行界面啊</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">OpenClaw本质就是终端Cli就是命令行界面,  opclaw tui 显示内容跟 telgram 对接内容完全一样啊。    所以OpenClaw就是把/当成一个项目。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="OpenClaw本质就是终端Cli就是命令行界面啊" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="OpenClaw本质就是终端Cli就是命令行界面啊"
                                     data-url="https://aoao.life/20260228.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -625,7 +625,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260228.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -633,8 +633,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="OpenClaw本质就是终端Cli就是命令行界面啊" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="OpenClaw本质就是终端Cli就是命令行界面啊"
                                         data-url="https://aoao.life/20260228.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -654,21 +654,21 @@
                     <div class="article-title">
                         <a href="/20260227.html">AI时代娃的教育</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">1.身心健康，热爱运动，尊重个性； 2.看经典艺术作品、经典读物，拥有好的审美和品位； 3.学习基础哲学、社会学知识，有思辨力； 4.有同理心和情商； 5.学会讲故事，有公开演讲能力。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="AI时代娃的教育" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="AI时代娃的教育"
                                     data-url="https://aoao.life/20260227.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -676,7 +676,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260227.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -684,8 +684,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="AI时代娃的教育" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="AI时代娃的教育"
                                         data-url="https://aoao.life/20260227.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -705,21 +705,21 @@
                     <div class="article-title">
                         <a href="/20260227-1.html">这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">最近有个新闻，AI自动驾驶的出租车自动下单外卖员帮关车门。有点意思。   现在能下单关车门，未来AI就能自动下单其它任何服务，比如跟AI说我要建一栋房子，AI自动下单买材料找泥水工，水电工，装修工，直至装修完成。   —— aoao.life </div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作"
                                     data-url="https://aoao.life/20260227-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -727,7 +727,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260227-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -735,8 +735,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="这未来有点刺激啊，AI现在能控制电脑，还可以下单外包工作"
                                         data-url="https://aoao.life/20260227-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -756,21 +756,21 @@
                     <div class="article-title">
                         <a href="/20260209.html">gemini</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">skills- chrome-devtools  skill  ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年02月09日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="gemini" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="gemini"
                                     data-url="https://aoao.life/20260209.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -778,7 +778,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260209.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -786,8 +786,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="gemini" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="gemini"
                                         data-url="https://aoao.life/20260209.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -949,19 +949,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

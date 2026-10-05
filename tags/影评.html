@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -399,10 +399,10 @@
                     <div class="article-title">
                         <a href="/20260906-1.html">夜王 (2026)-aoao评分：7.5</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">夜王 (2026)-aoao评分：7.5      有些人、有些地方，你见过它最美好的时候，就不是说放下便能放下。    香港电影，只要不是7.5分以下我都会看。比较没那么费脑。这个刚好75分。    🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：夜王国家：中国香港语言：粤语导演：吴炜伦主演：黄子华、郑秀文...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260906-1.html">
@@ -414,12 +414,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="夜王 (2026)-aoao评分：7.5" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="夜王 (2026)-aoao评分：7.5"
                                     data-url="https://aoao.life/20260906-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -427,7 +427,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260906-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -435,8 +435,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="夜王 (2026)-aoao评分：7.5" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="夜王 (2026)-aoao评分：7.5"
                                         data-url="https://aoao.life/20260906-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -456,10 +456,10 @@
                     <div class="article-title">
                         <a href="/20260906-2.html">杀死比尔：血色全传 (2004)-aoao评分：8.7</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">杀死比尔：血色全传 (2004)-aoao评分：8.4   有点无厘头。感觉没那么好，但是又觉得还不错，有点奇怪。      That woman deserves her revenge. And we deserve to die.   那个女人理应复仇，而我们也罪该万死。        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Met...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260906-2.html">
@@ -471,12 +471,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="杀死比尔：血色全传 (2004)-aoao评分：8.7" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="杀死比尔：血色全传 (2004)-aoao评分：8.7"
                                     data-url="https://aoao.life/20260906-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -484,7 +484,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260906-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -492,8 +492,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="杀死比尔：血色全传 (2004)-aoao评分：8.7" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="杀死比尔：血色全传 (2004)-aoao评分：8.7"
                                         data-url="https://aoao.life/20260906-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -513,10 +513,10 @@
                     <div class="article-title">
                         <a href="/20260905.html">国产凌凌漆(1994)-aoao评分：8.5</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">第一次看是在同学家里，同学拿这个片子招待客户人，太震撼了。   现在我也会推荐这个如果没有看过的话。       🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：國產凌凌漆国家：中国香港导演：周星驰、李力持主演：周星驰、袁咏仪、罗家英、黄锦江、陈宝莲、郑祖、于荣光类型：喜剧、动作、间谍          📝 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260905.html">
@@ -528,12 +528,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="国产凌凌漆(1994)-aoao评分：8.5" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="国产凌凌漆(1994)-aoao评分：8.5"
                                     data-url="https://aoao.life/20260905.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -541,7 +541,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -549,8 +549,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="国产凌凌漆(1994)-aoao评分：8.5" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="国产凌凌漆(1994)-aoao评分：8.5"
                                         data-url="https://aoao.life/20260905.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -570,21 +570,21 @@
                     <div class="article-title">
                         <a href="/20260831.html">The Terminal (幸福终点站) (2004)-aoao评分：8.8</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">The Terminal (幸福终点站) (2004)-aoao评分: 8.8      Life is waiting.   生活就在等待中展开。     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：The Terminal国家：美国导演：史蒂文·斯皮尔伯格 (Steven Spielberg)主演：汤...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8"
                                     data-url="https://aoao.life/20260831.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -592,7 +592,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260831.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -600,8 +600,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8"
                                         data-url="https://aoao.life/20260831.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -621,10 +621,10 @@
                     <div class="article-title">
                         <a href="/20260828-1.html">Rice (大鸿米店) (2004)-aoao评分：8.2</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Rice (大鸿米店) (2004)-aoao评分: 8.2   内容少了点。我们这种旧中国的落后其实不应该那么避讳，应该多拍点。      People are like rice grains in a mill; when the mill turns, everyone gets crushed into powder.   人就像米店里的米，磨盘一转，谁都得被碾成碎末。        🔽...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260828-1.html">
@@ -636,12 +636,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月28日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Rice (大鸿米店) (2004)-aoao评分：8.2" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Rice (大鸿米店) (2004)-aoao评分：8.2"
                                     data-url="https://aoao.life/20260828-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -649,7 +649,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260828-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -657,8 +657,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Rice (大鸿米店) (2004)-aoao评分：8.2" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Rice (大鸿米店) (2004)-aoao评分：8.2"
                                         data-url="https://aoao.life/20260828-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -678,10 +678,10 @@
                     <div class="article-title">
                         <a href="/20260827.html">Ju Dou (菊豆) (1990)-aoao评分：8.6</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Ju Dou (菊豆) (1990)-aoao评分: 8.6   又是一段我们落后的思想文化，哎。可以代表多少个地区，多少人，多少个年代？       In this vat of red dye, human passion and tragedy bleed together.   在这口染缸里，人性的欲望与悲剧被染得通红。        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260827.html">
@@ -693,12 +693,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Ju Dou (菊豆) (1990)-aoao评分：8.6" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Ju Dou (菊豆) (1990)-aoao评分：8.6"
                                     data-url="https://aoao.life/20260827.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -706,7 +706,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260827.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -714,8 +714,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Ju Dou (菊豆) (1990)-aoao评分：8.6" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Ju Dou (菊豆) (1990)-aoao评分：8.6"
                                         data-url="https://aoao.life/20260827.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -735,10 +735,10 @@
                     <div class="article-title">
                         <a href="/20260530.html">Green Book (绿皮书) (2018)-aoao评分：9.2</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Green Book (绿皮书) (2018)-aoao评分: 9.2   什么片名啊，害得我很后面才看。不错不错。      You never win with violence. You only win when you maintain your dignity.   你永远无法凭暴力取胜。只有保持尊严，你才能赢得真正的胜利。        🔽 点击展开：详细档案 / 深度剧评 / 标签...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260530.html">
@@ -750,12 +750,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月30日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Green Book (绿皮书) (2018)-aoao评分：9.2" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Green Book (绿皮书) (2018)-aoao评分：9.2"
                                     data-url="https://aoao.life/20260530.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -763,7 +763,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260530.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -771,8 +771,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Green Book (绿皮书) (2018)-aoao评分：9.2" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Green Book (绿皮书) (2018)-aoao评分：9.2"
                                         data-url="https://aoao.life/20260530.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -792,10 +792,10 @@
                     <div class="article-title">
                         <a href="/20260504.html">Her Story (好东西) (2024)-aoao评分：86</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">很不错。那个小娃丑了点。这剧本牛逼。      "Why do we have to do everything well? Who is the judge? Why can't we just mess things up?"   为什么什么都要做好呢？裁判是谁啊？为什么就不能搞砸？        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录   🎬 详细档案       属性...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260504.html">
@@ -807,12 +807,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月04日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Her Story (好东西) (2024)-aoao评分：86" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Her Story (好东西) (2024)-aoao评分：86"
                                     data-url="https://aoao.life/20260504.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -820,7 +820,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260504.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -828,8 +828,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Her Story (好东西) (2024)-aoao评分：86" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Her Story (好东西) (2024)-aoao评分：86"
                                         data-url="https://aoao.life/20260504.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -849,10 +849,10 @@
                     <div class="article-title">
                         <a href="/20260503.html">Triangle (恐怖游轮) (2009)-aoao评分：79</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这个不是恐怖片。这个适合精神分裂者看。 79分吧      You have to go back for them, don't you? Otherwise, they can't leave.   你必须回去救他们，不是吗？否则，他们无法离开。        🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录   🎞️ 影视档案       属性   值       英文名   T...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260503.html">
@@ -864,12 +864,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月03日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Triangle (恐怖游轮) (2009)-aoao评分：79" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Triangle (恐怖游轮) (2009)-aoao评分：79"
                                     data-url="https://aoao.life/20260503.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -877,7 +877,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260503.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -885,8 +885,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Triangle (恐怖游轮) (2009)-aoao评分：79" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Triangle (恐怖游轮) (2009)-aoao评分：79"
                                         data-url="https://aoao.life/20260503.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -906,10 +906,10 @@
                     <div class="article-title">
                         <a href="/20260502.html">One Battle After Another (一战再战) (2025)-aoao评分：80</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这个电影很多人会看不懂吧，我都看得很吃力。 电影提到的内容太多了没个重点。那个女反动分子把那个Gay反派日了情节很AI。         The past isn't dead. It isn't even past.   过去从未消逝，它甚至还未过去。     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录        类别   详细信息       导演   保罗·托马斯·安德...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260502.html">
@@ -921,12 +921,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="One Battle After Another (一战再战) (2025)-aoao评分：80" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="One Battle After Another (一战再战) (2025)-aoao评分：80"
                                     data-url="https://aoao.life/20260502.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -934,7 +934,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260502.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -942,8 +942,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="One Battle After Another (一战再战) (2025)-aoao评分：80" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="One Battle After Another (一战再战) (2025)-aoao评分：80"
                                         data-url="https://aoao.life/20260502.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -963,10 +963,10 @@
                     <div class="article-title">
                         <a href="/20260501.html">Pegasus (飞驰人生) (123)-aoao评分：70</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">就这样吧，可看可不看。爆米花电影。有些电影看完有说法，这个系列没有。aoao评分：70      You have no story in your life and want to have one; I have too many stories and want to give mine an ending.   你呢，是这辈子没故事，想拥有一段故事；我呢，是故事太多，想给故事一个结局。  ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260501.html">
@@ -978,12 +978,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年05月01日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Pegasus (飞驰人生) (123)-aoao评分：70" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Pegasus (飞驰人生) (123)-aoao评分：70"
                                     data-url="https://aoao.life/20260501.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -991,7 +991,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260501.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -999,8 +999,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Pegasus (飞驰人生) (123)-aoao评分：70" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Pegasus (飞驰人生) (123)-aoao评分：70"
                                         data-url="https://aoao.life/20260501.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1020,10 +1020,10 @@
                     <div class="article-title">
                         <a href="/20260421-2.html">Godspeed (一路顺风) (2016)-aoao评分：80</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">台湾的片子怎么就这么有温度呢。多给点80分吧。      Actually, we are born with nothing in this world. Since we have nothing, what is there to lose?   其实人生下来本来就没有带什么东西来的，我们本来就一无所有，还有什么可失去的呢？        🔽 点击展开：详细档案 / 深度剧评 / 标签 / ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260421-2.html">
@@ -1035,12 +1035,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月21日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Godspeed (一路顺风) (2016)-aoao评分：80" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Godspeed (一路顺风) (2016)-aoao评分：80"
                                     data-url="https://aoao.life/20260421-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1048,7 +1048,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260421-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1056,8 +1056,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Godspeed (一路顺风) (2016)-aoao评分：80" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Godspeed (一路顺风) (2016)-aoao评分：80"
                                         data-url="https://aoao.life/20260421-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1077,10 +1077,10 @@
                     <div class="article-title">
                         <a href="/20260412-2.html">The Last Dance (破·地狱) (2024)-aoao评分 85</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">电影从一个很特殊的行业背景，表达的都在最后白居易的那首诗，对人生的看法，建议先超度活人。         Taoist priests transcend the souls of the dead; agents transcend the souls of the living.   喃呒师傅超度死人，殡仪经纪超度活人。      🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260412-2.html">
@@ -1092,12 +1092,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月12日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Last Dance (破·地狱) (2024)-aoao评分 85" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Last Dance (破·地狱) (2024)-aoao评分 85"
                                     data-url="https://aoao.life/20260412-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1105,7 +1105,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260412-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1113,8 +1113,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Last Dance (破·地狱) (2024)-aoao评分 85" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Last Dance (破·地狱) (2024)-aoao评分 85"
                                         data-url="https://aoao.life/20260412-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1134,10 +1134,10 @@
                     <div class="article-title">
                         <a href="/20260407.html">肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">必看电影，什么榜单都是排名第一名的。       🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：肖申克的救赎 The Shawshank Redemption (1994)国家：未知导演：未知主演：未知类型：剧情          📝 个人观影记录 (My Record)       状态：✅ 已看完首看日...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260407.html">
@@ -1149,12 +1149,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月07日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95"
                                     data-url="https://aoao.life/20260407.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1162,7 +1162,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260407.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1170,8 +1170,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="肖申克的救赎 The Shawshank Redemption (1994)-aoao评分 95"
                                         data-url="https://aoao.life/20260407.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1191,10 +1191,10 @@
                     <div class="article-title">
                         <a href="/20260406-1.html">三峡好人 (2006)-aoao评分：79</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">三峡好人-aoao评分：79  写实的一些历史镜头，没经历过那年代的可能看不懂。        📋 档案详情 (点击展开)   📖 剧情简介  该片讲述了三峡工程背景下，两个寻找配偶的人在奉节县相遇的故事。表现了普通人在大时代背景下的生存状态。   💬 一句话点评  贾樟柯现实主义力作，沉稳而有力地记录了变迁中的中国底层叙事。   📸 档案元数据   生成工具：movie_archive v1.2...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260406-1.html">
@@ -1206,12 +1206,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="三峡好人 (2006)-aoao评分：79" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="三峡好人 (2006)-aoao评分：79"
                                     data-url="https://aoao.life/20260406-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1219,7 +1219,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260406-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1227,8 +1227,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="三峡好人 (2006)-aoao评分：79" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="三峡好人 (2006)-aoao评分：79"
                                         data-url="https://aoao.life/20260406-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1248,10 +1248,10 @@
                     <div class="article-title">
                         <a href="/20260406-2.html">内幕 (2025)-aoao评分：65</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">   很喜欢香港电影，所以看了。知道可以不看。aoao评分：65. 操蛋的我们，中国电影死得透透的。时代车轮确认就这样不会回头了么        背景故事与社会反响   背景故事  电影《内幕》（Under Current）由曾执导《无间道》系列的麦兆辉倾力打造，剧本筹备长达三年。导演的创作灵感源于真实的慈善犯罪新闻，旨在揭露上流社会中某些“善意变生意”的下流游戏。这也是郭富城与吴镇宇继《公元20...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260406-2.html">
@@ -1263,12 +1263,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月06日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="内幕 (2025)-aoao评分：65" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="内幕 (2025)-aoao评分：65"
                                     data-url="https://aoao.life/20260406-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1276,7 +1276,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260406-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1284,8 +1284,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="内幕 (2025)-aoao评分：65" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="内幕 (2025)-aoao评分：65"
                                         data-url="https://aoao.life/20260406-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1305,10 +1305,10 @@
                     <div class="article-title">
                         <a href="/20260405.html">Twilight (暮光之城) (2008)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">老了看不得这种片子了。不过娃特别是小女生还是很喜欢，男女主还是很漂亮，风景也还不错。-aoao评分: 72      "I don't have the strength to stay away from you anymore."   "我再也没有离开你的力气了。"            🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录         🎬 基本元数据 (Metad...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260405.html">
@@ -1320,12 +1320,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Twilight (暮光之城) (2008)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Twilight (暮光之城) (2008)"
                                     data-url="https://aoao.life/20260405.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1333,7 +1333,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260405.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1341,8 +1341,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Twilight (暮光之城) (2008)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Twilight (暮光之城) (2008)"
                                         data-url="https://aoao.life/20260405.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1362,21 +1362,21 @@
                     <div class="article-title">
                         <a href="/20260402-3.html">Scent of a Woman (闻香识女人) (1992)</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">Scent of a Woman (闻香识女人) (1992)-aoao评分: 96      There are no mistakes in the tango, not like life. If you make a mistake, get all tangled up, just tango on.   探戈里没有错误，不像人生。如果你跳错了，绊倒了，继续跳探戈就好。     🔽 点击...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年04月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Scent of a Woman (闻香识女人) (1992)" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Scent of a Woman (闻香识女人) (1992)"
                                     data-url="https://aoao.life/20260402-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1384,7 +1384,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260402-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1392,8 +1392,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Scent of a Woman (闻香识女人) (1992)" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Scent of a Woman (闻香识女人) (1992)"
                                         data-url="https://aoao.life/20260402-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1413,10 +1413,10 @@
                     <div class="article-title">
                         <a href="/20260327.html">Lord of War (战争之王) (2005)-aoao评分 88</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这个电影也好多切片，不看下你都看不懂。特别是那个为了不被抓，一飞机的军火免费送当地村民，一晚上连一颗螺丝都没有了。      There are over 550 million firearms in worldwide circulation. That's one firearm for every twelve people on the planet. The only question...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260327.html">
@@ -1428,12 +1428,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="Lord of War (战争之王) (2005)-aoao评分 88" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="Lord of War (战争之王) (2005)-aoao评分 88"
                                     data-url="https://aoao.life/20260327.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1441,7 +1441,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260327.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1449,8 +1449,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="Lord of War (战争之王) (2005)-aoao评分 88" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="Lord of War (战争之王) (2005)-aoao评分 88"
                                         data-url="https://aoao.life/20260327.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1470,10 +1470,10 @@
                     <div class="article-title">
                         <a href="/20260327-1.html">The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">黄、赌、毒全有的电影。内涵是少了点。但是爽就够了。 aoao评分：85      The only thing standing between you and your goal is the bullshit story you keep telling yourself as to why you can't achieve it.   唯一阻挡在你和目标之间的，就是你一直告诉自己无法实现目...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260327-1.html">
@@ -1485,12 +1485,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年03月27日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88"
                                     data-url="https://aoao.life/20260327-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -1498,7 +1498,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260327-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -1506,8 +1506,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Wolf of Wall Street (华尔街之狼) (2013)-aoao评分 88"
                                         data-url="https://aoao.life/20260327-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1673,19 +1673,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 

@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 75.6%; }
+            to { width: 76.2%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -30,7 +30,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 30px;
             padding: 0 20px;
         }
@@ -45,7 +45,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             animation: fadeInUp 0.5s ease-out;
         }
-        
+
         .header-top-row {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -53,7 +53,7 @@
             margin-bottom: 15px;
             gap: 20px;
         }
-        
+
         /* Ensure logo stays left */
         .header-top-row > .logo-text {
             justify-self: start;
@@ -74,19 +74,19 @@
             white-space: nowrap;
         }
         .header-nav a:hover { color: #1d9bf0; }
-        
+
         .logo-text {
             font-size: 24px;
             font-weight: 900;
             color: #1d9bf0;
             white-space: nowrap;
-            text-decoration: none; 
+            text-decoration: none;
         }
         .logo-text:hover { opacity: 0.8; }
 
         .header-search {
             justify-self: end;
-            width: 250px; 
+            width: 250px;
             position: relative;
         }
         .search-box {
@@ -165,8 +165,8 @@
             width: 300px;
             flex-shrink: 0;
         }
-        .sidebar-title { 
-            margin-top: 0; 
+        .sidebar-title {
+            margin-top: 0;
             margin-bottom: 15px;
             color: #1d9bf0;
             font-weight: 800;
@@ -210,7 +210,7 @@
             animation: fadeInUp 0.5s ease-out;
             animation-fill-mode: both;
         }
-        
+
         .item-body {
             display: flex;
             flex-direction: row;
@@ -238,22 +238,22 @@
         .item .content img {
             display: none; /* Hide images in snippet */
         }
-        
+
         .article-title {
             text-align: center; /* 列表页居中 */
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        .article-title a { 
-            text-decoration: none; 
+        .article-title a {
+            text-decoration: none;
             color: #1d9bf0;
             font-weight: 700;
         }
         .article-title a:hover {
             text-decoration: underline;
         }
-        
+
         .article-thumbnail {
             width: 240px;
             height: 160px;
@@ -263,18 +263,18 @@
             border: 1px solid #eee;
             background-color: #f7f9f9;
         }
-        .article-thumbnail img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
+        .article-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
         }
         .article-thumbnail:hover img { transform: scale(1.05); }
 
-        .article-footer { 
-            font-size: 14px; 
-            color: #536471; 
+        .article-footer {
+            font-size: 14px;
+            color: #536471;
             margin-top: 15px;
             border-top: 1px solid #f7f9f9;
             padding-top: 12px;
@@ -318,7 +318,7 @@
             }
             .progress-text { font-size: 12px; }
             .progress-container { height: 30px; }
-            
+
             /* Mobile Card Layout */
             .item-body {
                 flex-direction: column-reverse; /* Image on top for mobile, or below? Let's put image below text or above? usually top is better, but column-reverse puts last element (img) on top? No, HTML order: Content(1), Img(2). column-reverse -> Img top, Content bottom */
@@ -335,9 +335,9 @@
 <body class="three-column-page collapsible-listing-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 75.6%">
-        <span class="year-progress-fill" style="width: 75.6%;"></span>
-        <span class="year-progress-label">今天 2026.10.03 · 已过 75.6% · 剩 89 天</span>
+    <div class="year-progress" aria-label="本年度进度 76.2%">
+        <span class="year-progress-fill" style="width: 76.2%;"></span>
+        <span class="year-progress-label">今天 2026.10.05 · 已过 76.2% · 剩 87 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text">aoao.life</a>
@@ -378,10 +378,10 @@
                     <div class="article-title">
                         <a href="/20260905.html">国产凌凌漆(1994)-aoao评分：8.5</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">第一次看是在同学家里，同学拿这个片子招待客户人，太震撼了。   现在我也会推荐这个如果没有看过的话。       🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：國產凌凌漆国家：中国香港导演：周星驰、李力持主演：周星驰、袁咏仪、罗家英、黄锦江、陈宝莲、郑祖、于荣光类型：喜剧、动作、间谍          📝 ...</div>
-                        
+
                         
                             <div class="article-thumbnail">
                                 <a href="/20260905.html">
@@ -393,12 +393,12 @@
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="国产凌凌漆(1994)-aoao评分：8.5" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="国产凌凌漆(1994)-aoao评分：8.5"
                                     data-url="https://aoao.life/20260905.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -406,7 +406,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -414,8 +414,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="国产凌凌漆(1994)-aoao评分：8.5" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="国产凌凌漆(1994)-aoao评分：8.5"
                                         data-url="https://aoao.life/20260905.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -435,21 +435,21 @@
                     <div class="article-title">
                         <a href="/20260905-1.html">aoao音乐-执迷不悔 - 王菲（1993）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">真正的执迷并非看不见代价，而是在清醒之后仍愿为自己的选择负责。王菲以冷静、疏离却坚定的声音，把爱情中的固执唱成一种自我确认：不求旁人理解，也不借后悔逃避。这首歌最动人的地方，正是柔弱表象下那份不肯交出人生解释权的坚决。    点击查看深度鉴赏详情   《执迷不悔》由袁惟仁作曲、唐奕聪编曲、梁荣骏制作，收录于王菲1993年以“王靖雯”名义发行的同名专辑。国语版歌词由王菲本人创作，是她早期重要的填词作...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-执迷不悔 - 王菲（1993）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-执迷不悔 - 王菲（1993）"
                                     data-url="https://aoao.life/20260905-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -457,7 +457,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -465,8 +465,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-执迷不悔 - 王菲（1993）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-执迷不悔 - 王菲（1993）"
                                         data-url="https://aoao.life/20260905-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -486,21 +486,21 @@
                     <div class="article-title">
                         <a href="/20260905-2.html">aoao音乐-전화받어 (电话情缘) - 米娜（2002）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">电话无人接听，本是日常小事，在歌里却成为爱情失衡的确证。米娜以明艳舞曲包装猜疑、欺骗与失落，让急促铃声般的节奏反复催逼情绪。越是热烈喧闹，越显出等待回应之人的孤独，也凝固了移动电话初兴年代独特的情感记忆。    点击查看深度鉴赏详情   《전화받어》收录于米娜2002年11月7日发行的首张专辑《Rendezvous》，是对韩国女子组合KISS于2001年录制版本的重新演绎。米娜因2002年韩日世界...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                     data-url="https://aoao.life/20260905-2.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -508,7 +508,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-2.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -516,8 +516,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-전화받어 (电话情缘) - 米娜（2002）"
                                         data-url="https://aoao.life/20260905-2.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -537,21 +537,21 @@
                     <div class="article-title">
                         <a href="/20260905-3.html">aoao音乐-原来你也在这里 - 刘若英（2003）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌写尽了历经风雨后的偶然相逢：不是炽烈追逐，而是在人生沉淀之后，忽然认出那个仿佛早已等待许久的人。刘若英克制而温暖的演唱，让遗憾、孤独与希望彼此交叠，也使一句寻常的感叹成为许多人回望爱情时最柔软的回应。    点击查看深度鉴赏详情   创作背景：歌曲由姚谦作词、中岛美雪作曲、屠颖编曲，收录于刘若英2003年发行的专辑《我的失败与伟大》，并作为电视剧《她从海上来》的主题曲。旋律改编自日语作品《愛...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-原来你也在这里 - 刘若英（2003）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-原来你也在这里 - 刘若英（2003）"
                                     data-url="https://aoao.life/20260905-3.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -559,7 +559,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-3.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -567,8 +567,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-原来你也在这里 - 刘若英（2003）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-原来你也在这里 - 刘若英（2003）"
                                         data-url="https://aoao.life/20260905-3.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -588,21 +588,21 @@
                     <div class="article-title">
                         <a href="/20260905-4.html">aoao音乐-当爱已成往事 - 李宗盛、林忆莲（1992）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">最难的告别，是两个人仍有感情，却已无法共同走向明天。这首对唱让劝慰与执念同时发声：一个试着放手，一个仍在回望。它动人的地方，在于承认理智无法替情感收尾；所谓往事，并非已经消失，而是终于需要学习如何带着它继续生活。    点击查看深度鉴赏详情   创作背景：歌曲由李宗盛作词、作曲，李宗盛与林忆莲合唱，是电影《霸王别姬》的主题曲，编曲署名为Jenny Chin、Mac Chew。滚石官方音乐录像 年份...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月05日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-当爱已成往事 - 李宗盛、林忆莲（1992）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-当爱已成往事 - 李宗盛、林忆莲（1992）"
                                     data-url="https://aoao.life/20260905-4.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -610,7 +610,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260905-4.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -618,8 +618,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-当爱已成往事 - 李宗盛、林忆莲（1992）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-当爱已成往事 - 李宗盛、林忆莲（1992）"
                                         data-url="https://aoao.life/20260905-4.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -639,21 +639,21 @@
                     <div class="article-title">
                         <a href="/20260904.html">aoao音乐-朋友别哭 - 吕方（1995）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把友情写成困顿人生中的安静归宿。它不回避失意、衰老与世事无常，却用克制而温暖的口吻告诉听者：真正的陪伴未必能消除伤痛，却能让人不再独自承受。吕方醇厚朴实的演唱，使安慰没有流于口号，而成为可以依靠的情感承诺。    点击查看深度鉴赏详情   创作背景：歌曲由陈乐融作词、莫凡作曲、Belinda Foo编曲，收录于吕方1995年5月发行的国语专辑《爱一回伤一回》。据公开资料，专辑已有爱情主题的主...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月04日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-朋友别哭 - 吕方（1995）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-朋友别哭 - 吕方（1995）"
                                     data-url="https://aoao.life/20260904.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -661,7 +661,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260904.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -669,8 +669,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-朋友别哭 - 吕方（1995）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-朋友别哭 - 吕方（1995）"
                                         data-url="https://aoao.life/20260904.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -690,21 +690,21 @@
                     <div class="article-title">
                         <a href="/20260904-1.html">aoao音乐-太委屈 - 陶晶莹（2000）</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">这首歌把背叛后的疼痛写成一次迟来的自我确认：最难承受的不只是爱情消失，而是尊严在隐瞒与迁就中被逐渐磨损。陶晶莹克制而清醒的演唱，让委屈不止于控诉，最终落在主动离开、拒绝继续亏待自己的觉醒上。    点击查看深度鉴赏详情   创作背景：歌曲由郑华娟作词、作曲，陈伟与Mickey编曲，收录于陶晶莹2000年发行的专辑《爱缺》，主题聚焦伴侣背叛及当事人最后才得知分手的情感处境。音乐分析：作品属于国语流行...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月04日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="aoao音乐-太委屈 - 陶晶莹（2000）" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="aoao音乐-太委屈 - 陶晶莹（2000）"
                                     data-url="https://aoao.life/20260904-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -712,7 +712,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260904-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -720,8 +720,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="aoao音乐-太委屈 - 陶晶莹（2000）" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="aoao音乐-太委屈 - 陶晶莹（2000）"
                                         data-url="https://aoao.life/20260904-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -741,21 +741,21 @@
                     <div class="article-title">
                         <a href="/20260902.html">容百科技深度投资研究报告核心结_20260902_034448</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">﻿--- title: 容百科技深度投资研究报告核心结20260902034448 date: 2026-09-02   tags: 容百科技, 科创板, A股, 股票分析  容百科技（688005.SH）深度投资研究报告  核心结论与股票基本信息  研究结论先行：我今天会买，但只会建立小仓位观察仓，不会重仓。   截至A股最近一个交易日 2026年9月1日，容百科技收于 25.58元/股，跌0....</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="容百科技深度投资研究报告核心结_20260902_034448" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="容百科技深度投资研究报告核心结_20260902_034448"
                                     data-url="https://aoao.life/20260902.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -763,7 +763,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260902.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -771,8 +771,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="容百科技深度投资研究报告核心结_20260902_034448" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="容百科技深度投资研究报告核心结_20260902_034448"
                                         data-url="https://aoao.life/20260902.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -792,21 +792,21 @@
                     <div class="article-title">
                         <a href="/20260902-1.html">阿特斯深度投资研究报告结论先行_20260902_032217</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">﻿--- title: 阿特斯深度投资研究报告结论先行20260902032217 date: 2026-09-02   tags: 阿特斯, 股票投资, 储能, 光伏  阿特斯（688472.SH）深度投资研究报告     结论先行：截至 2026 年 9 月 2 日凌晨、A股尚未开盘，我今天不会直接买入阿特斯作为中线核心仓。   我认可其大型储能已经从“第二曲线”升级为当前最重要的增长与利润支...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年09月02日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="阿特斯深度投资研究报告结论先行_20260902_032217" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="阿特斯深度投资研究报告结论先行_20260902_032217"
                                     data-url="https://aoao.life/20260902-1.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -814,7 +814,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260902-1.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -822,8 +822,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="阿特斯深度投资研究报告结论先行_20260902_032217" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="阿特斯深度投资研究报告结论先行_20260902_032217"
                                         data-url="https://aoao.life/20260902-1.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -843,21 +843,21 @@
                     <div class="article-title">
                         <a href="/20260831.html">The Terminal (幸福终点站) (2004)-aoao评分：8.8</a>
                     </div>
-                    
+
                     <div class="item-body">
                         <div class="content">The Terminal (幸福终点站) (2004)-aoao评分: 8.8      Life is waiting.   生活就在等待中展开。     🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录           🎬 基本元数据 (Metadata)       原名：The Terminal国家：美国导演：史蒂文·斯皮尔伯格 (Steven Spielberg)主演：汤...</div>
-                        
+
                         
                     </div>
 
                     <div class="article-footer">
                         <span class="meta-item">发布于：2026年08月31日</span>
-                        
+
                         <span class="meta-divider">·</span>
-                        
+
                         <div class="index-meta-actions" style="display: flex; align-items: center; gap: 8px;">
-                            <button class="copy-btn index-copy-btn" 
-                                    data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8" 
+                            <button class="copy-btn index-copy-btn"
+                                    data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8"
                                     data-url="https://aoao.life/20260831.html"
                                     onclick="handleIndexCopy(this)">
                                 复制
@@ -865,7 +865,7 @@
 
                             <div class="index-like-wrapper">
                                 <button class="like-btn index-like-btn" data-article-id="aoao.life/20260831.html" onclick="handleLikeClick(this)">
-                                    <span class="like-icon heart-icon">🤍</span> 
+                                    <span class="like-icon heart-icon">🤍</span>
                                     <span class="like-count">...</span>
                                 </button>
                             </div>
@@ -873,8 +873,8 @@
                             <span class="meta-divider">·</span>
 
                             <div class="index-like-wrapper">
-                                <button class="share-btn index-share-btn" 
-                                        data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8" 
+                                <button class="share-btn index-share-btn"
+                                        data-title="The Terminal (幸福终点站) (2004)-aoao评分：8.8"
                                         data-url="https://aoao.life/20260831.html"
                                         onclick="handleShareClick(this)">
                                     <span>🔗</span>
@@ -1044,19 +1044,19 @@
 </aside>
         
     </div>
-    
+
             <div class="footer">
-    
+
                 <div class="footer-nav">
-    
+
                     <a href="/index.html">主页</a> |
-    
+
                     <a href="/about.html">关于我</a> |
-    
+
                     <a href="/clocklife.html">aoao生命时钟</a> |
 
                     <a href="/rss.xml" type="application/rss+xml">RSS 订阅</a>
-    
+
                 </div>        <div class="copyright"><a href="https://aoao.life">BY: aoao.life</a></div>
     </div>
 
