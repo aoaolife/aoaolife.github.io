@@ -6,7 +6,23 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 05 Oct 2026 22:31:54 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 23:47:16 +0800</lastBuildDate>
+    <item>
+      <title>aoao音乐-Hey Jude (嘿，朱迪) - The Beatles 披头士乐队（1968）</title>
+      <link>https://aoao.life/20261007.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261007.html</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0800</pubDate>
+      <description>这首歌的温柔，在于它允许悲伤停留，也鼓励人重新向生活伸手。麦卡特尼从近乎私语的钢琴弹唱出发，让一个人的伤心逐渐进入众人的合唱。漫长的尾声像持续的陪伴：困境未必立刻消失，但有人与你一起唱下去，孤独便有了出口。 点击查看深度鉴赏详情 创作背景：保罗·麦卡特尼为安慰正经历父母婚姻破裂的朱利安·列侬，写下最初名为“Hey Jules”的歌曲，随后改名“Hey Jude”。作品由麦卡特尼创作，沿用...</description>
+      <category>aoao音乐</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月07日</title>
+      <link>https://aoao.life/20261007-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261007-1.html</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月07日 有人质疑德州Terafab，我再次重申：晶圆厂必须由我们亲自建造和运营，毋庸置疑。算力是文明的基石。今天FCC批准了直连星链申请，SpaceX也在敲定新一轮AI芯片融资。只要物理定律允许，就全速推进。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>aoao音乐-Poker Face (扑克脸) - Lady Gaga 嘎嘎小姐（2008）</title>
       <link>https://aoao.life/20261003.html</link>
@@ -417,29 +433,6 @@
       <category>家庭剧情</category>
       <category>闽南语</category>
       <category>亲情电影</category>
-    </item>
-    <item>
-      <title>夜王 (2026)-aoao评分：7.5</title>
-      <link>https://aoao.life/20260906-1.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260906-1.html</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0800</pubDate>
-      <description>夜王 (2026)-aoao评分：7.5 有些人、有些地方，你见过它最美好的时候，就不是说放下便能放下。 香港电影，只要不是7.5分以下我都会看。比较没那么费脑。这个刚好75分。 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：夜王国家：中国香港语言：粤语导演：吴炜伦主演：黄子华、郑秀文...</description>
-      <category>夜王</category>
-      <category>黄子华</category>
-      <category>郑秀文</category>
-      <category>香港电影</category>
-      <category>影评</category>
-    </item>
-    <item>
-      <title>杀死比尔：血色全传 (2004)-aoao评分：8.7</title>
-      <link>https://aoao.life/20260906-2.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260906-2.html</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0800</pubDate>
-      <description>杀死比尔：血色全传 (2004)-aoao评分：8.4 有点无厘头。感觉没那么好，但是又觉得还不错，有点奇怪。 That woman deserves her revenge. And we deserve to die. 那个女人理应复仇，而我们也罪该万死。 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Met...</description>
-      <category>杀死比尔</category>
-      <category>动作电影</category>
-      <category>复仇电影</category>
-      <category>影评</category>
     </item>
   </channel>
 </rss>
