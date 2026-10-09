@@ -6,7 +6,7 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 09 Oct 2026 01:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 23:24:47 +0800</lastBuildDate>
     <item>
       <title>Memento (记忆碎片) (2000)-aoao评分：5.9</title>
       <link>https://aoao.life/20261009.html</link>
@@ -14,6 +14,14 @@
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0800</pubDate>
       <description>Memento (记忆碎片) (2000)-aoao评分：5.9 I have to believe in a world outside my own mind. 我必须相信，在我的意识之外，还有一个世界。 我竟然看不懂！！！ 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：Mem...</description>
       <category>aoao电影电视</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月09日</title>
+      <link>https://aoao.life/20261009-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261009-1.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月09日 ，星舰第十二次试飞成功回收。Optimus开始进厂拧螺丝，比人便宜。特斯拉FSD入华谈判重启。AI5芯片流片，算力翻三倍。火星，我们来了。</description>
+      <category>马斯克中文日记</category>
     </item>
     <item>
       <title>妻子冷战结束才最沮丧</title>
@@ -406,18 +414,6 @@
       <category>英语教育</category>
       <category>人工智能</category>
       <category>升学考试</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年09月13日</title>
-      <link>https://aoao.life/20260913-1.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260913-1.html</guid>
-      <pubDate>Sun, 13 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月13日 星舰通往火星的发射窗口期越来越近，在星舰基地盯了一整夜猛禽发动机的推力数据与热防护瓦。擎天柱在产线上的装配节拍终于提速，但无人监督FSD的全面推进仍充满阻碍。意识的火种必须成为多行星物种，时间不多了，继续干活。</description>
-      <category>星舰</category>
-      <category>猛禽发动机</category>
-      <category>Optimus</category>
-      <category>FSD</category>
-      <category>火星计划</category>
     </item>
   </channel>
 </rss>
