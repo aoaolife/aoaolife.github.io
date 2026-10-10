@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 10 Oct 2026 11:06:59 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 13:15:05 +0800</lastBuildDate>
+    <item>
+      <title>这个警非得报么</title>
+      <link>https://aoao.life/20261010.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261010.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0800</pubDate>
+      <description>这几天有个好玩的事。公司有个00 后女生，外卖放柜里，下个电梯的工夫，被偷了。 她就投诉到某团，某团也第一时间给退了款。 但是只退了款，没退优惠券，她很生气，打了110。 警车把她接去派出所，笔录做了3遍，中午饭没吃上，还要打车回来 ～-～ 第二天，警察说找到人了，把双方叫到派出所调解。 某团也调了取餐柜监控，跟大厦的监控一结合，事实很清楚：她的那份外卖，小哥柜门没关严，而另一位马大哈小姐，手...</description>
+      <category>aoao随笔</category>
+    </item>
     <item>
       <title>Memento (记忆碎片) (2000)-aoao评分：5.9</title>
       <link>https://aoao.life/20261009.html</link>
@@ -403,17 +411,6 @@
       <category>Optimus</category>
       <category>火星计划</category>
       <category>火箭回收</category>
-    </item>
-    <item>
-      <title>aoao也谈要不要全国取消英语考试</title>
-      <link>https://aoao.life/20260913.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260913.html</guid>
-      <pubDate>Sun, 13 Sep 2026 00:00:00 +0800</pubDate>
-      <description>虽然随着现在AI发展，全国取消英语考试呼声更大了，但我aoao觉得还是不要取消，至少高中前。 因为不管从国家角度还是个人角度其实还是建议要学习英语的。 从国家角度，还没有见过有哪个国家地区英语差的经济能好的，新加坡都把英语当国语了，香港、台台、日本、英语素质都非常高，印度因为被英国很殖民，英语素质其实很高的不然他们也不可能全球高端人才非常非常多特别是IT方面。 包括我们，经济这几十年发...</description>
-      <category>英语考试</category>
-      <category>英语教育</category>
-      <category>人工智能</category>
-      <category>升学考试</category>
     </item>
   </channel>
 </rss>
