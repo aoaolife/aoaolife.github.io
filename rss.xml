@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 10 Oct 2026 23:22:15 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 23:22:15 +0800</lastBuildDate>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月11日</title>
+      <link>https://aoao.life/20261011.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261011.html</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月11日 。星舰第十二次试飞终于成功入轨并回收。团队今晚在星港开了香槟。火星，我们来了。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>这个警非得报么</title>
       <link>https://aoao.life/20261010.html</link>
@@ -398,16 +406,6 @@
       <pubDate>Tue, 15 Sep 2026 00:00:00 +0800</pubDate>
       <description>2026年09月15日 星舰第12次试飞终于完全成功，热分离与回收均无瑕疵。团队今晚在星基地庆祝，我喝了一罐可乐。脑机接口获准临床，但距量产仍远。火星，明年见。</description>
       <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>说话做事都得注意</title>
-      <link>https://aoao.life/20260914.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260914.html</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0800</pubDate>
-      <description>说话要经得起录音， 发消息要经得起截图， 聚会要经得起偷拍， 翻脸要经得起翻旧账， 借钱要经得起不还， 绝交要经得起被出卖， 站队要经得起被清算， 背后吐槽要经得起方面对质。 —— 洞房不败</description>
-      <category>为人处世</category>
-      <category>谨言慎行</category>
-      <category>社交防坑</category>
     </item>
   </channel>
 </rss>
