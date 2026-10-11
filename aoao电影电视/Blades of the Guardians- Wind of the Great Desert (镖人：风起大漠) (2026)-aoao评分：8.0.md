@@ -1,11 +1,13 @@
 ---
-title: Blades of the Guardians- Wind of the Great Desert (镖人：风起大漠) (2026)-aoao评分：8.8
+title: Blades of the Guardians- Wind of the Great Desert (镖人：风起大漠) (2026)-aoao评分：8.0
 date: 2026-06-18
 tags: 镖人, 国产动画, 武侠动作, 硬派武侠
 ---
-Blades of the Guardians: Wind of the Great Desert (镖人：风起大漠) (2026)-aoao评分: 8.8
+还行吧喜欢武侠的可以看看。
 > The world is a game, and I am the blade that cuts through it.
 > 天下众生，皆入我局；掌中横刀，只为活命。
+
+
 
 <details>
 <summary><strong>🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录</strong></summary>
