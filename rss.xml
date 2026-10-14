@@ -6,7 +6,7 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 14 Oct 2026 02:29:04 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 18:07:13 +0800</lastBuildDate>
     <item>
       <title>沪硅产业 (688126.SH) 深度投资分析报告</title>
       <link>https://aoao.life/20261014.html</link>
@@ -38,6 +38,14 @@
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0800</pubDate>
       <description>美年健康（002044.SZ）深度投资分析 核心结论先行：以 2026 年 10 月 13 日收盘价 4.79 元为基准，我在 10 月 14 日不会主动追买美年健康。 我把它定义为一只处在“经营改善已出现、但尚未完成财务验证；AI第二曲线真实增长、但绝对体量仍小；同时短期遭遇股东减持供给压力”阶段的股票。 我的主观概率判断为：未来 7 个交易日上涨概率 46%，未来 30 天上涨...</description>
       <category>aoao生活</category>
+    </item>
+    <item>
+      <title>Crash (撞车) (2004)-aoao评分：8.0</title>
+      <link>https://aoao.life/20261014-4.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261014-4.html</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0800</pubDate>
+      <description>电影名改成偏见好像更符合点？电影都不知道什么主题连海报都不知道要怎么选用哪张。。。不过也不错，像一下看了好几部小电影。。。 8.0 分吧 aoao 还有个问题在美国我们跟黑人哪个地位高呢？ 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：Crash国家：美国语言：英语导演：保罗·哈吉斯主...</description>
+      <category>aoao电影电视</category>
     </item>
     <item>
       <title>aoao 心灵鸡汤-202610</title>
@@ -398,14 +406,6 @@
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0800</pubDate>
       <description>写出你一生要做的事情，把单子放在皮夹里，经常拿出来看。人生要有目标，要有计划，要有提醒，要有紧迫感。 一个又一个小目标串起来，就成了你一生的大目标。生活富足了，环境改善了，不要忘了皮夹里那张看似薄薄的单子。 —— aoao.life</description>
       <category>网友名人名言</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年09月18日</title>
-      <link>https://aoao.life/20260918-4.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260918-4.html</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月18日 今晚在奥斯汀。Neuralink最新实验进展给了我巨大惊喜，我们在接近奇迹。SpaceX与AI正在深度融合，但我仍忧心AGI失控的风险。外界还在热衷于纪录片与监管争议，而我只信奉第一性原理。文明必须加速冲向火星。</description>
-      <category>马斯克中文日记</category>
     </item>
   </channel>
 </rss>
