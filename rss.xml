@@ -6,13 +6,13 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 16 Oct 2026 22:27:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 23:22:15 +0800</lastBuildDate>
     <item>
       <title>aoao音乐-Nemo (Live) (尼莫) - Nightwish 夜愿（2004）</title>
       <link>https://aoao.life/20261016.html</link>
       <guid isPermaLink="true">https://aoao.life/20261016.html</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0800</pubDate>
-      <description>《尼莫》把渴望被认出、却又说不出自己是谁的孤独，写成一首宏阔的歌。钢琴引出低回的情绪，吉他与鼓逐渐推高声势，女声则始终带着近乎恳求的力量。现场演唱让这份私密的迷失面对听众：名字或许仍未找到，呼唤本身却已成为与人相连的方式。 点击查看深度鉴赏详情 歌曲由托马斯·霍洛派宁创作，原版于2004年4月作为单曲发行，随后收入《Once》；题目所标“Live”未提供场次信息，无法核实具体录音地点与日...</description>
+      <description>《尼莫》把渴望被认出、却又说不出自己是谁的孤独，写成一首宏阔的歌。钢琴引出低回的情绪，吉他与鼓逐渐推高声势，女声则始终带着近乎恳求的力量。现场演唱让这份私密的迷失面对听众：名字或许仍未找到，呼唤本身却已成为与人相连的方式。 点击查看深度鉴赏详情 歌曲由托马斯·霍洛派宁创作，原版于2004年4月作为单曲发行，随后收入《Once》；题目所标“Live”未提供场次信息，无法核实具体录音地...</description>
       <category>aoao音乐</category>
     </item>
     <item>
@@ -22,6 +22,14 @@
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0800</pubDate>
       <description>最难告别的，也许不是一个人，而是曾经无需解释就能彼此理解的关系。歌曲把分手后的疏离写成一种悖论：记忆仍然亲近，现实中的两人却已无话可说。萧亚轩以克制的低声起笔，让遗憾缓缓浮现；情绪走向高处时，听见的也不只是伤心，还有承认关系已经改变的清醒。 点击查看深度鉴赏详情 这首歌由姚谦作词、小柯作曲，收录于萧亚轩1999年发行的首张同名专辑。它以中慢板抒情旋律承托叙事：较低的音区留出回望的空...</description>
       <category>aoao音乐</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月16日</title>
+      <link>https://aoao.life/20261016-2.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261016-2.html</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月16日 。星舰第十二次试飞终于完全回收，筷子夹住了超重助推器。火星窗口倒计时八个月。xAI的Grok 6今天通过物理博士资格考。人类离多行星物种又近一步。继续压榨时间。</description>
+      <category>马斯克中文日记</category>
     </item>
     <item>
       <title>阿特斯（688472.SH）深度投资研究报告</title>
@@ -398,14 +406,6 @@
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
       <description>美国人打死也想不到，怎么全世界绕了半天，工厂还是中国人开的。 中国人打死也想不到，怎么全世界干了半年，钱还是让美国人赚了。 —— aoao.life</description>
       <category>网友名人名言</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年09月20日</title>
-      <link>https://aoao.life/20260920-2.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260920-2.html</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月20日 ，得州。星舰第12次试飞终于完全复用成功。Optimus在弗里蒙特工厂拧了第100万颗螺丝。Grok 5的推理能耗又降了四成。火星窗口还有四个月，这次得带上足够的人。</description>
-      <category>马斯克中文日记</category>
     </item>
   </channel>
 </rss>
