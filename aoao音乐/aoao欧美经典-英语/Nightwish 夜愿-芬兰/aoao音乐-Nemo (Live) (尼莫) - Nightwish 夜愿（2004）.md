@@ -5,6 +5,8 @@ tags: aoao音乐
 ---
 《尼莫》把渴望被认出、却又说不出自己是谁的孤独，写成一首宏阔的歌。钢琴引出低回的情绪，吉他与鼓逐渐推高声势，女声则始终带着近乎恳求的力量。现场演唱让这份私密的迷失面对听众：名字或许仍未找到，呼唤本身却已成为与人相连的方式。
 
+![](/Users/focus/aoaoimages/music/music-nemolive-0.webp)
+
 <details>
 <summary>点击查看深度鉴赏详情</summary>
 
