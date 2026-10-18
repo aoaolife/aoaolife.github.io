@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 17 Oct 2026 23:22:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 23:24:22 +0800</lastBuildDate>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月18日</title>
+      <link>https://aoao.life/20261018.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261018.html</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月18日 。星舰第十二次试飞成功回收，轨道级复用成本再降四成。Optimus已进厂拧螺丝，比人快。FSD v15在德州零干预跑完一周。xAI新集群上线，训练效率翻倍。忙，但值得。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>大家好，我是马斯克，今天是2026年10月17日</title>
       <link>https://aoao.life/20261017.html</link>
@@ -398,14 +406,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0800</pubDate>
       <description>2026年09月24日 。星舰第十次试飞终于成功回收，火星窗口临近。AI5芯片流片顺利，Optimus开始量产。但今天最触动我的，是孩子们说想一起去火星。文明多行星化，不是口号，是给他们的承诺。</description>
       <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>月饼必死</title>
-      <link>https://aoao.life/20260920.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260920.html</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0800</pubDate>
-      <description>看到竟然还有卖月饼的盆友圈，哎又快中秋了。 多少年不吃月饼了，记得原来公司每年都会发月饼，还是五星酒店的，最后都不吃扔掉了（边送人都不想送）。 听市场部的说一袋要135呢，就四个。不过那袋子真有质感，老妈都拿去当LV手提包。 现在老龄化月饼更是没人吃。 月饼。表面看这是老登食品，其实过去真正消化月饼的，不一定是送礼的老登，而是家里的孩子。商业活动旺的时候，单位发、客户送、亲戚互相拎，一...</description>
-      <category>aoao随笔</category>
     </item>
   </channel>
 </rss>
