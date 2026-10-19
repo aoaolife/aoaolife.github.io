@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 18 Oct 2026 23:24:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 12:10:01 +0800</lastBuildDate>
+    <item>
+      <title>拉黑</title>
+      <link>https://aoao.life/20261019.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261019.html</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0800</pubDate>
+      <description>我现在看到 AI 头像的，拉黑。 发的文章都是 AI 文章的，拉黑。 发的视频都是 AI视频的，拉黑。 发的图片全部 AI 图片的，拉黑。 那声音，那表情，那脚本，只要 aoao 闻到AI 味，拉黑。 太吐了。 还有哪个明星整容的，不是正常减肥的。拉黑。 —— aoao.life</description>
+      <category>aoao随笔</category>
+    </item>
     <item>
       <title>大家好，我是马斯克，今天是2026年10月18日</title>
       <link>https://aoao.life/20261018.html</link>
@@ -397,14 +405,6 @@
       <guid isPermaLink="true">https://aoao.life/20260925.html</guid>
       <pubDate>Fri, 25 Sep 2026 00:00:00 +0800</pubDate>
       <description>2026年09月25日 。星舰第十二次试飞终于实现全程可控回收，火星货运成本降至每吨百万美元以下。特斯拉FSD入华获批，上海储能工厂产能翻倍。Neuralink第三例植入者用思维发了一条推特。我回复：加速。</description>
-      <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年09月24日</title>
-      <link>https://aoao.life/20260924.html</link>
-      <guid isPermaLink="true">https://aoao.life/20260924.html</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0800</pubDate>
-      <description>2026年09月24日 。星舰第十次试飞终于成功回收，火星窗口临近。AI5芯片流片顺利，Optimus开始量产。但今天最触动我的，是孩子们说想一起去火星。文明多行星化，不是口号，是给他们的承诺。</description>
       <category>马斯克中文日记</category>
     </item>
   </channel>
