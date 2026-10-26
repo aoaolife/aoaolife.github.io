@@ -6,7 +6,23 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 25 Oct 2026 23:22:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 23:22:10 +0800</lastBuildDate>
+    <item>
+      <title>The Prestige (致命魔术) (2006)-aoao评分：8.8</title>
+      <link>https://aoao.life/20261026.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261026.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0800</pubDate>
+      <description>The Prestige (致命魔术) (2006)-aoao评分：8.8 Are you watching closely? 你看仔细了吗？ 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：The Prestige国家：['英国', '美国']语言：英语导演：克里斯托弗·诺兰主演：休·...</description>
+      <category>aoao电影电视</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月26日</title>
+      <link>https://aoao.life/20261026-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261026-1.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月26日 星舰第14次试飞成功，热分离干净利落。上午听Optimus团队汇报产线进展，手部自由度仍是瓶颈。下午和xAI讨论Grok 5训练数据配比。日程太满，久未陪孩子。得改。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>The Devil Wears Prada (穿普拉达的女王) (2006)-aoao评分：8.3</title>
       <link>https://aoao.life/20261025.html</link>
@@ -389,22 +405,6 @@
       <guid isPermaLink="true">https://aoao.life/20261003-2.html</guid>
       <pubDate>Sat, 03 Oct 2026 00:00:00 +0800</pubDate>
       <description>2026年10月03日 。星舰第十二次试飞成功回收，火星窗口倒计时四百天。Neuralink今日接入第一千名患者，Optimus在工厂学会了拧螺丝。但地球仍有太多琐事。加速，唯有加速。</description>
-      <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月02日</title>
-      <link>https://aoao.life/20261002.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261002.html</guid>
-      <pubDate>Fri, 02 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月02日 。星舰第15次试飞终于完全成功，筷子夹住了超重助推器。团队在控制室拥抱。火星窗口只剩三年，时间不多了。今晚得陪X Æ A-Xii写作业。</description>
-      <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月01日</title>
-      <link>https://aoao.life/20261001.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261001.html</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月01日 。星舰第五飞终于拿到FAA批文，明年火星窗口稳了。特斯拉FSD v14推送首日，干预率降了七成。今天只睡四小时，但值得。</description>
       <category>马斯克中文日记</category>
     </item>
   </channel>
