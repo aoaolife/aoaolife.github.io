@@ -19,7 +19,7 @@
         /* Animations */
         @keyframes fillProgress {
             from { width: 0; }
-            to { width: 83.0%; }
+            to { width: 83.3%; }
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -345,9 +345,9 @@
 <body class="three-column-page">
     
         <header class="site-header">
-    <div class="year-progress" aria-label="本年度进度 83.0%">
-        <span class="year-progress-fill" style="width: 83.0%;"></span>
-        <span class="year-progress-label">今天 2026.10.30 · 已过 83.0% · 剩 62 天</span>
+    <div class="year-progress" aria-label="本年度进度 83.3%">
+        <span class="year-progress-fill" style="width: 83.3%;"></span>
+        <span class="year-progress-label">今天 2026.10.31 · 已过 83.3% · 剩 61 天</span>
     </div>
     <div class="site-header-main">
         <a href="/index.html" class="logo-text"><svg class="logo-home-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 2 10.5V22h7v-7h6v7h7V10.5L12 2Z"/></svg><span>aoao.life</span></a>
@@ -3698,6 +3698,14 @@
             
             <aside class="right-sidebar" aria-label="辅助内容">
     
+    <section class="side-card avatar-card" aria-label="互动头像">
+    <div id="interactive-avatar" class="interactive-avatar">
+        <div class="circle" aria-hidden="true"></div>
+        <img class="avatar-fallback" src="/static/avatar/1.jpg" alt="aoao 的头像" width="220" height="260">
+        <canvas id="avatar-canvas" aria-label="可拖动的 aoao 互动头像"></canvas>
+    </div>
+    <p id="avatar-status" class="avatar-status" aria-live="polite">移动鼠标，或按住头像拖一拖</p>
+</section>
     <section class="side-card random-card">
         <div class="side-heading">随便看看</div>
         <div class="side-link-list random-article-list" id="random-article-list">
