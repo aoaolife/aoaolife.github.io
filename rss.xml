@@ -6,7 +6,7 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 31 Oct 2026 23:26:20 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 23:29:23 +0800</lastBuildDate>
     <item>
       <title>大家好，我是马斯克，今天是2026年10月31日</title>
       <link>https://aoao.life/20261031.html</link>
@@ -21,6 +21,22 @@
       <guid isPermaLink="true">https://aoao.life/20261030.html</guid>
       <pubDate>Fri, 30 Oct 2026 00:00:00 +0800</pubDate>
       <description>2026年10月30日 FSD V14在华获批，星舰完成年度第七飞。脑机接口让渐冻症患者用思维发了一条推文。今天很忙，但值得。人类正加速走向多行星文明。</description>
+      <category>马斯克中文日记</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月29日</title>
+      <link>https://aoao.life/20261029.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261029.html</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月29日 特斯拉与SpaceX的特别委员会已在评估合并。华尔街在纠结资本开支，但他们不懂第一性原理：从Grok、Optimus到星舰，唯有打通AI与物理世界闭环，才能让人类成为多行星物种。我回避了谈判，但大势已定。阻力不过是噪音。</description>
+      <category>马斯克中文日记</category>
+    </item>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年10月28日</title>
+      <link>https://aoao.life/20261028.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261028.html</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0800</pubDate>
+      <description>2026年10月28日 普京的称赞和华盛顿的政治杂音都不重要。传统电信巨头觉得Starlink做不成全美移动网络，就像当年他们觉得火箭不能回收一样。SpaceX三季度营收已经说明问题。地面上的噪音毫无意义，唯有物理学与第一性原理永恒。继续推进星舰，火星见。</description>
       <category>马斯克中文日记</category>
     </item>
     <item>
@@ -389,22 +405,6 @@
       <guid isPermaLink="true">https://aoao.life/20261007.html</guid>
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0800</pubDate>
       <description>2026年10月07日 有人质疑德州Terafab，我再次重申：晶圆厂必须由我们亲自建造和运营，毋庸置疑。算力是文明的基石。今天FCC批准了直连星链申请，SpaceX也在敲定新一轮AI芯片融资。只要物理定律允许，就全速推进。</description>
-      <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月06日</title>
-      <link>https://aoao.life/20261006.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261006.html</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月06日 。星舰第十二飞终于成了，热分离干净利落。Optimus在得州工厂开始拧螺丝，比人快三倍。今晚跟团队说：别庆祝，下个月还要回收。AI5芯片流片回来，功耗比预期低。火星，再等两年。</description>
-      <category>马斯克中文日记</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月05日</title>
-      <link>https://aoao.life/20261005.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261005.html</guid>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月05日 。星舰第十二次试飞成功回收，火星货运窗口倒计时八个月。AI5芯片流片。今天在德州，和团队吃了披萨。未来不是等来的，是造出来的。继续。</description>
       <category>马斯克中文日记</category>
     </item>
   </channel>
