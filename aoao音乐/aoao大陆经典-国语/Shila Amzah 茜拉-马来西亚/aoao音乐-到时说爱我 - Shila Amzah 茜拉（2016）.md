@@ -5,6 +5,8 @@ tags: aoao音乐
 ---
 有些情歌挽留一个离开的人，这首歌却把心事交给尚未出现的人。失恋后的迟疑与对未来的期待并存，让等待成为一次重新感受生活的练习。茜拉唱出的动人之处，是受伤之后仍愿意敞开心门：承认错过，也承认自己依然需要被爱，并为下一次相遇保留温度。
 
+![](/Users/focus/aoaoimages/music/music-daoshishuoaiwo-1.webp)
+
 <details>
 <summary>点击查看深度鉴赏详情</summary>
 
