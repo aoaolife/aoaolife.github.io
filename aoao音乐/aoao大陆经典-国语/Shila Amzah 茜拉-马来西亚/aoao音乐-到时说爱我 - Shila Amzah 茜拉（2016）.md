@@ -3,6 +3,10 @@ title: aoao音乐-到时说爱我 - Shila Amzah 茜拉（2016）
 date: 2026-11-05
 tags: aoao音乐
 ---
+年轻人听这个歌。
+
+![](/Users/focus/aoaoimages/music/music-daoshishuoaiwo-1.webp)
+
 有些情歌挽留一个离开的人，这首歌却把心事交给尚未出现的人。失恋后的迟疑与对未来的期待并存，让等待成为一次重新感受生活的练习。茜拉唱出的动人之处，是受伤之后仍愿意敞开心门：承认错过，也承认自己依然需要被爱，并为下一次相遇保留温度。
 
 ![](/Users/focus/aoaoimages/music/music-daoshishuoaiwo-1.webp)
