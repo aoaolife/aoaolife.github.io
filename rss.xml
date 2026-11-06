@@ -6,7 +6,7 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 06 Nov 2026 12:31:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 13:00:22 +0800</lastBuildDate>
     <item>
       <title>John Wick (疾速追杀) (2014)-aoao评分：7.9</title>
       <link>https://aoao.life/20261106.html</link>
@@ -14,6 +14,14 @@
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0800</pubDate>
       <description>内容少了一点点。小哥到死也不知道怎么死的，不就是一只狗么。 🔽 点击展开：详细档案 / 深度剧评 / 标签 / 观影记录 🎬 基本元数据 (Metadata) 原名：John Wick国家：美国语言：英语、俄语导演：查德·斯塔赫斯基主演：基努·里维斯、迈克尔·恩奎斯特、阿尔菲·艾伦、威廉·达福、伊恩·麦柯肖恩类型：动作、犯罪、惊悚 📝 个...</description>
       <category>aoao电影电视</category>
+    </item>
+    <item>
+      <title>什么是历史</title>
+      <link>https://aoao.life/20261106-1.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261106-1.html</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0800</pubDate>
+      <description>看到个小短文，叫什么是历史。 想起我初一第一节历史课，老师问了我们一句什么是历史？ 然后走出教室，关上门，然后开门进来又关上，然后说这就是历史。 那时候肯定不懂，后面懂了，永远记住了这话，不记得叫什么名字，但是还有模糊的记忆样子。 你一辈子有个老师镜头话能记辈子呢，这算一个，好厉害的十九线小镇的老师。 引用的短文： 历史系教授刚走进教室准备上课，两名歹徒突然冲进门，不由分说...</description>
+      <category>aoao随笔</category>
     </item>
     <item>
       <title>空枪 (2026)-aoao评分：7.2</title>
@@ -398,14 +406,6 @@
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0800</pubDate>
       <description>美年健康（002044.SZ）深度投资研究报告 核心结论先行：我今天不会在4.90元附近直接追涨买入。 我对公司中期基本面的判断是“经营拐点正在形成，但尚未被三季报确认；AI第二曲线真实存在，但当前估值已经提前计入相当一部分改善预期”。10月9日股价单日上涨8.41%至4.90元后，短线风险收益比明显下降；更合适的策略是等待4.55—4.70元附近的回踩机会，或者等待10月底三季报确认...</description>
       <category>aoao生活</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月12日</title>
-      <link>https://aoao.life/20261012-2.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261012-2.html</guid>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月12日 。星舰第十二飞终于把第二批百吨载荷送入轨道。看着数据曲线，我想起二十年前在PayPal时写的那些代码。人类离火星又近了一步。今天只睡了三小时，值。</description>
-      <category>马斯克中文日记</category>
     </item>
   </channel>
 </rss>
