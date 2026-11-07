@@ -6,7 +6,15 @@
     <description>aoao.life 最新文章订阅</description>
     <language>zh-CN</language>
     <atom:link href="https://aoao.life/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 07 Nov 2026 21:12:28 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 23:22:25 +0800</lastBuildDate>
+    <item>
+      <title>大家好，我是马斯克，今天是2026年11月07日</title>
+      <link>https://aoao.life/20261107.html</link>
+      <guid isPermaLink="true">https://aoao.life/20261107.html</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0800</pubDate>
+      <description>2026年11月07日 星舰第12次试飞终于全流程成功，回收精度超出预期。今晚和团队简单庆祝，随后继续推进V4发动机迭代。火星窗口倒计时，时间不多了。</description>
+      <category>马斯克中文日记</category>
+    </item>
     <item>
       <title>John Wick (疾速追杀) (2014)-aoao评分：7.9</title>
       <link>https://aoao.life/20261106.html</link>
@@ -398,14 +406,6 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0800</pubDate>
       <description>1、人民币存在四大行，每一行不要超过50万。 2、千万不要搞金条，买1g左右的小金豆子。 3、减少债务，提前储蓄，一个危机不会肆虐4年。就是日本也是可以做到不倒退的。 4、35岁以下，有考公资质和条件的，去抓住最后机会上岸。经济大萧条，只要分好蛋糕，做好流通就能渡过，因为城市人口过剩时，知青下乡劳动改造城市商品过剩时，家电下乡改善民生。 5、不到万不得已的时候，不要动用你的储备金。因为储备金是防范...</description>
       <category>网友名人名言</category>
-    </item>
-    <item>
-      <title>大家好，我是马斯克，今天是2026年10月13日</title>
-      <link>https://aoao.life/20261013-1.html</link>
-      <guid isPermaLink="true">https://aoao.life/20261013-1.html</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0800</pubDate>
-      <description>2026年10月13日 。星舰第十二飞终于全回收。脑机接口让首位患者用意念发推。特斯拉FSD入华获批。火星窗口倒计时，今晚睡工厂。</description>
-      <category>马斯克中文日记</category>
     </item>
   </channel>
 </rss>
